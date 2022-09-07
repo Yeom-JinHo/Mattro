@@ -1,0 +1,36 @@
+.wrapper {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  height: 810px;
+  width: vw(1140px);
+  background-image: url("/images/game.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 85px;
+  color: $MAIN;
+  h1 {
+    // font-size: 100px;
+    // font-weight: 600;
+    -webkit-text-stroke: 5px $WHITE;
+    margin-bottom: 150px;
+  }
+  div, button {
+    // font-size: 32px;
+    // font-weight: 600;
+    border-radius: 46px;
+    background-color: $WHITE;
+    border: 8px solid $MAIN;
+    text-transform: uppercase;
+    height: 80px;
+    width: vw(282px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div {
+    margin-bottom: 28px;
+  }
+}

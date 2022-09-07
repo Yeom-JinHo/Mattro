@@ -1,0 +1,20 @@
+.wrapper {
+  flex-direction: column;
+  background-image: url("/images/game_3.png");
+  background-position: center;
+  background-size: cover;
+  h2 {
+    width: vw(554px);
+    height: 100px;
+    background-color: $GRAY_3A;
+    color: $WHITE;
+    border-radius: 22px;
+  }
+  span {
+    width: vw(80px);
+    height: 64px;
+    background-color: $SUB_YELLOW;
+    color: $GRAY_3A;
+    border-radius: 22px;
+  }
+}
