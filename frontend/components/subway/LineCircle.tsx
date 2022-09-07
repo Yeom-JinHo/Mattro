@@ -9,7 +9,7 @@ export type LineCircleProps = {
 const LineCircle = ({ id, name }: LineCircleProps) => {
   return (
     <span
-      className={`${id} ${styles.circle} coreBlack fs-10 flex align-center justfiy-center`}
+      className={`${id} ${styles.circle} notoBold fs-10 flex align-center justfiy-center`}
     >
       {name}
     </span>

@@ -9,14 +9,14 @@ const LineSearch = () => {
     <div>
       <input
         type="text"
-        className={`fs-20 coreBold ${styles.input}`}
+        className={`fs-20 notoBold ${styles.input}`}
         placeholder="지하철 역 검색"
       />
       <ul>
         {searchList.map((lineInfo: LineCircleProps) => (
           <li key={lineInfo.id} className={`flex align-center ${styles.li}`}>
             <LineCircle id={lineInfo.id} name={lineInfo.name} />
-            <span id="test" className="fs-16 coreBold flex align-center">
+            <span id="test" className="fs-16 notoBold flex align-center">
               양재시민의 숲
             </span>
           </li>
