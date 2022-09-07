@@ -9,6 +9,8 @@ const MetroMap = () => {
       version="1.1"
       aria-hidden="true"
       // id="metro-map"
+      // viewBox="0 0 1525 1000"
+      viewBox="0 0 1500 1000"
       className={styles.map}
     >
       <svg
@@ -546,9 +548,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             1
@@ -572,9 +574,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             1
@@ -598,9 +600,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             1
@@ -1114,9 +1116,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             3
@@ -1140,9 +1142,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             3
@@ -1427,9 +1429,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             4
@@ -1453,9 +1455,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             4
@@ -1767,9 +1769,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             5
@@ -1793,9 +1795,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             5
@@ -1819,9 +1821,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             5
@@ -2060,9 +2062,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             6
@@ -2357,9 +2359,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             7
@@ -2383,9 +2385,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             7
@@ -2505,9 +2507,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             8
@@ -2531,9 +2533,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             8
@@ -2754,9 +2756,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             9
@@ -2780,9 +2782,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
           >
             9
@@ -3098,9 +3100,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="32"
           >
@@ -3125,9 +3127,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="32"
           >
@@ -3472,9 +3474,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="20"
           >
@@ -3499,9 +3501,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="20"
           >
@@ -3612,9 +3614,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="20"
           >
@@ -3711,9 +3713,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="47"
           >
@@ -3800,9 +3802,9 @@ const MetroMap = () => {
             style={{
               fill: "white",
               stroke: "white",
-              "stroke-width": "0.6",
-              "font-size": "9px",
-              "line-height": "10px"
+              strokeWidth: "0.6",
+              fontSize: "9px",
+              lineHeight: "10px"
             }}
             textLength="18"
           >
@@ -3821,7 +3823,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1915 L1"
@@ -3831,7 +3832,6 @@ const MetroMap = () => {
           id="M1915"
           stroke="#052f93"
           strokeWidth="1"
-          lineId="1"
           fill="#ffffff"
         />
         <circle
@@ -3843,7 +3843,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1913 L1"
@@ -3854,7 +3853,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1912 L1"
@@ -3865,7 +3863,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1911 L1"
@@ -3876,7 +3873,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1910 L1"
@@ -3887,7 +3883,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1909 L1"
@@ -3898,7 +3893,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1908 L1"
@@ -3909,7 +3903,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1907 L1"
@@ -3920,7 +3913,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1906 L1"
@@ -3931,14 +3923,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1905 L1 interchange M4602 LU"
           cx="992.5"
           cy="65"
           id="M1905"
-          lineId="1 U"
         >
           <rect
             x="989.5"
@@ -3975,14 +3965,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1903 L1 interchange M2712 L7"
           cx="1070"
           cy="80"
           id="M1903"
-          lineId="1 7"
         >
           <rect
             x="1067"
@@ -4019,7 +4007,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1901 L1"
@@ -4030,14 +4017,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1022 L1 interchange M0412 L4"
           cx="1070"
           cy="155"
           id="M0412"
-          lineId="1 4"
         >
           <rect
             x="1067"
@@ -4074,7 +4059,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1020 L1"
@@ -4085,14 +4069,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1019 L1 interchange M LG"
           cx="1070"
           cy="210"
           id="M1019"
-          lineId="1 G"
         >
           <rect
             x="1067"
@@ -4125,7 +4107,6 @@ const MetroMap = () => {
           cx="1070"
           cy="225"
           id="M1018"
-          lineId="1 6"
         >
           <rect
             x="1067"
@@ -4162,7 +4143,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1016 L1"
@@ -4173,14 +4153,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1015 L1 interchange M1307 LG M101C LK"
           cx="1030"
           cy="275"
           id="M1015"
-          lineId="1 G K"
         >
           <rect
             x="1027"
@@ -4221,7 +4199,6 @@ const MetroMap = () => {
           cx="995"
           cy="275"
           id="M0158"
-          lineId="1 G K B"
         >
           <rect
             x="992"
@@ -4274,14 +4251,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M0156 L1 interchange M0246 L2 M4713 LW"
           cx="930"
           cy="275"
           id="M0156"
-          lineId="1 2 W"
         >
           <rect
             x="927"
@@ -4322,7 +4297,6 @@ const MetroMap = () => {
           cx="900"
           cy="275"
           id="M0159"
-          lineId="1 6"
         >
           <rect
             x="897"
@@ -4355,7 +4329,6 @@ const MetroMap = () => {
           cx="865"
           cy="275"
           id="M0155"
-          lineId="1 4"
         >
           <rect
             x="862"
@@ -4392,14 +4365,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M0153 L1 interchange M0319 L3 M2535 L5"
           cx="715"
           cy="275"
           id="M0153"
-          lineId="1 3 5"
         >
           <rect
             x="712"
@@ -4444,14 +4415,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M0151 L1 interchange M0201 L2"
           cx="655"
           cy="345"
           id="M0151"
-          lineId="1 2"
         >
           <rect
             x="647"
@@ -4484,7 +4453,6 @@ const MetroMap = () => {
           cx="655"
           cy="400"
           id="M0150"
-          lineId="1 4 A"
         >
           <rect
             x="652"
@@ -4529,14 +4497,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1003 L1 interchange M100C LK"
           cx="655"
           cy="545"
           id="M1003"
-          lineId="1 K"
         >
           <rect
             x="652"
@@ -4569,7 +4535,6 @@ const MetroMap = () => {
           cx="590"
           cy="565"
           id="M1004"
-          lineId="1 9"
         >
           <rect
             x="587"
@@ -4602,7 +4567,6 @@ const MetroMap = () => {
           cx="512.5"
           cy="545"
           id="M1005"
-          lineId="1 SL"
         >
           <rect
             x="509.5"
@@ -4635,7 +4599,6 @@ const MetroMap = () => {
           cx="475"
           cy="515"
           id="M1032"
-          lineId="1 5"
         >
           <rect
             x="472"
@@ -4672,14 +4635,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1007 L1 interchange M0234 L2"
           cx="440"
           cy="550"
           id="M1007"
-          lineId="1 2"
         >
           <rect
             x="432"
@@ -4707,13 +4668,7 @@ const MetroMap = () => {
             fill="#10a643"
           />
         </g>
-        <g
-          className="marker M1701 L1 interchange"
-          cx="415"
-          cy="575"
-          id="M1701"
-          lineId="1"
-        >
+        <g className="marker M1701 L1 interchange" cx="415" cy="575" id="M1701">
           <rect
             x="412"
             y="572"
@@ -4749,7 +4704,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1801 L1"
@@ -4760,7 +4714,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1802 L1"
@@ -4771,14 +4724,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1821 L1 interchange M2752 L7"
           cx="330"
           cy="600"
           id="M1821"
-          lineId="1 7"
         >
           <rect
             x="322"
@@ -4815,14 +4766,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1814 L1 interchange M4804 LSH"
           cx="285"
           cy="645"
           id="M1814"
-          lineId="1 SH"
         >
           <rect
             x="282"
@@ -4859,7 +4808,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1822 L1"
@@ -4870,7 +4818,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1805 L1"
@@ -4881,7 +4828,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1815 L1"
@@ -4892,14 +4838,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1806 L1 interchange M3120 LI"
           cx="140"
           cy="670"
           id="M1806"
-          lineId="1 I"
         >
           <rect
             x="137"
@@ -4936,7 +4880,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1808 L1"
@@ -4947,7 +4890,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1816 L1"
@@ -4958,14 +4900,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1809 L1 interchange M3218 LI2"
           cx="95"
           cy="735"
           id="M1809"
-          lineId="1 I2"
         >
           <rect
             x="92"
@@ -5002,7 +4942,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1810 L1"
@@ -5013,7 +4952,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1817 L1"
@@ -5024,7 +4962,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1811 L1"
@@ -5035,14 +4972,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1812 L1 interchange M1891 LB"
           cx="220"
           cy="800"
           id="M1812"
-          lineId="1 B"
         >
           <rect
             x="217"
@@ -5075,7 +5010,6 @@ const MetroMap = () => {
           cx="415"
           cy="640"
           id="M1702"
-          lineId="1 7"
         >
           <rect
             x="412"
@@ -5112,15 +5046,8 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
-        <g
-          className="marker M1703 L1 interchange"
-          cx="415"
-          cy="720"
-          id="M1703"
-          lineId="1"
-        >
+        <g className="marker M1703 L1 interchange" cx="415" cy="720" id="M1703">
           <rect
             x="412"
             y="712"
@@ -5156,7 +5083,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1704 L1"
@@ -5167,7 +5093,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1705 L1"
@@ -5178,7 +5103,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1706 L1"
@@ -5189,7 +5113,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1707 L1"
@@ -5200,14 +5123,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1708 L1 interchange M1458 L4"
           cx="515"
           cy="860"
           id="M1708"
-          lineId="1 4"
         >
           <rect
             x="512"
@@ -5244,7 +5165,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1729 L1"
@@ -5255,7 +5175,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1710 L1"
@@ -5266,7 +5185,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1711 L1"
@@ -5277,7 +5195,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1712 L1"
@@ -5288,14 +5205,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M1713 L1 interchange M1846 LB"
           cx="670"
           cy="950"
           id="M1713"
-          lineId="1 B"
         >
           <rect
             x="667"
@@ -5332,15 +5247,8 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
-        <g
-          className="marker M1716 L1 interchange"
-          cx="730"
-          cy="950"
-          id="M1716"
-          lineId="1"
-        >
+        <g className="marker M1716 L1 interchange" cx="730" cy="950" id="M1716">
           <rect
             x="727"
             y="942"
@@ -5376,7 +5284,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1718 L1"
@@ -5387,7 +5294,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1719 L1"
@@ -5398,7 +5304,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1720 L1"
@@ -5409,7 +5314,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1721 L1"
@@ -5420,7 +5324,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1722 L1"
@@ -5431,7 +5334,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1723 L1"
@@ -5442,7 +5344,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1724 L1"
@@ -5453,7 +5354,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1725 L1"
@@ -5464,7 +5364,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1726 L1"
@@ -5475,7 +5374,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1727 L1"
@@ -5486,7 +5384,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1728 L1"
@@ -5497,7 +5394,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1401 L1"
@@ -5508,7 +5404,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1402 L1"
@@ -5519,7 +5414,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1403 L1"
@@ -5530,7 +5424,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1404 L1"
@@ -5541,7 +5434,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1405 L1"
@@ -5552,7 +5444,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1407 L1"
@@ -5563,7 +5454,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1408 L1"
@@ -5574,7 +5464,6 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <circle
           className="marker M1749 L1"
@@ -5585,14 +5474,12 @@ const MetroMap = () => {
           stroke="#052f93"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="1"
         />
         <g
           className="marker M0200 L2 interchange M2519 L5"
           cx="290"
           cy="460"
           id="M0200"
-          lineId="2 5"
         >
           <rect
             x="282"
@@ -5629,7 +5516,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0248 L2"
@@ -5640,7 +5526,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0247 L2"
@@ -5651,7 +5536,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0235 L2"
@@ -5662,14 +5546,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0236 L2 interchange M2524 L5"
           cx="415"
           cy="460"
           id="M0236"
-          lineId="2 5"
         >
           <rect
             x="412"
@@ -5702,7 +5584,6 @@ const MetroMap = () => {
           cx="460"
           cy="445"
           id="M0237"
-          lineId="2 9"
         >
           <rect
             x="452"
@@ -5735,7 +5616,6 @@ const MetroMap = () => {
           cx="510"
           cy="445"
           id="M0238"
-          lineId="2 6"
         >
           <rect
             x="502"
@@ -5768,7 +5648,6 @@ const MetroMap = () => {
           cx="550"
           cy="410"
           id="M0239"
-          lineId="2 K A"
         >
           <rect
             x="547"
@@ -5813,7 +5692,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0241 L2"
@@ -5824,7 +5702,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0242 L2"
@@ -5835,14 +5712,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0243 L2 interchange M2532 L5"
           cx="605"
           cy="345"
           id="M0243"
-          lineId="2 5"
         >
           <rect
             x="597"
@@ -5879,14 +5754,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0203 L2 interchange M0320 L3"
           cx="720"
           cy="345"
           id="M0203"
-          lineId="2 3"
         >
           <rect
             x="717"
@@ -5919,7 +5792,6 @@ const MetroMap = () => {
           cx="790"
           cy="345"
           id="M0204"
-          lineId="2 5"
         >
           <rect
             x="787"
@@ -5952,7 +5824,6 @@ const MetroMap = () => {
           cx="850"
           cy="340"
           id="M0205"
-          lineId="2 4 5"
         >
           <rect
             x="847"
@@ -5993,7 +5864,6 @@ const MetroMap = () => {
           cx="900"
           cy="345"
           id="M0206"
-          lineId="2 6"
         >
           <rect
             x="892"
@@ -6030,14 +5900,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0208 L2 interchange M2541 L5 M1013 LK M102C LB"
           cx="990"
           cy="390"
           id="M0208"
-          lineId="2 5 K B"
         >
           <rect
             x="987"
@@ -6090,7 +5958,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0210 L2"
@@ -6101,14 +5968,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0211 L2 interchange"
           cx="1055"
           cy="455"
           id="M0211"
-          lineId="2"
         >
           <rect
             x="1052"
@@ -6141,7 +6006,6 @@ const MetroMap = () => {
           cx="1165"
           cy="485"
           id="M0212"
-          lineId="2 7"
         >
           <rect
             x="1162"
@@ -6178,7 +6042,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0214 L2"
@@ -6189,7 +6052,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0215 L2"
@@ -6200,14 +6062,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0216 L2 interchange M2815 L8"
           cx="1255"
           cy="635"
           id="M0216"
-          lineId="2 8"
         >
           <rect
             x="1252"
@@ -6244,14 +6104,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0218 L2 interchange M4130 L9"
           cx="1145"
           cy="680"
           id="M0218"
-          lineId="2 9"
         >
           <rect
             x="1142"
@@ -6288,14 +6146,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0220 L2 interchange M1023 LB"
           cx="1015"
           cy="680"
           id="M0220"
-          lineId="2 B"
         >
           <rect
             x="1012"
@@ -6332,14 +6188,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0222 L2 interchange M4307 LS"
           cx="920"
           cy="680"
           id="M0222"
-          lineId="2 S"
         >
           <rect
             x="917"
@@ -6372,7 +6226,6 @@ const MetroMap = () => {
           cx="860"
           cy="680"
           id="M0223"
-          lineId="2 3"
         >
           <rect
             x="857"
@@ -6409,7 +6262,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0225 L2"
@@ -6420,14 +6272,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0226 L2 interchange M0433 L4"
           cx="705"
           cy="680"
           id="M0226"
-          lineId="2 4"
         >
           <rect
             x="702"
@@ -6464,7 +6314,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0228 L2"
@@ -6475,7 +6324,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0229 L2"
@@ -6486,14 +6334,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0230 L2 interchange M4408 LSL"
           cx="545"
           cy="680"
           id="M0230"
-          lineId="2 SL"
         >
           <rect
             x="542"
@@ -6530,7 +6376,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0232 L2"
@@ -6541,14 +6386,12 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <g
           className="marker M0233 L2 interchange M2746 L7"
           cx="460"
           cy="640"
           id="M0233"
-          lineId="2 7"
         >
           <rect
             x="457"
@@ -6585,7 +6428,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0245 L2"
@@ -6596,7 +6438,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M0250 L2"
@@ -6607,7 +6448,6 @@ const MetroMap = () => {
           stroke="#10a643"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="2"
         />
         <circle
           className="marker M1958 L3"
@@ -6618,7 +6458,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1957 L3"
@@ -6629,7 +6468,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1956 L3"
@@ -6640,7 +6478,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1955 L3"
@@ -6651,7 +6488,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1954 L3"
@@ -6662,14 +6498,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M1953 L3 interchange M0300 LK"
           cx="265"
           cy="175"
           id="M1953"
-          lineId="3 K"
         >
           <rect
             x="262"
@@ -6706,7 +6540,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1951 L3"
@@ -6717,7 +6550,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1948 L3"
@@ -6728,7 +6560,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M1950 L3"
@@ -6739,7 +6570,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0309 L3"
@@ -6750,7 +6580,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0310 L3"
@@ -6761,14 +6590,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0311 L3 interchange M2615 L6"
           cx="440"
           cy="175"
           id="M0311"
-          lineId="3 6"
         >
           <rect
             x="437"
@@ -6801,7 +6628,6 @@ const MetroMap = () => {
           cx="500"
           cy="175"
           id="M0312"
-          lineId="3 6"
         >
           <rect
             x="492"
@@ -6838,7 +6664,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0314 L3"
@@ -6849,7 +6674,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0315 L3"
@@ -6860,7 +6684,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0316 L3"
@@ -6871,7 +6694,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0317 L3"
@@ -6882,7 +6704,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0318 L3"
@@ -6893,14 +6714,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0321 L3 interchange M0423 L4"
           cx="775"
           cy="400"
           id="M0321"
-          lineId="3 4"
         >
           <rect
             x="772"
@@ -6937,14 +6756,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0323 L3 interchange M2634 L6"
           cx="850"
           cy="475"
           id="M0323"
-          lineId="3 6"
         >
           <rect
             x="847"
@@ -6981,14 +6798,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0325 L3 interchange M1011 LK"
           cx="860"
           cy="530"
           id="M0325"
-          lineId="3 K"
         >
           <rect
             x="857"
@@ -7025,14 +6840,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0327 L3 interchange M4304 LS"
           cx="860"
           cy="590"
           id="M0327"
-          lineId="3 S"
         >
           <rect
             x="857"
@@ -7069,14 +6882,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0329 L3 interchange M2736 L7 M4123 L9"
           cx="860"
           cy="645"
           id="M0329"
-          lineId="3 7 9"
         >
           <rect
             x="857"
@@ -7121,14 +6932,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0332 L3 interchange M4308 LS"
           cx="920"
           cy="725"
           id="M0332"
-          lineId="3 S"
         >
           <rect
             x="917"
@@ -7165,14 +6974,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0334 L3 interchange M1025 LB"
           cx="1015"
           cy="725"
           id="M0334"
-          lineId="3 B"
         >
           <rect
             x="1012"
@@ -7209,7 +7016,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0336 L3"
@@ -7220,7 +7026,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0337 L3"
@@ -7231,7 +7036,6 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <circle
           className="marker M0338 L3"
@@ -7242,14 +7046,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0339 L3 interchange M1030 LB"
           cx="1285"
           cy="765"
           id="M0339"
-          lineId="3 B"
         >
           <rect
             x="1282"
@@ -7282,7 +7084,6 @@ const MetroMap = () => {
           cx="1332.5"
           cy="717.5"
           id="M2818"
-          lineId="3 8"
         >
           <rect
             x="1329.5"
@@ -7319,14 +7120,12 @@ const MetroMap = () => {
           stroke="#ea8406"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="3"
         />
         <g
           className="marker M0342 L3 interchange M2558 L5"
           cx="1410"
           cy="640"
           id="M2558"
-          lineId="3 5"
         >
           <rect
             x="1407"
@@ -7363,7 +7162,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0406 L4"
@@ -7374,7 +7172,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0408 L4"
@@ -7385,7 +7182,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0409 L4"
@@ -7396,7 +7192,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0410 L4"
@@ -7407,14 +7202,12 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <g
           className="marker M0411 L4 interchange M2715 L7"
           cx="1150"
           cy="155"
           id="M0411"
-          lineId="4 7"
         >
           <rect
             x="1147"
@@ -7451,7 +7244,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0414 L4"
@@ -7462,7 +7254,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0415 L4"
@@ -7473,7 +7264,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0416 L4"
@@ -7484,7 +7274,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0417 L4"
@@ -7495,14 +7284,12 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <g
           className="marker M0418 L4 interchange M4711 LW"
           cx="865"
           cy="170"
           id="M0418"
-          lineId="4 W"
         >
           <rect
             x="862"
@@ -7539,7 +7326,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0420 L4"
@@ -7550,7 +7336,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0424 L4"
@@ -7561,7 +7346,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0425 L4"
@@ -7572,7 +7356,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M0427 L4"
@@ -7583,14 +7366,12 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <g
           className="marker M0428 L4 interchange M2629 L6"
           cx="705"
           cy="475"
           id="M0428"
-          lineId="4 6"
         >
           <rect
             x="697"
@@ -7627,14 +7408,12 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <g
           className="marker M0430 L4 interchange M1008 LK"
           cx="705"
           cy="545"
           id="M0430"
-          lineId="4 K"
         >
           <rect
             x="702"
@@ -7667,7 +7446,6 @@ const MetroMap = () => {
           cx="705"
           cy="600"
           id="M0431"
-          lineId="4 9"
         >
           <rect
             x="702"
@@ -7700,7 +7478,6 @@ const MetroMap = () => {
           cx="705"
           cy="640"
           id="M0432"
-          lineId="4 7"
         >
           <rect
             x="702"
@@ -7737,7 +7514,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1450 L4"
@@ -7748,7 +7524,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1451 L4"
@@ -7759,7 +7534,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1452 L4"
@@ -7770,7 +7544,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1453 L4"
@@ -7781,7 +7554,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1454 L4"
@@ -7792,7 +7564,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1455 L4"
@@ -7803,7 +7574,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1456 L4"
@@ -7814,7 +7584,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1457 L4"
@@ -7825,7 +7594,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1751 L4"
@@ -7836,7 +7604,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1763 L4"
@@ -7847,7 +7614,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1752 L4"
@@ -7858,7 +7624,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1753 L4"
@@ -7869,7 +7634,6 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <circle
           className="marker M1754 L4"
@@ -7880,14 +7644,12 @@ const MetroMap = () => {
           stroke="#00a8e6"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="4"
         />
         <g
           className="marker M1755 L4 interchange M1830 LB"
           cx="350"
           cy="945"
           id="M1755"
-          lineId="4 B"
         >
           <rect
             x="347"
@@ -7920,7 +7682,6 @@ const MetroMap = () => {
           cx="320"
           cy="945"
           id="M1756"
-          lineId="4 B"
         >
           <rect
             x="317"
@@ -7953,7 +7714,6 @@ const MetroMap = () => {
           cx="290"
           cy="945"
           id="M1757"
-          lineId="4 B"
         >
           <rect
             x="287"
@@ -7986,7 +7746,6 @@ const MetroMap = () => {
           cx="260"
           cy="945"
           id="M1758"
-          lineId="4 B SH"
         >
           <rect
             x="257"
@@ -8027,7 +7786,6 @@ const MetroMap = () => {
           cx="230"
           cy="945"
           id="M1759"
-          lineId="4 B"
         >
           <rect
             x="227"
@@ -8060,7 +7818,6 @@ const MetroMap = () => {
           cx="195"
           cy="945"
           id="M1760"
-          lineId="4 B"
         >
           <rect
             x="192"
@@ -8093,7 +7850,6 @@ const MetroMap = () => {
           cx="155"
           cy="945"
           id="M1761"
-          lineId="4 B"
         >
           <rect
             x="152"
@@ -8126,7 +7882,6 @@ const MetroMap = () => {
           cx="100"
           cy="945"
           id="M1762"
-          lineId="4 B"
         >
           <rect
             x="97"
@@ -8163,7 +7918,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2512 L5"
@@ -8174,14 +7928,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2513 L5 interchange M4102 L9 M4929 LKP M4207 LA"
           cx="210"
           cy="350"
           id="M2513"
-          lineId="5 9 KP A"
         >
           <rect
             x="207"
@@ -8234,7 +7986,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2515 L5"
@@ -8245,7 +7996,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2516 L5"
@@ -8256,7 +8006,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2517 L5"
@@ -8267,7 +8016,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2518 L5"
@@ -8278,7 +8026,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2520 L5"
@@ -8289,7 +8036,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2521 L5"
@@ -8300,7 +8046,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2522 L5"
@@ -8311,7 +8056,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2523 L5"
@@ -8322,7 +8066,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2525 L5"
@@ -8333,14 +8076,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2527 L5 interchange M4115 L9"
           cx="525"
           cy="505"
           id="M2527"
-          lineId="5 9"
         >
           <rect
             x="522"
@@ -8377,7 +8118,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2529 L5"
@@ -8388,14 +8128,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2530 L5 interchange M2627 L6 M1262 LK M4202 LA"
           cx="605"
           cy="460"
           id="M2530"
-          lineId="5 6 K A"
         >
           <rect
             x="602"
@@ -8448,7 +8186,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2533 L5"
@@ -8459,7 +8196,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2534 L5"
@@ -8470,14 +8206,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2538 L5 interchange M2635 L6"
           cx="850"
           cy="395"
           id="M2538"
-          lineId="5 6"
         >
           <rect
             x="847"
@@ -8514,7 +8248,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2540 L5"
@@ -8525,7 +8258,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2542 L5"
@@ -8536,7 +8268,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2543 L5"
@@ -8547,7 +8278,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2544 L5"
@@ -8558,14 +8288,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2545 L5 interchange M2727 L7"
           cx="1165"
           cy="395"
           id="M2545"
-          lineId="5 7"
         >
           <rect
             x="1162"
@@ -8602,7 +8330,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2547 L5"
@@ -8613,14 +8340,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2548 L5 interchange M2812 L8"
           cx="1355"
           cy="540"
           id="M2548"
-          lineId="5 8"
         >
           <rect
             x="1352"
@@ -8653,7 +8378,6 @@ const MetroMap = () => {
           cx="1410"
           cy="540"
           id="M2549"
-          lineId="5"
         >
           <rect
             x="1407"
@@ -8690,7 +8414,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2551 L5"
@@ -8701,7 +8424,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2552 L5"
@@ -8712,7 +8434,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2553 L5"
@@ -8723,7 +8444,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2554 L5"
@@ -8734,7 +8454,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2562 L5"
@@ -8745,7 +8464,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2563 L5"
@@ -8756,7 +8474,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2564 L5"
@@ -8767,7 +8484,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2565 L5"
@@ -8778,7 +8494,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2566 L5"
@@ -8789,7 +8504,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2555 L5"
@@ -8800,14 +8514,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2556 L5 interchange M4136 L9"
           cx="1410"
           cy="590"
           id="M2556"
-          lineId="5 9"
         >
           <rect
             x="1407"
@@ -8844,7 +8556,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2559 L5"
@@ -8855,7 +8566,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2560 L5"
@@ -8866,7 +8576,6 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <circle
           className="marker M2561 L5"
@@ -8877,14 +8586,12 @@ const MetroMap = () => {
           stroke="#a95094"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="5"
         />
         <g
           className="marker M2649 L6 interchange M1311 LG"
           cx="1260"
           cy="255"
           id="M1311"
-          lineId="6 G"
         >
           <rect
             x="1257"
@@ -8921,7 +8628,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2647 L6"
@@ -8932,14 +8638,12 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <g
           className="marker M2646 L6 interchange M2719 L7"
           cx="1165"
           cy="225"
           id="M2646"
-          lineId="6 7"
         >
           <rect
             x="1157"
@@ -8976,7 +8680,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2643 L6"
@@ -8987,7 +8690,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2642 L6"
@@ -8998,7 +8700,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2641 L6"
@@ -9009,7 +8710,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2640 L6"
@@ -9020,14 +8720,12 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <g
           className="marker M2639 L6 interchange M4712 LW"
           cx="900"
           cy="240"
           id="M2639"
-          lineId="6 W"
         >
           <rect
             x="897"
@@ -9064,7 +8762,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2633 L6"
@@ -9075,7 +8772,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2632 L6"
@@ -9086,7 +8782,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2631 L6"
@@ -9097,7 +8792,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2630 L6"
@@ -9108,14 +8802,12 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <g
           className="marker M2628 L6 interchange M1261 LK"
           cx="635"
           cy="470"
           id="M2628"
-          lineId="6 K"
         >
           <rect
             x="632"
@@ -9152,7 +8844,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2625 L6"
@@ -9163,7 +8854,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2624 L6"
@@ -9174,7 +8864,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2622 L6"
@@ -9185,7 +8874,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2621 L6"
@@ -9196,7 +8884,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2620 L6"
@@ -9207,14 +8894,12 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <g
           className="marker M2619 L6 interchange M1266 LK M4204 LA"
           cx="470"
           cy="310"
           id="M2619"
-          lineId="6 K A"
         >
           <rect
             x="467"
@@ -9259,7 +8944,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2617 L6"
@@ -9270,7 +8954,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2611 L6"
@@ -9281,7 +8964,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2612 L6"
@@ -9292,7 +8974,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2614 L6"
@@ -9303,7 +8984,6 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <circle
           className="marker M2616 L6"
@@ -9314,14 +8994,12 @@ const MetroMap = () => {
           stroke="#d08d1a"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="6"
         />
         <g
           className="marker M3763 L7 interchange M3213 LI2"
           cx="40"
           cy="580"
           id="M3213"
-          lineId="7 I2"
         >
           <rect
             x="37"
@@ -9358,14 +9036,12 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <g
           className="marker M3761 L7 interchange M3118 LI"
           cx="140"
           cy="605"
           id="M3118"
-          lineId="7 I"
         >
           <rect
             x="137"
@@ -9402,7 +9078,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3759 L7"
@@ -9413,7 +9088,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3758 L7"
@@ -9424,7 +9098,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3757 L7"
@@ -9435,7 +9108,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3756 L7"
@@ -9446,7 +9118,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3755 L7"
@@ -9457,7 +9128,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3754 L7"
@@ -9468,7 +9138,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M3753 L7"
@@ -9479,7 +9148,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2751 L7"
@@ -9490,7 +9158,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2750 L7"
@@ -9501,7 +9168,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2749 L7"
@@ -9512,7 +9178,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2747 L7"
@@ -9523,7 +9188,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2745 L7"
@@ -9534,14 +9198,12 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <g
           className="marker M2744 L7 interchange M4404 LSL"
           cx="520"
           cy="640"
           id="M2744"
-          lineId="7 SL"
         >
           <rect
             x="517"
@@ -9578,7 +9240,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2742 L7"
@@ -9589,7 +9250,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2741 L7"
@@ -9600,7 +9260,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2740 L7"
@@ -9611,7 +9270,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2739 L7"
@@ -9622,7 +9280,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2737 L7"
@@ -9633,7 +9290,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2735 L7"
@@ -9644,14 +9300,12 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <g
           className="marker M2734 L7 interchange M4305 LS"
           cx="975"
           cy="600"
           id="M2734"
-          lineId="7 S"
         >
           <rect
             x="972"
@@ -9688,14 +9342,12 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <g
           className="marker M2732 L7 interchange M1849 LB"
           cx="1095"
           cy="570"
           id="M2732"
-          lineId="7 B"
         >
           <rect
             x="1092"
@@ -9732,7 +9384,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2730 L7"
@@ -9743,7 +9394,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2728 L7"
@@ -9754,7 +9404,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2726 L7"
@@ -9765,7 +9414,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2725 L7"
@@ -9776,7 +9424,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2724 L7"
@@ -9787,7 +9434,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2723 L7"
@@ -9798,14 +9444,12 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <g
           className="marker M2722 L7 interchange M1309 LG M1202 LK"
           cx="1165"
           cy="270"
           id="M2722"
-          lineId="7 G K"
         >
           <rect
             x="1162"
@@ -9858,7 +9502,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2720 L7"
@@ -9869,7 +9512,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2718 L7"
@@ -9880,7 +9522,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2717 L7"
@@ -9891,7 +9532,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2716 L7"
@@ -9902,7 +9542,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2714 L7"
@@ -9913,7 +9552,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2713 L7"
@@ -9924,7 +9562,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2711 L7"
@@ -9935,7 +9572,6 @@ const MetroMap = () => {
           stroke="#657931"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="7"
         />
         <circle
           className="marker M2811 L8"
@@ -9946,7 +9582,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2813 L8"
@@ -9957,7 +9592,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2814 L8"
@@ -9968,14 +9602,12 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <g
           className="marker M2816 L8 interchange M4133 L9"
           cx="1280"
           cy="660"
           id="M2816"
-          lineId="8 9"
         >
           <rect
             x="1277"
@@ -10012,7 +9644,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2819 L8"
@@ -10023,7 +9654,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2820 L8"
@@ -10034,14 +9664,12 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <g
           className="marker M2821 L8 interchange M1031 LB"
           cx="1385"
           cy="765"
           id="M1031"
-          lineId="8 B"
         >
           <rect
             x="1377"
@@ -10078,7 +9706,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2822 L8"
@@ -10089,7 +9716,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2823 L8"
@@ -10100,7 +9726,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2824 L8"
@@ -10111,7 +9736,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2825 L8"
@@ -10122,7 +9746,6 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <circle
           className="marker M2826 L8"
@@ -10133,14 +9756,12 @@ const MetroMap = () => {
           stroke="#e74e6d"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="8"
         />
         <g
           className="marker M2827 L8 interchange M1853 LB"
           cx="1295"
           cy="805"
           id="M1853"
-          lineId="8 B"
         >
           <rect
             x="1292"
@@ -10177,7 +9798,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4103 L9"
@@ -10188,7 +9808,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4104 L9"
@@ -10199,14 +9818,12 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <g
           className="marker M4105 L9 interchange M4206 LA"
           cx="275"
           cy="375"
           id="M4105"
-          lineId="9 A"
         >
           <rect
             x="272"
@@ -10243,7 +9860,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4107 L9"
@@ -10254,7 +9870,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4108 L9"
@@ -10265,7 +9880,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4109 L9"
@@ -10276,7 +9890,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4110 L9"
@@ -10287,7 +9900,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4111 L9"
@@ -10298,7 +9910,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4112 L9"
@@ -10309,7 +9920,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4114 L9"
@@ -10320,14 +9930,12 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <g
           className="marker M4116 L9 interchange M4401 LSL"
           cx="548.5"
           cy="525"
           id="M4116"
-          lineId="9 SL"
         >
           <rect
             x="540.5"
@@ -10364,7 +9972,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4119 L9"
@@ -10375,7 +9982,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4121 L9"
@@ -10386,7 +9992,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4122 L9"
@@ -10397,7 +10002,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4124 L9"
@@ -10408,14 +10012,12 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <g
           className="marker M4125 L9 interchange M4306 LS"
           cx="975"
           cy="645"
           id="M4125"
-          lineId="9 S"
         >
           <rect
             x="972"
@@ -10452,14 +10054,12 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <g
           className="marker M4127 L9 interchange M1850 LB"
           cx="1050"
           cy="645"
           id="M1850"
-          lineId="9 B"
         >
           <rect
             x="1047"
@@ -10496,7 +10096,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4129 L9"
@@ -10507,7 +10106,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4131 L9"
@@ -10518,7 +10116,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4132 L9"
@@ -10529,7 +10126,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4134 L9"
@@ -10540,7 +10136,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4135 L9"
@@ -10551,7 +10146,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4137 L9"
@@ -10562,7 +10156,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
         <circle
           className="marker M4138 L9"
@@ -10573,7 +10166,6 @@ const MetroMap = () => {
           stroke="#be941c"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="9"
         />
 
         <g
@@ -10581,7 +10173,6 @@ const MetroMap = () => {
           cx="320"
           cy="855"
           id="M3130"
-          lineId="I B"
         >
           <rect
             x="317"
@@ -10614,7 +10205,6 @@ const MetroMap = () => {
           cx="1105"
           cy="280"
           id="M1201"
-          lineId="G K"
         >
           <rect
             x="1102"
@@ -10647,7 +10237,6 @@ const MetroMap = () => {
           cx="1240"
           cy="280"
           id="M1203"
-          lineId="G K"
         >
           <rect
             x="1237"
@@ -10685,15 +10274,8 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
-        <g
-          className="marker M1284 LK interchange"
-          cx="75"
-          cy="80"
-          id="M1284"
-          lineId="K"
-        >
+        <g className="marker M1284 LK interchange" cx="75" cy="80" id="M1284">
           <rect
             x="72"
             y="77"
@@ -10729,7 +10311,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1282 LK"
@@ -10740,7 +10321,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1280 LK"
@@ -10751,7 +10331,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1279 LK"
@@ -10762,7 +10341,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1278 LK"
@@ -10773,7 +10351,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1277 LK"
@@ -10784,7 +10361,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1276 LK"
@@ -10795,7 +10371,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1275 LK"
@@ -10806,7 +10381,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1274 LK"
@@ -10817,7 +10391,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1273 LK"
@@ -10828,7 +10401,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1272 LK"
@@ -10839,7 +10411,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1271 LK"
@@ -10850,7 +10421,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1270 LK"
@@ -10861,7 +10431,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1269 LK"
@@ -10872,7 +10441,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1268 LK"
@@ -10883,7 +10451,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1267 LK"
@@ -10894,15 +10461,8 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
-        <g
-          className="marker M1265 LK interchange"
-          cx="495"
-          cy="315"
-          id="M1265"
-          lineId="K"
-        >
+        <g className="marker M1265 LK interchange" cx="495" cy="315" id="M1265">
           <rect
             x="492"
             y="312"
@@ -10938,7 +10498,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1251 LK"
@@ -10949,7 +10508,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1263 LK"
@@ -10960,7 +10518,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1009 LK"
@@ -10971,7 +10528,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1010 LK"
@@ -10982,7 +10538,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1012 LK"
@@ -10993,7 +10548,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1204 LK"
@@ -11004,7 +10558,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1205 LK"
@@ -11015,7 +10568,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1206 LK"
@@ -11026,7 +10578,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1207 LK"
@@ -11037,7 +10588,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1208 LK"
@@ -11048,7 +10598,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1209 LK"
@@ -11059,7 +10608,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1210 LK"
@@ -11070,7 +10618,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1211 LK"
@@ -11081,7 +10628,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1212 LK"
@@ -11092,7 +10638,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1213 LK"
@@ -11103,7 +10648,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1214 LK"
@@ -11114,7 +10658,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1215 LK"
@@ -11125,7 +10668,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1216 LK"
@@ -11136,7 +10678,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1217 LK"
@@ -11147,7 +10688,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1218 LK"
@@ -11158,7 +10698,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1219 LK"
@@ -11169,7 +10708,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1220 LK"
@@ -11180,7 +10718,6 @@ const MetroMap = () => {
           stroke="#79c0a0"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="K"
         />
         <circle
           className="marker M1890 LB"
@@ -11191,7 +10728,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1889 LB"
@@ -11202,7 +10738,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1888 LB"
@@ -11213,7 +10748,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1886 LB"
@@ -11224,7 +10758,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1885 LB"
@@ -11235,7 +10768,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1883 LB"
@@ -11246,7 +10778,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1882 LB"
@@ -11257,7 +10788,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1881 LB"
@@ -11268,7 +10798,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1880 LB"
@@ -11279,7 +10808,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1879 LB"
@@ -11290,7 +10818,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1878 LB"
@@ -11301,7 +10828,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1877 LB"
@@ -11312,7 +10838,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1876 LB"
@@ -11323,7 +10848,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1875 LB"
@@ -11334,7 +10858,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1874 LB"
@@ -11345,7 +10868,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1873 LB"
@@ -11356,7 +10878,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1872 LB"
@@ -11367,7 +10888,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1871 LB"
@@ -11378,7 +10898,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1870 LB"
@@ -11389,7 +10908,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1869 LB"
@@ -11400,7 +10918,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1868 LB"
@@ -11411,7 +10928,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1867 LB"
@@ -11422,7 +10938,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1866 LB"
@@ -11433,14 +10948,12 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <g
           className="marker M1865 LB interchange M4501 LE"
           cx="865"
           cy="870"
           id="M1865"
-          lineId="B E"
         >
           <rect
             x="862"
@@ -11477,7 +10990,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1863 LB"
@@ -11488,7 +11000,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1861 LB"
@@ -11499,7 +11010,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1862 LB"
@@ -11510,7 +11020,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1859 LB"
@@ -11521,14 +11030,12 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <g
           className="marker M1858 LB interchange M4313 LS"
           cx="1070"
           cy="850"
           id="M1858"
-          lineId="B S"
         >
           <rect
             x="1062"
@@ -11561,7 +11068,6 @@ const MetroMap = () => {
           cx="1090"
           cy="830"
           id="M1857"
-          lineId="B S"
         >
           <rect
             x="1082"
@@ -11598,7 +11104,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1855 LB"
@@ -11609,14 +11114,12 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <g
           className="marker M1860 LB interchange M1502 LKK"
           cx="1210"
           cy="805"
           id="M1860"
-          lineId="B KK"
         >
           <rect
             x="1207"
@@ -11653,7 +11156,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1852 LB"
@@ -11664,7 +11166,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1851 LB"
@@ -11675,7 +11176,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1028 LB"
@@ -11686,7 +11186,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1027 LB"
@@ -11697,7 +11196,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1026 LB"
@@ -11708,7 +11206,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1024 LB"
@@ -11719,7 +11216,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1848 LB"
@@ -11730,7 +11226,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M1847 LB"
@@ -11741,7 +11236,6 @@ const MetroMap = () => {
           stroke="#dbba16"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="B"
         />
         <circle
           className="marker M4309 LS"
@@ -11752,7 +11246,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <circle
           className="marker M4310 LS"
@@ -11763,14 +11256,12 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <g
           className="marker M4311 LS interchange M1501 LKK"
           cx="1045"
           cy="800"
           id="M4311"
-          lineId="S KK"
         >
           <rect
             x="1042"
@@ -11807,7 +11298,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <circle
           className="marker M4315 LS"
@@ -11818,7 +11308,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <circle
           className="marker M4316 LS"
@@ -11829,7 +11318,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <circle
           className="marker M4317 LS"
@@ -11840,7 +11328,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <circle
           className="marker M4318 LS"
@@ -11851,7 +11338,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
         <circle
           className="marker M4319 LS"
@@ -11862,7 +11348,6 @@ const MetroMap = () => {
           stroke="#cd2234"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="S"
         />
 
         <circle
@@ -11874,7 +11359,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4709 LW"
@@ -11885,7 +11369,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4708 LW"
@@ -11896,7 +11379,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4707 LW"
@@ -11907,7 +11389,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4706 LW"
@@ -11918,7 +11399,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4705 LW"
@@ -11929,7 +11409,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4704 LW"
@@ -11940,7 +11419,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4703 LW"
@@ -11951,7 +11429,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4702 LW"
@@ -11962,7 +11439,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
         <circle
           className="marker M4701 LW"
@@ -11973,7 +11449,6 @@ const MetroMap = () => {
           stroke="#878787"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="W"
         />
 
         <circle
@@ -11985,7 +11460,6 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
         <circle
           className="marker M4405 LSL"
@@ -11996,7 +11470,6 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
         <circle
           className="marker M4406 LSL"
@@ -12007,7 +11480,6 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
         <circle
           className="marker M4407 LSL"
@@ -12018,7 +11490,6 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
         <circle
           className="marker M4409 LSL"
@@ -12029,7 +11500,6 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
         <circle
           className="marker M4410 LSL"
@@ -12040,7 +11510,6 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
         <circle
           className="marker M4411 LSL"
@@ -12051,20 +11520,18 @@ const MetroMap = () => {
           stroke="#3399FF"
           strokeWidth="1"
           fill="#ffffff"
-          lineId="SL"
         />
       </g>
       {/* <!-- 텍스트 라벨 --> */}
       <g
         className="label-group"
-        style={{ fill: "black", "letter-spacing": "-1px", "font-size": "9px" }}
+        style={{ fill: "black", letterSpacing: "-1px", fontSize: "9px" }}
       >
         <text
           className="label S1916 L1"
           y="65"
           id="S1916"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="645" dx="0" dy="13" fontSize="9px">
             소요산
@@ -12074,8 +11541,7 @@ const MetroMap = () => {
           className="label S1915 L1"
           y="65"
           id="S1915"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="680" dx="0" dy="13" fontSize="9px">
             동두천
@@ -12085,8 +11551,7 @@ const MetroMap = () => {
           className="label S1914 L1"
           y="65"
           id="S1914"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="710" dx="0" dy="13" fontSize="9px">
             보산
@@ -12096,8 +11561,7 @@ const MetroMap = () => {
           className="label S1913 L1"
           y="65"
           id="S1913"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="742.5" dx="0" dy="13" fontSize="9px">
             동두천중앙
@@ -12107,8 +11571,7 @@ const MetroMap = () => {
           className="label S1912 L1"
           y="65"
           id="S1912"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="775" dx="0" dy="13" fontSize="9px">
             지행
@@ -12118,8 +11581,7 @@ const MetroMap = () => {
           className="label S1911 L1"
           y="65"
           id="S1911"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="805" dx="0" dy="13" fontSize="9px">
             덕정
@@ -12129,8 +11591,7 @@ const MetroMap = () => {
           className="label S1910 L1"
           y="65"
           id="S1910"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="840" dx="0" dy="13" fontSize="9px">
             덕계
@@ -12140,8 +11601,7 @@ const MetroMap = () => {
           className="label S1909 L1"
           y="65"
           id="S1909"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="870" dx="0" dy="13" fontSize="9px">
             양주
@@ -12151,8 +11611,7 @@ const MetroMap = () => {
           className="label S1908 L1"
           y="65"
           id="S1908"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="902.5" dx="0" dy="13" fontSize="9px">
             녹양
@@ -12162,8 +11621,7 @@ const MetroMap = () => {
           className="label S1907 L1"
           y="65"
           id="S1907"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="935" dx="0" dy="13" fontSize="9px">
             가능
@@ -12173,8 +11631,7 @@ const MetroMap = () => {
           className="label S1906 L1"
           y="65"
           id="S1906"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="965" dx="0" dy="13" fontSize="9px">
             의정부
@@ -12184,8 +11641,7 @@ const MetroMap = () => {
           className="label S1905 L1 S4602 LU"
           y="65"
           id="S1905"
-          style={{ "text-anchor": "start" }}
-          lineId="1 U"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="992.5" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             회룡
@@ -12195,8 +11651,7 @@ const MetroMap = () => {
           className="label S1904 L1"
           y="65"
           id="S1904"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1030" dx="0" dy="13" fontSize="9px">
             망월사
@@ -12206,8 +11661,7 @@ const MetroMap = () => {
           className="label S1903 L1 S2712 L7"
           y="80"
           id="S1903"
-          style={{ "text-anchor": "start" }}
-          lineId="1 7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             도봉산
@@ -12217,8 +11671,7 @@ const MetroMap = () => {
           className="label S1902 L1"
           y="100"
           id="S1902"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="5" dy="3" fontSize="9px">
             도봉
@@ -12228,8 +11681,7 @@ const MetroMap = () => {
           className="label S1901 L1"
           y="120"
           id="S1901"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="5" dy="3" fontSize="9px">
             방학
@@ -12239,8 +11691,7 @@ const MetroMap = () => {
           className="label S1022 L1 S0412 L4"
           y="155"
           id="S0412"
-          style={{ "text-anchor": "start" }}
-          lineId="1 4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             창동
@@ -12250,8 +11701,7 @@ const MetroMap = () => {
           className="label S1021 L1"
           y="172.5"
           id="S1021"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="5" dy="3" fontSize="9px">
             녹천
@@ -12261,8 +11711,7 @@ const MetroMap = () => {
           className="label S1020 L1"
           y="190"
           id="S1020"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="5" dy="3" fontSize="9px">
             월계
@@ -12272,8 +11721,7 @@ const MetroMap = () => {
           className="label S1019 L1 S LG"
           y="210"
           id="S1019"
-          style={{ "text-anchor": "start" }}
-          lineId="1 G"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             광운대
@@ -12283,8 +11731,7 @@ const MetroMap = () => {
           className="label S1018 L1 S2645 L6"
           y="225"
           id="S1018"
-          style={{ "text-anchor": "start" }}
-          lineId="1 6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             석계
@@ -12294,8 +11741,7 @@ const MetroMap = () => {
           className="label S1017 L1"
           y="245"
           id="S1017"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1065" dx="3" dy="11" fontSize="9px">
             신이문
@@ -12305,8 +11751,7 @@ const MetroMap = () => {
           className="label S1016 L1"
           y="260"
           id="S1016"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1050" dx="3" dy="11" fontSize="9px">
             외대앞
@@ -12316,8 +11761,7 @@ const MetroMap = () => {
           className="label S1015 L1 S1307 LG S101C LK"
           y="275"
           id="S1015"
-          style={{ "text-anchor": "middle" }}
-          lineId="1 G K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1030" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             회기
@@ -12327,8 +11771,7 @@ const MetroMap = () => {
           className="label S0158 L1 S1306 LG S1014 LK S1845 LB"
           y="275"
           id="S0158"
-          style={{ "text-anchor": "middle" }}
-          lineId="1 G K B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="995" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             청량리
@@ -12338,8 +11781,7 @@ const MetroMap = () => {
           className="label S0157 L1"
           y="275"
           id="S0157"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="960" dx="0" dy="-5" fontSize="9px">
             제기동
@@ -12349,8 +11791,7 @@ const MetroMap = () => {
           className="label S0156 L1 S0246 L2 S4713 LW"
           y="275"
           id="S0156"
-          style={{ "text-anchor": "middle" }}
-          lineId="1 2 W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="930" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             신설동
@@ -12360,8 +11801,7 @@ const MetroMap = () => {
           className="label S0159 L1 S2637 L6"
           y="275"
           id="S0159"
-          style={{ "text-anchor": "end" }}
-          lineId="1 6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="900" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             동묘앞
@@ -12371,8 +11811,7 @@ const MetroMap = () => {
           className="label S0155 L1 S0421 L4"
           y="275"
           id="S0155"
-          style={{ "text-anchor": "end" }}
-          lineId="1 4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="865" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             동대문
@@ -12382,8 +11821,7 @@ const MetroMap = () => {
           className="label S0154 L1"
           y="275"
           id="S0154"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="795" dx="0" dy="-5" fontSize="9px">
             종로5가
@@ -12393,8 +11831,7 @@ const MetroMap = () => {
           className="label S0153 L1 S0319 L3 S2535 L5"
           y="275"
           id="S0153"
-          style={{ "text-anchor": "start" }}
-          lineId="1 3 5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="715" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             종로3가
@@ -12404,8 +11841,7 @@ const MetroMap = () => {
           className="label S0152 L1"
           y="310"
           id="S0152"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="680" dx="-3" dy="-3" fontSize="9px">
             종각
@@ -12415,8 +11851,7 @@ const MetroMap = () => {
           className="label S0151 L1 S0201 L2"
           y="345"
           id="S0151"
-          style={{ "text-anchor": "end" }}
-          lineId="1 2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="655" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             시청
@@ -12426,8 +11861,7 @@ const MetroMap = () => {
           className="label S0150 L1 S0426 L4 S4201 LA"
           y="400"
           id="S0150"
-          style={{ "text-anchor": "start" }}
-          lineId="1 4 A"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="655" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             서울역
@@ -12437,8 +11871,7 @@ const MetroMap = () => {
           className="label S1002 L1"
           y="440"
           id="S1002"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="655" dx="5" dy="3" fontSize="9px">
             남영
@@ -12448,8 +11881,7 @@ const MetroMap = () => {
           className="label S1003 L1 S100C LK"
           y="545"
           id="S1003"
-          style={{ "text-anchor": "start" }}
-          lineId="1 K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="655" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             용산
@@ -12459,8 +11891,7 @@ const MetroMap = () => {
           className="label S1004 L1 S4117 L9"
           y="565"
           id="S1004"
-          style={{ "text-anchor": "end" }}
-          lineId="1 9"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="590" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             노량진
@@ -12470,8 +11901,7 @@ const MetroMap = () => {
           className="label S1005 L1 S4402 LSL"
           y="545"
           id="S1005"
-          style={{ "text-anchor": "end" }}
-          lineId="1 SL"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="512.5" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             대방
@@ -12481,8 +11911,7 @@ const MetroMap = () => {
           className="label S1032 L1 S2526 L5"
           y="515"
           id="S1032"
-          style={{ "text-anchor": "middle" }}
-          lineId="1 5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="475" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             신길
@@ -12492,8 +11921,7 @@ const MetroMap = () => {
           className="label S1006 L1"
           y="530"
           id="S1006"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="460" dx="-3" dy="-3" fontSize="9px">
             영등포
@@ -12503,8 +11931,7 @@ const MetroMap = () => {
           className="label S1007 L1 S0234 L2"
           y="550"
           id="S1007"
-          style={{ "text-anchor": "start" }}
-          lineId="1 2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="440" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             신도림
@@ -12514,8 +11941,7 @@ const MetroMap = () => {
           className="label S1701 L1"
           y="575"
           id="S1701"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="415" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             구로
@@ -12525,8 +11951,7 @@ const MetroMap = () => {
           className="label S1813 L1"
           y="590"
           id="S1813"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="400" dx="-3" dy="-3" fontSize="9px">
             구일
@@ -12536,8 +11961,7 @@ const MetroMap = () => {
           className="label S1801 L1"
           y="595"
           id="S1801"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="380" dx="0" dy="13" fontSize="9px">
             개봉
@@ -12547,8 +11971,7 @@ const MetroMap = () => {
           className="label S1802 L1"
           y="595"
           id="S1802"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="355" dx="0" dy="13" fontSize="9px">
             오류동
@@ -12558,8 +11981,7 @@ const MetroMap = () => {
           className="label S1821 L1 S2752 L7"
           y="600"
           id="S1821"
-          style={{ "text-anchor": "middle" }}
-          lineId="1 7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="330" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             온수
@@ -12569,8 +11991,7 @@ const MetroMap = () => {
           className="label S1803 L1"
           y="625"
           id="S1803"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="305" dx="-3" dy="-3" fontSize="9px">
             역곡
@@ -12580,8 +12001,7 @@ const MetroMap = () => {
           className="label S1814 L1 S4804 LSH"
           y="645"
           id="S1814"
-          style={{ "text-anchor": "end" }}
-          lineId="1 SH"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="285" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             소사
@@ -12591,8 +12011,7 @@ const MetroMap = () => {
           className="label S1804 L1"
           y="670"
           id="S1804"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="255" dx="0" dy="-5" fontSize="9px">
             부천
@@ -12602,8 +12021,7 @@ const MetroMap = () => {
           className="label S1822 L1"
           y="670"
           id="S1822"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="222.5" dx="0" dy="-5" fontSize="9px">
             중동
@@ -12613,8 +12031,7 @@ const MetroMap = () => {
           className="label S1805 L1"
           y="670"
           id="S1805"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="195" dx="0" dy="-5" fontSize="9px">
             송내
@@ -12624,8 +12041,7 @@ const MetroMap = () => {
           className="label S1815 L1"
           y="670"
           id="S1815"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="167.5" dx="0" dy="-5" fontSize="9px">
             부개
@@ -12635,8 +12051,7 @@ const MetroMap = () => {
           className="label S1806 L1 S3120 LI"
           y="670"
           id="S1806"
-          style={{ "text-anchor": "end" }}
-          lineId="1 I"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="140" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             부평
@@ -12646,8 +12061,7 @@ const MetroMap = () => {
           className="label S1807 L1"
           y="670"
           id="S1807"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="115" dx="0" dy="-5" fontSize="9px">
             백운
@@ -12657,8 +12071,7 @@ const MetroMap = () => {
           className="label S1808 L1"
           y="697.5"
           id="S1808"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="95" dx="5" dy="3" fontSize="9px">
             동암
@@ -12668,8 +12081,7 @@ const MetroMap = () => {
           className="label S1816 L1"
           y="715"
           id="S1816"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="95" dx="5" dy="3" fontSize="9px">
             간석
@@ -12679,8 +12091,7 @@ const MetroMap = () => {
           className="label S1809 L1 S3218 LI2"
           y="735"
           id="S1809"
-          style={{ "text-anchor": "start" }}
-          lineId="1 I2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="95" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             주안
@@ -12690,8 +12101,7 @@ const MetroMap = () => {
           className="label S1823 L1"
           y="760"
           id="S1823"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="95" dx="-5" dy="3" fontSize="9px">
             도화
@@ -12701,8 +12111,7 @@ const MetroMap = () => {
           className="label S1810 L1"
           y="800"
           id="S1810"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="125" dx="0" dy="-5" fontSize="9px">
             제물포
@@ -12712,8 +12121,7 @@ const MetroMap = () => {
           className="label S1817 L1"
           y="800"
           id="S1817"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="155" dx="0" dy="-5" fontSize="9px">
             도원
@@ -12723,8 +12131,7 @@ const MetroMap = () => {
           className="label S1811 L1"
           y="800"
           id="S1811"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="185" dx="0" dy="-5" fontSize="9px">
             동인천
@@ -12734,8 +12141,7 @@ const MetroMap = () => {
           className="label S1812 L1 S1891 LB"
           y="800"
           id="S1812"
-          style={{ "text-anchor": "middle" }}
-          lineId="1 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="220" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             인천
@@ -12745,8 +12151,7 @@ const MetroMap = () => {
           className="label S1702 L1 S2748 L7"
           y="640"
           id="S1702"
-          style={{ "text-anchor": "end" }}
-          lineId="1 7"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="415" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             가산
@@ -12759,8 +12164,7 @@ const MetroMap = () => {
           className="label S1714 L1"
           y="685"
           id="S1714"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="415" dx="5" dy="3" fontSize="9px">
             독산
@@ -12770,8 +12174,7 @@ const MetroMap = () => {
           className="label S1703 L1"
           y="720"
           id="S1703"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="415" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             금천구청
@@ -12781,8 +12184,7 @@ const MetroMap = () => {
           className="label S1750 L1"
           y="700"
           id="S1750"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="390" dx="-5" dy="3" fontSize="9px">
             광명
@@ -12792,8 +12194,7 @@ const MetroMap = () => {
           className="label S1704 L1"
           y="720"
           id="S1704"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="470" dx="0" dy="13" fontSize="9px">
             석수
@@ -12803,8 +12204,7 @@ const MetroMap = () => {
           className="label S1705 L1"
           y="750"
           id="S1705"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="515" dx="-5" dy="3" fontSize="9px">
             관악
@@ -12814,8 +12214,7 @@ const MetroMap = () => {
           className="label S1706 L1"
           y="790"
           id="S1706"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="515" dx="-5" dy="3" fontSize="9px">
             안양
@@ -12825,8 +12224,7 @@ const MetroMap = () => {
           className="label S1707 L1"
           y="830"
           id="S1707"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="515" dx="-5" dy="3" fontSize="9px">
             명학
@@ -12836,8 +12234,7 @@ const MetroMap = () => {
           className="label S1708 L1 S1458 L4"
           y="860"
           id="S1708"
-          style={{ "text-anchor": "start" }}
-          lineId="1 4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="515" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             금정
@@ -12847,8 +12244,7 @@ const MetroMap = () => {
           className="label S1709 L1"
           y="910"
           id="S1709"
-          style={{ "text-anchor": "start" }}
-          lineId="1"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="530" dx="3" dy="-3" fontSize="9px">
             군포
@@ -12858,8 +12254,7 @@ const MetroMap = () => {
           className="label S1729 L1"
           y="930"
           id="S1729"
-          style={{ "text-anchor": "end" }}
-          lineId="1"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="550" dx="-3" dy="11" fontSize="9px">
             당정
@@ -12869,8 +12264,7 @@ const MetroMap = () => {
           className="label S1710 L1"
           y="950"
           id="S1710"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="585" dx="0" dy="-5" fontSize="9px">
             의왕
@@ -12880,8 +12274,7 @@ const MetroMap = () => {
           className="label S1711 L1"
           y="950"
           id="S1711"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="620" dx="0" dy="-5" fontSize="9px">
             성균관대
@@ -12891,8 +12284,7 @@ const MetroMap = () => {
           className="label S1712 L1"
           y="950"
           id="S1712"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="647.5" dx="0" dy="-5" fontSize="9px">
             화서
@@ -12902,8 +12294,7 @@ const MetroMap = () => {
           className="label S1713 L1 S1846 LB"
           y="950"
           id="S1713"
-          style={{ "text-anchor": "start" }}
-          lineId="1 B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="670" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             수원
@@ -12913,8 +12304,7 @@ const MetroMap = () => {
           className="label S1715 L1"
           y="950"
           id="S1715"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="697.5" dx="0" dy="-5" fontSize="9px">
             세류
@@ -12924,8 +12314,7 @@ const MetroMap = () => {
           className="label S1716 L1"
           y="950"
           id="S1716"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="730" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             병점
@@ -12935,8 +12324,7 @@ const MetroMap = () => {
           className="label S1717 L1"
           y="950"
           id="S1717"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="760" dx="0" dy="-5" fontSize="9px">
             세마
@@ -12946,8 +12334,7 @@ const MetroMap = () => {
           className="label S1718 L1"
           y="950"
           id="S1718"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="795" dx="0" dy="-5" fontSize="9px">
             오산대
@@ -12957,8 +12344,7 @@ const MetroMap = () => {
           className="label S1719 L1"
           y="950"
           id="S1719"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="825" dx="0" dy="-5" fontSize="9px">
             오산
@@ -12968,8 +12354,7 @@ const MetroMap = () => {
           className="label S1720 L1"
           y="950"
           id="S1720"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="855" dx="0" dy="-5" fontSize="9px">
             진위
@@ -12979,8 +12364,7 @@ const MetroMap = () => {
           className="label S1721 L1"
           y="950"
           id="S1721"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="885" dx="0" dy="-5" fontSize="9px">
             송탄
@@ -12990,8 +12374,7 @@ const MetroMap = () => {
           className="label S1722 L1"
           y="950"
           id="S1722"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="917.5" dx="0" dy="-5" fontSize="9px">
             서정리
@@ -13001,8 +12384,7 @@ const MetroMap = () => {
           className="label S1723 L1"
           y="950"
           id="S1723"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="950" dx="0" dy="-5" fontSize="9px">
             평택지제
@@ -13012,8 +12394,7 @@ const MetroMap = () => {
           className="label S1724 L1"
           y="950"
           id="S1724"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="980" dx="0" dy="-5" fontSize="9px">
             평택
@@ -13023,8 +12404,7 @@ const MetroMap = () => {
           className="label S1725 L1"
           y="950"
           id="S1725"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1010" dx="0" dy="-5" fontSize="9px">
             성환
@@ -13034,8 +12414,7 @@ const MetroMap = () => {
           className="label S1726 L1"
           y="950"
           id="S1726"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1040" dx="0" dy="-5" fontSize="9px">
             직산
@@ -13045,8 +12424,7 @@ const MetroMap = () => {
           className="label S1727 L1"
           y="950"
           id="S1727"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1070" dx="0" dy="-5" fontSize="9px">
             두정
@@ -13056,8 +12434,7 @@ const MetroMap = () => {
           className="label S1728 L1"
           y="950"
           id="S1728"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1100" dx="0" dy="-5" fontSize="9px">
             천안
@@ -13067,8 +12444,7 @@ const MetroMap = () => {
           className="label S1401 L1"
           y="950"
           id="S1401"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1130" dx="0" dy="-5" fontSize="9px">
             봉명
@@ -13078,8 +12454,7 @@ const MetroMap = () => {
           className="label S1402 L1"
           y="950"
           id="S1402"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1165" dx="0" dy="-5" fontSize="9px">
             쌍용
@@ -13089,8 +12464,7 @@ const MetroMap = () => {
           className="label S1403 L1"
           y="950"
           id="S1403"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1197.5" dx="0" dy="-5" fontSize="9px">
             아산
@@ -13100,8 +12474,7 @@ const MetroMap = () => {
           className="label S1404 L1"
           y="950"
           id="S1404"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1230" dx="0" dy="-5" fontSize="9px">
             탕정
@@ -13111,8 +12484,7 @@ const MetroMap = () => {
           className="label S1405 L1"
           y="950"
           id="S1405"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1270" dx="0" dy="-5" fontSize="9px">
             배방
@@ -13122,8 +12494,7 @@ const MetroMap = () => {
           className="label S1407 L1"
           y="950"
           id="S1407"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1310" dx="0" dy="-5" fontSize="9px">
             온양온천
@@ -13133,8 +12504,7 @@ const MetroMap = () => {
           className="label S1408 L1"
           y="950"
           id="S1408"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1350" dx="0" dy="-5" fontSize="9px">
             신창
@@ -13144,8 +12514,7 @@ const MetroMap = () => {
           className="label S1749 L1"
           y="920"
           id="S1749"
-          style={{ "text-anchor": "middle" }}
-          lineId="1"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="730" dx="0" dy="-5" fontSize="9px">
             서동탄
@@ -13155,8 +12524,7 @@ const MetroMap = () => {
           className="label S0200 L2 S2519 L5"
           y="460"
           id="S0200"
-          style={{ "text-anchor": "middle" }}
-          lineId="2 5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="290" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             까치산
@@ -13166,8 +12534,7 @@ const MetroMap = () => {
           className="label S0249 L2"
           y="495"
           id="S0249"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="325" dx="3" dy="-3" fontSize="9px">
             신정네거리
@@ -13177,8 +12544,7 @@ const MetroMap = () => {
           className="label S0248 L2"
           y="515"
           id="S0248"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="345" dx="3" dy="-3" fontSize="9px">
             양천구청
@@ -13188,8 +12554,7 @@ const MetroMap = () => {
           className="label S0247 L2"
           y="535"
           id="S0247"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="365" dx="3" dy="-3" fontSize="9px">
             도림천
@@ -13199,8 +12564,7 @@ const MetroMap = () => {
           className="label S0235 L2"
           y="500"
           id="S0235"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="415" dx="5" dy="3" fontSize="9px">
             문래
@@ -13210,8 +12574,7 @@ const MetroMap = () => {
           className="label S0236 L2 S2524 L5"
           y="460"
           id="S0236"
-          style={{ "text-anchor": "end" }}
-          lineId="2 5"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="415" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             영등포구청
@@ -13221,8 +12584,7 @@ const MetroMap = () => {
           className="label S0237 L2 S4113 L9"
           y="445"
           id="S0237"
-          style={{ "text-anchor": "end" }}
-          lineId="2 9"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="460" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             당산
@@ -13232,8 +12594,7 @@ const MetroMap = () => {
           className="label S0238 L2 S2623 L6"
           y="445"
           id="S0238"
-          style={{ "text-anchor": "end" }}
-          lineId="2 6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="510" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             합정
@@ -13243,8 +12604,7 @@ const MetroMap = () => {
           className="label S0239 L2 S1264 LK S4203 LA"
           y="410"
           id="S0239"
-          style={{ "text-anchor": "start" }}
-          lineId="2 K A"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="550" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             홍대입구
@@ -13254,8 +12614,7 @@ const MetroMap = () => {
           className="label S0240 L2"
           y="382.5"
           id="S0240"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="550" dx="5" dy="3" fontSize="9px">
             신촌
@@ -13265,8 +12624,7 @@ const MetroMap = () => {
           className="label S0241 L2"
           y="370"
           id="S0241"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="550" dx="-5" dy="3" fontSize="9px">
             이대
@@ -13276,8 +12634,7 @@ const MetroMap = () => {
           className="label S0242 L2"
           y="355"
           id="S0242"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="550" dx="-5" dy="3" fontSize="9px">
             아현
@@ -13287,8 +12644,7 @@ const MetroMap = () => {
           className="label S0243 L2 S2532 L5"
           y="345"
           id="S0243"
-          style={{ "text-anchor": "end" }}
-          lineId="2 5"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="605" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             충정로
@@ -13298,8 +12654,7 @@ const MetroMap = () => {
           className="label S0202 L2"
           y="345"
           id="S0202"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="690" dx="0" dy="-5" fontSize="9px">
             을지로입구
@@ -13309,8 +12664,7 @@ const MetroMap = () => {
           className="label S0203 L2 S0320 L3"
           y="345"
           id="S0203"
-          style={{ "text-anchor": "start" }}
-          lineId="2 3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="720" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             을지로3가
@@ -13320,8 +12674,7 @@ const MetroMap = () => {
           className="label S0204 L2 S2536 L5"
           y="345"
           id="S0204"
-          style={{ "text-anchor": "end" }}
-          lineId="2 5"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="790" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             을지로4가
@@ -13331,8 +12684,7 @@ const MetroMap = () => {
           className="label S0205 L2 S0422 L4 S2537 L5"
           y="340"
           id="S0205"
-          style={{ "text-anchor": "end" }}
-          lineId="2 4 5"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="850" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             문화공원
@@ -13345,8 +12697,7 @@ const MetroMap = () => {
           className="label S0206 L2 S2636 L6"
           y="345"
           id="S0206"
-          style={{ "text-anchor": "start" }}
-          lineId="2 6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="900" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             신당
@@ -13356,8 +12707,7 @@ const MetroMap = () => {
           className="label S0207 L2"
           y="360"
           id="S0207"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="960" dx="-3" dy="11" fontSize="9px">
             상왕십리
@@ -13367,8 +12717,7 @@ const MetroMap = () => {
           className="label S0208 L2 S2541 L5 S1013 LK S102C LB"
           y="390"
           id="S0208"
-          style={{ "text-anchor": "start" }}
-          lineId="2 5 K B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="990" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             왕십리
@@ -13378,8 +12727,7 @@ const MetroMap = () => {
           className="label S0209 L2"
           y="420"
           id="S0209"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1020" dx="-3" dy="11" fontSize="9px">
             한양대
@@ -13389,8 +12737,7 @@ const MetroMap = () => {
           className="label S0210 L2"
           y="435"
           id="S0210"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1035" dx="-3" dy="11" fontSize="9px">
             뚝섬
@@ -13400,8 +12747,7 @@ const MetroMap = () => {
           className="label S0211 L2"
           y="455"
           id="S0211"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1055" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             성수
@@ -13411,8 +12757,7 @@ const MetroMap = () => {
           className="label S0212 L2 S2729 L7"
           y="485"
           id="S0212"
-          style={{ "text-anchor": "end" }}
-          lineId="2 7"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1165" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             건대입구
@@ -13422,8 +12767,7 @@ const MetroMap = () => {
           className="label S0213 L2"
           y="500"
           id="S0213"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1200" dx="3" dy="-3" fontSize="9px">
             구의
@@ -13433,8 +12777,7 @@ const MetroMap = () => {
           className="label S0214 L2"
           y="530"
           id="S0214"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1230" dx="3" dy="-3" fontSize="9px">
             강변
@@ -13444,8 +12787,7 @@ const MetroMap = () => {
           className="label S0215 L2"
           y="585"
           id="S0215"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1255" dx="5" dy="3" fontSize="9px">
             잠실나루
@@ -13455,8 +12797,7 @@ const MetroMap = () => {
           className="label S0216 L2 S2815 L8"
           y="635"
           id="S0216"
-          style={{ "text-anchor": "end" }}
-          lineId="2 8"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1255" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             잠실
@@ -13466,8 +12807,7 @@ const MetroMap = () => {
           className="label S0217 L2"
           y="680"
           id="S0217"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1237.5" dx="0" dy="-5" fontSize="9px">
             잠실새내
@@ -13477,8 +12817,7 @@ const MetroMap = () => {
           className="label S0218 L2 S4130 L9"
           y="680"
           id="S0218"
-          style={{ "text-anchor": "end" }}
-          lineId="2 9"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1145" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             종합운동장
@@ -13488,8 +12827,7 @@ const MetroMap = () => {
           className="label S0219 L2"
           y="680"
           id="S0219"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1085" dx="0" dy="-5" fontSize="9px">
             삼성
@@ -13499,8 +12837,7 @@ const MetroMap = () => {
           className="label S0220 L2 S1023 LB"
           y="680"
           id="S0220"
-          style={{ "text-anchor": "end" }}
-          lineId="2 B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1015" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             선릉
@@ -13510,8 +12847,7 @@ const MetroMap = () => {
           className="label S0221 L2"
           y="680"
           id="S0221"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="970" dx="0" dy="-5" fontSize="9px">
             역삼
@@ -13521,8 +12857,7 @@ const MetroMap = () => {
           className="label S0222 L2 S4307 LS"
           y="680"
           id="S0222"
-          style={{ "text-anchor": "middle" }}
-          lineId="2 S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="920" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             강남
@@ -13532,8 +12867,7 @@ const MetroMap = () => {
           className="label S0223 L2 S0330 L3"
           y="680"
           id="S0223"
-          style={{ "text-anchor": "end" }}
-          lineId="2 3"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="860" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             교대
@@ -13543,8 +12877,7 @@ const MetroMap = () => {
           className="label S0224 L2"
           y="680"
           id="S0224"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="805" dx="0" dy="13" fontSize="9px">
             서초
@@ -13554,8 +12887,7 @@ const MetroMap = () => {
           className="label S0225 L2"
           y="680"
           id="S0225"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="760" dx="0" dy="13" fontSize="9px">
             방배
@@ -13565,8 +12897,7 @@ const MetroMap = () => {
           className="label S0226 L2 S0433 L4"
           y="680"
           id="S0226"
-          style={{ "text-anchor": "start" }}
-          lineId="2 4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="705" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             사당
@@ -13576,8 +12907,7 @@ const MetroMap = () => {
           className="label S0227 L2"
           y="680"
           id="S0227"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="677.5" dx="0" dy="13" fontSize="9px">
             낙성대
@@ -13587,8 +12917,7 @@ const MetroMap = () => {
           className="label S0228 L2"
           y="680"
           id="S0228"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="635" dx="0" dy="13" fontSize="9px">
             서울대입구
@@ -13598,8 +12927,7 @@ const MetroMap = () => {
           className="label S0229 L2"
           y="680"
           id="S0229"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="585" dx="0" dy="13" fontSize="9px">
             봉천
@@ -13609,8 +12937,7 @@ const MetroMap = () => {
           className="label S0230 L2 S4408 LSL"
           y="680"
           id="S0230"
-          style={{ "text-anchor": "middle" }}
-          lineId="2 SL"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="545" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             신림
@@ -13620,8 +12947,7 @@ const MetroMap = () => {
           className="label S0231 L2"
           y="680"
           id="S0231"
-          style={{ "text-anchor": "middle" }}
-          lineId="2"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="500" dx="0" dy="13" fontSize="9px">
             신대방
@@ -13631,8 +12957,7 @@ const MetroMap = () => {
           className="label S0232 L2"
           y="670"
           id="S0232"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="460" dx="5" dy="3" fontSize="9px">
             구로디지털단지
@@ -13642,8 +12967,7 @@ const MetroMap = () => {
           className="label S0233 L2 S2746 L7"
           y="640"
           id="S0233"
-          style={{ "text-anchor": "start" }}
-          lineId="2 7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="460" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             대림
@@ -13653,8 +12977,7 @@ const MetroMap = () => {
           className="label S0244 L2"
           y="420"
           id="S0244"
-          style={{ "text-anchor": "start" }}
-          lineId="2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1055" dx="5" dy="3" fontSize="9px">
             용답
@@ -13664,8 +12987,7 @@ const MetroMap = () => {
           className="label S0245 L2"
           y="315"
           id="S0245"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="975" dx="-3" dy="11" fontSize="9px">
             신답
@@ -13675,8 +12997,7 @@ const MetroMap = () => {
           className="label S0250 L2"
           y="295"
           id="S0250"
-          style={{ "text-anchor": "end" }}
-          lineId="2"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="955" dx="-3" dy="11" fontSize="9px">
             용두
@@ -13686,8 +13007,7 @@ const MetroMap = () => {
           className="label S1958 L3"
           y="175"
           id="S1958"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="80" dx="0" dy="-5" fontSize="9px">
             대화
@@ -13697,8 +13017,7 @@ const MetroMap = () => {
           className="label S1957 L3"
           y="175"
           id="S1957"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="120" dx="0" dy="-5" fontSize="9px">
             주엽
@@ -13708,8 +13027,7 @@ const MetroMap = () => {
           className="label S1956 L3"
           y="175"
           id="S1956"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="157.5" dx="0" dy="-5" fontSize="9px">
             정발산
@@ -13719,8 +13037,7 @@ const MetroMap = () => {
           className="label S1955 L3"
           y="175"
           id="S1955"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="194.5" dx="0" dy="-5" fontSize="9px">
             마두
@@ -13730,8 +13047,7 @@ const MetroMap = () => {
           className="label S1954 L3"
           y="175"
           id="S1954"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="230" dx="0" dy="-5" fontSize="9px">
             백석
@@ -13741,8 +13057,7 @@ const MetroMap = () => {
           className="label S1953 L3 S0300 LK"
           y="175"
           id="S1953"
-          style={{ "text-anchor": "end" }}
-          lineId="3 K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="265" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             대곡
@@ -13752,8 +13067,7 @@ const MetroMap = () => {
           className="label S1952 L3"
           y="175"
           id="S1952"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="287.5" dx="0" dy="-5" fontSize="9px">
             화정
@@ -13763,8 +13077,7 @@ const MetroMap = () => {
           className="label S1951 L3"
           y="175"
           id="S1951"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="315" dx="0" dy="-5" fontSize="9px">
             원당
@@ -13774,8 +13087,7 @@ const MetroMap = () => {
           className="label S1948 L3"
           y="175"
           id="S1948"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="340" dx="0" dy="-5" fontSize="9px">
             원흥
@@ -13785,8 +13097,7 @@ const MetroMap = () => {
           className="label S1950 L3"
           y="175"
           id="S1950"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="365" dx="0" dy="-5" fontSize="9px">
             삼송
@@ -13796,8 +13107,7 @@ const MetroMap = () => {
           className="label S0309 L3"
           y="175"
           id="S0309"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="391" dx="0" dy="-5" fontSize="9px">
             지축
@@ -13807,8 +13117,7 @@ const MetroMap = () => {
           className="label S0310 L3"
           y="175"
           id="S0310"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="419" dx="0" dy="-5" fontSize="9px">
             구파발
@@ -13818,8 +13127,7 @@ const MetroMap = () => {
           className="label S0311 L3 S2615 L6"
           y="175"
           id="S0311"
-          style={{ "text-anchor": "end" }}
-          lineId="3 6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="440" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             연신내
@@ -13829,8 +13137,7 @@ const MetroMap = () => {
           className="label S0312 L3 S2613 L6"
           y="175"
           id="S0312"
-          style={{ "text-anchor": "start" }}
-          lineId="3 6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="500" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             불광
@@ -13840,8 +13147,7 @@ const MetroMap = () => {
           className="label S0313 L3"
           y="175"
           id="S0313"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="542.5" dx="0" dy="-5" fontSize="9px">
             녹번
@@ -13851,8 +13157,7 @@ const MetroMap = () => {
           className="label S0314 L3"
           y="175"
           id="S0314"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="575" dx="0" dy="-5" fontSize="9px">
             홍제
@@ -13862,8 +13167,7 @@ const MetroMap = () => {
           className="label S0315 L3"
           y="175"
           id="S0315"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="605" dx="0" dy="-5" fontSize="9px">
             무악재
@@ -13873,8 +13177,7 @@ const MetroMap = () => {
           className="label S0316 L3"
           y="200"
           id="S0316"
-          style={{ "text-anchor": "start" }}
-          lineId="3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="645" dx="3" dy="-3" fontSize="9px">
             독립문
@@ -13884,8 +13187,7 @@ const MetroMap = () => {
           className="label S0317 L3"
           y="225"
           id="S0317"
-          style={{ "text-anchor": "start" }}
-          lineId="3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="670" dx="3" dy="-3" fontSize="9px">
             경복궁
@@ -13895,8 +13197,7 @@ const MetroMap = () => {
           className="label S0318 L3"
           y="245"
           id="S0318"
-          style={{ "text-anchor": "start" }}
-          lineId="3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="690" dx="3" dy="-3" fontSize="9px">
             안국
@@ -13906,8 +13207,7 @@ const MetroMap = () => {
           className="label S0321 L3 S0423 L4"
           y="400"
           id="S0321"
-          style={{ "text-anchor": "start" }}
-          lineId="3 4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="775" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             충무로
@@ -13917,8 +13217,7 @@ const MetroMap = () => {
           className="label S0322 L3"
           y="435"
           id="S0322"
-          style={{ "text-anchor": "end" }}
-          lineId="3"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="810" dx="-3" dy="11" fontSize="9px">
             동대입구
@@ -13928,8 +13227,7 @@ const MetroMap = () => {
           className="label S0323 L3 S2634 L6"
           y="475"
           id="S0323"
-          style={{ "text-anchor": "start" }}
-          lineId="3 6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="850" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             약수
@@ -13939,8 +13237,7 @@ const MetroMap = () => {
           className="label S0324 L3"
           y="500"
           id="S0324"
-          style={{ "text-anchor": "start" }}
-          lineId="3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="860" dx="5" dy="3" fontSize="9px">
             금호
@@ -13950,8 +13247,7 @@ const MetroMap = () => {
           className="label S0325 L3 S1011 LK"
           y="530"
           id="S0325"
-          style={{ "text-anchor": "start" }}
-          lineId="3 K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="860" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             옥수
@@ -13961,8 +13257,7 @@ const MetroMap = () => {
           className="label S0326 L3"
           y="570"
           id="S0326"
-          style={{ "text-anchor": "start" }}
-          lineId="3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="860" dx="5" dy="3" fontSize="9px">
             압구정
@@ -13972,8 +13267,7 @@ const MetroMap = () => {
           className="label S0327 L3 S4304 LS"
           y="590"
           id="S0327"
-          style={{ "text-anchor": "end" }}
-          lineId="3 S"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="860" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             신사
@@ -13983,8 +13277,7 @@ const MetroMap = () => {
           className="label S0328 L3"
           y="610"
           id="S0328"
-          style={{ "text-anchor": "start" }}
-          lineId="3"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="860" dx="5" dy="3" fontSize="9px">
             잠원
@@ -13994,8 +13287,7 @@ const MetroMap = () => {
           className="label S0329 L3 S2736 L7 S4123 L9"
           y="645"
           id="S0329"
-          style={{ "text-anchor": "start" }}
-          lineId="3 7 9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="860" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             고속터미널
@@ -14005,8 +13297,7 @@ const MetroMap = () => {
           className="label S0331 L3"
           y="700"
           id="S0331"
-          style={{ "text-anchor": "end" }}
-          lineId="3"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="880" dx="-3" dy="11" fontSize="9px">
             남부터미널
@@ -14016,8 +13307,7 @@ const MetroMap = () => {
           className="label S0332 L3 S4308 LS"
           y="725"
           id="S0332"
-          style={{ "text-anchor": "end" }}
-          lineId="3 S"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="920" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             양재
@@ -14027,8 +13317,7 @@ const MetroMap = () => {
           className="label S0333 L3"
           y="725"
           id="S0333"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="960" dx="0" dy="-5" fontSize="9px">
             매봉
@@ -14038,8 +13327,7 @@ const MetroMap = () => {
           className="label S0334 L3 S1025 LB"
           y="725"
           id="S0334"
-          style={{ "text-anchor": "start" }}
-          lineId="3 B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1015" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             도곡
@@ -14049,8 +13337,7 @@ const MetroMap = () => {
           className="label S0335 L3"
           y="725"
           id="S0335"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1065" dx="0" dy="-5" fontSize="9px">
             대치
@@ -14060,8 +13347,7 @@ const MetroMap = () => {
           className="label S0336 L3"
           y="725"
           id="S0336"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1110" dx="0" dy="-5" fontSize="9px">
             학여울
@@ -14071,8 +13357,7 @@ const MetroMap = () => {
           className="label S0337 L3"
           y="725"
           id="S0337"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1175" dx="0" dy="-5" fontSize="9px">
             대청
@@ -14082,8 +13367,7 @@ const MetroMap = () => {
           className="label S0338 L3"
           y="725"
           id="S0338"
-          style={{ "text-anchor": "middle" }}
-          lineId="3"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1220" dx="0" dy="-5" fontSize="9px">
             일원
@@ -14093,8 +13377,7 @@ const MetroMap = () => {
           className="label S0339 L3 S1030 LB"
           y="765"
           id="S0339"
-          style={{ "text-anchor": "middle" }}
-          lineId="3 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1285" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             수서
@@ -14104,8 +13387,7 @@ const MetroMap = () => {
           className="label S0340 L3 S2818 L8"
           y="717.5"
           id="S2818"
-          style={{ "text-anchor": "end" }}
-          lineId="3 8"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1332.5" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             가락시장
@@ -14115,8 +13397,7 @@ const MetroMap = () => {
           className="label S0341 L3"
           y="675"
           id="S0341"
-          style={{ "text-anchor": "end" }}
-          lineId="3"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1375" dx="-3" dy="-3" fontSize="9px">
             경찰병원
@@ -14126,8 +13407,7 @@ const MetroMap = () => {
           className="label S0342 L3 S2558 L5"
           y="640"
           id="S2558"
-          style={{ "text-anchor": "start" }}
-          lineId="3 5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             오금
@@ -14137,8 +13417,7 @@ const MetroMap = () => {
           className="label S0405 L4"
           y="80"
           id="S0405"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1290" dx="-3" dy="-3" fontSize="9px">
             진접
@@ -14148,8 +13427,7 @@ const MetroMap = () => {
           className="label S0406 L4"
           y="100"
           id="S0406"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1270" dx="-3" dy="-3" fontSize="9px">
             오남
@@ -14159,8 +13437,7 @@ const MetroMap = () => {
           className="label S0408 L4"
           y="120"
           id="S0408"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1250" dx="-3" dy="-3" fontSize="9px">
             별내별가람
@@ -14170,8 +13447,7 @@ const MetroMap = () => {
           className="label S0409 L4"
           y="140"
           id="S0409"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1230" dx="-3" dy="-3" fontSize="9px">
             당고개
@@ -14181,8 +13457,7 @@ const MetroMap = () => {
           className="label S0410 L4"
           y="155"
           id="S0410"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1195" dx="0" dy="-5" fontSize="9px">
             상계
@@ -14192,8 +13467,7 @@ const MetroMap = () => {
           className="label S0411 L4 S2715 L7"
           y="155"
           id="S0411"
-          style={{ "text-anchor": "start" }}
-          lineId="4 7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1150" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             노원
@@ -14203,8 +13477,7 @@ const MetroMap = () => {
           className="label S0413 L4"
           y="155"
           id="S0413"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1030" dx="0" dy="-5" fontSize="9px">
             쌍문
@@ -14214,8 +13487,7 @@ const MetroMap = () => {
           className="label S0414 L4"
           y="155"
           id="S0414"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1000" dx="0" dy="-5" fontSize="9px">
             수유
@@ -14225,8 +13497,7 @@ const MetroMap = () => {
           className="label S0415 L4"
           y="155"
           id="S0415"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="955" dx="0" dy="-5" fontSize="9px">
             미아
@@ -14236,8 +13507,7 @@ const MetroMap = () => {
           className="label S0416 L4"
           y="155"
           id="S0416"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="915" dx="0" dy="-5" fontSize="9px">
             미아사거리
@@ -14247,8 +13517,7 @@ const MetroMap = () => {
           className="label S0417 L4"
           y="155"
           id="S0417"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="880" dx="0" dy="-5" fontSize="9px">
             길음
@@ -14258,8 +13527,7 @@ const MetroMap = () => {
           className="label S0418 L4 S4711 LW"
           y="170"
           id="S0418"
-          style={{ "text-anchor": "end" }}
-          lineId="4 W"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="865" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             성신여대입구
@@ -14269,8 +13537,7 @@ const MetroMap = () => {
           className="label S0419 L4"
           y="200"
           id="S0419"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="865" dx="-5" dy="3" fontSize="9px">
             한성대입구
@@ -14280,8 +13547,7 @@ const MetroMap = () => {
           className="label S0420 L4"
           y="230"
           id="S0420"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="865" dx="-5" dy="3" fontSize="9px">
             혜화
@@ -14291,8 +13557,7 @@ const MetroMap = () => {
           className="label S0424 L4"
           y="400"
           id="S0424"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="745" dx="0" dy="-5" fontSize="9px">
             명동
@@ -14302,8 +13567,7 @@ const MetroMap = () => {
           className="label S0425 L4"
           y="400"
           id="S0425"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="715" dx="0" dy="-5" fontSize="9px">
             회현
@@ -14313,8 +13577,7 @@ const MetroMap = () => {
           className="label S0427 L4"
           y="435"
           id="S0427"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="690" dx="3" dy="-3" fontSize="9px">
             숙대입구
@@ -14324,8 +13587,7 @@ const MetroMap = () => {
           className="label S0428 L4 S2629 L6"
           y="475"
           id="S0428"
-          style={{ "text-anchor": "end" }}
-          lineId="4 6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="705" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             삼각지
@@ -14335,8 +13597,7 @@ const MetroMap = () => {
           className="label S0429 L4"
           y="515"
           id="S0429"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="705" dx="-5" dy="3" fontSize="9px">
             신용산
@@ -14346,8 +13607,7 @@ const MetroMap = () => {
           className="label S0430 L4 S1008 LK"
           y="545"
           id="S0430"
-          style={{ "text-anchor": "start" }}
-          lineId="4 K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="705" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             이촌
@@ -14357,8 +13617,7 @@ const MetroMap = () => {
           className="label S0431 L4 S4120 L9"
           y="600"
           id="S0431"
-          style={{ "text-anchor": "start" }}
-          lineId="4 9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="705" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             동작
@@ -14368,8 +13627,7 @@ const MetroMap = () => {
           className="label S0432 L4 S2738 L7"
           y="640"
           id="S0432"
-          style={{ "text-anchor": "start" }}
-          lineId="4 7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="705" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             총신대입구
@@ -14379,8 +13637,7 @@ const MetroMap = () => {
           className="label S0434 L4"
           y="705"
           id="S0434"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="705" dx="5" dy="3" fontSize="9px">
             남태령
@@ -14390,8 +13647,7 @@ const MetroMap = () => {
           className="label S1450 L4"
           y="725"
           id="S1450"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="705" dx="5" dy="3" fontSize="9px">
             선바위
@@ -14401,8 +13657,7 @@ const MetroMap = () => {
           className="label S1451 L4"
           y="745"
           id="S1451"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="695" dx="3" dy="11" fontSize="9px">
             경마공원
@@ -14412,8 +13667,7 @@ const MetroMap = () => {
           className="label S1452 L4"
           y="765"
           id="S1452"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="675" dx="3" dy="11" fontSize="9px">
             대공원
@@ -14423,8 +13677,7 @@ const MetroMap = () => {
           className="label S1453 L4"
           y="780"
           id="S1453"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="655" dx="0" dy="13" fontSize="9px">
             과천
@@ -14434,8 +13687,7 @@ const MetroMap = () => {
           className="label S1454 L4"
           y="780"
           id="S1454"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="620" dx="0" dy="13" fontSize="9px">
             정부과천청사
@@ -14445,8 +13697,7 @@ const MetroMap = () => {
           className="label S1455 L4"
           y="800"
           id="S1455"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="575" dx="3" dy="11" fontSize="9px">
             인덕원
@@ -14456,8 +13707,7 @@ const MetroMap = () => {
           className="label S1456 L4"
           y="820"
           id="S1456"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="555" dx="3" dy="11" fontSize="9px">
             평촌
@@ -14467,8 +13717,7 @@ const MetroMap = () => {
           className="label S1457 L4"
           y="840"
           id="S1457"
-          style={{ "text-anchor": "start" }}
-          lineId="4"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="535" dx="3" dy="11" fontSize="9px">
             범계
@@ -14478,8 +13727,7 @@ const MetroMap = () => {
           className="label S1751 L4"
           y="880"
           id="S1751"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="495" dx="-3" dy="-3" fontSize="9px">
             산본
@@ -14489,8 +13737,7 @@ const MetroMap = () => {
           className="label S1763 L4"
           y="900"
           id="S1763"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="475" dx="-3" dy="-3" fontSize="9px">
             수리산
@@ -14500,8 +13747,7 @@ const MetroMap = () => {
           className="label S1752 L4"
           y="920"
           id="S1752"
-          style={{ "text-anchor": "end" }}
-          lineId="4"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="455" dx="-3" dy="-3" fontSize="9px">
             대야미
@@ -14511,8 +13757,7 @@ const MetroMap = () => {
           className="label S1753 L4"
           y="945"
           id="S1753"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="410" dx="0" dy="-5" fontSize="9px">
             반월
@@ -14522,8 +13767,7 @@ const MetroMap = () => {
           className="label S1754 L4"
           y="945"
           id="S1754"
-          style={{ "text-anchor": "middle" }}
-          lineId="4"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="380" dx="0" dy="-5" fontSize="9px">
             상록수
@@ -14533,8 +13777,7 @@ const MetroMap = () => {
           className="label S1755 L4 S1830 LB"
           y="945"
           id="S1755"
-          style={{ "text-anchor": "middle" }}
-          lineId="4 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="350" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             한대앞
@@ -14544,8 +13787,7 @@ const MetroMap = () => {
           className="label S1756 L4 S1831 LB"
           y="945"
           id="S1756"
-          style={{ "text-anchor": "middle" }}
-          lineId="4 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="320" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             중앙
@@ -14555,8 +13797,7 @@ const MetroMap = () => {
           className="label S1757 L4 S1832 LB"
           y="945"
           id="S1757"
-          style={{ "text-anchor": "middle" }}
-          lineId="4 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="290" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             고잔
@@ -14566,8 +13807,7 @@ const MetroMap = () => {
           className="label S1758 L4 S1833 LB S4813 LSH"
           y="945"
           id="S1758"
-          style={{ "text-anchor": "start" }}
-          lineId="4 B SH"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="260" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             초지
@@ -14577,8 +13817,7 @@ const MetroMap = () => {
           className="label S1759 L4 S1834 LB"
           y="945"
           id="S1759"
-          style={{ "text-anchor": "middle" }}
-          lineId="4 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="230" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             안산
@@ -14588,8 +13827,7 @@ const MetroMap = () => {
           className="label S1760 L4 S1835 LB"
           y="945"
           id="S1760"
-          style={{ "text-anchor": "middle" }}
-          lineId="4 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="195" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             신길온천
@@ -14599,8 +13837,7 @@ const MetroMap = () => {
           className="label S1761 L4 S1836 LB"
           y="945"
           id="S1761"
-          style={{ "text-anchor": "middle" }}
-          lineId="4 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="155" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             정왕
@@ -14610,8 +13847,7 @@ const MetroMap = () => {
           className="label S1762 L4 S1800 LB"
           y="945"
           id="S1762"
-          style={{ "text-anchor": "start" }}
-          lineId="4 B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="100" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             오이도
@@ -14621,8 +13857,7 @@ const MetroMap = () => {
           className="label S2511 L5"
           y="275"
           id="S2511"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             방화
@@ -14632,8 +13867,7 @@ const MetroMap = () => {
           className="label S2512 L5"
           y="310"
           id="S2512"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             개화산
@@ -14643,8 +13877,7 @@ const MetroMap = () => {
           className="label S2513 L5 S4102 L9 S4929 LKP S4207 LA"
           y="350"
           id="S2513"
-          style={{ "text-anchor": "end" }}
-          lineId="5 9 KP A"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="210" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             김포공항
@@ -14654,8 +13887,7 @@ const MetroMap = () => {
           className="label S2514 L5"
           y="377.5"
           id="S2514"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             송정
@@ -14665,8 +13897,7 @@ const MetroMap = () => {
           className="label S2515 L5"
           y="402.5"
           id="S2515"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             마곡
@@ -14676,8 +13907,7 @@ const MetroMap = () => {
           className="label S2516 L5"
           y="429"
           id="S2516"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             발산
@@ -14687,8 +13917,7 @@ const MetroMap = () => {
           className="label S2517 L5"
           y="460"
           id="S2517"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="225" dx="0" dy="-5" fontSize="9px">
             우장산
@@ -14698,8 +13927,7 @@ const MetroMap = () => {
           className="label S2518 L5"
           y="460"
           id="S2518"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="255" dx="0" dy="-5" fontSize="9px">
             화곡
@@ -14709,8 +13937,7 @@ const MetroMap = () => {
           className="label S2520 L5"
           y="460"
           id="S2520"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="320" dx="0" dy="-5" fontSize="9px">
             신정
@@ -14720,8 +13947,7 @@ const MetroMap = () => {
           className="label S2521 L5"
           y="460"
           id="S2521"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="345" dx="0" dy="-5" fontSize="9px">
             목동
@@ -14731,8 +13957,7 @@ const MetroMap = () => {
           className="label S2522 L5"
           y="460"
           id="S2522"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="370" dx="0" dy="-5" fontSize="9px">
             오목교
@@ -14742,8 +13967,7 @@ const MetroMap = () => {
           className="label S2523 L5"
           y="460"
           id="S2523"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="395" dx="0" dy="-5" fontSize="9px">
             양평
@@ -14753,8 +13977,7 @@ const MetroMap = () => {
           className="label S2525 L5"
           y="485"
           id="S2525"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="442.5" dx="5" dy="3" fontSize="9px">
             영등포시장
@@ -14764,8 +13987,7 @@ const MetroMap = () => {
           className="label S2527 L5 S4115 L9"
           y="505"
           id="S2527"
-          style={{ "text-anchor": "middle" }}
-          lineId="5 9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="525" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             여의도
@@ -14775,8 +13997,7 @@ const MetroMap = () => {
           className="label S2528 L5"
           y="505"
           id="S2528"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="565" dx="0" dy="13" fontSize="9px">
             여의나루
@@ -14786,8 +14007,7 @@ const MetroMap = () => {
           className="label S2529 L5"
           y="505"
           id="S2529"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="600" dx="0" dy="13" fontSize="9px">
             마포
@@ -14797,8 +14017,7 @@ const MetroMap = () => {
           className="label S2530 L5 S2627 L6 S1262 LK S4202 LA"
           y="460"
           id="S2530"
-          style={{ "text-anchor": "end" }}
-          lineId="5 6 K A"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="605" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             공덕
@@ -14808,8 +14027,7 @@ const MetroMap = () => {
           className="label S2531 L5"
           y="365"
           id="S2531"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="605" dx="5" dy="3" fontSize="9px">
             애오개
@@ -14819,8 +14037,7 @@ const MetroMap = () => {
           className="label S2533 L5"
           y="300"
           id="S2533"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="605" dx="5" dy="3" fontSize="9px">
             서대문
@@ -14830,8 +14047,7 @@ const MetroMap = () => {
           className="label S2534 L5"
           y="275"
           id="S2534"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="645" dx="0" dy="-5" fontSize="9px">
             광화문
@@ -14841,8 +14057,7 @@ const MetroMap = () => {
           className="label S2538 L5 S2635 L6"
           y="395"
           id="S2538"
-          style={{ "text-anchor": "start" }}
-          lineId="5 6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="850" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             청구
@@ -14852,8 +14067,7 @@ const MetroMap = () => {
           className="label S2539 L5"
           y="395"
           id="S2539"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="905" dx="0" dy="-5" fontSize="9px">
             신금호
@@ -14863,8 +14077,7 @@ const MetroMap = () => {
           className="label S2540 L5"
           y="395"
           id="S2540"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="945" dx="0" dy="-5" fontSize="9px">
             행당
@@ -14874,8 +14087,7 @@ const MetroMap = () => {
           className="label S2542 L5"
           y="395"
           id="S2542"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1035" dx="0" dy="13" fontSize="9px">
             마장
@@ -14885,8 +14097,7 @@ const MetroMap = () => {
           className="label S2543 L5"
           y="395"
           id="S2543"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1085" dx="0" dy="-5" fontSize="9px">
             답십리
@@ -14896,8 +14107,7 @@ const MetroMap = () => {
           className="label S2544 L5"
           y="395"
           id="S2544"
-          style={{ "text-anchor": "middle" }}
-          lineId="5"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1130" dx="0" dy="-5" fontSize="9px">
             장한평
@@ -14907,8 +14117,7 @@ const MetroMap = () => {
           className="label S2545 L5 S2727 L7"
           y="395"
           id="S2545"
-          style={{ "text-anchor": "start" }}
-          lineId="5 7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             군자
@@ -14918,8 +14127,7 @@ const MetroMap = () => {
           className="label S2546 L5"
           y="420"
           id="S2546"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1235" dx="3" dy="-3" fontSize="9px">
             아차산
@@ -14929,8 +14137,7 @@ const MetroMap = () => {
           className="label S2547 L5"
           y="460"
           id="S2547"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1275" dx="3" dy="-3" fontSize="9px">
             광나루
@@ -14940,8 +14147,7 @@ const MetroMap = () => {
           className="label S2548 L5 S2812 L8"
           y="540"
           id="S2548"
-          style={{ "text-anchor": "end" }}
-          lineId="5 8"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1355" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             천호
@@ -14951,8 +14157,7 @@ const MetroMap = () => {
           className="label S2549 L5"
           y="540"
           id="S2549"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             강동
@@ -14962,8 +14167,7 @@ const MetroMap = () => {
           className="label S2550 L5"
           y="515"
           id="S2550"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             길동
@@ -14973,8 +14177,7 @@ const MetroMap = () => {
           className="label S2551 L5"
           y="490"
           id="S2551"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             굽은다리
@@ -14984,8 +14187,7 @@ const MetroMap = () => {
           className="label S2552 L5"
           y="465"
           id="S2552"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             명일
@@ -14995,8 +14197,7 @@ const MetroMap = () => {
           className="label S2553 L5"
           y="440"
           id="S2553"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             고덕
@@ -15006,8 +14207,7 @@ const MetroMap = () => {
           className="label S2554 L5"
           y="415"
           id="S2554"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             상일동
@@ -15017,8 +14217,7 @@ const MetroMap = () => {
           className="label S2562 L5"
           y="415"
           id="S2562"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1455" dx="5" dy="3" fontSize="9px">
             강일
@@ -15028,8 +14227,7 @@ const MetroMap = () => {
           className="label S2563 L5"
           y="435"
           id="S2563"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1455" dx="5" dy="3" fontSize="9px">
             미사
@@ -15039,8 +14237,7 @@ const MetroMap = () => {
           className="label S2564 L5"
           y="455"
           id="S2564"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1455" dx="5" dy="3" fontSize="9px">
             하남풍산
@@ -15050,8 +14247,7 @@ const MetroMap = () => {
           className="label S2565 L5"
           y="475"
           id="S2565"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1455" dx="5" dy="3" fontSize="9px">
             하남시청
@@ -15061,8 +14257,7 @@ const MetroMap = () => {
           className="label S2566 L5"
           y="495"
           id="S2566"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1455" dx="5" dy="3" fontSize="9px">
             하남검단산
@@ -15072,8 +14267,7 @@ const MetroMap = () => {
           className="label S2555 L5"
           y="565"
           id="S2555"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             둔촌동
@@ -15083,8 +14277,7 @@ const MetroMap = () => {
           className="label S2556 L5 S4136 L9"
           y="590"
           id="S2556"
-          style={{ "text-anchor": "start" }}
-          lineId="5 9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             올림픽공원
@@ -15094,8 +14287,7 @@ const MetroMap = () => {
           className="label S2557 L5"
           y="615"
           id="S2557"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             방이
@@ -15105,8 +14297,7 @@ const MetroMap = () => {
           className="label S2559 L5"
           y="665"
           id="S2559"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             개롱
@@ -15116,8 +14307,7 @@ const MetroMap = () => {
           className="label S2560 L5"
           y="690"
           id="S2560"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             거여
@@ -15127,8 +14317,7 @@ const MetroMap = () => {
           className="label S2561 L5"
           y="715"
           id="S2561"
-          style={{ "text-anchor": "start" }}
-          lineId="5"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="5" dy="3" fontSize="9px">
             마천
@@ -15138,8 +14327,7 @@ const MetroMap = () => {
           className="label S2649 L6 S1311 LG"
           y="255"
           id="S1311"
-          style={{ "text-anchor": "end" }}
-          lineId="6 G"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1260" dx="-9" dy="3" fontSize="9px" fontWeight="bold">
             신내
@@ -15149,8 +14337,7 @@ const MetroMap = () => {
           className="label S2648 L6"
           y="240"
           id="S2648"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1245" dx="-5" dy="3" fontSize="9px">
             봉화산
@@ -15160,8 +14347,7 @@ const MetroMap = () => {
           className="label S2647 L6"
           y="225"
           id="S2647"
-          style={{ "text-anchor": "start" }}
-          lineId="6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1195" dx="3" dy="-3" fontSize="9px">
             화랑대
@@ -15171,8 +14357,7 @@ const MetroMap = () => {
           className="label S2646 L6 S2719 L7"
           y="225"
           id="S2646"
-          style={{ "text-anchor": "end" }}
-          lineId="6 7"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1165" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             태릉입구
@@ -15182,8 +14367,7 @@ const MetroMap = () => {
           className="label S2644 L6"
           y="225"
           id="S2644"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1045" dx="0" dy="-5" fontSize="9px">
             돌곶이
@@ -15193,8 +14377,7 @@ const MetroMap = () => {
           className="label S2643 L6"
           y="225"
           id="S2643"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1010" dx="0" dy="-5" fontSize="9px">
             상월곡
@@ -15204,8 +14387,7 @@ const MetroMap = () => {
           className="label S2642 L6"
           y="225"
           id="S2642"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="970" dx="0" dy="-5" fontSize="9px">
             월곡
@@ -15215,8 +14397,7 @@ const MetroMap = () => {
           className="label S2641 L6"
           y="225"
           id="S2641"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="940" dx="0" dy="-5" fontSize="9px">
             고려대
@@ -15226,8 +14407,7 @@ const MetroMap = () => {
           className="label S2640 L6"
           y="225"
           id="S2640"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="905" dx="0" dy="-5" fontSize="9px">
             안암
@@ -15237,8 +14417,7 @@ const MetroMap = () => {
           className="label S2639 L6 S4712 LW"
           y="240"
           id="S2639"
-          style={{ "text-anchor": "start" }}
-          lineId="6 W"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="900" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             보문
@@ -15248,8 +14427,7 @@ const MetroMap = () => {
           className="label S2638 L6"
           y="255"
           id="S2638"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="900" dx="-5" dy="3" fontSize="9px">
             창신
@@ -15259,8 +14437,7 @@ const MetroMap = () => {
           className="label S2633 L6"
           y="475"
           id="S2633"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="825" dx="0" dy="13" fontSize="9px">
             버티고개
@@ -15270,8 +14447,7 @@ const MetroMap = () => {
           className="label S2632 L6"
           y="475"
           id="S2632"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="795" dx="0" dy="13" fontSize="9px">
             한강진
@@ -15281,8 +14457,7 @@ const MetroMap = () => {
           className="label S2631 L6"
           y="475"
           id="S2631"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="755" dx="0" dy="13" fontSize="9px">
             이태원
@@ -15292,8 +14467,7 @@ const MetroMap = () => {
           className="label S2630 L6"
           y="475"
           id="S2630"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="725" dx="0" dy="13" fontSize="9px">
             녹사평
@@ -15303,8 +14477,7 @@ const MetroMap = () => {
           className="label S2628 L6 S1261 LK"
           y="470"
           id="S2628"
-          style={{ "text-anchor": "middle" }}
-          lineId="6 K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="635" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             효창공원앞
@@ -15314,8 +14487,7 @@ const MetroMap = () => {
           className="label S2626 L6"
           y="475"
           id="S2626"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="580" dx="0" dy="13" fontSize="9px">
             대흥
@@ -15325,8 +14497,7 @@ const MetroMap = () => {
           className="label S2625 L6"
           y="475"
           id="S2625"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="545" dx="0" dy="13" fontSize="9px">
             광흥창
@@ -15336,8 +14507,7 @@ const MetroMap = () => {
           className="label S2624 L6"
           y="460"
           id="S2624"
-          style={{ "text-anchor": "start" }}
-          lineId="6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="525" dx="3" dy="-3" fontSize="9px">
             상수
@@ -15347,8 +14517,7 @@ const MetroMap = () => {
           className="label S2622 L6"
           y="420"
           id="S2622"
-          style={{ "text-anchor": "start" }}
-          lineId="6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="485" dx="3" dy="-3" fontSize="9px">
             망원
@@ -15358,8 +14527,7 @@ const MetroMap = () => {
           className="label S2621 L6"
           y="375"
           id="S2621"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="470" dx="-5" dy="3" fontSize="9px">
             마포구청
@@ -15369,8 +14537,7 @@ const MetroMap = () => {
           className="label S2620 L6"
           y="350"
           id="S2620"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="470" dx="-5" dy="3" fontSize="9px">
             월드컵경기장
@@ -15380,8 +14547,7 @@ const MetroMap = () => {
           className="label S2619 L6 S1266 LK S4204 LA"
           y="310"
           id="S2619"
-          style={{ "text-anchor": "end" }}
-          lineId="6 K A"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="470" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             디지털미디어시티
@@ -15391,8 +14557,7 @@ const MetroMap = () => {
           className="label S2618 L6"
           y="280"
           id="S2618"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="470" dx="-5" dy="3" fontSize="9px">
             증산
@@ -15402,8 +14567,7 @@ const MetroMap = () => {
           className="label S2617 L6"
           y="250"
           id="S2617"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="470" dx="-5" dy="3" fontSize="9px">
             새절
@@ -15413,8 +14577,7 @@ const MetroMap = () => {
           className="label S2611 L6"
           y="205"
           id="S2611"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="470" dx="-3" dy="11" fontSize="9px">
             응암
@@ -15424,8 +14587,7 @@ const MetroMap = () => {
           className="label S2612 L6"
           y="190"
           id="S2612"
-          style={{ "text-anchor": "start" }}
-          lineId="6"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="485" dx="3" dy="11" fontSize="9px">
             역촌
@@ -15435,8 +14597,7 @@ const MetroMap = () => {
           className="label S2614 L6"
           y="145"
           id="S2614"
-          style={{ "text-anchor": "middle" }}
-          lineId="6"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="470" dx="0" dy="-5" fontSize="9px">
             독바위
@@ -15446,8 +14607,7 @@ const MetroMap = () => {
           className="label S2616 L6"
           y="190"
           id="S2616"
-          style={{ "text-anchor": "end" }}
-          lineId="6"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="455" dx="-3" dy="11" fontSize="9px">
             구산
@@ -15457,8 +14617,7 @@ const MetroMap = () => {
           className="label S3763 L7 S3213 LI2"
           y="580"
           id="S3213"
-          style={{ "text-anchor": "start" }}
-          lineId="7 I2"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="40" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             석남
@@ -15468,8 +14627,7 @@ const MetroMap = () => {
           className="label S3762 L7"
           y="605"
           id="S3762"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="100" dx="0" dy="-5" fontSize="9px">
             산곡
@@ -15479,8 +14637,7 @@ const MetroMap = () => {
           className="label S3761 L7 S3118 LI"
           y="605"
           id="S3118"
-          style={{ "text-anchor": "start" }}
-          lineId="7 I"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="140" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             부평구청
@@ -15490,8 +14647,7 @@ const MetroMap = () => {
           className="label S3760 L7"
           y="550"
           id="S3760"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="195" dx="3" dy="11" fontSize="9px">
             굴포천
@@ -15501,8 +14657,7 @@ const MetroMap = () => {
           className="label S3759 L7"
           y="535"
           id="S3759"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             삼산체육관
@@ -15512,8 +14667,7 @@ const MetroMap = () => {
           className="label S3758 L7"
           y="515"
           id="S3758"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="210" dx="5" dy="3" fontSize="9px">
             상동
@@ -15523,8 +14677,7 @@ const MetroMap = () => {
           className="label S3757 L7"
           y="495"
           id="S3757"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="240" dx="0" dy="-5" fontSize="9px">
             부천시청
@@ -15534,8 +14687,7 @@ const MetroMap = () => {
           className="label S3756 L7"
           y="500"
           id="S3756"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="270" dx="3" dy="-3" fontSize="9px">
             신중동
@@ -15545,8 +14697,7 @@ const MetroMap = () => {
           className="label S3755 L7"
           y="515"
           id="S3755"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="285" dx="3" dy="-3" fontSize="9px">
             춘의
@@ -15556,8 +14707,7 @@ const MetroMap = () => {
           className="label S3754 L7"
           y="540"
           id="S3754"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="290" dx="5" dy="3" fontSize="9px">
             부천종합운동장
@@ -15567,8 +14717,7 @@ const MetroMap = () => {
           className="label S3753 L7"
           y="565"
           id="S3753"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="290" dx="3" dy="-3" fontSize="9px">
             까치울
@@ -15578,8 +14727,7 @@ const MetroMap = () => {
           className="label S2751 L7"
           y="615"
           id="S2751"
-          style={{ "text-anchor": "end" }}
-          lineId="7"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="340" dx="-3" dy="11" fontSize="9px">
             천왕
@@ -15589,8 +14737,7 @@ const MetroMap = () => {
           className="label S2750 L7"
           y="630"
           id="S2750"
-          style={{ "text-anchor": "end" }}
-          lineId="7"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="355" dx="-3" dy="11" fontSize="9px">
             광명사거리
@@ -15600,8 +14747,7 @@ const MetroMap = () => {
           className="label S2749 L7"
           y="640"
           id="S2749"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="390" dx="0" dy="-5" fontSize="9px">
             철산
@@ -15611,8 +14757,7 @@ const MetroMap = () => {
           className="label S2747 L7"
           y="640"
           id="S2747"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="435" dx="0" dy="-5" fontSize="9px">
             남구로
@@ -15622,8 +14767,7 @@ const MetroMap = () => {
           className="label S2745 L7"
           y="640"
           id="S2745"
-          style={{ "text-anchor": "end" }}
-          lineId="7"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="485" dx="-3" dy="-3" fontSize="9px">
             신풍
@@ -15633,8 +14777,7 @@ const MetroMap = () => {
           className="label S2744 L7 S4404 LSL"
           y="640"
           id="S2744"
-          style={{ "text-anchor": "end" }}
-          lineId="7 SL"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="520" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
             보라매
@@ -15644,8 +14787,7 @@ const MetroMap = () => {
           className="label S2743 L7"
           y="640"
           id="S2743"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="555" dx="0" dy="-5" fontSize="9px">
             삼거리
@@ -15658,8 +14800,7 @@ const MetroMap = () => {
           className="label S2742 L7"
           y="640"
           id="S2742"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="585" dx="0" dy="-5" fontSize="9px">
             장승배기
@@ -15669,8 +14810,7 @@ const MetroMap = () => {
           className="label S2741 L7"
           y="640"
           id="S2741"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="615" dx="0" dy="-5" fontSize="9px">
             상도
@@ -15680,8 +14820,7 @@ const MetroMap = () => {
           className="label S2740 L7"
           y="640"
           id="S2740"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="650" dx="0" dy="-5" fontSize="9px">
             숭실대입구
@@ -15691,8 +14830,7 @@ const MetroMap = () => {
           className="label S2739 L7"
           y="640"
           id="S2739"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="685" dx="0" dy="-5" fontSize="9px">
             남성
@@ -15702,8 +14840,7 @@ const MetroMap = () => {
           className="label S2737 L7"
           y="640"
           id="S2737"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="795" dx="0" dy="-5" fontSize="9px">
             내방
@@ -15713,8 +14850,7 @@ const MetroMap = () => {
           className="label S2735 L7"
           y="600"
           id="S2735"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="940" dx="0" dy="-5" fontSize="9px">
             반포
@@ -15724,8 +14860,7 @@ const MetroMap = () => {
           className="label S2734 L7 S4305 LS"
           y="600"
           id="S2734"
-          style={{ "text-anchor": "start" }}
-          lineId="7 S"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="975" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             논현
@@ -15735,8 +14870,7 @@ const MetroMap = () => {
           className="label S2733 L7"
           y="600"
           id="S2733"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1030" dx="0" dy="-5" fontSize="9px">
             학동
@@ -15746,8 +14880,7 @@ const MetroMap = () => {
           className="label S2732 L7 S1849 LB"
           y="570"
           id="S2732"
-          style={{ "text-anchor": "start" }}
-          lineId="7 B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1095" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             강남구청
@@ -15757,8 +14890,7 @@ const MetroMap = () => {
           className="label S2731 L7"
           y="535"
           id="S2731"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1130" dx="3" dy="11" fontSize="9px">
             청담
@@ -15768,8 +14900,7 @@ const MetroMap = () => {
           className="label S2730 L7"
           y="505"
           id="S2730"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1160" dx="3" dy="11" fontSize="9px">
             뚝섬유원지
@@ -15779,8 +14910,7 @@ const MetroMap = () => {
           className="label S2728 L7"
           y="435"
           id="S2728"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             어린이대공원
@@ -15790,8 +14920,7 @@ const MetroMap = () => {
           className="label S2726 L7"
           y="365"
           id="S2726"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             중곡
@@ -15801,8 +14930,7 @@ const MetroMap = () => {
           className="label S2725 L7"
           y="345"
           id="S2725"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             용마산
@@ -15812,8 +14940,7 @@ const MetroMap = () => {
           className="label S2724 L7"
           y="325"
           id="S2724"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             사가정
@@ -15823,8 +14950,7 @@ const MetroMap = () => {
           className="label S2723 L7"
           y="305"
           id="S2723"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             면목
@@ -15834,8 +14960,7 @@ const MetroMap = () => {
           className="label S2722 L7 S1309 LG S1202 LK"
           y="270"
           id="S2722"
-          style={{ "text-anchor": "start" }}
-          lineId="7 G K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             상봉
@@ -15845,8 +14970,7 @@ const MetroMap = () => {
           className="label S2721 L7"
           y="255"
           id="S2721"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             중화
@@ -15856,8 +14980,7 @@ const MetroMap = () => {
           className="label S2720 L7"
           y="240"
           id="S2720"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             먹골
@@ -15867,8 +14990,7 @@ const MetroMap = () => {
           className="label S2718 L7"
           y="200"
           id="S2718"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             공릉
@@ -15878,8 +15000,7 @@ const MetroMap = () => {
           className="label S2717 L7"
           y="185"
           id="S2717"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             하계
@@ -15889,8 +15010,7 @@ const MetroMap = () => {
           className="label S2716 L7"
           y="170"
           id="S2716"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1165" dx="5" dy="3" fontSize="9px">
             중계
@@ -15900,8 +15020,7 @@ const MetroMap = () => {
           className="label S2714 L7"
           y="130"
           id="S2714"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1125" dx="5" dy="3" fontSize="9px">
             마들
@@ -15911,8 +15030,7 @@ const MetroMap = () => {
           className="label S2713 L7"
           y="110"
           id="S2713"
-          style={{ "text-anchor": "start" }}
-          lineId="7"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1105" dx="5" dy="3" fontSize="9px">
             수락산
@@ -15922,8 +15040,7 @@ const MetroMap = () => {
           className="label S2711 L7"
           y="80"
           id="S2711"
-          style={{ "text-anchor": "middle" }}
-          lineId="7"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1155" dx="0" dy="-5" fontSize="9px">
             장암
@@ -15933,8 +15050,7 @@ const MetroMap = () => {
           className="label S2811 L8"
           y="500"
           id="S2811"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1355" dx="5" dy="3" fontSize="9px">
             암사
@@ -15944,8 +15060,7 @@ const MetroMap = () => {
           className="label S2813 L8"
           y="569"
           id="S2813"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1325" dx="3" dy="11" fontSize="9px">
             강동구청
@@ -15955,8 +15070,7 @@ const MetroMap = () => {
           className="label S2814 L8"
           y="597.5"
           id="S2814"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1295" dx="3" dy="11" fontSize="9px">
             몽촌토성
@@ -15966,8 +15080,7 @@ const MetroMap = () => {
           className="label S2816 L8 S4133 L9"
           y="660"
           id="S2816"
-          style={{ "text-anchor": "start" }}
-          lineId="8 9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1280" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             석촌
@@ -15977,8 +15090,7 @@ const MetroMap = () => {
           className="label S2817 L8"
           y="685"
           id="S2817"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1305" dx="3" dy="-3" fontSize="9px">
             송파
@@ -15988,8 +15100,7 @@ const MetroMap = () => {
           className="label S2819 L8"
           y="730"
           id="S2819"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1350" dx="3" dy="-3" fontSize="9px">
             문정
@@ -15999,8 +15110,7 @@ const MetroMap = () => {
           className="label S2820 L8"
           y="750"
           id="S2820"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1370" dx="3" dy="-3" fontSize="9px">
             장지
@@ -16010,8 +15120,7 @@ const MetroMap = () => {
           className="label S2821 L8 S1031 LB"
           y="765"
           id="S1031"
-          style={{ "text-anchor": "start" }}
-          lineId="8 B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1385" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             복정
@@ -16021,8 +15130,7 @@ const MetroMap = () => {
           className="label S2828 L8"
           y="790"
           id="S2828"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1410" dx="3" dy="-3" fontSize="9px">
             남위례
@@ -16032,8 +15140,7 @@ const MetroMap = () => {
           className="label S2822 L8"
           y="810"
           id="S2822"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1425" dx="5" dy="3" fontSize="9px">
             산성
@@ -16043,8 +15150,7 @@ const MetroMap = () => {
           className="label S2823 L8"
           y="840"
           id="S2823"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1425" dx="5" dy="3" fontSize="9px">
             남한산성입구
@@ -16054,8 +15160,7 @@ const MetroMap = () => {
           className="label S2824 L8"
           y="845"
           id="S2824"
-          style={{ "text-anchor": "middle" }}
-          lineId="8"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1392.5" dx="0" dy="-5" fontSize="9px">
             단대오거리
@@ -16065,8 +15170,7 @@ const MetroMap = () => {
           className="label S2825 L8"
           y="845"
           id="S2825"
-          style={{ "text-anchor": "middle" }}
-          lineId="8"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1355" dx="0" dy="-5" fontSize="9px">
             신흥
@@ -16076,8 +15180,7 @@ const MetroMap = () => {
           className="label S2826 L8"
           y="835"
           id="S2826"
-          style={{ "text-anchor": "start" }}
-          lineId="8"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1315" dx="3" dy="-3" fontSize="9px">
             수진
@@ -16087,8 +15190,7 @@ const MetroMap = () => {
           className="label S2827 L8 S1853 LB"
           y="805"
           id="S1853"
-          style={{ "text-anchor": "end" }}
-          lineId="8 B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1295" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
             모란
@@ -16098,8 +15200,7 @@ const MetroMap = () => {
           className="label S4101 L9"
           y="275"
           id="S4101"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="185" dx="5" dy="3" fontSize="9px">
             개화
@@ -16109,8 +15210,7 @@ const MetroMap = () => {
           className="label S4103 L9"
           y="345"
           id="S4103"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="230" dx="3" dy="-3" fontSize="9px">
             공항시장
@@ -16120,8 +15220,7 @@ const MetroMap = () => {
           className="label S4104 L9"
           y="355"
           id="S4104"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="255" dx="3" dy="-3" fontSize="9px">
             신방화
@@ -16131,8 +15230,7 @@ const MetroMap = () => {
           className="label S4105 L9 S4206 LA"
           y="375"
           id="S4105"
-          style={{ "text-anchor": "start" }}
-          lineId="9 A"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="275" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             마곡나루
@@ -16142,8 +15240,7 @@ const MetroMap = () => {
           className="label S4106 L9"
           y="390"
           id="S4106"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="290" dx="3" dy="-3" fontSize="9px">
             양천향교
@@ -16153,8 +15250,7 @@ const MetroMap = () => {
           className="label S4107 L9"
           y="415"
           id="S4107"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="330" dx="0" dy="-5" fontSize="9px">
             가양
@@ -16164,8 +15260,7 @@ const MetroMap = () => {
           className="label S4108 L9"
           y="415"
           id="S4108"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="360" dx="0" dy="-5" fontSize="9px">
             증미
@@ -16175,8 +15270,7 @@ const MetroMap = () => {
           className="label S4109 L9"
           y="415"
           id="S4109"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="385" dx="0" dy="-5" fontSize="9px">
             등촌
@@ -16186,8 +15280,7 @@ const MetroMap = () => {
           className="label S4110 L9"
           y="415"
           id="S4110"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="415" dx="0" dy="-5" fontSize="9px">
             염창
@@ -16197,8 +15290,7 @@ const MetroMap = () => {
           className="label S4111 L9"
           y="425"
           id="S4111"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="440" dx="3" dy="-3" fontSize="9px">
             신목동
@@ -16208,8 +15300,7 @@ const MetroMap = () => {
           className="label S4112 L9"
           y="435"
           id="S4112"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="450" dx="3" dy="-3" fontSize="9px">
             선유도
@@ -16219,8 +15310,7 @@ const MetroMap = () => {
           className="label S4114 L9"
           y="470"
           id="S4114"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="487.5" dx="3" dy="11" fontSize="9px">
             국회의사당
@@ -16230,8 +15320,7 @@ const MetroMap = () => {
           className="label S4116 L9 S4401 LSL"
           y="525"
           id="S4116"
-          style={{ "text-anchor": "middle" }}
-          lineId="9 SL"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="548.5" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             샛강
@@ -16241,8 +15330,7 @@ const MetroMap = () => {
           className="label S4118 L9"
           y="590"
           id="S4118"
-          style={{ "text-anchor": "end" }}
-          lineId="9"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="615" dx="-3" dy="11" fontSize="9px">
             노들
@@ -16252,8 +15340,7 @@ const MetroMap = () => {
           className="label S4119 L9"
           y="600"
           id="S4119"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="660" dx="0" dy="-5" fontSize="9px">
             흑석
@@ -16263,8 +15350,7 @@ const MetroMap = () => {
           className="label S4121 L9"
           y="600"
           id="S4121"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="765" dx="0" dy="-5" fontSize="9px">
             구반포
@@ -16274,8 +15360,7 @@ const MetroMap = () => {
           className="label S4122 L9"
           y="600"
           id="S4122"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="810" dx="0" dy="-5" fontSize="9px">
             신반포
@@ -16285,8 +15370,7 @@ const MetroMap = () => {
           className="label S4124 L9"
           y="645"
           id="S4124"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="935" dx="0" dy="-5" fontSize="9px">
             사평
@@ -16296,8 +15380,7 @@ const MetroMap = () => {
           className="label S4125 L9 S4306 LS"
           y="645"
           id="S4125"
-          style={{ "text-anchor": "start" }}
-          lineId="9 S"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="975" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             신논현
@@ -16307,8 +15390,7 @@ const MetroMap = () => {
           className="label S4126 L9"
           y="645"
           id="S4126"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1025" dx="0" dy="-5" fontSize="9px">
             언주
@@ -16318,8 +15400,7 @@ const MetroMap = () => {
           className="label S4127 L9 S1850 LB"
           y="645"
           id="S1850"
-          style={{ "text-anchor": "middle" }}
-          lineId="9 B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1050" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             선정릉
@@ -16329,8 +15410,7 @@ const MetroMap = () => {
           className="label S4128 L9"
           y="645"
           id="S4128"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1115" dx="0" dy="-5" fontSize="9px">
             삼성중앙
@@ -16340,8 +15420,7 @@ const MetroMap = () => {
           className="label S4129 L9"
           y="650"
           id="S4129"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1145" dx="5" dy="3" fontSize="9px">
             봉은사
@@ -16351,8 +15430,7 @@ const MetroMap = () => {
           className="label S4131 L9"
           y="695"
           id="S4131"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1195" dx="0" dy="13" fontSize="9px">
             삼전
@@ -16362,8 +15440,7 @@ const MetroMap = () => {
           className="label S4132 L9"
           y="695"
           id="S4132"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1260" dx="0" dy="13" fontSize="9px">
             석촌고분
@@ -16373,8 +15450,7 @@ const MetroMap = () => {
           className="label S4134 L9"
           y="630"
           id="S4134"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1315" dx="5" dy="3" fontSize="9px">
             송파나루
@@ -16384,8 +15460,7 @@ const MetroMap = () => {
           className="label S4135 L9"
           y="600"
           id="S4135"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1345" dx="5" dy="3" fontSize="9px">
             한성백제
@@ -16395,8 +15470,7 @@ const MetroMap = () => {
           className="label S4137 L9"
           y="590"
           id="S4137"
-          style={{ "text-anchor": "middle" }}
-          lineId="9"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1450" dx="0" dy="-5" fontSize="9px">
             둔촌오륜
@@ -16406,8 +15480,7 @@ const MetroMap = () => {
           className="label S4138 L9"
           y="565"
           id="S4138"
-          style={{ "text-anchor": "start" }}
-          lineId="9"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1470" dx="5" dy="3" fontSize="9px">
             중앙
@@ -16421,8 +15494,7 @@ const MetroMap = () => {
           className="label S1308 LG S1201 LK"
           y="280"
           id="S1201"
-          style={{ "text-anchor": "middle" }}
-          lineId="G K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1105" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             중랑
@@ -16432,8 +15504,7 @@ const MetroMap = () => {
           className="label S1310 LG S1203 LK"
           y="280"
           id="S1203"
-          style={{ "text-anchor": "middle" }}
-          lineId="G K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1240" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             망우
@@ -16444,8 +15515,7 @@ const MetroMap = () => {
           className="label S1285 LK"
           y="80"
           id="S1285"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="40" dx="0" dy="13" fontSize="9px">
             임진강
@@ -16455,8 +15525,7 @@ const MetroMap = () => {
           className="label S1284 LK"
           y="80"
           id="S1284"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="75" dx="0" dy="17" fontSize="9px" fontWeight="bold">
             문산
@@ -16466,8 +15535,7 @@ const MetroMap = () => {
           className="label S1283 LK"
           y="80"
           id="S1283"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="100" dx="0" dy="13" fontSize="9px">
             파주
@@ -16477,8 +15545,7 @@ const MetroMap = () => {
           className="label S1282 LK"
           y="80"
           id="S1282"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="125" dx="0" dy="13" fontSize="9px">
             월롱
@@ -16488,8 +15555,7 @@ const MetroMap = () => {
           className="label S1280 LK"
           y="80"
           id="S1280"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="150" dx="0" dy="13" fontSize="9px">
             금촌
@@ -16499,8 +15565,7 @@ const MetroMap = () => {
           className="label S1279 LK"
           y="80"
           id="S1279"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="175" dx="0" dy="13" fontSize="9px">
             금릉
@@ -16510,8 +15575,7 @@ const MetroMap = () => {
           className="label S1278 LK"
           y="80"
           id="S1278"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="200" dx="0" dy="13" fontSize="9px">
             운정
@@ -16521,8 +15585,7 @@ const MetroMap = () => {
           className="label S1277 LK"
           y="80"
           id="S1277"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="225" dx="0" dy="13" fontSize="9px">
             야당
@@ -16532,8 +15595,7 @@ const MetroMap = () => {
           className="label S1276 LK"
           y="80"
           id="S1276"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="250" dx="0" dy="13" fontSize="9px">
             탄현
@@ -16543,8 +15605,7 @@ const MetroMap = () => {
           className="label S1275 LK"
           y="90"
           id="S1275"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="265" dx="5" dy="3" fontSize="9px">
             일산
@@ -16554,8 +15615,7 @@ const MetroMap = () => {
           className="label S1274 LK"
           y="110"
           id="S1274"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="265" dx="5" dy="3" fontSize="9px">
             풍산
@@ -16565,8 +15625,7 @@ const MetroMap = () => {
           className="label S1273 LK"
           y="130"
           id="S1273"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="265" dx="5" dy="3" fontSize="9px">
             백마
@@ -16576,8 +15635,7 @@ const MetroMap = () => {
           className="label S1272 LK"
           y="150"
           id="S1272"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="265" dx="5" dy="3" fontSize="9px">
             곡산
@@ -16587,8 +15645,7 @@ const MetroMap = () => {
           className="label S1271 LK"
           y="210"
           id="S1271"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="280" dx="3" dy="-3" fontSize="9px">
             능곡
@@ -16598,8 +15655,7 @@ const MetroMap = () => {
           className="label S1270 LK"
           y="230"
           id="S1270"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="300" dx="3" dy="-3" fontSize="9px">
             행신
@@ -16609,8 +15665,7 @@ const MetroMap = () => {
           className="label S1269 LK"
           y="255"
           id="S1269"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="325" dx="3" dy="-3" fontSize="9px">
             강매
@@ -16620,8 +15675,7 @@ const MetroMap = () => {
           className="label S1268 LK"
           y="275"
           id="S1268"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="345" dx="3" dy="-3" fontSize="9px">
             화전
@@ -16631,8 +15685,7 @@ const MetroMap = () => {
           className="label S1267 LK"
           y="295"
           id="S1267"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="365" dx="3" dy="-3" fontSize="9px">
             수색
@@ -16642,8 +15695,7 @@ const MetroMap = () => {
           className="label S1265 LK"
           y="315"
           id="S1265"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="495" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             가좌
@@ -16653,8 +15705,7 @@ const MetroMap = () => {
           className="label S1252 LK"
           y="315"
           id="S1252"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="525" dx="0" dy="-5" fontSize="9px">
             신촌
@@ -16664,8 +15715,7 @@ const MetroMap = () => {
           className="label S1251 LK"
           y="385"
           id="S1251"
-          style={{ "text-anchor": "end" }}
-          lineId="K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="645" dx="-3" dy="11" fontSize="9px">
             서울역
@@ -16675,8 +15725,7 @@ const MetroMap = () => {
           className="label S1263 LK"
           y="440"
           id="S1263"
-          style={{ "text-anchor": "start" }}
-          lineId="K"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="550" dx="5" dy="3" fontSize="9px">
             서강대
@@ -16686,8 +15735,7 @@ const MetroMap = () => {
           className="label S1009 LK"
           y="545"
           id="S1009"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="780" dx="0" dy="-5" fontSize="9px">
             서빙고
@@ -16697,8 +15745,7 @@ const MetroMap = () => {
           className="label S1010 LK"
           y="545"
           id="S1010"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="825" dx="0" dy="-5" fontSize="9px">
             한남
@@ -16708,8 +15755,7 @@ const MetroMap = () => {
           className="label S1012 LK"
           y="465"
           id="S1012"
-          style={{ "text-anchor": "end" }}
-          lineId="K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="925" dx="-3" dy="-3" fontSize="9px">
             응봉
@@ -16719,8 +15765,7 @@ const MetroMap = () => {
           className="label S1204 LK"
           y="285"
           id="S1204"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1275" dx="0" dy="-5" fontSize="9px">
             양원
@@ -16730,8 +15775,7 @@ const MetroMap = () => {
           className="label S1205 LK"
           y="285"
           id="S1205"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1300" dx="0" dy="-5" fontSize="9px">
             구리
@@ -16741,8 +15785,7 @@ const MetroMap = () => {
           className="label S1206 LK"
           y="285"
           id="S1206"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1325" dx="0" dy="-5" fontSize="9px">
             도농
@@ -16752,8 +15795,7 @@ const MetroMap = () => {
           className="label S1207 LK"
           y="285"
           id="S1207"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1350" dx="0" dy="-5" fontSize="9px">
             양정
@@ -16763,8 +15805,7 @@ const MetroMap = () => {
           className="label S1208 LK"
           y="285"
           id="S1208"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1375" dx="0" dy="-5" fontSize="9px">
             덕소
@@ -16774,8 +15815,7 @@ const MetroMap = () => {
           className="label S1209 LK"
           y="285"
           id="S1209"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1400" dx="0" dy="-5" fontSize="9px">
             도심
@@ -16785,8 +15825,7 @@ const MetroMap = () => {
           className="label S1210 LK"
           y="300"
           id="S1210"
-          style={{ "text-anchor": "end" }}
-          lineId="K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1435" dx="-5" dy="3" fontSize="9px">
             팔당
@@ -16796,8 +15835,7 @@ const MetroMap = () => {
           className="label S1211 LK"
           y="320"
           id="S1211"
-          style={{ "text-anchor": "end" }}
-          lineId="K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1435" dx="-5" dy="3" fontSize="9px">
             운길산
@@ -16807,8 +15845,7 @@ const MetroMap = () => {
           className="label S1212 LK"
           y="340"
           id="S1212"
-          style={{ "text-anchor": "end" }}
-          lineId="K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1435" dx="-5" dy="3" fontSize="9px">
             양수
@@ -16818,8 +15855,7 @@ const MetroMap = () => {
           className="label S1213 LK"
           y="360"
           id="S1213"
-          style={{ "text-anchor": "end" }}
-          lineId="K"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1435" dx="-5" dy="3" fontSize="9px">
             신원
@@ -16829,8 +15865,7 @@ const MetroMap = () => {
           className="label S1214 LK"
           y="375"
           id="S1214"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1400" dx="0" dy="-5" fontSize="9px">
             국수
@@ -16840,8 +15875,7 @@ const MetroMap = () => {
           className="label S1215 LK"
           y="375"
           id="S1215"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1375" dx="0" dy="-5" fontSize="9px">
             아신
@@ -16851,8 +15885,7 @@ const MetroMap = () => {
           className="label S1216 LK"
           y="375"
           id="S1216"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1350" dx="0" dy="-5" fontSize="9px">
             오빈
@@ -16862,8 +15895,7 @@ const MetroMap = () => {
           className="label S1217 LK"
           y="375"
           id="S1217"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1325" dx="0" dy="-5" fontSize="9px">
             양평
@@ -16873,8 +15905,7 @@ const MetroMap = () => {
           className="label S1218 LK"
           y="375"
           id="S1218"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1300" dx="0" dy="-5" fontSize="9px">
             원덕
@@ -16884,8 +15915,7 @@ const MetroMap = () => {
           className="label S1219 LK"
           y="375"
           id="S1219"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1275" dx="0" dy="-5" fontSize="9px">
             용문
@@ -16895,8 +15925,7 @@ const MetroMap = () => {
           className="label S1220 LK"
           y="375"
           id="S1220"
-          style={{ "text-anchor": "middle" }}
-          lineId="K"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1250" dx="0" dy="-5" fontSize="9px">
             지평
@@ -16906,8 +15935,7 @@ const MetroMap = () => {
           className="label S1890 LB"
           y="800"
           id="S1890"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="255" dx="0" dy="-5" fontSize="9px">
             신포
@@ -16917,8 +15945,7 @@ const MetroMap = () => {
           className="label S1889 LB"
           y="805"
           id="S1889"
-          style={{ "text-anchor": "start" }}
-          lineId="B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="275" dx="3" dy="-3" fontSize="9px">
             숭의
@@ -16928,8 +15955,7 @@ const MetroMap = () => {
           className="label S1888 LB"
           y="818"
           id="S1888"
-          style={{ "text-anchor": "start" }}
-          lineId="B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="287.5" dx="3" dy="-3" fontSize="9px">
             인하대
@@ -16939,8 +15965,7 @@ const MetroMap = () => {
           className="label S1886 LB"
           y="831.5"
           id="S1886"
-          style={{ "text-anchor": "start" }}
-          lineId="B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="300" dx="3" dy="-3" fontSize="9px">
             송도
@@ -16950,8 +15975,7 @@ const MetroMap = () => {
           className="label S1885 LB"
           y="845"
           id="S1885"
-          style={{ "text-anchor": "start" }}
-          lineId="B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="312.5" dx="3" dy="-3" fontSize="9px">
             연수
@@ -16961,8 +15985,7 @@ const MetroMap = () => {
           className="label S1883 LB"
           y="900"
           id="S1883"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="285" dx="0" dy="-5" fontSize="9px">
             인더스파크
@@ -16975,8 +15998,7 @@ const MetroMap = () => {
           className="label S1882 LB"
           y="900"
           id="S1882"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="245" dx="0" dy="-5" fontSize="9px">
             호구포
@@ -16986,8 +16008,7 @@ const MetroMap = () => {
           className="label S1881 LB"
           y="900"
           id="S1881"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="205" dx="0" dy="-5" fontSize="9px">
             인천논현
@@ -16997,8 +16018,7 @@ const MetroMap = () => {
           className="label S1880 LB"
           y="900"
           id="S1880"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="160" dx="0" dy="-5" fontSize="9px">
             소래포구
@@ -17008,8 +16028,7 @@ const MetroMap = () => {
           className="label S1879 LB"
           y="900"
           id="S1879"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="120" dx="0" dy="-5" fontSize="9px">
             월곶
@@ -17019,8 +16038,7 @@ const MetroMap = () => {
           className="label S1878 LB"
           y="920"
           id="S1878"
-          style={{ "text-anchor": "start" }}
-          lineId="B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="100" dx="5" dy="3" fontSize="9px">
             달월
@@ -17030,8 +16048,7 @@ const MetroMap = () => {
           className="label S1877 LB"
           y="965"
           id="S1877"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="400" dx="0" dy="13" fontSize="9px">
             사리
@@ -17041,8 +16058,7 @@ const MetroMap = () => {
           className="label S1876 LB"
           y="965"
           id="S1876"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="455" dx="0" dy="13" fontSize="9px">
             야목
@@ -17052,8 +16068,7 @@ const MetroMap = () => {
           className="label S1875 LB"
           y="965"
           id="S1875"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="510" dx="0" dy="13" fontSize="9px">
             어천
@@ -17063,8 +16078,7 @@ const MetroMap = () => {
           className="label S1874 LB"
           y="965"
           id="S1874"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="565" dx="0" dy="13" fontSize="9px">
             오목천
@@ -17074,8 +16088,7 @@ const MetroMap = () => {
           className="label S1873 LB"
           y="965"
           id="S1873"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="620" dx="0" dy="13" fontSize="9px">
             고색
@@ -17085,8 +16098,7 @@ const MetroMap = () => {
           className="label S1872 LB"
           y="910"
           id="S1872"
-          style={{ "text-anchor": "end" }}
-          lineId="B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="670" dx="-5" dy="3" fontSize="9px">
             매교
@@ -17096,8 +16108,7 @@ const MetroMap = () => {
           className="label S1871 LB"
           y="890"
           id="S1871"
-          style={{ "text-anchor": "end" }}
-          lineId="B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="670" dx="-5" dy="3" fontSize="9px">
             수원시청
@@ -17107,8 +16118,7 @@ const MetroMap = () => {
           className="label S1870 LB"
           y="870"
           id="S1870"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="695" dx="0" dy="-5" fontSize="9px">
             매탄권선
@@ -17118,8 +16128,7 @@ const MetroMap = () => {
           className="label S1869 LB"
           y="870"
           id="S1869"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="735" dx="0" dy="-5" fontSize="9px">
             망포
@@ -17129,8 +16138,7 @@ const MetroMap = () => {
           className="label S1868 LB"
           y="870"
           id="S1868"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="770" dx="0" dy="-5" fontSize="9px">
             영통
@@ -17140,8 +16148,7 @@ const MetroMap = () => {
           className="label S1867 LB"
           y="870"
           id="S1867"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="800" dx="0" dy="-5" fontSize="9px">
             청명
@@ -17151,8 +16158,7 @@ const MetroMap = () => {
           className="label S1866 LB"
           y="870"
           id="S1866"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="835" dx="0" dy="-5" fontSize="9px">
             상갈
@@ -17162,8 +16168,7 @@ const MetroMap = () => {
           className="label S1865 LB S4501 LE"
           y="870"
           id="S1865"
-          style={{ "text-anchor": "middle" }}
-          lineId="B E"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="865" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             기흥
@@ -17173,8 +16178,7 @@ const MetroMap = () => {
           className="label S1864 LB"
           y="870"
           id="S1864"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="895" dx="0" dy="-5" fontSize="9px">
             신갈
@@ -17184,8 +16188,7 @@ const MetroMap = () => {
           className="label S1863 LB"
           y="870"
           id="S1863"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="940" dx="0" dy="-5" fontSize="9px">
             구성
@@ -17195,8 +16198,7 @@ const MetroMap = () => {
           className="label S1861 LB"
           y="870"
           id="S1861"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="975" dx="0" dy="-5" fontSize="9px">
             보정
@@ -17206,8 +16208,7 @@ const MetroMap = () => {
           className="label S1862 LB"
           y="870"
           id="S1862"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1010" dx="0" dy="-5" fontSize="9px">
             죽전
@@ -17217,8 +16218,7 @@ const MetroMap = () => {
           className="label S1859 LB"
           y="870"
           id="S1859"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1045" dx="0" dy="-5" fontSize="9px">
             오리
@@ -17228,8 +16228,7 @@ const MetroMap = () => {
           className="label S1858 LB S4313 LS"
           y="850"
           id="S1858"
-          style={{ "text-anchor": "start" }}
-          lineId="B S"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1070" dx="7" dy="15" fontSize="9px" fontWeight="bold">
             미금
@@ -17239,8 +16238,7 @@ const MetroMap = () => {
           className="label S1857 LB S4312 LS"
           y="830"
           id="S1857"
-          style={{ "text-anchor": "start" }}
-          lineId="B S"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1090" dx="9" dy="3" fontSize="9px" fontWeight="bold">
             정자
@@ -17250,8 +16248,7 @@ const MetroMap = () => {
           className="label S1856 LB"
           y="805"
           id="S1856"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1135" dx="0" dy="13" fontSize="9px">
             수내
@@ -17261,8 +16258,7 @@ const MetroMap = () => {
           className="label S1855 LB"
           y="805"
           id="S1855"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1170" dx="0" dy="13" fontSize="9px">
             서현
@@ -17272,8 +16268,7 @@ const MetroMap = () => {
           className="label S1860 LB S1502 LKK"
           y="805"
           id="S1860"
-          style={{ "text-anchor": "start" }}
-          lineId="B KK"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1210" dx="7" dy="-7" fontSize="9px" fontWeight="bold">
             이매
@@ -17283,8 +16278,7 @@ const MetroMap = () => {
           className="label S1854 LB"
           y="805"
           id="S1854"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1245" dx="0" dy="13" fontSize="9px">
             야탑
@@ -17294,8 +16288,7 @@ const MetroMap = () => {
           className="label S1852 LB"
           y="805"
           id="S1852"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1330" dx="0" dy="-5" fontSize="9px">
             태평
@@ -17305,8 +16298,7 @@ const MetroMap = () => {
           className="label S1851 LB"
           y="785"
           id="S1851"
-          style={{ "text-anchor": "end" }}
-          lineId="B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1360" dx="-3" dy="-3" fontSize="9px">
             가천대
@@ -17316,8 +16308,7 @@ const MetroMap = () => {
           className="label S1028 LB"
           y="765"
           id="S1028"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1195" dx="0" dy="-5" fontSize="9px">
             대모산입구
@@ -17327,8 +16318,7 @@ const MetroMap = () => {
           className="label S1027 LB"
           y="765"
           id="S1027"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1135" dx="0" dy="-5" fontSize="9px">
             개포동
@@ -17338,8 +16328,7 @@ const MetroMap = () => {
           className="label S1026 LB"
           y="765"
           id="S1026"
-          style={{ "text-anchor": "middle" }}
-          lineId="B"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1075" dx="0" dy="-5" fontSize="9px">
             구룡
@@ -17349,8 +16338,7 @@ const MetroMap = () => {
           className="label S1024 LB"
           y="700"
           id="S1024"
-          style={{ "text-anchor": "start" }}
-          lineId="B"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="1015" dx="5" dy="3" fontSize="9px">
             한티
@@ -17360,8 +16348,7 @@ const MetroMap = () => {
           className="label S1848 LB"
           y="535"
           id="S1848"
-          style={{ "text-anchor": "end" }}
-          lineId="B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1060" dx="-3" dy="11" fontSize="9px">
             압구정로데오
@@ -17371,8 +16358,7 @@ const MetroMap = () => {
           className="label S1847 LB"
           y="485"
           id="S1847"
-          style={{ "text-anchor": "end" }}
-          lineId="B"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="1010" dx="-3" dy="11" fontSize="9px">
             서울숲
@@ -17382,8 +16368,7 @@ const MetroMap = () => {
           className="label S4309 LS"
           y="775"
           id="S4309"
-          style={{ "text-anchor": "start" }}
-          lineId="S"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="930" dx="3" dy="-3" fontSize="9px">
             양재시민의숲
@@ -17393,8 +16378,7 @@ const MetroMap = () => {
           className="label S4310 LS"
           y="800"
           id="S4310"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="980" dx="0" dy="-5" fontSize="9px">
             청계산입구
@@ -17404,8 +16388,7 @@ const MetroMap = () => {
           className="label S4311 LS S1501 LKK"
           y="800"
           id="S4311"
-          style={{ "text-anchor": "middle" }}
-          lineId="S KK"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1045" dx="0" dy="-9" fontSize="9px" fontWeight="bold">
             판교
@@ -17415,8 +16398,7 @@ const MetroMap = () => {
           className="label S4314 LS"
           y="835"
           id="S4314"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1045" dx="0" dy="-5" fontSize="9px">
             동천
@@ -17426,8 +16408,7 @@ const MetroMap = () => {
           className="label S4315 LS"
           y="835"
           id="S4315"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="1010" dx="0" dy="-5" fontSize="9px">
             수지구청
@@ -17437,8 +16418,7 @@ const MetroMap = () => {
           className="label S4316 LS"
           y="835"
           id="S4316"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="975" dx="0" dy="-5" fontSize="9px">
             성복
@@ -17448,8 +16428,7 @@ const MetroMap = () => {
           className="label S4317 LS"
           y="835"
           id="S4317"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="940" dx="0" dy="-5" fontSize="9px">
             상현
@@ -17459,8 +16438,7 @@ const MetroMap = () => {
           className="label S4318 LS"
           y="835"
           id="S4318"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="905" dx="0" dy="-5" fontSize="9px">
             광교중앙
@@ -17470,8 +16448,7 @@ const MetroMap = () => {
           className="label S4319 LS"
           y="835"
           id="S4319"
-          style={{ "text-anchor": "middle" }}
-          lineId="S"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="870" dx="0" dy="-5" fontSize="9px">
             광교
@@ -17482,8 +16459,7 @@ const MetroMap = () => {
           className="label S4710 LW"
           y="140"
           id="S4710"
-          style={{ "text-anchor": "start" }}
-          lineId="W"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="840" dx="3" dy="-3" fontSize="9px">
             정릉
@@ -17493,8 +16469,7 @@ const MetroMap = () => {
           className="label S4709 LW"
           y="135"
           id="S4709"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="815" dx="0" dy="13" fontSize="9px">
             북한산보국문
@@ -17504,8 +16479,7 @@ const MetroMap = () => {
           className="label S4708 LW"
           y="135"
           id="S4708"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="780" dx="0" dy="13" fontSize="9px">
             솔샘
@@ -17515,8 +16489,7 @@ const MetroMap = () => {
           className="label S4707 LW"
           y="135"
           id="S4707"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="745" dx="0" dy="13" fontSize="9px">
             삼양사거리
@@ -17526,8 +16499,7 @@ const MetroMap = () => {
           className="label S4706 LW"
           y="135"
           id="S4706"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="710" dx="0" dy="13" fontSize="9px">
             삼양
@@ -17537,8 +16509,7 @@ const MetroMap = () => {
           className="label S4705 LW"
           y="135"
           id="S4705"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="680" dx="0" dy="13" fontSize="9px">
             화계
@@ -17548,8 +16519,7 @@ const MetroMap = () => {
           className="label S4704 LW"
           y="135"
           id="S4704"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="650" dx="0" dy="13" fontSize="9px">
             가오리
@@ -17559,8 +16529,7 @@ const MetroMap = () => {
           className="label S4703 LW"
           y="135"
           id="S4703"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="610" dx="0" dy="13" fontSize="9px">
             4·19민주묘지
@@ -17570,8 +16539,7 @@ const MetroMap = () => {
           className="label S4702 LW"
           y="110"
           id="S4702"
-          style={{ "text-anchor": "end" }}
-          lineId="W"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="575" dx="-3" dy="11" fontSize="9px">
             솔밭공원
@@ -17581,8 +16549,7 @@ const MetroMap = () => {
           className="label S4701 LW"
           y="95"
           id="S4701"
-          style={{ "text-anchor": "middle" }}
-          lineId="W"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="525" dx="0" dy="13" fontSize="9px">
             북한산우이
@@ -17592,8 +16559,7 @@ const MetroMap = () => {
           className="label S4403 LSL"
           y="595"
           id="S4403"
-          style={{ "text-anchor": "end" }}
-          lineId="SL"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="512.5" dx="-5" dy="3" fontSize="9px">
             서울지방
@@ -17606,8 +16572,7 @@ const MetroMap = () => {
           className="label S4405 LSL"
           y="650"
           id="S4405"
-          style={{ "text-anchor": "start" }}
-          lineId="SL"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="525" dx="5" dy="3" fontSize="9px">
             보라매공원
@@ -17617,8 +16582,7 @@ const MetroMap = () => {
           className="label S4406 LSL"
           y="660"
           id="S4406"
-          style={{ "text-anchor": "start" }}
-          lineId="SL"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="530" dx="5" dy="3" fontSize="9px">
             보라매병원
@@ -17628,8 +16592,7 @@ const MetroMap = () => {
           className="label S4407 LSL"
           y="670"
           id="S4407"
-          style={{ "text-anchor": "start" }}
-          lineId="SL"
+          style={{ textAnchor: "start" }}
         >
           <tspan x="540" dx="5" dy="3" fontSize="9px">
             당곡
@@ -17639,8 +16602,7 @@ const MetroMap = () => {
           className="label S4409 LSL"
           y="710"
           id="S4409"
-          style={{ "text-anchor": "end" }}
-          lineId="SL"
+          style={{ textAnchor: "end" }}
         >
           <tspan x="575" dx="-5" dy="3" fontSize="9px">
             서원
@@ -17650,8 +16612,7 @@ const MetroMap = () => {
           className="label S4410 LSL"
           y="725"
           id="S4410"
-          style={{ "text-anchor": "middle" }}
-          lineId="SL"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="605" dx="0" dy="13" fontSize="9px">
             서울대벤처타운
@@ -17661,8 +16622,7 @@ const MetroMap = () => {
           className="label S4411 LSL"
           y="725"
           id="S4411"
-          style={{ "text-anchor": "middle" }}
-          lineId="SL"
+          style={{ textAnchor: "middle" }}
         >
           <tspan x="635" dx="0" dy="-5" fontSize="9px">
             관악산(서울대)
