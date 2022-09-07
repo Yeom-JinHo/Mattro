@@ -1,0 +1,12 @@
+.infoListRect {
+  position: absolute;
+  display: flex;
+  border: 1px solid $GRAY_BA;
+
+  li {
+    padding: 12px;
+  }
+  li + li {
+    border-left: 1px solid $GRAY_BA;
+  }
+}
