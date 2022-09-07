@@ -1,9 +1,10 @@
 @mixin box {
-  padding: 12px;
+  padding: vw(12px);
 
-  width: 286px;
-  height: 48px;
+  width: vw(286px);
+  height: vw(48px);
 
+  background-color: white;
   border: 1px solid $GRAY_BA;
 }
 
@@ -13,7 +14,6 @@
 
 .li {
   @include box();
-
   &:hover {
     cursor: pointer;
     background-color: aliceblue;
@@ -24,7 +24,7 @@
       transform: none;
     }
     & + span {
-      margin-left: 8px;
+      margin-left: vw(8px);
     }
   }
 }
