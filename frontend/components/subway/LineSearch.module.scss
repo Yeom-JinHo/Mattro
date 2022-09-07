@@ -1,0 +1,30 @@
+@mixin box {
+  padding: 12px;
+
+  width: 286px;
+  height: 48px;
+
+  border: 1px solid $GRAY_BA;
+}
+
+.input {
+  @include box();
+}
+
+.li {
+  @include box();
+
+  &:hover {
+    cursor: pointer;
+    background-color: aliceblue;
+  }
+
+  span {
+    &:hover {
+      transform: none;
+    }
+    & + span {
+      margin-left: 8px;
+    }
+  }
+}

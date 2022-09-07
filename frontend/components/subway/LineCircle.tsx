@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./LineCircle.module.scss";
 
-type LineCircleProps = {
+export type LineCircleProps = {
   id: string;
   name: string;
 };
