@@ -1,0 +1,39 @@
+.lineSelectedBar {
+  padding: 26px 16px;
+  width: 691px;
+  height: 100px;
+
+  border: 1px solid $GRAY_BA;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.stations {
+  max-width: 484px;
+  overflow-y: scroll;
+}
+
+.station {
+  padding: 14px 25px;
+  border-radius: 20px;
+  color: white;
+  white-space: nowrap;
+  & + .station {
+    margin-left: 16px;
+  }
+}
+
+.btn {
+  margin-left: 8px;
+
+  padding: 14px 25px;
+  width: 167px;
+  height: 48px;
+
+  border-radius: 20px;
+  color: white;
+  background-color: $GRAY_BA;
+
+  &:hover {
+    color: black;
+  }
+}

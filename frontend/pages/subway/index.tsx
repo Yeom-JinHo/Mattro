@@ -1,6 +1,7 @@
 import React from "react";
 import LineInfoList from "../../components/subway/LineCircleList";
 import LineSearch from "../../components/subway/LineSearch";
+import LineSelectedBar from "../../components/subway/LineSelectedBar";
 import MetroMap from "../../components/subway/MetroMap";
 import styles from "./subway.module.scss";
 
@@ -10,6 +11,7 @@ const index = () => {
       <LineInfoList />
       <LineSearch />
       {/* <MetroMap /> */}
+      <LineSelectedBar />
     </div>
   );
 };
