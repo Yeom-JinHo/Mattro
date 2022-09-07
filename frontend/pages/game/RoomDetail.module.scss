@@ -4,17 +4,52 @@
   background-position: center;
   background-size: cover;
   h2 {
+    padding: vw(32px);
     width: vw(554px);
-    height: 100px;
+    height: vw(100px);
     background-color: $GRAY_3A;
     color: $WHITE;
     border-radius: 22px;
+    span {
+      margin-right: vw(36px);
+      width: vw(80px);
+      height: vw(64px);
+      border-radius: 22px;
+      background-color: $SUB_YELLOW;
+      color: $GRAY_3A;
+    }
   }
-  span {
-    width: vw(80px);
-    height: 64px;
-    background-color: $SUB_YELLOW;
+  button {
+    width: vw(200px);
+    height: vw(70px);
+    border: 4px solid $L1;
+    border-radius: 20px;
     color: $GRAY_3A;
-    border-radius: 22px;
+    text-transform: uppercase;
+  }
+}
+
+.userList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: vw(36px);
+  margin-top: vw(64px);
+  margin-bottom: vw(90px);
+  .user {
+    width: vw(224px);
+    height: vw(340px);
+    border-radius: 44px;
+    background-color: $GRAY_5F;
+    .username {
+      margin-bottom: vw(28px);
+      color: $WHITE;
+    }
+    .invisible {
+      // display: none;
+      width: vw(86px);
+      height: vw(38px);
+      border-radius: 22px;
+      background-color: $SUB_YELLOW;
+    }
   }
 }
