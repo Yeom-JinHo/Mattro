@@ -1,4 +1,45 @@
-
+.L1 {
+  color: $L1;
+}
+.L2 {
+  color: $L2;
+}
+.L3 {
+  color: $L3;
+}
+.L4 {
+  color: $L4;
+}
+.L5 {
+  color: $L5;
+}
+.L6 {
+  color: $L6;
+}
+.L7 {
+  color: $L7;
+}
+.L8 {
+  color: $L8;
+}
+.L9 {
+  color: $L9;
+}
+.LK {
+  color: $LK;
+}
+.LB {
+  color: $LB;
+}
+.LS {
+  color: $LS;
+}
+.LW {
+  color: $LW;
+}
+.LSL {
+  color: $LSL;
+}
 /* 폰트 타이포 */
 .notoMid {
   font-family: "NotoSansMedium";
@@ -14,20 +55,20 @@
 .notoBlack {
   font-family: "NotoSansBlack";
 }
-.coreHeavy{
-  font-family : "SCDream8";
+.coreHeavy {
+  font-family: "SCDream8";
 }
-.coreBold{
-  font-family : "SCDream6";
+.coreBold {
+  font-family: "SCDream6";
 }
-.coreExtra{
-  font-family : "SCDream7";
+.coreExtra {
+  font-family: "SCDream7";
 }
-.coreMid{
-  font-family : "SCDream5";
+.coreMid {
+  font-family: "SCDream5";
 }
-.coreBlack{
-  font-family : "SCDream9";
+.coreBlack {
+  font-family: "SCDream9";
 }
 
 .phoneOnly {
@@ -101,7 +142,6 @@
 }
 
 @media screen and (max-width: $DESKTOP-VW) {
-
   .fs-10 {
     font-size: vw(10px);
   }
@@ -168,9 +208,7 @@
   .fs-100 {
     font-size: vw(100px);
   }
-
 }
-
 
 @media screen and (max-width: $TABLET-VW) {
   .desktopOnly {
