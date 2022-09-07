@@ -5,7 +5,7 @@ import lineInfos from "../../constants/lineInfo";
 
 const LineCircleList = () => {
   return (
-    <ul className={styles.infoListRect}>
+    <ul id="lineCircleList" className={styles.infoListRect}>
       {lineInfos.map((line) => (
         <li id={line.id} key={line.id} className="infoLi">
           <LineCircle id={line.id} name={line.name} />

@@ -6,7 +6,7 @@ const LineSearch = () => {
   const [searchList, setSearchList] = useState([{ id: "LS", name: "신분당" }]);
 
   return (
-    <div>
+    <div id="lineSearch">
       <input
         type="text"
         className={`fs-20 notoBold ${styles.input}`}

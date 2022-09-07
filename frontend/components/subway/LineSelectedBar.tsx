@@ -21,7 +21,7 @@ const LineSelectedBar = () => {
         ))}
       </ul>
       <button
-        className={`fs-20 notoBold flex align-center  ${styles.btn}`}
+        className={`fs-20 notoBold flex align-center justify-center  ${styles.btn}`}
         type="button"
       >
         맛집 추천받기

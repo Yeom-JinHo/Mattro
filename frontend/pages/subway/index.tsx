@@ -8,9 +8,9 @@ import styles from "./subway.module.scss";
 const index = () => {
   return (
     <div className={styles.subway}>
+      <MetroMap />
       <LineInfoList />
       <LineSearch />
-      {/* <MetroMap /> */}
       <LineSelectedBar />
     </div>
   );

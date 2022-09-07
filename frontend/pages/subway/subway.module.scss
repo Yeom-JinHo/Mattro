@@ -1,0 +1,26 @@
+.subway {
+  ul[id="lineCircleList"] {
+    position: absolute;
+    top: vw(70px);
+    left: vw(62px);
+  }
+
+  div[id="lineSearch"] {
+    position: absolute;
+    top: vw(70px);
+    right: vw(62px);
+  }
+
+  div[id="metroMap"] {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: vw(70px);
+  }
+  div[id="lineSelectedBar"] {
+    position: absolute;
+    bottom: vw(68px);
+    left: vw(375px);
+  }
+}
