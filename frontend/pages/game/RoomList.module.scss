@@ -1,11 +1,8 @@
 .wrapper {
-  width: 100%;
   height: 100%;
-  background-image: url("/images/game_2.png");
-  background-position: center;
-  background-size: cover;
+  background-color: $GRAY_ED;
   .roomList {
-    margin-top: vw(200px);
+    margin-top: vw(50px);
     display: grid;
     grid-template-columns: repeat(2, vw(414px));
     grid-auto-rows: vw(100px);
@@ -35,7 +32,7 @@
   button {
     align-self: flex-end;
     margin-top: vw(58px);
-    margin-right: vw(124px);
+    margin-right: vw(270px);
     width: vw(164px);
     height: vw(56px);
     border: 4px solid $L1;

@@ -9,7 +9,9 @@
 }
 
 @media screen and (max-width: $DESKTOP-VW) {
-  .children {
-    width: vw(1440px);
+  .root {
+    .children {
+      width: vw(1440px);
+    }
   }
 }
