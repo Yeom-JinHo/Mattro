@@ -7,7 +7,7 @@ type AppLayoutProps = {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
-    <div>
+    <div className="flex justify-center">
       <Navbar />
       {children}
     </div>
