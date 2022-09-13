@@ -1,15 +1,15 @@
 .theme {
-  width: 1440px;
+  // width: 1440px;
   height: 100%;
   //   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: cover;
-  background-image: url("../../public/images/theme_main.png");
+  // background-repeat: no-repeat;
+  // background-position: center bottom;
+  // background-size: cover;
+  // background-image: url("../../public/images/theme_main.png");
   .contents {
-    // height: 100vh;
     align-items: flex-end;
-    justify-content: flex-end;
+    // justify-content: flex-end;
+
     .btn {
       color: $MAIN;
       background-color: $WHITE;

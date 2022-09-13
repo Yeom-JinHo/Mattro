@@ -24,7 +24,7 @@ export default function ResultCard() {
       <div className={`${styles.num} coreExtra fs-24`}>1</div>
       <div className="coreBold fs-30">{storeName}</div>
       <div className={`${styles.img} flex align-center justify-center`}>
-        <Image src={temp} alt="food" />
+        <Image src={temp} alt="food" className={styles.sub} />
       </div>
       <div className={styles.stars}>
         <Image src={star} alt="star" className={styles.star} />
