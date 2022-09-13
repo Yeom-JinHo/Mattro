@@ -1,14 +1,13 @@
 .wrapper {
   width: 100%;
   height: 100%;
-  background-image: url("/images/game_4.png");
-  background-size: cover;
-  background-position: center;
+  background-color: $GRAY_ED;
   h2 {
-    margin-top: vw(66px);
-    margin-bottom: vw(72px);
-    width: vw(554px);
-    height: vw(100px);
+    margin-top: vw(30px);
+    margin-bottom: vw(30px);
+    // width: vw(554px);
+    // height: vw(100px);
+    padding: vw(30px) vw(158px);
     border-radius: 22px;
     background-color: $GRAY_3A;
     color: $WHITE;
@@ -16,16 +15,13 @@
       color: $SUB_YELLOW;
     }
   }
-  button {
-    color: $GRAY_3A;
-  }
 }
 
 .userList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: vw(44px);
-  margin-bottom: vw(150px);
+  margin-bottom: vw(130px);
   .user {
     width: vw(202px);
     height: vw(68px);
@@ -36,7 +32,7 @@
 }
 
 .line {
-  margin-bottom: vw(128px);
+  margin-bottom: vw(100px);
   width: 100%;
   height: vw(90px);
   background-color: $LS;
@@ -47,5 +43,18 @@
     border-radius: 50%;
     text-align: center;
     background-color: $WHITE;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  button {
+    color: $GRAY_3A;
+  }
+  .chair2 {
+    justify-self: flex-end;
+    width: 30%;
   }
 }

@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./RoomList.module.scss";
 import station from "../../public/images/station.png";
+import chair1 from "../../public/images/chair1.png";
 
 const roomList = [
   { id: 1, number: 0, title: "방 제목 111" },
@@ -15,27 +17,30 @@ const roomList = [
 
 const RoomList: NextPage = () => {
   return (
-    <div
-      className={`${styles.wrapper} flex column justify-center align-center`}
-    >
-      <div className="image">
+    <div className={`${styles.wrapper} flex column align-center`}>
+      <span className={styles.station}>
         <Image src={station} alt="station" />
-      </div>
+      </span>
       <div className={styles.roomList}>
         {roomList.map((room) => (
-          <div className={`${styles.room} flex align-center`} key={room.id}>
-            <p className="flex align-center fs-34 coreExtra">
-              <span className="flex justify-center align-center fs-24 coreExtra">
-                {room.number}/4
-              </span>
-              {room.title}
-            </p>
-          </div>
+          <Link href="/game/RoomDetail" key={room.id}>
+            <div className={`${styles.room} flex align-center`}>
+              <p className="flex align-center fs-34 coreExtra">
+                <span className="flex justify-center align-center fs-24 coreExtra">
+                  {room.number}/4
+                </span>
+                {room.title}
+              </p>
+            </div>
+          </Link>
         ))}
+        <span className={styles.chair1}>
+          <Image src={chair1} alt="chair1" />
+        </span>
+        <button className="fs-24 coreExtra" type="button">
+          방 만들기
+        </button>
       </div>
-      <button className="fs-24 coreExtra" type="button">
-        방 만들기
-      </button>
     </div>
   );
 };
