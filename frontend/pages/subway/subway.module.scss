@@ -1,14 +1,13 @@
 .subway {
-  ul[id="lineCircleList"] {
-    position: absolute;
-    top: vw(70px);
-    left: vw(62px);
-  }
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-  div[id="lineSearch"] {
+  div[id="line-container"] {
     position: absolute;
-    top: vw(70px);
-    right: vw(62px);
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   div[id="metroMap"] {
@@ -20,7 +19,7 @@
   }
   div[id="lineSelectedBar"] {
     position: absolute;
-    bottom: vw(68px);
     left: vw(375px);
+    bottom: 0;
   }
 }

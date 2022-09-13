@@ -9,8 +9,10 @@ const index = () => {
   return (
     <div className={styles.subway}>
       <MetroMap />
-      <LineInfoList />
-      <LineSearch />
+      <div id="line-container" className="flex">
+        <LineInfoList />
+        <LineSearch />
+      </div>
       <LineSelectedBar />
     </div>
   );
