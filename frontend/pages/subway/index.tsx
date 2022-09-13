@@ -13,7 +13,9 @@ const index = () => {
         <LineInfoList />
         <LineSearch />
       </div>
-      <LineSelectedBar />
+      <div id="select-container" className="flex justify-center">
+        <LineSelectedBar />
+      </div>
     </div>
   );
 };

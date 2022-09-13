@@ -158,6 +158,14 @@ table {
   border-spacing: 0;
 }
 
+html,
+body,
+body > div:first-child,
+div#__next {
+  height: 100%;
+  overflow: hidden;
+}
+
 /* input:focus {
   box-shadow: 0px 0px 4px #d77d20;
 } */
