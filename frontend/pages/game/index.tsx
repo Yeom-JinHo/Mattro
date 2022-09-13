@@ -9,7 +9,7 @@ const index: NextPage = () => {
       className={`${styles.wrapper} flex column justify-center align-center`}
     >
       <h1 className="fs-100">지하철 미니 게임</h1>
-      <Link href="/game/RoomList">
+      <Link href="/game/roomList">
         <div className="fs-32 coreExtra flex justify-center align-center">
           start
         </div>

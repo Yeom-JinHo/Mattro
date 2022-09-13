@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 
-import styles from "./RoomDetail.module.scss";
+import styles from "./roomDetail.module.scss";
 import chair1 from "../../public/images/chair1.png";
 import chair2 from "../../public/images/chair2.png";
 import subway1 from "../../public/images/subway1.svg";
@@ -9,14 +9,22 @@ import subway2 from "../../public/images/subway2.svg";
 
 const userList = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 
+const room = {
+  title: "방 제목 111111111111"
+};
+
 const RoomDetail: NextPage = () => {
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
-      <h2 className="flex align-center coreExtra fs-34">
+      <h2 className="align-center coreExtra fs-30">
         <span className="flex justify-center align-center coreExtra fs-28">
           0/4
         </span>
-        <span className={`${styles.room__title}`}>방 제목 111</span>
+        <span className={`${styles.room__title}`}>
+          {room.title.length > 13
+            ? `${room.title.slice(0, 13)}...`
+            : room.title}
+        </span>
         <span className={`${styles.subway1}`}>
           <Image src={subway1} alt="subway1" />
         </span>
