@@ -1,9 +1,9 @@
 .circle {
-  padding: vw(6px) vw(9px);
-  min-height: vw(24px);
-  min-width: vw(24px);
+  padding: (6px) (9px);
+  min-height: (24px);
+  min-width: (24px);
 
-  border-radius: vw(24px);
+  border-radius: (24px);
   color: white;
 
   white-space: nowrap;
@@ -11,5 +11,15 @@
   &:hover {
     cursor: pointer;
     transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: $DESKTOP-VW) {
+  .circle {
+    padding: vw(6px) vw(9px);
+    min-height: vw(24px);
+    min-width: vw(24px);
+
+    border-radius: vw(24px);
   }
 }

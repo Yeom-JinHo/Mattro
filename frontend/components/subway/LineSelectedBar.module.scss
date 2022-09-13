@@ -1,40 +1,70 @@
 .lineSelectedBar {
-  padding: vw(26px) vw(16px);
-  width: vw(691px);
-  height: vw(100px);
+  padding: (26px) (16px);
+  width: (691px);
+  height: (100px);
 
   background-color: white;
   border: 1px solid $GRAY_BA;
-  border-radius: vw(20px);
+  border-radius: (20px);
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .stations {
-  max-width: vw(484px);
+  max-width: (484px);
   overflow-y: scroll;
 }
 
 .station {
-  padding: vw(14px) vw(25px);
-  border-radius: vw(20px);
+  padding: (14px) (25px);
+  border-radius: (20px);
   color: white;
   white-space: nowrap;
   & + .station {
-    margin-left: vw(16px);
+    margin-left: (16px);
   }
 }
 
 .btn {
   margin-left: auto;
 
-  padding: vw(14px) vw(25px);
-  width: vw(167px);
-  height: vw(48px);
+  padding: (14px) (25px);
+  width: (167px);
+  height: (48px);
 
-  border-radius: vw(20px);
+  border-radius: (20px);
   color: white;
   background-color: $GRAY_BA;
 
   &:hover {
     color: black;
+  }
+}
+
+@media screen and (max-width: $DESKTOP-VW) {
+  .lineSelectedBar {
+    padding: vw(26px) vw(16px);
+    width: vw(691px);
+    height: vw(100px);
+
+    border-radius: vw(20px);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .stations {
+    max-width: vw(484px);
+  }
+
+  .station {
+    padding: vw(14px) vw(25px);
+    border-radius: vw(20px);
+    & + .station {
+      margin-left: vw(16px);
+    }
+  }
+
+  .btn {
+    padding: vw(14px) vw(25px);
+    width: vw(167px);
+    height: vw(48px);
+
+    border-radius: vw(20px);
   }
 }
