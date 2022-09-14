@@ -8,18 +8,11 @@
   justify-content: space-between;
   padding: 0 (62px);
   align-items: center;
-  .menu {
-  }
 }
 
 .menu {
   width: (36px);
   height: (24px);
-  //   &:hover {
-  //     background-color: white;
-  //     padding: vw(24px);
-  //     border-radius: 50%;
-  //   }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,24 +20,39 @@
 
 @media screen and (max-width: $DESKTOP-VW) {
   .navbar {
-    display: flex;
-    flex-direction: row;
     width: vw(1440px);
     height: (70px);
-    position: fixed;
-    top: 0;
-    justify-content: space-between;
     padding: 0 vw(62px);
-    align-items: center;
   }
 
   .menu {
     width: vw(36px);
     height: vw(24px);
-    //   &:hover {
-    //     background-color: white;
-    //     padding: vw(24px);
-    //     border-radius: 50%;
-    //   }
+  }
+}
+
+@media screen and (max-width: $TABLET-VW) {
+  .navbar {
+    width: vw-t(1440px);
+    height: (70px);
+    padding: 0 vw-t(62px);
+  }
+
+  .menu {
+    width: vw-t(36px);
+    height: vw-t(24px);
+  }
+}
+
+@media screen and (max-width: $PHONE-VW) {
+  .navbar {
+    width: vw-p(1440px);
+    height: (70px);
+    padding: 0 vw-p(62px);
+  }
+
+  .menu {
+    width: vw-p(36px);
+    height: vw-p(24px);
   }
 }
