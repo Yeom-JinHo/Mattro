@@ -7,6 +7,9 @@ import chair2 from "../../public/images/chair2.png";
 const userList = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 
 const Start: NextPage = () => {
+  const onChange = () => {
+    console.log(1);
+  };
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -23,7 +26,10 @@ const Start: NextPage = () => {
         ))}
       </div>
       <div className={`${styles.line} flex justify-center align-center`}>
-        <input className="coreExtra fs-60" value="1호선" />
+        <div className={`${styles.circle} flex justify-center align-center`}>
+          <input className="coreExtra fs-60" value="1" onChange={onChange} />
+          <span className="coreExtra fs-60">호선</span>
+        </div>
       </div>
       <div className={`${styles.footer}`}>
         <span className={styles.empty} />

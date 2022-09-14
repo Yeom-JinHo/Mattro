@@ -36,13 +36,17 @@
   width: 100%;
   height: 90px;
   background-color: $LS;
-  input {
-    width: 292px;
-    height: 292px;
+  .circle {
+    width: vw(292px);
+    height: vw(292px);
     border: 20px solid $LS;
     border-radius: 50%;
     text-align: center;
     background-color: $WHITE;
+    input {
+      width: vw(40px);
+      background: none;
+    }
   }
 }
 
@@ -84,9 +88,12 @@
   .line {
     margin-bottom: vw(100px);
     height: vw(90px);
-    input {
+    .circle {
       width: vw(292px);
       height: vw(292px);
+      input {
+        width: vw(40px);
+      }
     }
   }
   .footer {
