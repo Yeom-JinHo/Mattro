@@ -1,0 +1,31 @@
+@mixin fixedLayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.dimmer {
+  @include fixedLayout();
+  width: 100%;
+  animation: dimmer 1s ease-in-out 3s forwards;
+}
+
+.wrapper {
+  @include fixedLayout();
+  width: 600%;
+  animation: slide 3s cubic-bezier(0.72, 0, 0.65, 1.17) forwards;
+}
+
+@keyframes dimmer {
+  to {
+    background-color: $GRAY_D9;
+    opacity: 0.7;
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(vw(-7200px));
+  }
+}
