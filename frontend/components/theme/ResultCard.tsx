@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./ResultCard.module.scss";
 import temp from "../../public/images/foodTemp.jpeg";
 import star from "../../public/images/star.png";
+import kakao from "../../public/images/kakao.svg";
 
 export default function ResultCard() {
   const storeName = "동대문 엽기 떡볶이";
@@ -18,9 +19,12 @@ export default function ResultCard() {
   //     return starArray;
   //   }
 
+  const shareKakao = () => {
+    console.log("kakao");
+  };
+
   return (
     <div className={`${styles.card} flex column align-center justify-center`}>
-      {/* <div className={styles.contents}> */}
       <div className={`${styles.num} coreExtra fs-24`}>1</div>
       <div className="coreBold fs-30">{storeName}</div>
       <div className={`${styles.img} flex align-center justify-center`}>
@@ -52,7 +56,14 @@ export default function ResultCard() {
           <span>{nearStation}</span>
         </div>
       </div>
+      <button
+        type="button"
+        onClick={shareKakao}
+        className="flex notoBold fs-20 align-center justify-center"
+      >
+        <Image src={kakao} alt="kakao" />
+        <p>카카오톡 공유하기</p>
+      </button>
     </div>
-    // </div>
   );
 }

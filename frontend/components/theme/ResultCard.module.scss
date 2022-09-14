@@ -1,6 +1,6 @@
 .card {
   width: (518px);
-  height: (810px);
+  height: (920px);
   background-color: $WHITE;
   border-radius: (59px);
   color: $GRAY-3A;
@@ -52,12 +52,25 @@
       }
     }
   }
+  button {
+    margin-top: (20px);
+    background-color: $KAKAO_YELLOW;
+    border-radius: (14px);
+    padding: (10px) (20px);
+    p {
+      margin-left: (10px);
+      color: $KAKAO_BROWN;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 @media screen and (max-width: $DESKTOP-VW) {
   .card {
     width: vw(518px);
-    height: vw(810px);
+    height: vw(920px);
     border-radius: vw(59px);
     border: vw(8px) solid $L1;
     box-shadow: 0px 0px vw(19px) vw(14px) rgba(255, 255, 255, 0.44);
@@ -99,13 +112,21 @@
         }
       }
     }
+    button {
+      margin-top: vw(20px);
+      border-radius: vw(14px);
+      padding: vw(10px) vw(20px);
+      p {
+        margin-left: vw(10px);
+      }
+    }
   }
 }
 
 @media screen and (max-width: $TABLET-VW) {
   .card {
     width: vw-t(518px);
-    height: vw-t(810px);
+    height: vw-t(920px);
     border-radius: vw-t(59px);
     border: vw-t(8px) solid $L1;
     box-shadow: 0px 0px vw-t(19px) vw-t(14px) rgba(255, 255, 255, 0.44);
@@ -147,13 +168,21 @@
         }
       }
     }
+    button {
+      margin-top: vw-t(20px);
+      border-radius: vw-t(14px);
+      padding: vw-t(10px) vw-t(20px);
+      p {
+        margin-left: vw-t(10px);
+      }
+    }
   }
 }
 
 @media screen and (max-width: $PHONE-VW) {
   .card {
     width: vw-p(518px);
-    height: vw-p(810px);
+    height: vw-p(920px);
     border-radius: vw-p(59px);
     border: vw-p(8px) solid $L1;
     box-shadow: 0px 0px vw-p(19px) vw-p(14px) rgba(255, 255, 255, 0.44);
@@ -193,6 +222,14 @@
             width: vw-p(289px);
           }
         }
+      }
+    }
+    button {
+      margin-top: vw-p(20px);
+      border-radius: vw-p(14px);
+      padding: vw-p(10px) vw-p(20px);
+      p {
+        margin-left: vw-p(10px);
       }
     }
   }

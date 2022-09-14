@@ -14,7 +14,7 @@ export default function Navbar() {
     console.log("aa");
   };
   return (
-    <header
+    <nav
       className={
         pathname === "/"
           ? `${styles.navbar_main} flex`
@@ -33,6 +33,6 @@ export default function Navbar() {
           <span className={styles.stick} /> */}
         </button>
       </div>
-    </header>
+    </nav>
   );
 }

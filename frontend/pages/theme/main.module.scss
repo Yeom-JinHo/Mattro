@@ -6,40 +6,36 @@
       width: 70%;
       margin: (50px) 0 (34px) 0;
     }
-    p {
-      margin-bottom: (30px);
-    }
     .images {
       position: fixed;
       bottom: 24%;
       width: (1000px);
       margin-bottom: (30px);
       justify-content: space-between;
-      :nth-child(n):nth-child(1) {
-        :nth-child(1) {
-          width: 100%;
-          height: 100%;
-        }
-      }
       :nth-child(2n + 1) {
-        width: (320px);
         display: flex;
         align-items: center;
         justify-content: center;
       }
       :nth-child(2) {
+        margin-right: 15%;
+        width: 15%;
+      }
+      :nth-child(1) {
+        width: 30%;
+      }
+      :nth-child(3) {
         width: 15%;
       }
     }
     .btn {
       position: fixed;
-      bottom: 0;
+      bottom: (76px);
       color: $MAIN;
       background-color: $WHITE;
       padding: (25px) (46px);
       border: (8px) solid $MAIN;
       border-radius: (46px);
-      margin-bottom: (76px);
       &:hover {
         color: $WHITE;
         background-color: $MAIN;
@@ -54,21 +50,15 @@
       .title {
         margin: vw(50px) 0 vw(34px) 0;
       }
-      p {
-        margin-bottom: vw(30px);
-      }
       .images {
         width: vw(1000px);
         margin-bottom: vw(30px);
-        :nth-child(2n + 1) {
-          width: vw(320px);
-        }
       }
       .btn {
+        bottom: vw(76px);
         padding: vw(25px) vw(46px);
         border: vw(8px) solid $MAIN;
         border-radius: vw(46px);
-        margin-bottom: vw(76px);
       }
     }
   }
@@ -80,21 +70,15 @@
       .title {
         margin: vw-t(50px) 0 vw-t(34px) 0;
       }
-      p {
-        margin-bottom: vw-t(30px);
-      }
       .images {
         width: vw-t(1000px);
         margin-bottom: vw-t(30px);
-        :nth-child(2n + 1) {
-          width: vw-t(320px);
-        }
       }
       .btn {
+        bottom: vw-t(76px);
         padding: vw-t(25px) vw-t(46px);
         border: vw-t(8px) solid $MAIN;
         border-radius: vw-t(46px);
-        margin-bottom: vw-t(76px);
       }
     }
   }
@@ -106,9 +90,6 @@
       .title {
         margin: vw-p(50px) 0 vw-p(34px) 0;
       }
-      p {
-        margin-bottom: vw-p(30px);
-      }
       .images {
         width: vw-p(1000px);
         margin-bottom: vw-p(30px);
@@ -117,10 +98,10 @@
         }
       }
       .btn {
+        bottom: vw-p(76px);
         padding: vw-p(25px) vw-p(46px);
         border: vw-p(8px) solid $MAIN;
         border-radius: vw-p(46px);
-        margin-bottom: vw-p(76px);
       }
     }
   }

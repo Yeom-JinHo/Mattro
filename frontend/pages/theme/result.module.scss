@@ -14,6 +14,19 @@
         }
       }
     }
+    .btn {
+      margin-top: (60px);
+      button {
+        padding: (16px) (28px);
+        background-color: $GRAY-BA;
+        color: $WHITE;
+        border-radius: (30px);
+        margin: 0 (20px);
+        &:hover {
+          background-color: $MAIN;
+        }
+      }
+    }
   }
 }
 
@@ -29,6 +42,14 @@
           border-radius: vw(46px);
           margin: 0 vw(52px);
         }
+      }
+    }
+    .btn {
+      margin-top: vw(60px);
+      button {
+        padding: vw(16px) vw(28px);
+        border-radius: vw(30px);
+        margin: 0 vw(20px);
       }
     }
   }
@@ -47,6 +68,14 @@
         }
       }
     }
+    .btn {
+      margin-top: vw-t(60px);
+      button {
+        padding: vw-t(16px) vw-t(28px);
+        border-radius: vw-t(30px);
+        margin: 0 vw-t(20px);
+      }
+    }
   }
 }
 @media screen and (max-width: $PHONE-VW) {
@@ -61,6 +90,14 @@
           border-radius: vw-p(46px);
           margin: 0 vw-p(52px);
         }
+      }
+    }
+    .btn {
+      margin-top: vw-p(60px);
+      button {
+        padding: vw-p(16px) vw-p(28px);
+        border-radius: vw-p(30px);
+        margin: 0 vw-p(20px);
       }
     }
   }
