@@ -1,15 +1,13 @@
-.lineSelectedBar {
+.stations {
+  margin-left: (168px);
   padding: (26px) (16px);
-  width: (691px);
+  max-width: (768px);
   height: (100px);
 
   background-color: white;
   border: 1px solid $GRAY_BA;
   border-radius: (20px);
   box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.stations {
-  max-width: (484px);
   overflow-y: scroll;
 }
 
@@ -24,10 +22,9 @@
 }
 
 .btn {
-  margin-left: auto;
-
+  margin-left: (16px);
   padding: (14px) (25px);
-  width: (167px);
+  width: (180px);
   height: (48px);
 
   border-radius: (20px);
@@ -40,16 +37,13 @@
 }
 
 @media screen and (max-width: $DESKTOP-VW) {
-  .lineSelectedBar {
+  .stations {
+    margin-left: vw(168px);
     padding: vw(26px) vw(16px);
-    width: vw(691px);
+    max-width: vw(768px);
     height: vw(100px);
 
     border-radius: vw(20px);
-    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  .stations {
-    max-width: vw(484px);
   }
 
   .station {
@@ -61,8 +55,9 @@
   }
 
   .btn {
+    margin-left: vw(16px);
     padding: vw(14px) vw(25px);
-    width: vw(167px);
+    width: vw(180px);
     height: vw(48px);
 
     border-radius: vw(20px);

@@ -9,7 +9,7 @@ const LineSelectedBar = () => {
     { line: "LS", name: "판교" }
   ]);
   return (
-    <div id="lineSelectedBar" className={`flex ${styles.lineSelectedBar}`}>
+    <div id="lineSelectedBar" className="flex align-center">
       <ul className={`flex ${styles.stations}`}>
         {selectedStation.map((station) => (
           <li
