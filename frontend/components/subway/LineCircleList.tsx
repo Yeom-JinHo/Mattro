@@ -7,7 +7,11 @@ const LineCircleList = () => {
   return (
     <ul id="lineCircleList" className={`${styles.infoListRect} flex`}>
       {lineInfos.map((line) => (
-        <li id={line.id} key={line.id} className="infoLi">
+        <li
+          id={line.id}
+          key={line.id}
+          className="infoLi flex align-center justify-center"
+        >
           <LineCircle id={line.id} name={line.name} />
         </li>
       ))}
