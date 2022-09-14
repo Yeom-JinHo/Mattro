@@ -27,7 +27,7 @@ export default function themeMain() {
           </div>
         </div>
         <nav className="flex justify-center">
-          <Link href="/">
+          <Link href="/theme/question">
             <div className={`${styles.btn} fs-32 coreExtra`}>
               테마별 맛집 추천받기
             </div>

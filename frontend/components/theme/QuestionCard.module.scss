@@ -1,0 +1,25 @@
+.card {
+  .title {
+    color: $MAIN;
+    margin-bottom: vw(40px);
+  }
+  .ques {
+    color: $GRAY-3A;
+    margin-bottom: vw(68px);
+  }
+  .select {
+    color: $GRAY-5B;
+    button {
+      padding-left: vw(51px);
+      margin-bottom: vw(40px);
+      border-radius: vw(46px);
+      //   justify-content: center;
+      width: vw(627px);
+      height: vw(114px);
+      background-color: $GRAY-ED;
+      &:hover {
+        opacity: 70%;
+      }
+    }
+  }
+}
