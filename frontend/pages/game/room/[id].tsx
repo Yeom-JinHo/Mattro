@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-import styles from "./roomDetail.module.scss";
-import chair1 from "../../public/images/chair1.png";
-import chair2 from "../../public/images/chair2.png";
-import subway1 from "../../public/images/subway1.svg";
-import subway2 from "../../public/images/subway2.svg";
+import styles from "./[id].module.scss";
+import chair1 from "../../../public/images/chair1.png";
+import chair2 from "../../../public/images/chair2.png";
+import subway1 from "../../../public/images/subway1.svg";
+import subway2 from "../../../public/images/subway2.svg";
 
 const userList = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 
@@ -14,6 +15,8 @@ const room = {
 };
 
 const RoomDetail: NextPage = () => {
+  const router = useRouter();
+  console.log(router.query.id);
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <h2 className="align-center coreExtra fs-30">

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./roomList.module.scss";
+import styles from "./rooms.module.scss";
 import station from "../../public/images/station.png";
 import chair1 from "../../public/images/chair1.png";
 
@@ -15,7 +15,9 @@ const roomList = [
   { id: 6, number: 0, title: "방 제목 666" }
 ];
 
-const RoomList: NextPage = () => {
+// eslint-disable-next-line react/prop-types
+const Rooms: NextPage = (id) => {
+  console.log(id);
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <span className={styles.station}>
@@ -23,7 +25,7 @@ const RoomList: NextPage = () => {
       </span>
       <div className={styles.roomList}>
         {roomList.map((room) => (
-          <Link href="/game/roomDetail" key={room.id}>
+          <Link href="/game/room/1" key={room.id}>
             <div className={`${styles.room} flex align-center`}>
               <p className="flex align-center fs-34 coreExtra">
                 <span className="flex justify-center align-center fs-24 coreExtra">
@@ -49,4 +51,4 @@ const RoomList: NextPage = () => {
   );
 };
 
-export default RoomList;
+export default Rooms;

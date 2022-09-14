@@ -13,6 +13,8 @@
     column-gap: 64px;
     row-gap: 30px;
     height: 60%;
+    padding: 16px;
+    overflow: auto;
     .room {
       padding: 18px 30px;
       width: 414px;
@@ -44,7 +46,7 @@
   grid-template-columns: repeat(2, 414px);
   column-gap: 64px;
   row-gap: 30px;
-  margin-top: 50px;
+  margin-top: 44px;
   justify-self: flex-end;
   .chair1 {
     width: 40%;
@@ -76,6 +78,7 @@
       grid-auto-rows: vw(100px);
       column-gap: vw(64px);
       row-gap: vw(30px);
+      padding: vw(16px);
       .room {
         padding: vw(18px) vw(30px);
         width: vw(414px);
@@ -93,7 +96,7 @@
   }
   .footer {
     grid-template-columns: repeat(2, vw(414px));
-    margin-top: vw(50px);
+    margin-top: vw(44px);
     button {
       width: vw(164px);
       height: vw(56px);
