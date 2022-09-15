@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import styles from "./index.module.scss";
 
@@ -9,24 +10,30 @@ const Home: NextPage = () => {
   //   router.push("/theme/main"); // 페이지 이동
   // };
   return (
-    <div className={`${styles.home}`}>
-      <div className={`${styles.contents} flex column align-center`}>
-        <div className={`${styles.subtitle} fs-50 coreExtra`}>
-          지하철 노선별 맛집 추천
-          <div />
+    <>
+      <Head>
+        <title>맛트로</title>
+        {/* <link rel = "icon" href ="/favicon.ico" /> */}
+      </Head>
+      <div className={`${styles.home}`}>
+        <div className={`${styles.contents} flex column align-center`}>
+          <div className={`${styles.subtitle} fs-50 coreExtra`}>
+            지하철 노선별 맛집 추천
+            <div />
+          </div>
+          <div className={`${styles.title} fs-100 coreHeavy`}>맛트로</div>
+          <button
+            type="button"
+            onClick={() => {
+              router.push("/theme/main");
+            }}
+            className={`${styles.btn} fs-40 coreExtra`}
+          >
+            START
+          </button>
         </div>
-        <div className={`${styles.title} fs-100 coreHeavy`}>맛트로</div>
-        <button
-          type="button"
-          onClick={() => {
-            router.push("/theme/main");
-          }}
-          className={`${styles.btn} fs-40 coreExtra`}
-        >
-          START
-        </button>
       </div>
-    </div>
+    </>
   );
 };
 
