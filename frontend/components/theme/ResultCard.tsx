@@ -62,7 +62,7 @@ export default function ResultCard() {
         className="flex notoBold fs-20 align-center justify-center"
       >
         <Image src={kakao} alt="kakao" />
-        <p>카카오톡 공유하기</p>
+        <p className={styles.btn_txt}>카카오톡 공유하기</p>
       </button>
     </div>
   );

@@ -15,11 +15,11 @@ export default function themeMain() {
           <div>입니다.</div>
         </div>
         <ResultCard />
-        <div className={`${styles.btn} flex`}>
-          <button type="button" className="notoBold fs-24">
+        <div className={`${styles.btns} flex`}>
+          <button type="button" className={`${styles.btn} notoBold fs-24`}>
             다른 메뉴 추천 받기
           </button>
-          <button type="button" className="notoBold fs-24">
+          <button type="button" className={`${styles.btn} notoBold fs-24`}>
             홈으로 돌아가기
           </button>
         </div>
