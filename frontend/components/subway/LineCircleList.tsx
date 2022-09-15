@@ -12,7 +12,7 @@ const LineCircleList = () => {
           key={line.id}
           className="infoLi flex align-center justify-center"
         >
-          <LineCircle id={line.id} name={line.name} />
+          <LineCircle id={line.id} lineName={line.name} />
         </li>
       ))}
     </ul>
