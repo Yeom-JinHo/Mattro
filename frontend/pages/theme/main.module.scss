@@ -1,16 +1,20 @@
 .theme {
   height: 100%;
   .contents {
-    background: linear-gradient(to top, $GRAY-E0 40%, #ffffff 0%);
+    justify-content: space-between;
+    // background: linear-gradient(to top, $GRAY-E0 30%, #ffffff 30%);
     .title {
       width: 70%;
-      margin: (50px) 0 (34px) 0;
+      margin: (30px) 0 (34px) 0;
+    }
+    .box {
+      width: 100%;
     }
     .images {
-      position: fixed;
-      bottom: 24%;
+      z-index: 2;
+      position: relative;
       width: (1000px);
-      margin-bottom: (30px);
+      margin: (50px) 0 0 0;
       justify-content: space-between;
       :nth-child(2n + 1) {
         display: flex;
@@ -18,22 +22,31 @@
         justify-content: center;
       }
       :nth-child(2) {
-        margin-right: 15%;
+        margin-right: 11%;
         width: 15%;
       }
       :nth-child(1) {
-        width: 30%;
+        width: 26%;
       }
       :nth-child(3) {
-        width: 15%;
+        width: 13%;
       }
     }
+    nav {
+      position: relative;
+      top: -80px;
+      z-index: 1;
+      padding-top: 100px;
+      margin-bottom: -80px;
+      width: 100%;
+      height: 300px;
+      background-color: $GRAY-E0;
+    }
     .btn {
-      position: fixed;
-      bottom: (76px);
       color: $MAIN;
       background-color: $WHITE;
-      padding: (25px) (46px);
+      width: (389px);
+      height: (92px);
       border: (8px) solid $MAIN;
       border-radius: (46px);
       &:hover {
@@ -48,15 +61,23 @@
   .theme {
     .contents {
       .title {
-        margin: vw(50px) 0 vw(34px) 0;
+        width: 70%;
+        margin: vw(30px) 0 vw(34px) 0;
       }
       .images {
+        z-index: 2;
         width: vw(1000px);
-        margin-bottom: vw(30px);
+        margin: vw(50px) 0 0 0;
+      }
+      nav {
+        top: vw(-80px);
+        padding-top: vw(100px);
+        margin-bottom: vw(-80px);
+        height: vw(300px);
       }
       .btn {
-        bottom: vw(76px);
-        padding: vw(25px) vw(46px);
+        width: vw(389px);
+        height: vw(92px);
         border: vw(8px) solid $MAIN;
         border-radius: vw(46px);
       }
@@ -65,44 +86,27 @@
 }
 
 @media screen and (max-width: $TABLET-VW) {
-  .theme {
-    .contents {
-      .title {
-        margin: vw-t(50px) 0 vw-t(34px) 0;
-      }
-      .images {
-        width: vw-t(1000px);
-        margin-bottom: vw-t(30px);
-      }
-      .btn {
-        bottom: vw-t(76px);
-        padding: vw-t(25px) vw-t(46px);
-        border: vw-t(8px) solid $MAIN;
-        border-radius: vw-t(46px);
-      }
-    }
-  }
 }
 
 @media screen and (max-width: $PHONE-VW) {
-  .theme {
-    .contents {
-      .title {
-        margin: vw-p(50px) 0 vw-p(34px) 0;
-      }
-      .images {
-        width: vw-p(1000px);
-        margin-bottom: vw-p(30px);
-        :nth-child(2n + 1) {
-          width: vw-p(320px);
-        }
-      }
-      .btn {
-        bottom: vw-p(76px);
-        padding: vw-p(25px) vw-p(46px);
-        border: vw-p(8px) solid $MAIN;
-        border-radius: vw-p(46px);
-      }
-    }
-  }
+  // .theme {
+  //   .contents {
+  //     .title {
+  //       margin: vw-p(50px) 0 vw-p(34px) 0;
+  //     }
+  //     .images {
+  //       width: vw-p(1000px);
+  //       margin-bottom: vw-p(30px);
+  //       :nth-child(2n + 1) {
+  //         width: vw-p(320px);
+  //       }
+  //     }
+  //     .btn {
+  //       bottom: vw-p(76px);
+  //       padding: vw-p(25px) vw-p(46px);
+  //       border: vw-p(8px) solid $MAIN;
+  //       border-radius: vw-p(46px);
+  //     }
+  //   }
+  // }
 }
