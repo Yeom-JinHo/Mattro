@@ -30,7 +30,7 @@ const index: NextPage = () => {
         게임 설명
       </button>
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
-        <div className={styles.children}>
+        <div className={`${styles.children} fs-32 coreExtra`}>
           <p>
             1. 랜덤한 유저가 지하철 노선 중 하나를 입력하면 게임이 시작됩니다.
           </p>

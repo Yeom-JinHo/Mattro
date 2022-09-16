@@ -30,7 +30,8 @@
     margin: 72px 0;
     p {
       margin: 20px 0;
-      line-height: 24px;
+      line-height: 36px;
+      text-align: start;
     }
   }
 }
@@ -51,7 +52,7 @@
       margin: vw(72px) 0;
       p {
         margin: vw(20px) 0;
-        line-height: vw(24px);
+        line-height: vw(36px);
       }
     }
   }
@@ -80,7 +81,8 @@
       margin: 72px 0;
       p {
         margin: 20px 0;
-        line-height: 24px;
+        line-height: 32px;
+        font-size: 20px;
       }
     }
   }
@@ -108,7 +110,8 @@
       margin: vw-p(72px) 0;
       p {
         margin: vw-p(20px) 0;
-        line-height: vw-p(24px);
+        line-height: vw-p(32px);
+        font-size: vw-p(20px);
       }
     }
   }

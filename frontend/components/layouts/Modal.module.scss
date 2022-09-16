@@ -15,7 +15,7 @@
   }
   .modal__box {
     position: absolute;
-    width: 80%;
+    width: 60%;
     margin: 0 10%;
     padding: 30px;
     border-radius: 20px;
@@ -42,6 +42,33 @@
       padding: vw(30px);
       .modal__btn {
         line-height: vw(30px);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: $TABLET-VW) {
+  .modal {
+    .modal__box {
+      width: 360px;
+      padding: 30px;
+      border-radius: 20px;
+      .modal__btn {
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $PHONE-VW) {
+  .modal {
+    .modal__box {
+      width: vw-p(360px);
+      padding: vw-p(30px);
+      border-radius: vw-p(20px);
+      .modal__btn {
+        line-height: vw-p(30px);
       }
     }
   }
