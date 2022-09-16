@@ -5,7 +5,10 @@ import lineInfos from "../../constants/lineInfo";
 
 const LineCircleList = () => {
   return (
-    <ul id="lineCircleList" className={`${styles.infoListRect} flex`}>
+    <ul
+      id="lineCircleList"
+      className={`${styles.infoListRect} flex justify-center`}
+    >
       {lineInfos.map((line) => (
         <li
           id={line.id}
