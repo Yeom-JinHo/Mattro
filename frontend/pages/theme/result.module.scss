@@ -15,9 +15,10 @@
       }
     }
     .btns {
-      margin-top: (30px);
+      margin-top: (50px);
       .btn {
-        padding: (8px) (20px);
+        font-size: 20px;
+        padding: (12px) (24px);
         background-color: $GRAY-BA;
         color: $WHITE;
         border-radius: (18px);
@@ -47,6 +48,7 @@
     .btns {
       margin-top: vw(30px);
       .btn {
+        font-size: vw(18px);
         padding: vw(16px) vw(28px);
         border-radius: vw(20px);
         margin: 0 vw(20px);
