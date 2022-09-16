@@ -21,7 +21,9 @@ const RoomDetail: NextPage = () => {
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <h2 className="align-center coreExtra fs-30">
-        <span className="flex justify-center align-center coreExtra fs-28">
+        <span
+          className={`${styles.room__num} flex justify-center align-center coreExtra fs-28`}
+        >
           0/4
         </span>
         <span className={`${styles.room__title}`}>
