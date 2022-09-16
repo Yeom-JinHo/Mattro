@@ -28,6 +28,7 @@
       margin-right: (20px);
       width: (48px);
       height: (48px);
+      padding: 8px;
 
       background-color: white;
       border-radius: 50%;
@@ -54,6 +55,7 @@
         margin-right: vw(20px);
         width: vw(48px);
         height: vw(48px);
+        padding: vw(8px);
         & + button {
           margin-top: vw(4px);
         }
@@ -76,8 +78,12 @@
 
       button {
         margin-right: (12px);
-        width: (48px);
-        height: (48px);
+        width: (36px);
+        height: (36px);
+        padding: (6px);
+        image {
+          width: 30px;
+        }
         & + button {
           margin-top: (4px);
         }
@@ -107,8 +113,9 @@
 
       button {
         margin-right: vw-p(12px);
-        width: vw-p(48px);
-        height: vw-p(48px);
+        width: vw-p(36px);
+        height: vw-p(36px);
+        padding: vw-p(6px);
         & + button {
           margin-top: vw-p(4px);
         }
