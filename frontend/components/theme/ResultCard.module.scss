@@ -1,26 +1,27 @@
 .card {
-  width: (518px);
-  height: (920px);
+  width: (430px);
+  height: (470px);
   background-color: $WHITE;
   border-radius: (59px);
   color: $GRAY-3A;
-  border: (8px) solid $L1;
+  border: (6px) solid $L1;
   box-shadow: 0px 0px (19px) (14px) rgba(255, 255, 255, 0.44);
   //   .contents {
   .num {
-    padding: (10px) (26px);
-    background-color: $L1;
-    color: $WHITE;
-    border-radius: (12px);
-    margin: 0 0 (30px) 0;
-    // }
+    p {
+      padding: (6px) (20px);
+      background-color: $L1;
+      color: $WHITE;
+      border-radius: (12px);
+      margin: 0 (20px) 0 0;
+    }
   }
   .img {
-    width: (420px);
-    height: (300px);
+    width: (330px);
+    height: (150px);
     border-radius: (18px);
     overflow: hidden;
-    margin: (40px) 0 (24px) 0;
+    margin: (15px) 0 (12px) 0;
     .sub {
       width: 100%;
       height: 100%;
@@ -28,15 +29,13 @@
     }
   }
   .stars {
-    span {
-      margin: 0 (30px);
-    }
+    display: none;
   }
   .detail {
-    margin-top: (34px);
+    margin-top: (12px);
     .txt {
       //   justify-content: flex-end;
-      margin-bottom: (24px);
+      margin-bottom: (16px);
       span {
         &:nth-child(1) {
           width: (75px);
@@ -44,7 +43,7 @@
           margin-right: (30px);
         }
         &:nth-child(2) {
-          width: (289px);
+          width: (240px);
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -53,10 +52,18 @@
     }
   }
   button {
-    margin-top: (20px);
+    margin-top: (4px);
     background-color: $KAKAO_YELLOW;
     border-radius: (14px);
     padding: (10px) (20px);
+    div {
+      width: 20px;
+      .icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
     .btn_txt {
       margin-left: (10px);
       color: $KAKAO_BROWN;
@@ -69,55 +76,53 @@
 
 @media screen and (max-width: $DESKTOP-VW) {
   .card {
-    width: vw(518px);
-    height: vw(920px);
+    width: vw(430px);
+    height: vw(470px);
     border-radius: vw(59px);
-    border: vw(8px) solid $L1;
+    border: vw(6px) solid $L1;
     box-shadow: 0px 0px vw(19px) vw(14px) rgba(255, 255, 255, 0.44);
     //   .contents {
     .num {
-      padding: vw(10px) vw(26px);
-      border-radius: vw(12px);
-      margin: 0 0 vw(30px) 0;
-      // }
+      p {
+        padding: vw(6px) vw(20px);
+        border-radius: vw(12px);
+        margin: 0 vw(20px) 0 0;
+      }
     }
     .img {
-      width: vw(420px);
-      height: vw(300px);
+      width: vw(330px);
+      height: vw(150px);
       border-radius: vw(18px);
-      margin: vw(40px) 0 vw(24px) 0;
-      .sub {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .stars {
-      span {
-        margin: 0 vw(30px);
-      }
+      margin: vw(15px) 0 vw(12px) 0;
     }
     .detail {
-      margin-top: vw(34px);
+      margin-top: vw(12px);
       .txt {
-        margin-bottom: vw(24px);
+        //   justify-content: flex-end;
+        margin-bottom: vw(16px);
         span {
           &:nth-child(1) {
             width: vw(75px);
-            text-align: end;
             margin-right: vw(30px);
           }
           &:nth-child(2) {
-            width: vw(289px);
+            width: vw(240px);
           }
         }
       }
     }
     button {
-      margin-top: vw(20px);
+      margin-top: vw(4px);
       border-radius: vw(14px);
       padding: vw(10px) vw(20px);
+      div {
+        width: vw(20px);
+      }
       .btn_txt {
         margin-left: vw(10px);
+      }
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
@@ -126,16 +131,18 @@
 @media screen and (max-width: $TABLET-VW) {
   .card {
     width: (330px);
-    height: (600px);
+    height: (500px);
     border-radius: (59px);
     border: (6px) solid $L1;
     // box-shadow: 0px 0px (19px) (14px) rgba(255, 255, 255, 0.44);
 
     .num {
-      font-size: (16px);
-      padding: (10px) (26px);
-      border-radius: (12px);
-      margin: 0 0 (12px) 0;
+      p {
+        font-size: (12px);
+        padding: (6px) (20px);
+        border-radius: (12px);
+        margin: 0 (12px) 0 0;
+      }
     }
     :nth-child(2) {
       font-size: (20px);
@@ -144,11 +151,7 @@
       width: (270px);
       height: (150px);
       border-radius: (18px);
-      margin: (24px) 0 (24px) 0;
-      .sub {
-        width: 100%;
-        height: 100%;
-      }
+      margin: (24px) 0 0 0;
     }
     .stars {
       span {
@@ -164,7 +167,6 @@
           &:nth-child(1) {
             font-size: (12px);
             width: (50px);
-            text-align: end;
             margin-right: (13px);
           }
           &:nth-child(2) {
@@ -178,6 +180,9 @@
       margin-top: (10px);
       border-radius: (14px);
       padding: (10px) (20px);
+      div {
+        width: (16px);
+      }
       .btn_txt {
         margin-left: (10px);
         font-size: (12px);
@@ -189,16 +194,18 @@
 @media screen and (max-width: $PHONE-VW) {
   .card {
     width: vw-p(330px);
-    height: vw-p(600px);
+    height: vw-p(500px);
     border-radius: vw-p(59px);
     border: vw-p(6px) solid $L1;
     // box-shadow: 0px 0px vw-p(19px) vw-p(14px) rgba(255, 255, 255, 0.44);
 
     .num {
-      font-size: vw-p(16px);
-      padding: vw-p(10px) vw-p(26px);
-      border-radius: vw-p(12px);
-      margin: 0 0 vw-p(12px) 0;
+      p {
+        font-size: vw-p(12px);
+        padding: vw-p(6px) vw-p(20px);
+        border-radius: vw-p(12px);
+        margin: 0 vw-p(12px) 0 0;
+      }
     }
     :nth-child(2) {
       font-size: vw-p(20px);
@@ -207,7 +214,7 @@
       width: vw-p(270px);
       height: vw-p(150px);
       border-radius: vw-p(18px);
-      margin: vw-p(24px) 0 vw-p(24px) 0;
+      margin: vw-p(24px) 0 0 0;
     }
     .stars {
       span {
@@ -236,6 +243,9 @@
       margin-top: vw-p(10px);
       border-radius: vw-p(14px);
       padding: vw-p(10px) vw-p(20px);
+      div {
+        width: vw-p(16px);
+      }
       .btn_txt {
         margin-left: vw-p(10px);
         font-size: vw-p(12px);
