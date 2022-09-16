@@ -23,7 +23,7 @@
       background-color: $GRAY_3A;
       cursor: pointer;
       &:hover {
-        transform: scale(1.05) translateY(-8px);
+        transform: scale(1.02) translateY(-2px);
       }
       p {
         color: $WHITE;
@@ -84,9 +84,6 @@
         width: vw(414px);
         height: vw(100px);
         border-radius: vw(22px);
-        &:hover {
-          transform: scale(1.05) translateY(vw(-8px));
-        }
         p {
           span {
             margin-right: vw(24px);

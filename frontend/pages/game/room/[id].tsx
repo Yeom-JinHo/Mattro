@@ -56,7 +56,10 @@ const RoomDetail: NextPage = () => {
           <Image src={chair1} alt="chair1" />
         </span>
         <Link href="/game/main">
-          <button className="coreExtra fs-32" type="button">
+          <button
+            className="flex align-center justify-center coreExtra fs-32"
+            type="button"
+          >
             start
           </button>
         </Link>
