@@ -19,7 +19,7 @@ const index: NextPage = () => {
       <div>
         <Image src={logo} alt="logo" />
       </div>
-      <Link href="/game/rooms">
+      <Link href="/game/main">
         <div
           className={`${styles.start__btn} flex justify-center align-center fs-32 coreExtra`}
         >

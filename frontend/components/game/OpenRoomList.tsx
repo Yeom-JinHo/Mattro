@@ -1,21 +1,35 @@
-import type { NextPage } from "next";
+import React, { useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "./rooms.module.scss";
 import station from "../../public/images/station.png";
 import chair1 from "../../public/images/chair1.png";
+import styles from "./OpenRoomList.module.scss";
+import type { ISocket } from "../../pages/game/main";
 
-const roomList = [
-  { id: 1, number: 0, title: "방 제목 111111111111" },
-  { id: 2, number: 1, title: "방 제목 222" },
-  { id: 3, number: 2, title: "방 제목 333" },
-  { id: 4, number: 3, title: "방 제목 444" },
-  { id: 5, number: 4, title: "방 제목 555" },
-  { id: 6, number: 0, title: "방 제목 666" }
-];
+interface Props {
+  roomList: [
+    {
+      id: number;
+      number: number;
+      title: string;
+    }
+  ];
+  socket: ISocket;
+  setIsEntered: (a: boolean) => void;
+}
 
-const Rooms: NextPage = () => {
+const Rooms: React.FunctionComponent<Props> = ({
+  roomList,
+  socket,
+  setIsEntered
+}) => {
+  const onMakeRoom = useCallback(() => {
+    socket.emit("enter_room", "roomName", () => {
+      setIsEntered(true);
+    });
+  }, [socket]);
+
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <span className={styles.station}>
@@ -41,7 +55,7 @@ const Rooms: NextPage = () => {
         <span className={styles.chair1}>
           <Image src={chair1} alt="chair1" />
         </span>
-        <button className="fs-24 coreExtra" type="button">
+        <button className="fs-24 coreExtra" type="button" onClick={onMakeRoom}>
           방 만들기
         </button>
       </div>
