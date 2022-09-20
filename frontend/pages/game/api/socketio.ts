@@ -1,3 +1,5 @@
+import { Socket } from "socket.io-client";
+
 export interface ServerToClientEvents {
   // noArg: () => void;
   // basicEmit: (a: number, b: string, c: Buffer) => void;
@@ -17,10 +19,21 @@ export interface ClientToServerEvents {
   nickname: (nickname: string) => void;
 }
 
+export type ISocket = Socket<ServerToClientEvents, ClientToServerEvents>;
+
 export interface InterServerEvents {
   ping: () => void;
 }
 
 export interface SocketData {
   nickname: string;
+}
+
+export interface IUserList {
+  id: number;
+  nickname: string;
+}
+
+export interface IRoomList {
+  title: string;
 }

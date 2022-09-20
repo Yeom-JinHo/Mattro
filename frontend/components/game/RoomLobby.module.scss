@@ -46,6 +46,7 @@
 }
 
 .userList {
+  margin: 50px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 36px;
@@ -74,6 +75,7 @@
 }
 
 .footer {
+  margin: 70px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 1004px;
@@ -119,9 +121,9 @@
       }
     }
   }
-  
   .userList {
     column-gap: vw(36px);
+    margin: vw(50px) 0;
     .user {
       width: vw(224px);
       height: vw(340px);
@@ -136,7 +138,6 @@
       }
     }
   }
-  
   .footer {
     width: vw(1004px);
   }
@@ -192,7 +193,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 0;
-    height: 60%;
     .user {
       width: 136px;
       height: 208px;

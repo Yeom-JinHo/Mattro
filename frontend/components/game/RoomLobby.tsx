@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import Image from "next/image";
 
 import styles from "./RoomLobby.module.scss";
@@ -6,27 +6,25 @@ import chair1 from "../../public/images/chair1.png";
 import chair2 from "../../public/images/chair2.png";
 import subway1 from "../../public/images/subway1.svg";
 import subway2 from "../../public/images/subway2.svg";
-import type { ISocket } from "../../pages/game/main";
+import { ISocket, IUserList } from "../../pages/game/api/socketio";
 
 const room = {
   title: "방 제목 111111111111"
 };
 
-const candidates = new Array(4).fill(0).map((_, index) => index + 1);
-
 interface Props {
   socket: ISocket;
   setIsStarted: (a: boolean) => void;
   nowCnt: number;
-  nickname: string;
-  userList: string[];
+  // nickname: string;
+  userList: IUserList[];
 }
 
 const RoomLobby: React.FunctionComponent<Props> = ({
   socket,
   setIsStarted,
   nowCnt,
-  nickname,
+  // nickname,
   userList
 }) => {
   const onStartLobby: React.MouseEventHandler<HTMLButtonElement> =
@@ -59,7 +57,7 @@ const RoomLobby: React.FunctionComponent<Props> = ({
               <Image src={subway2} alt="subway2" />
             </span>
             <div className={`${styles.username} notoBold`}>
-              {user.nickname}번 출구님
+              {user.nickname}님
             </div>
             <span
               className={`${styles.invisible} flex justify-center align-center notoBold fs-20`}
