@@ -64,8 +64,14 @@
       margin: 28px 0;
       color: $WHITE;
     }
+    .visible {
+      width: 86px;
+      height: 38px;
+      border-radius: 22px;
+      background-color: $SUB_YELLOW;
+    }
     .invisible {
-      // display: none;
+      display: none;
       width: 86px;
       height: 38px;
       border-radius: 22px;
@@ -130,6 +136,11 @@
       border-radius: vw(44px);
       .username {
         margin: vw(28px) 0;
+      }
+      .visible {
+        width: vw(86px);
+        height: vw(38px);
+        border-radius: vw(22px);
       }
       .invisible {
         width: vw(86px);
@@ -205,12 +216,17 @@
         margin: 28px 0;
         font-size: 20px;
       }
-      .invisible {
-        // display: none;
+      .visible {
         width: 86px;
         height: 38px;
         border-radius: 22px;
-        background-color: $SUB_YELLOW;
+        font-size: 20px;
+      }
+      .invisible {
+        display: none;
+        width: 86px;
+        height: 38px;
+        border-radius: 22px;
         font-size: 20px;
       }
     }
@@ -285,6 +301,12 @@
       border-radius: vw-p(24px);
       .username {
         margin: vw-p(28px) 0;
+        font-size: vw-p(20px);
+      }
+      .visible {
+        width: vw-p(86px);
+        height: vw-p(38px);
+        border-radius: vw-p(22px);
         font-size: vw-p(20px);
       }
       .invisible {

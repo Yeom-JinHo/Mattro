@@ -4,7 +4,7 @@ import Image from "next/image";
 import station from "../../public/images/station.png";
 import chair1 from "../../public/images/chair1.png";
 import styles from "./OpenRoomList.module.scss";
-import type { ISocket } from "../../pages/game/api/socketio";
+import type { ISocket, IUserList } from "../../pages/game/api/socketio";
 
 interface Props {
   roomList: string[];
@@ -27,6 +27,7 @@ const Rooms: React.FunctionComponent<Props> = ({
     useCallback(() => {
       socket.emit("enter_room", roomName, () => {
         setIsEntered(true);
+        // setUserList((prev: any) => [...prev, { nickname: "익명", me: true }]);
       });
     }, [roomName]);
 
@@ -35,6 +36,7 @@ const Rooms: React.FunctionComponent<Props> = ({
       if (title.current?.textContent) {
         socket.emit("enter_room", title.current?.textContent, () => {
           setIsEntered(true);
+          // setUserList((prev: any) => [...prev, { nickname: "익명", me: true }]);
         });
       }
     }, [title.current]);

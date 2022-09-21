@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import Image from "next/image";
 
 import styles from "./RoomLobby.module.scss";
@@ -8,29 +8,41 @@ import subway1 from "../../public/images/subway1.svg";
 import subway2 from "../../public/images/subway2.svg";
 import { ISocket, IUserList } from "../../pages/game/api/socketio";
 
-const room = {
-  title: "방 제목 111111111111"
-};
-
 interface Props {
   socket: ISocket;
-  setIsStarted: (a: boolean) => void;
   nowCnt: number;
-  // nickname: string;
   userList: IUserList[];
+  roomName: string;
 }
 
 const RoomLobby: React.FunctionComponent<Props> = ({
   socket,
-  setIsStarted,
   nowCnt,
-  // nickname,
-  userList
+  userList,
+  roomName
 }) => {
+  const [nickname, setNickname] = useState("익명");
+  const onChangeNickname: React.ChangeEventHandler<HTMLInputElement> =
+    useCallback((e) => {
+      e.preventDefault();
+      setNickname(e.target.value);
+    }, []);
   const onStartLobby: React.MouseEventHandler<HTMLButtonElement> =
     useCallback(() => {
-      setIsStarted(true);
-    }, []);
+      if (roomName) {
+        socket.emit("start_lobby", roomName);
+      }
+    }, [roomName]);
+
+  const onSubmitNickname: React.FormEventHandler<HTMLFormElement> = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (nickname && roomName) {
+        socket.emit("nickname", roomName, nickname);
+      }
+    },
+    [roomName, nickname]
+  );
 
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
@@ -41,31 +53,53 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           {nowCnt}/4
         </span>
         <span className={`${styles.room__title}`}>
-          {room.title.length > 9 ? `${room.title.slice(0, 9)}...` : room.title}
+          {roomName.length > 9 ? `${roomName.slice(0, 9)}...` : roomName}
         </span>
         <span className={`${styles.subway1}`}>
           <Image src={subway1} alt="subway1" />
         </span>
       </h2>
       <div className={`${styles.userList}`}>
-        {userList.map((user) => (
-          <div
-            className={`${styles.user} flex column justify-center align-center fs-32`}
-            key={user.id}
-          >
-            <span className={`${styles.subway2}`}>
-              <Image src={subway2} alt="subway2" />
-            </span>
-            <div className={`${styles.username} notoBold`}>
-              {user.nickname}님
-            </div>
-            <span
-              className={`${styles.invisible} flex justify-center align-center notoBold fs-20`}
+        {userList.map((user) => {
+          if (user.me) {
+            return (
+              <div
+                className={`${styles.user} flex column justify-center align-center fs-32`}
+                key={user.id}
+              >
+                <span className={`${styles.subway2}`}>
+                  <Image src={subway2} alt="subway2" />
+                </span>
+                <div className={`${styles.username} notoBold`}>
+                  {user.nickname}님
+                </div>
+                <span
+                  className={`${styles.visible} flex justify-center align-center notoBold fs-20`}
+                >
+                  나
+                </span>
+              </div>
+            );
+          }
+          return (
+            <div
+              className={`${styles.user} flex column justify-center align-center fs-32`}
+              key={user.nickname}
             >
-              나
-            </span>
-          </div>
-        ))}
+              <span className={`${styles.subway2}`}>
+                <Image src={subway2} alt="subway2" />
+              </span>
+              <div className={`${styles.username} notoBold`}>
+                {user.nickname}님
+              </div>
+              <span
+                className={`${styles.invisible} flex justify-center align-center notoBold fs-20`}
+              >
+                나
+              </span>
+            </div>
+          );
+        })}
       </div>
       <footer className={styles.footer}>
         <span className={styles.chair1}>
@@ -82,6 +116,10 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           <Image src={chair2} alt="chair1" />
         </span>
       </footer>
+      <form onSubmit={onSubmitNickname}>
+        <input value={nickname} onChange={onChangeNickname} />
+        <button type="submit">Save</button>
+      </form>
     </div>
   );
 };

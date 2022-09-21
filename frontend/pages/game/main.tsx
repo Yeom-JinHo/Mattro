@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-shadow */
 import type { NextPage } from "next";
 import { useState, useEffect } from "react";
@@ -11,14 +12,15 @@ import RoomStart from "../../components/game/RoomStart";
 const socket = io("ws://localhost:8000");
 
 const Main: NextPage = () => {
-  // const [roomName, setRoomName] = useState<string>("");
+  const [roomName, setRoomName] = useState<string>("");
   // const [messages, setMessages] = useState([]);
   const [roomList, setRoomList] = useState([]);
   const [isEntered, setIsEntered] = useState<boolean>(false);
-  const [isStarted, setIsStarted] = useState<boolean>(false);
-  // const [nickname, setNickname] = useState<string>("");
+  const [isStartedLobby, setIsStartedLobby] = useState<boolean>(false);
   const [nowCnt, setNowCnt] = useState<number>(1);
   const [userList, setUserList] = useState<IUserList[]>([]);
+  const [canStart, setCanStart] = useState<boolean>(false);
+  const [isStartedGame, setIsStartedGame] = useState<boolean>(false);
 
   function addMessage(message: string) {
     // const ul = room.querySelector("ul");
@@ -28,44 +30,66 @@ const Main: NextPage = () => {
   }
 
   useEffect(() => {
-    socket.on("welcome", (users, newCount) => {
-      setUserList(users);
+    socket.emit("room_change");
+    socket.on("welcome", (roomName, user, newCount) => {
+      setRoomName(roomName);
+      setUserList((prev) => [...prev, user]);
       setNowCnt(newCount);
     });
-    socket.on("bye", (nickname, newCount) => {
-      // const h3 = room.querySelector("h3");
-      // h3.innerText = `Room ${roomName} (${newCount})`;
-      // addMessage(`${nickname} 님이 퇴장하셨습니다!`);
+    socket.on("bye", (socketId, newCount) => {
+      setUserList((prev) => prev.filter((user) => user.id !== socketId));
+      setNowCnt(newCount);
     });
     socket.on("new_message", addMessage);
     socket.on("room_change", (rooms) => {
       setRoomList(rooms);
     });
-    // socket.on("welcome_count", (newCount) => {
-    // const h3 = room.querySelector("h3");
-    // h3.innerText = `Room ${roomName} (${newCount})`;
-    // });
+    socket.on("start_lobby", (canStart) => {
+      setCanStart(canStart);
+      setIsStartedLobby(true);
+    });
+    socket.on("start_game", () => {
+      setIsStartedGame(true);
+    });
+    socket.on("nickname", (socketId, nickname) => {
+      setUserList((prev) => {
+        const copy = [...prev];
+        copy.forEach((user) => {
+          if (user.id === socketId) {
+            user.nickname = nickname;
+          }
+        });
+        return copy;
+      });
+    });
     return () => {
       socket.off("welcome");
       socket.off("bye");
       socket.off("new_message");
       socket.off("room_change");
-      socket.off("welcome_count");
+      socket.off("start_lobby");
+      socket.off("start_game");
+      socket.off("nickname");
     };
   }, []);
 
   return (
     <div>
       {socket && isEntered ? (
-        isStarted ? (
-          <RoomStart />
+        isStartedLobby ? (
+          <RoomStart
+            userList={userList}
+            socket={socket}
+            roomName={roomName}
+            canStart={canStart}
+            isStartedGame={isStartedGame}
+          />
         ) : (
           <RoomLobby
             socket={socket}
-            setIsStarted={setIsStarted}
             nowCnt={nowCnt}
-            // nickname={nickname}
             userList={userList}
+            roomName={roomName}
           />
         )
       ) : (

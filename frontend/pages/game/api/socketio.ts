@@ -16,7 +16,10 @@ export interface ClientToServerEvents {
   disconnecting: () => void;
   disconnect: () => void;
   new_message: (msg: string, room: object, done: () => void) => void;
-  nickname: (nickname: string) => void;
+  nickname: (roomName: string, nickname: string) => void;
+  start_lobby: (roomName: string) => void;
+  start_game: (roomName: string, line: string) => void;
+  answer: (answer: string) => void;
 }
 
 export type ISocket = Socket<ServerToClientEvents, ClientToServerEvents>;
@@ -30,8 +33,9 @@ export interface SocketData {
 }
 
 export interface IUserList {
-  id: number;
+  id: string;
   nickname: string;
+  me: boolean;
 }
 
 export interface IRoomList {
