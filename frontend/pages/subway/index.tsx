@@ -18,7 +18,7 @@ const Index = () => {
   const [selectedStations, setSelectedStations] = useState<string[]>([]);
   const [selecting, setSelecting] = useState(true);
   const [stationInfo, setStationInfo] = useState({ cx: 0, cy: 0, name: "" });
-
+  const [scaleSize, setScaleSize] = useState(1);
   const handleSelectedLines = (line: UsedLineIdType) => {
     const ind = selectedLines.indexOf(line);
     if (ind === -1) {
@@ -163,18 +163,25 @@ const Index = () => {
     // setStationInfo({ cx: 0, cy: 0, name: "" });
     setSelecting(true);
   }, [selecting]);
+
   return (
     <div className={styles.subway}>
-      <MetroMap />
+      <MetroMap scaleSize={scaleSize} />
       <div id="line-container" className="flex">
         <LineInfoList togggleSelectedLines={handleSelectedLines} />
         <LineSearch />
       </div>
       <div id="map-btn" className="flex column">
-        <button type="button">
+        <button
+          type="button"
+          onClick={() => setScaleSize((prev) => (prev >= 4 ? 4 : prev + 1))}
+        >
           <Image src={PlusBtn} layout="responsive" alt="확대" />
         </button>
-        <button type="button">
+        <button
+          type="button"
+          onClick={() => setScaleSize((prev) => (prev <= 1 ? 1 : prev - 1))}
+        >
           <Image src={MinusBtn} layout="responsive" alt="축소" />
         </button>
       </div>

@@ -2,7 +2,10 @@
 import React from "react";
 import styles from "./MetroMap.module.scss";
 
-const MetroMap = () => {
+type MetroMapProps = {
+  scaleSize: number;
+};
+const MetroMap = ({ scaleSize }: MetroMapProps) => {
   return (
     <div id="metroMap">
       <svg
@@ -13,6 +16,7 @@ const MetroMap = () => {
         // viewBox="0 0 1525 1000"
         viewBox="0 0 1500 1000"
         className={styles.map}
+        style={{ transform: `scale(${scaleSize})` }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

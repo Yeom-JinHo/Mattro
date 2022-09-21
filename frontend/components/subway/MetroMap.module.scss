@@ -49,14 +49,13 @@
   // transform-origin: 0px 0px 0px;
   transform-origin: center;
   backface-visibility: hidden;
-
+  // overflow: hidden;
   width: 100%;
   height: 100%;
-  transform: scale(1) scaleZ(1);
+  // transform: scale(1) scaleZ(1);
   transition-timing-function: ease;
-  cursor: default;
-  // cursor: move;
-
+  // cursor: default;
+  cursor: grab;
   circle:hover {
     r: 5;
   }
