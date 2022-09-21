@@ -1,3 +1,12 @@
+.wrraper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
 .map {
   circle[class*="L1"] {
     color: $L1;
@@ -41,20 +50,12 @@
   circle[class*="LSL"] {
     color: $LSL;
   }
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // z-index: 1000;
-  // padding-top: vw(128px);
-  // transform-origin: 0px 0px 0px;
   transform-origin: center;
   backface-visibility: hidden;
-  // overflow: hidden;
+  position: relative;
   width: 100%;
   height: 100%;
-  // transform: scale(1) scaleZ(1);
   transition-timing-function: ease;
-  // cursor: default;
   cursor: grab;
   circle:hover {
     r: 5;
