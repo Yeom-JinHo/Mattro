@@ -9,7 +9,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  div[id="lineSearch"] {
+
+  div[id="lineSearch"],
+  ul[id="lineCircleList"],
+  div[id="map-btn"] > button {
     z-index: 3;
   }
   div[id="metroMap"] {
