@@ -21,7 +21,7 @@ const LineCircle = ({
   };
   return (
     <span
-      className={`${id} ${styles.circle} notoBold fs-10 flex align-center justify-center`}
+      className={`${id} ${styles.circle} coreExtra fs-10 flex align-center justify-center`}
       onClick={toggleCircle}
     >
       {lineName}
