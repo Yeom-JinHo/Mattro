@@ -13,7 +13,7 @@ const lineInfos: { id: UsedLineIdType; name: UsedLinNameType }[] = [
   { id: "LK", name: "경의중앙" },
   { id: "LB", name: "수인분당" },
   { id: "LS", name: "신분당" },
-  { id: "LW", name: "우아신설" },
+  { id: "LW", name: "우이신설" },
   { id: "LSL", name: "신림" }
 ];
 

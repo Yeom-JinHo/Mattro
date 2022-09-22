@@ -27,7 +27,7 @@ export type UsedLinNameType =
   | "경의중앙"
   | "수인분당"
   | "신분당"
-  | "우아신설"
+  | "우이신설"
   | "신림";
 
 export type UnusedLineIdType =
