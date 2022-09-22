@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-shadow */
 import type { NextPage } from "next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 
 import { IUserList } from "./api/socketio";
@@ -12,6 +12,7 @@ import RoomStart from "../../components/game/RoomStart";
 const socket = io("ws://localhost:8000");
 
 const Main: NextPage = () => {
+  const childRef = useRef<{ setLine: (line: string) => void }>(null);
   const [roomName, setRoomName] = useState<string>("");
   // const [messages, setMessages] = useState([]);
   const [roomList, setRoomList] = useState([]);
@@ -31,13 +32,20 @@ const Main: NextPage = () => {
 
   useEffect(() => {
     socket.emit("room_change");
-    socket.on("welcome", (roomName, user, newCount) => {
+    socket.on("welcome", (roomName, newUser, newCount) => {
       setRoomName(roomName);
-      setUserList((prev) => [...prev, user]);
+      setUserList((prev) => [...prev, newUser]);
       setNowCnt(newCount);
+      socket.emit("iMHere", roomName);
+    });
+    socket.on("iMHere", (newUser) => {
+      setUserList((prev) => {
+        const filteredPrev = prev.filter((user) => user.id !== newUser.id);
+        return [...filteredPrev, newUser];
+      });
     });
     socket.on("bye", (socketId, newCount) => {
-      setUserList((prev) => prev.filter((user) => user.id !== socketId));
+      setUserList((prev) => [...prev].filter((user) => user.id !== socketId));
       setNowCnt(newCount);
     });
     socket.on("new_message", addMessage);
@@ -48,8 +56,9 @@ const Main: NextPage = () => {
       setCanStart(canStart);
       setIsStartedLobby(true);
     });
-    socket.on("start_game", () => {
+    socket.on("start_game", (line) => {
       setIsStartedGame(true);
+      childRef.current?.setLine(line);
     });
     socket.on("nickname", (socketId, nickname) => {
       setUserList((prev) => {
@@ -64,6 +73,7 @@ const Main: NextPage = () => {
     });
     return () => {
       socket.off("welcome");
+      socket.off("iMHere");
       socket.off("bye");
       socket.off("new_message");
       socket.off("room_change");
@@ -83,6 +93,7 @@ const Main: NextPage = () => {
             roomName={roomName}
             canStart={canStart}
             isStartedGame={isStartedGame}
+            ref={childRef}
           />
         ) : (
           <RoomLobby

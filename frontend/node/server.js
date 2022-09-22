@@ -12,14 +12,14 @@ app.use(cors());
 
 const httpServer = http.createServer(app);
 // const wss = new WebSocket.Server({ httpServer });
-const wsServer = new Server(httpServer, {
+const io = new Server(httpServer, {
   cors: {
     credentials: true
   }
 });
 
 function publicRooms() {
-  const { sids, rooms } = wsServer.sockets.adapter;
+  const { sids, rooms } = io.sockets.adapter;
   const res = [];
   rooms.forEach((_, key) => {
     if (sids.get(key) === undefined) {
@@ -30,24 +30,24 @@ function publicRooms() {
 }
 
 function whoInRoom(roomName) {
-  return wsServer.sockets.adapter.rooms.get(roomName);
+  return io.sockets.adapter.rooms.get(roomName);
 }
 
 function howManyInRoom(roomName) {
-  return wsServer.sockets.adapter.rooms.get(roomName)?.size;
+  return io.sockets.adapter.rooms.get(roomName)?.size;
 }
 
 let line;
 
-wsServer.on("connection", (socket) => {
+io.on("connection", (socket) => {
   // 소켓 연결 되자마자 강제로 어떤 방으로 입장시키기
-  // wsServer.socketsJoin("어떤");
+  // io.socketsJoin("어떤");
   // socket.data.nickname = `Anonymous`;
   socket.data.nickname = `익명`;
   socket.emit("room_change", publicRooms());
 
   socket.onAny((event) => {
-    // console.log(wsServer.sockets.adapter);
+    // console.log(io.sockets.adapter);
     console.log(`Socket Event : ${event}`);
   });
 
@@ -68,11 +68,16 @@ wsServer.on("connection", (socket) => {
         { id: socket.id, nickname: socket.data.nickname, me: false },
         howManyInRoom(roomName)
       );
-    // socket
-    //   .to(roomName)
-    //   .emit("welcome", socket.data.nickname, howManyInRoom(roomName));
     // 방 입장할 때마다 방 개수를 emit
-    wsServer.sockets.emit("room_change", publicRooms());
+    io.sockets.emit("room_change", publicRooms());
+  });
+
+  socket.on("iMHere", (roomName) => {
+    socket.to(roomName).emit("iMHere", {
+      id: socket.id,
+      nickname: socket.data.nickname,
+      me: false
+    });
   });
 
   socket.on("disconnecting", () => {
@@ -82,7 +87,7 @@ wsServer.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    wsServer.sockets.emit("room_change", publicRooms());
+    io.sockets.emit("room_change", publicRooms());
   });
 
   socket.on("new_message", (msg, room, done) => {
@@ -102,8 +107,8 @@ wsServer.on("connection", (socket) => {
   });
 
   socket.on("start_game", (roomName, line) => {
-    socket.to(roomName).emit("start_game");
-    socket.emit("start_game");
+    socket.to(roomName).emit("start_game", line);
+    socket.emit("start_game", line);
     line = line;
   });
   socket.on("room_change", () => {
@@ -111,6 +116,7 @@ wsServer.on("connection", (socket) => {
   });
   socket.on("answer", (answer) => {
     // answer 체크 후 true or false
+    console.log(answer);
     // true or false를 에밋~
     socket.emit("check_answer");
   });
