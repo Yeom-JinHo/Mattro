@@ -39,7 +39,9 @@
     // width: 292px;
     height: 292px;
     padding: 20px;
-    border: 20px solid;
+    border-width: 20px;
+    border-style: solid;
+    // border: 20px solid;
     border-radius: 236px;
     text-align: center;
     background-color: $WHITE;
