@@ -63,6 +63,7 @@
     .train_out {
       animation-duration: 3s;
       animation-name: train_out;
+      animation-fill-mode: forwards;
     }
   }
 

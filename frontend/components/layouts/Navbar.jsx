@@ -97,9 +97,9 @@ export default function Navbar() {
                 onClick={() => {
                   movePage("/");
                 }}
-                className={`${styles.hover_target} fs-60 coreExtra`}
+                className={`${styles.hover_target} fs-60 coreBold`}
               >
-                HOME
+                메인
               </button>
             </li>
             <li
@@ -115,9 +115,9 @@ export default function Navbar() {
                 onClick={() => {
                   movePage("/subway");
                 }}
-                className={`${styles.hover_target} fs-60 coreExtra`}
+                className={`${styles.hover_target} fs-60 coreBold`}
               >
-                SUBWAY
+                노선별 추천
               </button>
             </li>
             <li
@@ -133,9 +133,9 @@ export default function Navbar() {
                 onClick={() => {
                   movePage("/theme/main");
                 }}
-                className={`${styles.hover_target} fs-60 coreExtra`}
+                className={`${styles.hover_target} fs-60 coreBold`}
               >
-                THEME
+                오늘의 추천
               </button>
             </li>
             <li
@@ -151,9 +151,9 @@ export default function Navbar() {
                 onClick={() => {
                   movePage("/game");
                 }}
-                className={`${styles.hover_target} fs-60 coreExtra`}
+                className={`${styles.hover_target} fs-60 coreBold`}
               >
-                GAME
+                지하철 게임
               </button>
             </li>
           </ul>
