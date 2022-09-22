@@ -34,13 +34,12 @@
   margin-bottom: 100px;
   width: 100%;
   height: 90px;
-  background-color: $LS;
   .circle {
     width: min-content;
     // width: 292px;
     height: 292px;
     padding: 20px;
-    border: 20px solid $LS;
+    border: 20px solid;
     border-radius: 236px;
     text-align: center;
     background-color: $WHITE;
@@ -79,7 +78,7 @@
       padding: vw(30px) vw(158px);
     }
   }
-  
+
   .userList {
     column-gap: vw(44px);
     margin-bottom: vw(130px);
@@ -88,7 +87,7 @@
       height: vw(68px);
     }
   }
-  
+
   .line {
     margin-bottom: vw(100px);
     height: vw(90px);
@@ -106,7 +105,6 @@
   }
 }
 
-
 @media screen and (max-width: $TABLET-VW) {
   .wrapper {
     h2 {
@@ -115,7 +113,7 @@
       font-size: 20px;
     }
   }
-  
+
   .userList {
     width: 80%;
     margin-top: 20px;
@@ -129,7 +127,7 @@
       font-size: 16px;
     }
   }
-  
+
   .line {
     margin-top: 58px;
     width: 100%;
@@ -137,7 +135,7 @@
     .circle {
       // width: 180px;
       height: 180px;
-      border: 12px solid $LS;
+      border: 12px solid;
       border-radius: 236px;
       input {
         max-width: 128px;
@@ -150,7 +148,7 @@
       }
     }
   }
-  
+
   .footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 160px;
@@ -180,7 +178,7 @@
       font-size: vw-p(20px);
     }
   }
-  
+
   .userList {
     margin-top: vw-p(20px);
     row-gap: vw-p(16px);
@@ -191,14 +189,14 @@
       font-size: vw-p(16px);
     }
   }
-  
+
   .line {
     margin-top: vw-p(58px);
     height: vw-p(40px);
     .circle {
       // width: vw-p(180px);
       height: vw-p(180px);
-      border: vw-p(12px) solid $LS;
+      border: vw-p(12px) solid;
       border-radius: vw-p(236px);
       input {
         max-width: vw-p(156px);
@@ -211,7 +209,7 @@
       }
     }
   }
-  
+
   .footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: vw-p(160px);

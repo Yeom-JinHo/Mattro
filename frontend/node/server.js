@@ -29,15 +29,17 @@ function publicRooms() {
   return res;
 }
 
-function whoInRoom(roomName) {
-  return io.sockets.adapter.rooms.get(roomName);
-}
+// function whoInRoom(roomName) {
+//   return io.sockets.adapter.rooms.get(roomName);
+// }
 
 function howManyInRoom(roomName) {
   return io.sockets.adapter.rooms.get(roomName)?.size;
 }
 
 let line;
+
+let timeout;
 
 io.on("connection", (socket) => {
   // 소켓 연결 되자마자 강제로 어떤 방으로 입장시키기

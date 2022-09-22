@@ -6,7 +6,8 @@ import React, {
   useState,
   forwardRef,
   useImperativeHandle,
-  useRef
+  useRef,
+  useEffect
 } from "react";
 import Image from "next/image";
 
@@ -14,6 +15,7 @@ import styles from "./RoomStart.module.scss";
 import chair1 from "../../public/images/chair1.png";
 import chair2 from "../../public/images/chair2.png";
 import { IUserList, ISocket } from "../../pages/game/api/socketio";
+import lineData from "../../constants/lineData";
 
 interface Props {
   userList: IUserList[];
@@ -26,7 +28,9 @@ interface Props {
 
 const RoomStart: React.FunctionComponent<Props> = forwardRef(
   ({ userList, socket, roomName, canStart, isStartedGame }, ref) => {
-    const lineRef = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null);
+    const lineRef = useRef<any>(null);
+    const circleRef = useRef<HTMLDivElement>(null);
     const [line, setLine] = useState<string>("경의중앙");
     const [answer, setAnswer] = useState<string>("");
     useImperativeHandle(ref, () => ({
@@ -43,19 +47,35 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     const onStartGame: React.MouseEventHandler<HTMLButtonElement> | undefined =
       useCallback(() => {
         if (!roomName) return;
-        if (lineRef?.current?.value) {
-          socket.emit("start_game", roomName, lineRef.current.value);
+        if (inputRef?.current?.value) {
+          socket.emit("start_game", roomName, inputRef.current.value);
         }
       }, [roomName]);
 
-    const onSubmitAnswer: React.FormEventHandler<HTMLFormElement> = useCallback(
-      (e) => {
-        e.preventDefault();
-        if (!answer) return;
-        socket.emit("answer", answer);
-      },
-      [answer]
-    );
+    const onSubmitAnswer: React.FormEventHandler<HTMLFormElement> = (e) => {
+      e.preventDefault();
+      if (!answer) return;
+      socket.emit("answer", answer);
+    };
+
+    useEffect(() => {
+      if (
+        line === "1" ||
+        line === "2" ||
+        line === "3" ||
+        line === "4" ||
+        line === "5" ||
+        line === "6" ||
+        line === "7" ||
+        line === "8" ||
+        line === "9"
+      ) {
+        if (lineRef?.current && circleRef?.current) {
+          lineRef.current.className = `${styles.line} flex justify-center align-center L${line}`;
+          circleRef.current.className = `${styles.circle} flex justify-center align-center L${line}`;
+        }
+      }
+    }, [line]);
 
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
@@ -72,11 +92,17 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
             </div>
           ))}
         </div>
-        <div className={`${styles.line} flex justify-center align-center`}>
-          <div className={`${styles.circle} flex justify-center align-center`}>
+        <div
+          ref={lineRef}
+          className={`${styles.line} flex justify-center align-center L1`}
+        >
+          <div
+            ref={circleRef}
+            className={`${styles.circle} flex justify-center align-center L1`}
+          >
             <input
               className="coreExtra fs-60"
-              ref={lineRef}
+              ref={inputRef}
               value={line}
               onChange={onChangeLine}
             />
@@ -84,9 +110,9 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
           </div>
         </div>
         <div className={`${styles.footer}`}>
-          <span className={styles.chair1}>
+          {/* <span className={styles.chair1}>
             <Image src={chair1} alt="chair1" />
-          </span>
+          </span> */}
           {!isStartedGame && canStart && (
             <button
               className="coreExtra fs-80"
@@ -99,11 +125,12 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
           {isStartedGame && (
             <form onSubmit={onSubmitAnswer}>
               <input value={answer} onChange={onChangeAnswer} />
+              <button type="submit">submit</button>
             </form>
           )}
-          <span className={styles.chair2}>
+          {/* <span className={styles.chair2}>
             <Image src={chair2} alt="chair2" />
-          </span>
+          </span> */}
         </div>
       </div>
     );
