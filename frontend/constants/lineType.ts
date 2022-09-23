@@ -51,3 +51,13 @@ export type UnusedLineNameType =
   | "경강선"
   | "서해선"
   | "김포도시철도";
+
+export type StationType = {
+  id: string;
+  name: string;
+  intertChange?: boolean;
+};
+
+export type lineDataType = {
+  [key: string]: { attr: any; stations: StationType[] };
+};
