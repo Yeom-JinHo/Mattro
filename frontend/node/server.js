@@ -6,6 +6,8 @@ import http from "http";
 import cors from "cors";
 import { Server } from "socket.io";
 
+import checkAnswer from "./checkAnswer";
+
 const app = express();
 
 app.use(cors());
@@ -36,8 +38,6 @@ function publicRooms() {
 function howManyInRoom(roomName) {
   return io.sockets.adapter.rooms.get(roomName)?.size;
 }
-
-let line;
 
 let timeout;
 
@@ -111,14 +111,13 @@ io.on("connection", (socket) => {
   socket.on("start_game", (roomName, line) => {
     socket.to(roomName).emit("start_game", line);
     socket.emit("start_game", line);
-    line = line;
   });
   socket.on("room_change", () => {
     socket.emit("room_change", publicRooms());
   });
-  socket.on("answer", (answer) => {
+  socket.on("answer", (line, answer) => {
     // answer 체크 후 true or false
-    console.log(answer);
+    checkAnswer(line, answer);
     // true or false를 에밋~
     socket.emit("check_answer");
   });

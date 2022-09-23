@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/display-name */
 /* eslint-disable no-alert */
 /* eslint-disable react/prop-types */
@@ -9,13 +10,13 @@ import React, {
   useRef,
   useEffect
 } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 import styles from "./RoomStart.module.scss";
-import chair1 from "../../public/images/chair1.png";
-import chair2 from "../../public/images/chair2.png";
+// import chair1 from "../../public/images/chair1.png";
+// import chair2 from "../../public/images/chair2.png";
 import { IUserList, ISocket } from "../../pages/game/api/socketio";
-import lineData from "../../constants/lineData";
+// import lineData from "../../constants/lineData";
 
 interface Props {
   userList: IUserList[];
@@ -26,11 +27,44 @@ interface Props {
   ref: React.ForwardedRef<unknown>;
 }
 
+const lineToColor = (line: string): string => {
+  if (
+    line === "1" ||
+    line === "2" ||
+    line === "3" ||
+    line === "4" ||
+    line === "5" ||
+    line === "6" ||
+    line === "7" ||
+    line === "8" ||
+    line === "9"
+  ) {
+    return line;
+  }
+  if (line === "경의중앙") {
+    return "K";
+  }
+  if (line === "수인분당") {
+    return "B";
+  }
+  if (line === "신분당") {
+    return "S";
+  }
+  if (line === "우아신설") {
+    return "W";
+  }
+  if (line === "신림") {
+    return "SL";
+  }
+  return "";
+};
+
 const RoomStart: React.FunctionComponent<Props> = forwardRef(
   ({ userList, socket, roomName, canStart, isStartedGame }, ref) => {
-    const inputRef = useRef<HTMLInputElement>(null);
-    const lineRef = useRef<any>(null);
-    const circleRef = useRef<HTMLDivElement>(null);
+    const inputLineRef = useRef<HTMLInputElement>(null);
+    // const lineRef = useRef<any>(null);
+    // const circleRef = useRef<HTMLDivElement>(null);
+    // const answerRef = useRef<HTMLDivElement>(null);
     const [line, setLine] = useState<string>("경의중앙");
     const [answer, setAnswer] = useState<string>("");
     useImperativeHandle(ref, () => ({
@@ -47,35 +81,32 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     const onStartGame: React.MouseEventHandler<HTMLButtonElement> | undefined =
       useCallback(() => {
         if (!roomName) return;
-        if (inputRef?.current?.value) {
-          socket.emit("start_game", roomName, inputRef.current.value);
+        if (inputLineRef?.current) {
+          socket.emit("start_game", roomName, inputLineRef.current.value);
         }
       }, [roomName]);
 
-    const onSubmitAnswer: React.FormEventHandler<HTMLFormElement> = (e) => {
-      e.preventDefault();
+    const onSubmitAnswer = useCallback((answer: string) => {
       if (!answer) return;
-      socket.emit("answer", answer);
-    };
-
+      socket.emit("answer", line, answer);
+      setAnswer("");
+    }, []);
+    // Enter 누르면 submit
     useEffect(() => {
-      if (
-        line === "1" ||
-        line === "2" ||
-        line === "3" ||
-        line === "4" ||
-        line === "5" ||
-        line === "6" ||
-        line === "7" ||
-        line === "8" ||
-        line === "9"
-      ) {
-        if (lineRef?.current && circleRef?.current) {
-          lineRef.current.className = `${styles.line} flex justify-center align-center L${line}`;
-          circleRef.current.className = `${styles.circle} flex justify-center align-center L${line}`;
+      const keyDownHandler = (e: {
+        key: string;
+        preventDefault: () => void;
+      }) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          onSubmitAnswer(answer);
         }
-      }
-    }, [line]);
+      };
+      document.addEventListener("keydown", keyDownHandler);
+      return () => {
+        document.removeEventListener("keydown", keyDownHandler);
+      };
+    }, [answer]);
 
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
@@ -93,20 +124,45 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
           ))}
         </div>
         <div
-          ref={lineRef}
-          className={`${styles.line} flex justify-center align-center L1`}
+          className={`${
+            styles.line
+          } flex justify-center align-center L${lineToColor(line)}`}
         >
           <div
-            ref={circleRef}
-            className={`${styles.circle} flex justify-center align-center L1`}
+            className={`${
+              styles.circle
+            } flex justify-center align-center L${lineToColor(line)}`}
           >
-            <input
-              className="coreExtra fs-60"
-              ref={inputRef}
-              value={line}
-              onChange={onChangeLine}
-            />
-            <span className="coreExtra fs-60">(호)선</span>
+            {isStartedGame ? (
+              <div className={`${styles.answer} flex align-center`}>
+                <span
+                  className={`${
+                    styles.answer__station
+                  } flex justify-center align-center coreExtra L${lineToColor(
+                    line
+                  )}`}
+                >
+                  {line}
+                </span>
+                <input
+                  className={`${styles.answer__content} coreExtra fs-60`}
+                  value={answer}
+                  onChange={onChangeAnswer}
+                />
+              </div>
+            ) : (
+              <input
+                ref={inputLineRef}
+                className="coreExtra fs-60"
+                value={line}
+                onChange={onChangeLine}
+              />
+            )}
+            {isStartedGame ? (
+              <span className="coreExtra fs-60">역</span>
+            ) : (
+              <span className="coreExtra fs-60">(호)선</span>
+            )}
           </div>
         </div>
         <div className={`${styles.footer}`}>
@@ -121,12 +177,6 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
             >
               Start!
             </button>
-          )}
-          {isStartedGame && (
-            <form onSubmit={onSubmitAnswer}>
-              <input value={answer} onChange={onChangeAnswer} />
-              <button type="submit">submit</button>
-            </form>
           )}
           {/* <span className={styles.chair2}>
             <Image src={chair2} alt="chair2" />

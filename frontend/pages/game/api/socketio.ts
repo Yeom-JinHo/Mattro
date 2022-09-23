@@ -19,7 +19,7 @@ export interface ClientToServerEvents {
   nickname: (roomName: string, nickname: string) => void;
   start_lobby: (roomName: string) => void;
   start_game: (roomName: string, line: string) => void;
-  answer: (answer: string) => void;
+  answer: (line: string, answer: string) => void;
 }
 
 export type ISocket = Socket<ServerToClientEvents, ClientToServerEvents>;

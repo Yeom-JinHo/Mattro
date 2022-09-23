@@ -45,12 +45,20 @@
     border-radius: 236px;
     text-align: center;
     background-color: $WHITE;
+    .answer__station {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
     input {
       max-width: 236px;
+      border-bottom: 1px solid black;
       background: none;
+      // text-align: right;
     }
     span {
-      width: 160px;
+      width: 80px;
     }
   }
 }
@@ -61,6 +69,7 @@
   width: 80%;
   margin-top: 30px;
   button {
+    grid-column-start: 2;
     color: $GRAY_3A;
     &:hover {
       color: $LS;
