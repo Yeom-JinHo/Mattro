@@ -22,16 +22,33 @@ repositories {
 }
 
 dependencies {
-	implementation group: 'org.apache.spark', name: 'spark-core_2.13', version: '3.3.0'
+	implementation group: 'org.apache.spark', name: 'spark-core_2.12', version: '3.3.0'
+	compileOnly group: 'org.apache.spark', name: 'spark-sql_2.12', version: '3.3.0'
+//	implementation group: 'org.scala-lang', name: 'scala-library', version: '2.13.0'
+// https://mvnrepository.com/artifact/org.scala-lang/scala-library
+//	implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.0'
+	implementation group: 'org.scala-lang', name: 'scala-library', version: '2.12.15'
+//	implementation group: 'org.scala-lang', name: 'scala-library', version: '2.13.8'
+
+
+	implementation group: 'org.scala-lang.modules', name: 'scala-parallel-collections_2.13', version: '1.0.3'
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+//	implementation group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.3.3'
+	implementation 'org.apache.avro:avro-mapred:1.11.0'
+	implementation group: 'org.mongodb.spark', name: 'mongo-spark-connector_2.12', version: '3.0.1'
+//	implementation group: 'org.apache.avro', name: 'avro-mapred', version: '1.11.0'
+
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
-	testImplementation 'org.springframework.security:spring-security-test'
+//	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+//	testImplementation 'org.springframework.security:spring-security-test'
+//	 https://mvnrepository.com/artifact/org.mongodb.spark/mongo-spark-connector
+
 }
 
 tasks.named('test') {
