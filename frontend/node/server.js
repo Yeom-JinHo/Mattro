@@ -6,7 +6,7 @@ import http from "http";
 import cors from "cors";
 import { Server } from "socket.io";
 
-import checkAnswer from "./checkAnswer";
+import isAnswer from "./checkAnswer";
 
 const app = express();
 
@@ -39,7 +39,7 @@ function howManyInRoom(roomName) {
   return io.sockets.adapter.rooms.get(roomName)?.size;
 }
 
-let timeout;
+let turn;
 
 io.on("connection", (socket) => {
   // 소켓 연결 되자마자 강제로 어떤 방으로 입장시키기
@@ -108,18 +108,48 @@ io.on("connection", (socket) => {
     socket.emit("start_lobby", true);
   });
 
-  socket.on("start_game", (roomName, line) => {
-    socket.to(roomName).emit("start_game", line);
-    socket.emit("start_game", line);
+  socket.on("start_game", (roomName, line, order) => {
+    socket.to(roomName).emit("start_game", line, order);
+    socket.emit("start_game", line, order);
   });
   socket.on("room_change", () => {
     socket.emit("room_change", publicRooms());
   });
-  socket.on("answer", (line, answer) => {
-    // answer 체크 후 true or false
-    checkAnswer(line, answer);
-    // true or false를 에밋~
-    socket.emit("check_answer");
+  socket.on(
+    "answer",
+    (roomName, line, answer, arr, order, now, userListNum) => {
+      const res = isAnswer(line, answer, arr);
+      arr.push(answer);
+      socket.emit(
+        "check_answer",
+        roomName,
+        res,
+        arr,
+        answer,
+        order,
+        now,
+        userListNum
+      );
+      socket
+        .to(roomName)
+        .emit(
+          "check_answer",
+          roomName,
+          res,
+          arr,
+          answer,
+          order,
+          now,
+          userListNum
+        );
+    }
+  );
+  socket.on("correct", (roomName, answer, order, now, userListNum) => {
+    socket.emit("correct", answer, socket.id, order, now, userListNum);
+  });
+  socket.on("uncorrect", (roomName) => {
+    socket.to(roomName).emit("uncorrect", socket.id);
+    socket.emit("uncorrect", socket.id);
   });
 });
 

@@ -25,6 +25,11 @@ interface Props {
   canStart: boolean;
   isStartedGame: boolean;
   ref: React.ForwardedRef<unknown>;
+  turn: any;
+  total: string[];
+  result: any;
+  order: IUserList[];
+  now: number;
 }
 
 const lineToColor = (line: string): string => {
@@ -59,14 +64,43 @@ const lineToColor = (line: string): string => {
   return "";
 };
 
+const shuffle = (arr: IUserList[], socketId: string) => {
+  const res = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i].id === socketId) {
+      res.push(arr.splice(i, 1)[0]);
+    }
+  }
+  while (arr.length) {
+    const randomIdx = Math.floor(Math.random() * arr.length);
+    res.push(arr.splice(randomIdx, 1)[0]);
+  }
+  return res;
+};
+
 const RoomStart: React.FunctionComponent<Props> = forwardRef(
-  ({ userList, socket, roomName, canStart, isStartedGame }, ref) => {
+  (
+    {
+      userList,
+      socket,
+      roomName,
+      canStart,
+      isStartedGame,
+      turn,
+      total,
+      result,
+      order,
+      now
+    },
+    ref
+  ) => {
     const inputLineRef = useRef<HTMLInputElement>(null);
     // const lineRef = useRef<any>(null);
     // const circleRef = useRef<HTMLDivElement>(null);
     // const answerRef = useRef<HTMLDivElement>(null);
-    const [line, setLine] = useState<string>("경의중앙");
+    const [line, setLine] = useState<string>("2");
     const [answer, setAnswer] = useState<string>("");
+
     useImperativeHandle(ref, () => ({
       setLine
     }));
@@ -82,15 +116,28 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       useCallback(() => {
         if (!roomName) return;
         if (inputLineRef?.current) {
-          socket.emit("start_game", roomName, inputLineRef.current.value);
+          socket.emit(
+            "start_game",
+            roomName,
+            inputLineRef.current.value,
+            shuffle([...userList], socket.id)
+          );
         }
       }, [roomName]);
 
-    const onSubmitAnswer = useCallback((answer: string) => {
-      if (!answer) return;
-      socket.emit("answer", line, answer);
+    const onSubmitAnswer = (answer: string) => {
+      socket.emit(
+        "answer",
+        roomName,
+        line,
+        answer,
+        total,
+        order,
+        now,
+        userList.length
+      );
       setAnswer("");
-    }, []);
+    };
     // Enter 누르면 submit
     useEffect(() => {
       const keyDownHandler = (e: {
@@ -107,19 +154,22 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         document.removeEventListener("keydown", keyDownHandler);
       };
     }, [answer]);
-
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
-          <span>1번 출구</span>님 차례
+          {turn && <span>{turn.nickname}님 차례</span>}
         </h2>
         <div className={`${styles.userList}`}>
           {userList.map((user) => (
-            <div
-              className={`${styles.user} flex justify-center align-center coreExtra fs-24`}
-              key={user.id}
-            >
-              {user.nickname}님
+            <div key={user.id}>
+              <div className={`${styles.result}`}>
+                {result.socketId === user.id && result.answer}
+              </div>
+              <div
+                className={`${styles.user} flex justify-center align-center coreExtra fs-24`}
+              >
+                {user.nickname}님
+              </div>
             </div>
           ))}
         </div>
@@ -148,6 +198,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
                   className={`${styles.answer__content} coreExtra fs-60`}
                   value={answer}
                   onChange={onChangeAnswer}
+                  disabled={socket.id !== turn.id}
                 />
               </div>
             ) : (

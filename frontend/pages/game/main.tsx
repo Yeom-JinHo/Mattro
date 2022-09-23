@@ -23,12 +23,11 @@ const Main: NextPage = () => {
   const [canStart, setCanStart] = useState<boolean>(false);
   const [isStartedGame, setIsStartedGame] = useState<boolean>(false);
 
-  function addMessage(message: string) {
-    // const ul = room.querySelector("ul");
-    // const li = document.createElement("li");
-    // li.innerText = message;
-    // ul.appendChild(li);
-  }
+  const [order, setOrder] = useState<IUserList[]>(userList);
+  const [turn, setTurn] = useState<IUserList | object>({});
+  const [total, setTotal] = useState<string[]>([]);
+  const [result, setResult] = useState({});
+  const [now, setNow] = useState<number>(0);
 
   useEffect(() => {
     socket.emit("room_change");
@@ -48,7 +47,6 @@ const Main: NextPage = () => {
       setUserList((prev) => [...prev].filter((user) => user.id !== socketId));
       setNowCnt(newCount);
     });
-    socket.on("new_message", addMessage);
     socket.on("room_change", (rooms) => {
       setRoomList(rooms);
     });
@@ -56,9 +54,12 @@ const Main: NextPage = () => {
       setCanStart(canStart);
       setIsStartedLobby(true);
     });
-    socket.on("start_game", (line) => {
+    socket.on("start_game", (line, order) => {
       setIsStartedGame(true);
       childRef.current?.setLine(line);
+      setTurn(order[now]);
+      setOrder(order);
+      setNow(0);
     });
     socket.on("nickname", (socketId, nickname) => {
       setUserList((prev) => {
@@ -71,15 +72,39 @@ const Main: NextPage = () => {
         return copy;
       });
     });
+    socket.on(
+      "check_answer",
+      (roomName, res, arr, answer, order, now, userListNum) => {
+        if (res) {
+          setTotal(arr);
+          socket.emit("correct", roomName, answer, order, now, userListNum);
+        } else {
+          socket.emit("uncorrect", roomName);
+        }
+      }
+    );
+    socket.on("correct", (answer, socketId, order, now, userListNum) => {
+      setResult({ answer, socketId });
+      setTimeout(() => {
+        setResult({});
+        setTurn(order[(now + 1) % userListNum]);
+        setNow((prev) => prev + 1);
+      }, 2000);
+    });
+    // socket.on("uncorrect", (socketId) => {
+
+    // });
     return () => {
       socket.off("welcome");
       socket.off("iMHere");
       socket.off("bye");
-      socket.off("new_message");
       socket.off("room_change");
       socket.off("start_lobby");
       socket.off("start_game");
       socket.off("nickname");
+      socket.off("check_answer");
+      socket.off("correct");
+      socket.off("uncorrect");
     };
   }, []);
 
@@ -94,6 +119,11 @@ const Main: NextPage = () => {
             canStart={canStart}
             isStartedGame={isStartedGame}
             ref={childRef}
+            turn={turn}
+            total={total}
+            result={result}
+            order={order}
+            now={now}
           />
         ) : (
           <RoomLobby

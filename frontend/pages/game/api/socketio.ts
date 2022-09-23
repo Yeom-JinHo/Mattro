@@ -1,5 +1,15 @@
 import { Socket } from "socket.io-client";
 
+export interface IUserList {
+  id: string;
+  nickname: string;
+  me: boolean;
+}
+
+export interface IRoomList {
+  title: string;
+}
+
 export interface ServerToClientEvents {
   // noArg: () => void;
   // basicEmit: (a: number, b: string, c: Buffer) => void;
@@ -18,8 +28,16 @@ export interface ClientToServerEvents {
   new_message: (msg: string, room: object, done: () => void) => void;
   nickname: (roomName: string, nickname: string) => void;
   start_lobby: (roomName: string) => void;
-  start_game: (roomName: string, line: string) => void;
-  answer: (line: string, answer: string) => void;
+  start_game: (roomName: string, line: string, order: IUserList[]) => void;
+  answer: (
+    roomName: string,
+    line: string,
+    answer: string,
+    total: string[],
+    order: IUserList[],
+    now: number,
+    userListNum: number
+  ) => void;
 }
 
 export type ISocket = Socket<ServerToClientEvents, ClientToServerEvents>;
@@ -30,14 +48,4 @@ export interface InterServerEvents {
 
 export interface SocketData {
   nickname: string;
-}
-
-export interface IUserList {
-  id: string;
-  nickname: string;
-  me: boolean;
-}
-
-export interface IRoomList {
-  title: string;
 }

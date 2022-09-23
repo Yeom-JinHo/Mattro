@@ -27,7 +27,6 @@ const Rooms: React.FunctionComponent<Props> = ({
     useCallback(() => {
       socket.emit("enter_room", roomName, () => {
         setIsEntered(true);
-        // setUserList((prev: any) => [...prev, { nickname: "익명", me: true }]);
       });
     }, [roomName]);
 
@@ -36,7 +35,6 @@ const Rooms: React.FunctionComponent<Props> = ({
       if (title.current?.textContent) {
         socket.emit("enter_room", title.current?.textContent, () => {
           setIsEntered(true);
-          // setUserList((prev: any) => [...prev, { nickname: "익명", me: true }]);
         });
       }
     }, [title.current]);
