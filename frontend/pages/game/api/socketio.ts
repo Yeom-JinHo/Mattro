@@ -38,6 +38,7 @@ export interface ClientToServerEvents {
     now: number,
     userListNum: number
   ) => void;
+  uncorrect: (roomName: string, answer: string) => void;
 }
 
 export type ISocket = Socket<ServerToClientEvents, ClientToServerEvents>;

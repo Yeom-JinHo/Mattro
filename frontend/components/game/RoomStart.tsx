@@ -16,6 +16,7 @@ import styles from "./RoomStart.module.scss";
 // import chair1 from "../../public/images/chair1.png";
 // import chair2 from "../../public/images/chair2.png";
 import { IUserList, ISocket } from "../../pages/game/api/socketio";
+import Modal from "../layouts/Modal";
 // import lineData from "../../constants/lineData";
 
 interface Props {
@@ -30,6 +31,7 @@ interface Props {
   result: any;
   order: IUserList[];
   now: number;
+  limit: number;
 }
 
 const lineToColor = (line: string): string => {
@@ -90,10 +92,14 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       total,
       result,
       order,
-      now
+      now,
+      limit
     },
     ref
   ) => {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const toggleModal = () => setIsModalOpen(!isModalOpen);
+
     const inputLineRef = useRef<HTMLInputElement>(null);
     // const lineRef = useRef<any>(null);
     // const circleRef = useRef<HTMLDivElement>(null);
@@ -102,7 +108,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     const [answer, setAnswer] = useState<string>("");
 
     useImperativeHandle(ref, () => ({
-      setLine
+      setLine,
+      toggleModal
     }));
     const onChangeLine: React.ChangeEventHandler<HTMLInputElement> = (e) => {
       if (isStartedGame) return;
@@ -154,6 +161,13 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         document.removeEventListener("keydown", keyDownHandler);
       };
     }, [answer]);
+    useEffect(() => {
+      if (!limit) return;
+      if (socket.id !== turn.id) return;
+      setTimeout(() => {
+        socket.emit("uncorrect", roomName, "시간초과");
+      }, limit);
+    }, [limit]);
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -233,6 +247,15 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
             <Image src={chair2} alt="chair2" />
           </span> */}
         </div>
+        <Modal isOpen={isModalOpen} onClose={toggleModal}>
+          <div className={`${styles.children} fs-32 coreExtra`}>
+            <div>
+              {isModalOpen && (
+                <div>{result.socketId === socket.id ? "패배" : "승리"}</div>
+              )}
+            </div>
+          </div>
+        </Modal>
       </div>
     );
   }

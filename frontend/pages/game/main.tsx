@@ -12,7 +12,10 @@ import RoomStart from "../../components/game/RoomStart";
 const socket = io("ws://localhost:8000");
 
 const Main: NextPage = () => {
-  const childRef = useRef<{ setLine: (line: string) => void }>(null);
+  const childRef = useRef<{
+    setLine: (line: string) => void;
+    toggleModal: (a: boolean) => void;
+  }>(null);
   const [roomName, setRoomName] = useState<string>("");
   // const [messages, setMessages] = useState([]);
   const [roomList, setRoomList] = useState([]);
@@ -28,6 +31,7 @@ const Main: NextPage = () => {
   const [total, setTotal] = useState<string[]>([]);
   const [result, setResult] = useState({});
   const [now, setNow] = useState<number>(0);
+  const [limit, setLimit] = useState<number>(0);
 
   useEffect(() => {
     socket.emit("room_change");
@@ -54,12 +58,13 @@ const Main: NextPage = () => {
       setCanStart(canStart);
       setIsStartedLobby(true);
     });
-    socket.on("start_game", (line, order) => {
+    socket.on("start_game", (line, order, limit) => {
       setIsStartedGame(true);
       childRef.current?.setLine(line);
       setTurn(order[now]);
       setOrder(order);
       setNow(0);
+      setLimit(limit);
     });
     socket.on("nickname", (socketId, nickname) => {
       setUserList((prev) => {
@@ -79,21 +84,27 @@ const Main: NextPage = () => {
           setTotal(arr);
           socket.emit("correct", roomName, answer, order, now, userListNum);
         } else {
-          socket.emit("uncorrect", roomName);
+          socket.emit("uncorrect", roomName, answer);
         }
       }
     );
-    socket.on("correct", (answer, socketId, order, now, userListNum) => {
+    socket.on("correct", (answer, socketId, now, turn) => {
       setResult({ answer, socketId });
       setTimeout(() => {
         setResult({});
-        setTurn(order[(now + 1) % userListNum]);
-        setNow((prev) => prev + 1);
+        setNow(now);
+        setTurn(turn);
       }, 2000);
     });
-    // socket.on("uncorrect", (socketId) => {
-
-    // });
+    socket.on("uncorrect", (answer, socketId) => {
+      setResult({ answer, socketId });
+      setTimeout(() => {
+        childRef.current?.toggleModal(true);
+        setTimeout(() => {
+          setIsStartedLobby(false);
+        }, 3000);
+      }, 1000);
+    });
     return () => {
       socket.off("welcome");
       socket.off("iMHere");
@@ -124,6 +135,7 @@ const Main: NextPage = () => {
             result={result}
             order={order}
             now={now}
+            limit={limit}
           />
         ) : (
           <RoomLobby
