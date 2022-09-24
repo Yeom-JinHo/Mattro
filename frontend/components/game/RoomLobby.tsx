@@ -13,7 +13,6 @@ interface Props {
   nowCnt: number;
   userList: IUserList[];
   roomName: string;
-  // setIsEntered: (a: boolean) => void;
 }
 
 const RoomLobby: React.FunctionComponent<Props> = ({
@@ -21,7 +20,6 @@ const RoomLobby: React.FunctionComponent<Props> = ({
   nowCnt,
   userList,
   roomName
-  // setIsEntered
 }) => {
   const [nickname, setNickname] = useState("익명");
   const onChangeNickname: React.ChangeEventHandler<HTMLInputElement> =

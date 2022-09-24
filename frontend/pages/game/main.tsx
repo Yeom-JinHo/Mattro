@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-shadow */
 import type { NextPage } from "next";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { io } from "socket.io-client";
 
 import { IUserList } from "./api/socketio";
@@ -15,6 +15,7 @@ const Main: NextPage = () => {
   const childRef = useRef<{
     setLine: (line: string) => void;
     toggleModal: (a: boolean) => void;
+    clear: () => void;
   }>(null);
   const [roomName, setRoomName] = useState<string>("");
   // const [messages, setMessages] = useState([]);
@@ -26,12 +27,23 @@ const Main: NextPage = () => {
   const [canStart, setCanStart] = useState<boolean>(false);
   const [isStartedGame, setIsStartedGame] = useState<boolean>(false);
 
-  const [order, setOrder] = useState<IUserList[]>(userList);
+  const [order, setOrder] = useState<IUserList[]>([]);
   const [turn, setTurn] = useState<IUserList | object>({});
   const [total, setTotal] = useState<string[]>([]);
   const [result, setResult] = useState({});
   const [now, setNow] = useState<number>(0);
-  const [limit, setLimit] = useState<number>(0);
+  const [limit, setLimit] = useState<number>(5000);
+
+  const resetGame = useCallback(() => {
+    setIsStartedLobby(false);
+    setIsStartedGame(false);
+    setOrder([]);
+    setTurn({});
+    setTotal([]);
+    setResult({});
+    setNow(0);
+    setLimit(5000);
+  }, []);
 
   useEffect(() => {
     socket.emit("room_change");
@@ -81,6 +93,7 @@ const Main: NextPage = () => {
       "check_answer",
       (roomName, res, arr, answer, order, now, userListNum) => {
         if (res) {
+          childRef.current?.clear();
           setTotal(arr);
           socket.emit("correct", roomName, answer, order, now, userListNum);
         } else {
@@ -101,7 +114,7 @@ const Main: NextPage = () => {
       setTimeout(() => {
         childRef.current?.toggleModal(true);
         setTimeout(() => {
-          setIsStartedLobby(false);
+          resetGame();
         }, 3000);
       }, 1000);
     });

@@ -97,19 +97,23 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     },
     ref
   ) => {
+    const timeoutReturn: { current: NodeJS.Timeout | null } = useRef(null);
+    const clear = () => {
+      clearTimeout(timeoutReturn.current as NodeJS.Timeout);
+    };
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const toggleModal = () => setIsModalOpen(!isModalOpen);
-
     const inputLineRef = useRef<HTMLInputElement>(null);
+    const inputAnswerRef = useRef<HTMLInputElement>(null);
     // const lineRef = useRef<any>(null);
     // const circleRef = useRef<HTMLDivElement>(null);
     // const answerRef = useRef<HTMLDivElement>(null);
     const [line, setLine] = useState<string>("2");
     const [answer, setAnswer] = useState<string>("");
-
     useImperativeHandle(ref, () => ({
       setLine,
-      toggleModal
+      toggleModal,
+      clear
     }));
     const onChangeLine: React.ChangeEventHandler<HTMLInputElement> = (e) => {
       if (isStartedGame) return;
@@ -164,10 +168,18 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     useEffect(() => {
       if (!limit) return;
       if (socket.id !== turn.id) return;
-      setTimeout(() => {
+      const id = setTimeout(() => {
         socket.emit("uncorrect", roomName, "시간초과");
-      }, limit);
-    }, [limit]);
+      }, limit - now * 500);
+      timeoutReturn.current = id;
+    }, [limit, now]);
+    useEffect(() => {
+      if (socket.id === turn.id) {
+        if (inputAnswerRef?.current) {
+          inputAnswerRef.current.focus();
+        }
+      }
+    }, [turn]);
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -209,6 +221,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
                   {line}
                 </span>
                 <input
+                  ref={inputAnswerRef}
                   className={`${styles.answer__content} coreExtra fs-60`}
                   value={answer}
                   onChange={onChangeAnswer}
