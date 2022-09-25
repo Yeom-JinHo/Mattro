@@ -44,5 +44,3 @@ export default function themeMain() {
     </div>
   );
 }
-
-// export default themeMain;
