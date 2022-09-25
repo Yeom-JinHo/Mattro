@@ -1,11 +1,14 @@
 .card {
   // align-items: flex-end;
-  .container {
-    // position: absolute;
+  .ani {
     animation-name: moveLeft;
     animation-duration: 1.3s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
+  }
+  .container {
+    position: absolute;
+
     .title {
       color: $MAIN;
       margin-bottom: (40px);
@@ -32,11 +35,13 @@
 }
 @keyframes moveLeft {
   from {
-    right: 10%;
+    right: 0%;
     opacity: 0%;
   }
   to {
-    right: 313.5px;
+    // transform: (-50%, -50%);
+    right: 50%;
+    transform: translateX(50%);
     opacity: 100%;
   }
 }
