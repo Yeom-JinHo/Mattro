@@ -1,15 +1,35 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/no-unknown-property */
-import React, { useRef, useState, MouseEvent, TouchEvent } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  MouseEvent,
+  TouchEvent
+} from "react";
 import styles from "./MetroMap.module.scss";
 
 type MetroMapProps = {
   scaleSize: number;
+  searchId: string | null;
 };
-const MetroMap = ({ scaleSize }: MetroMapProps) => {
+const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
   const wrraperRef = useRef<HTMLDivElement>(null);
   const [dragging, setDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const movePosition = (posX: number, posY: number) => {
+    if (wrraperRef.current) {
+      wrraperRef.current.style.left = `${
+        (wrraperRef.current.style.left.replace("px", "") as unknown as number) -
+        posX
+      }px`;
+      wrraperRef.current.style.top = `${
+        (wrraperRef.current.style.top.replace("px", "") as unknown as number) -
+        posY
+      }px`;
+    }
+  };
 
   const startDrag = (e: MouseEvent<HTMLDivElement>) => {
     setPosition({ x: e.clientX, y: e.clientY });
@@ -19,14 +39,7 @@ const MetroMap = ({ scaleSize }: MetroMapProps) => {
   const drag = (e: MouseEvent<HTMLDivElement>) => {
     if (dragging && wrraperRef.current) {
       e.preventDefault();
-      wrraperRef.current.style.left = `${
-        (wrraperRef.current.style.left.replace("px", "") as unknown as number) -
-        (position.x - e.clientX)
-      }px`;
-      wrraperRef.current.style.top = `${
-        (wrraperRef.current.style.top.replace("px", "") as unknown as number) -
-        (position.y - e.clientY)
-      }px`;
+      movePosition(position.x - e.clientX, position.y - e.clientY);
       setPosition({ x: e.clientX, y: e.clientY });
     }
   };
@@ -41,22 +54,31 @@ const MetroMap = ({ scaleSize }: MetroMapProps) => {
 
   const touchMove = (e: TouchEvent<HTMLDivElement>) => {
     if (dragging && wrraperRef.current) {
-      e.preventDefault();
-      wrraperRef.current.style.left = `${
-        (wrraperRef.current.style.left.replace("px", "") as unknown as number) -
-        (position.x - e.touches[0].clientX)
-      }px`;
-      wrraperRef.current.style.top = `${
-        (wrraperRef.current.style.top.replace("px", "") as unknown as number) -
-        (position.y - e.touches[0].clientY)
-      }px`;
+      // e.preventDefault();
+      movePosition(
+        position.x - e.touches[0].clientX,
+        position.y - e.touches[0].clientY
+      );
       setPosition({ x: e.touches[0].clientX, y: e.touches[0].clientY });
     }
   };
   const endTouch = () => {
     setDragging(false);
   };
-
+  useEffect(() => {
+    if (wrraperRef.current && searchId) {
+      const circle = document.querySelector(`.M${searchId}`);
+      if (!circle || !window) return;
+      movePosition(
+        (wrraperRef.current.style.left.replace("px", "") as unknown as number) -
+          (window.innerWidth > 1024 ? 4 : 1) *
+            (740 - (circle.getAttribute("cx") as unknown as number)),
+        (wrraperRef.current.style.top.replace("px", "") as unknown as number) -
+          (window.innerWidth > 1024 ? 4 : 1) *
+            (475 - (circle.getAttribute("cy") as unknown as number))
+      );
+    }
+  }, [searchId]);
   return (
     <div id="metroMap">
       <div
@@ -95,6 +117,7 @@ const MetroMap = ({ scaleSize }: MetroMapProps) => {
               strokeLinecap="round"
             />
           </svg>
+          <g className="selectedMarker" />
           {/* <!-- 경로        --> */}
           <g
             className="line"
@@ -12790,11 +12813,11 @@ const MetroMap = ({ scaleSize }: MetroMapProps) => {
               id="S0205"
               style={{ textAnchor: "end" }}
             >
-              <tspan x="850" dx="-7" dy="-7" fontSize="9px" fontWeight="bold">
-                문화공원
-              </tspan>
               <tspan x="850" dx="-7" dy="-12" fontSize="9px" fontWeight="bold">
                 동대문역사
+              </tspan>
+              <tspan x="850" dx="-7" dy="9" fontSize="9px" fontWeight="bold">
+                문화공원
               </tspan>
             </text>
             <text
@@ -14893,11 +14916,11 @@ const MetroMap = ({ scaleSize }: MetroMapProps) => {
               id="S2743"
               style={{ textAnchor: "middle" }}
             >
-              <tspan x="555" dx="0" dy="-5" fontSize="9px">
-                삼거리
-              </tspan>
               <tspan x="555" dx="0" dy="-12" fontSize="9px">
                 신대방
+              </tspan>
+              <tspan x="555" dx="0" dy="9" fontSize="9px">
+                삼거리
               </tspan>
             </text>
             <text
@@ -16091,11 +16114,11 @@ const MetroMap = ({ scaleSize }: MetroMapProps) => {
               id="S1883"
               style={{ textAnchor: "middle" }}
             >
-              <tspan x="285" dx="0" dy="-5" fontSize="9px">
-                인더스파크
-              </tspan>
               <tspan x="285" dx="0" dy="-12" fontSize="9px">
                 남동
+              </tspan>
+              <tspan x="285" dx="0" dy="9" fontSize="9px">
+                인더스파크
               </tspan>
             </text>
             <text

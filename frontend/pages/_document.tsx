@@ -11,6 +11,10 @@ class MyDocument extends Document {
             src="https://developers.kakao.com/sdk/js/kakao.min.js"
             defer
           />
+          <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+          />
         </Head>
         <body>
           <Main />
