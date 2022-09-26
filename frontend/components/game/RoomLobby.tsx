@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from "react";
+/* eslint-disable no-shadow */
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import styles from "./RoomLobby.module.scss";
@@ -7,6 +8,7 @@ import chair2 from "../../public/images/chair2.png";
 import subway1 from "../../public/images/subway1.svg";
 import subway2 from "../../public/images/subway2.svg";
 import { ISocket, IUserList } from "../../pages/game/api/socketio";
+import Modal from "../layouts/Modal";
 
 interface Props {
   socket: ISocket;
@@ -21,10 +23,13 @@ const RoomLobby: React.FunctionComponent<Props> = ({
   userList,
   roomName
 }) => {
+  const nicknameRef = useRef<HTMLInputElement>(null);
   const [nickname, setNickname] = useState("익명");
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
   const onChangeNickname: React.ChangeEventHandler<HTMLInputElement> =
     useCallback((e) => {
-      e.preventDefault();
       setNickname(e.target.value);
     }, []);
   const onStartLobby: React.MouseEventHandler<HTMLButtonElement> =
@@ -34,16 +39,25 @@ const RoomLobby: React.FunctionComponent<Props> = ({
       }
     }, [roomName]);
 
-  const onSubmitNickname: React.FormEventHandler<HTMLFormElement> = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (nickname && roomName) {
+  // Enter 누르면 submit
+  useEffect(() => {
+    const keyDownHandler = (e: { key: string; preventDefault: () => void }) => {
+      if (e.key === "Enter") {
         socket.emit("nickname", roomName, nickname);
+        toggleModal();
       }
-    },
-    [roomName, nickname]
-  );
+    };
+    document.addEventListener("keydown", keyDownHandler);
+    return () => {
+      document.removeEventListener("keydown", keyDownHandler);
+    };
+  }, [roomName, nickname]);
 
+  useEffect(() => {
+    if (isModalOpen && nicknameRef?.current) {
+      nicknameRef.current.focus();
+    }
+  }, [isModalOpen]);
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <h2 className="align-center coreExtra fs-30">
@@ -61,39 +75,25 @@ const RoomLobby: React.FunctionComponent<Props> = ({
       </h2>
       <div className={`${styles.userList}`}>
         {userList.map((user) => {
-          if (user.me) {
-            return (
-              <div
-                className={`${styles.user} flex column justify-center align-center fs-32`}
-                key={user.id}
-              >
-                <span className={`${styles.subway2}`}>
-                  <Image src={subway2} alt="subway2" />
-                </span>
-                <div className={`${styles.username} notoBold`}>
-                  {user.nickname}님
-                </div>
-                <span
-                  className={`${styles.visible} flex justify-center align-center notoBold fs-20`}
-                >
-                  나
-                </span>
-              </div>
-            );
-          }
           return (
             <div
               className={`${styles.user} flex column justify-center align-center fs-32`}
-              key={user.nickname}
+              key={user.id}
             >
               <span className={`${styles.subway2}`}>
                 <Image src={subway2} alt="subway2" />
               </span>
-              <div className={`${styles.username} notoBold`}>
+              <div
+                className={`${styles.username} notoBold`}
+                onClick={toggleModal}
+                aria-hidden="true"
+              >
                 {user.nickname}님
               </div>
               <span
-                className={`${styles.invisible} flex justify-center align-center notoBold fs-20`}
+                className={`${
+                  user.me ? styles.visible : styles.invisible
+                } flex justify-center align-center notoBold fs-20`}
               >
                 나
               </span>
@@ -106,7 +106,7 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           <Image src={chair1} alt="chair1" />
         </span>
         <button
-          className="flex align-center justify-center coreExtra fs-32"
+          className={`${styles.startBtn} flex align-center justify-center coreExtra fs-32`}
           type="button"
           onClick={onStartLobby}
         >
@@ -116,10 +116,26 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           <Image src={chair2} alt="chair1" />
         </span>
       </footer>
-      <form onSubmit={onSubmitNickname}>
+      {/* <form onSubmit={onSubmitNickname}>
         <input value={nickname} onChange={onChangeNickname} />
         <button type="submit">Save</button>
-      </form>
+      </form> */}
+      <Modal isOpen={isModalOpen} onClose={toggleModal}>
+        <div className={`${styles.children} fs-32 coreExtra`}>
+          <div>
+            <span className={styles.modal__label}>닉네임 :</span>
+            <input
+              ref={nicknameRef}
+              className={`${styles.modal__input} fs-32 coreExtra`}
+              type="text"
+              required
+              maxLength={6}
+              value={nickname}
+              onChange={onChangeNickname}
+            />
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

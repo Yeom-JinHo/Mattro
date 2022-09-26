@@ -19,8 +19,17 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 44px;
-  margin-top: 58px;
-  margin-bottom: 130px;
+  margin-top: 50px;
+  margin-bottom: 120px;
+  .result {
+    width: 86px;
+    height: 38px;
+  }
+  .empty {
+    visibility: hidden;
+    width: 86px;
+    height: 38px;
+  }
   .user {
     width: 202px;
     height: 68px;
@@ -92,7 +101,8 @@
 
   .userList {
     column-gap: vw(44px);
-    margin-bottom: vw(130px);
+    margin-top: vw(50px);
+    margin-bottom: vw(120px);
     .user {
       width: vw(202px);
       height: vw(68px);

@@ -3,6 +3,7 @@
 import type { NextPage } from "next";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { io } from "socket.io-client";
+import { useRouter } from "next/router";
 
 import { IUserList } from "./api/socketio";
 import OpenRoomList from "../../components/game/OpenRoomList";
@@ -12,6 +13,7 @@ import RoomStart from "../../components/game/RoomStart";
 const socket = io("ws://localhost:8000");
 
 const Main: NextPage = () => {
+  const router = useRouter();
   const childRef = useRef<{
     setLine: (line: string) => void;
     toggleModal: (a: boolean) => void;
@@ -107,7 +109,7 @@ const Main: NextPage = () => {
         setResult({});
         setNow(now);
         setTurn(turn);
-      }, 2000);
+      }, 1000);
     });
     socket.on("uncorrect", (answer, socketId) => {
       setResult({ answer, socketId });
@@ -115,7 +117,7 @@ const Main: NextPage = () => {
         childRef.current?.toggleModal(true);
         setTimeout(() => {
           resetGame();
-        }, 3000);
+        }, 2000);
       }, 1000);
     });
     return () => {
@@ -132,6 +134,44 @@ const Main: NextPage = () => {
     };
   }, []);
 
+  const leave = (e: any) => {
+    // setIsEntered(false);
+    // resetGame();
+    // socket.disconnect();
+    // setTimeout(() => {
+    //   router.push("/game");
+    // }, 10000);
+    e.preventDefault();
+    e.returnValue = "";
+  };
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", leave);
+    return () => {
+      window.removeEventListener("beforeunload", leave);
+    };
+  }, []);
+
+  // const [closeSession, setCloseSession] = useState(false);
+
+  // const closeQuickView = () => {
+  //   setCloseSession(true);
+  // };
+
+  // useEffect(() => {
+  //   window.history.pushState(
+  //     "fake-route",
+  //     document.title,
+  //     window.location.href
+  //   );
+  //   window.addEventListener("popstate", closeQuickView);
+  //   return () => {
+  //     window.removeEventListener("popstate", closeQuickView);
+  //     if (window.history.state === "fake-route") {
+  //       window.history.back();
+  //     }
+  //   };
+  // }, []);
   return (
     <div>
       {socket && isEntered ? (
@@ -149,6 +189,9 @@ const Main: NextPage = () => {
             order={order}
             now={now}
             limit={limit}
+            // closeSession={closeSession}
+            resetGame={resetGame}
+            setIsEntered={setIsEntered}
           />
         ) : (
           <RoomLobby

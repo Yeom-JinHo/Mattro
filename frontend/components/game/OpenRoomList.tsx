@@ -4,7 +4,7 @@ import Image from "next/image";
 import station from "../../public/images/station.png";
 import chair1 from "../../public/images/chair1.png";
 import styles from "./OpenRoomList.module.scss";
-import type { ISocket, IUserList } from "../../pages/game/api/socketio";
+import type { ISocket } from "../../pages/game/api/socketio";
 
 interface Props {
   roomList: string[];
@@ -17,6 +17,11 @@ const Rooms: React.FunctionComponent<Props> = ({
   socket,
   setIsEntered
 }) => {
+  useEffect(() => {
+    socket.emit("enter_room", "지하철 게임", () => {
+      setIsEntered(true);
+    });
+  }, []);
   const title = useRef<HTMLSpanElement>(null);
   const [roomName, setRoomName] = useState<string>("");
   const onChangeRoomName: React.ChangeEventHandler<HTMLInputElement> =

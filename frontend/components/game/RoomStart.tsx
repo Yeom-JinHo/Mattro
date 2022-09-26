@@ -10,14 +10,10 @@ import React, {
   useRef,
   useEffect
 } from "react";
-// import Image from "next/image";
-
+import { useRouter } from "next/router";
 import styles from "./RoomStart.module.scss";
-// import chair1 from "../../public/images/chair1.png";
-// import chair2 from "../../public/images/chair2.png";
 import { IUserList, ISocket } from "../../pages/game/api/socketio";
 import Modal from "../layouts/Modal";
-// import lineData from "../../constants/lineData";
 
 interface Props {
   userList: IUserList[];
@@ -32,6 +28,9 @@ interface Props {
   order: IUserList[];
   now: number;
   limit: number;
+  // closeSession: boolean;
+  resetGame: () => void;
+  setIsEntered: (a: boolean) => void;
 }
 
 const lineToColor = (line: string): string => {
@@ -93,10 +92,14 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       result,
       order,
       now,
-      limit
+      limit,
+      // closeSession,
+      resetGame,
+      setIsEntered
     },
     ref
   ) => {
+    const router = useRouter();
     const timeoutReturn: { current: NodeJS.Timeout | null } = useRef(null);
     const clear = () => {
       clearTimeout(timeoutReturn.current as NodeJS.Timeout);
@@ -182,6 +185,16 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         }
       }
     }, [turn]);
+    // useEffect(() => {
+    //   if (closeSession) {
+    //     setIsEntered(false);
+    //     resetGame();
+    //     socket.disconnect();
+    //     setTimeout(() => {
+    //       router.push("/game");
+    //     });
+    //   }
+    // }, [closeSession]);
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -190,8 +203,12 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         <div className={`${styles.userList}`}>
           {userList.map((user) => (
             <div key={user.id}>
-              <div className={`${styles.result}`}>
-                {result.socketId === user.id && result.answer}
+              <div
+                className={`${
+                  result.socketId === user.id ? styles.result : styles.empty
+                }`}
+              >
+                {result.answer}
               </div>
               <div
                 className={`${styles.user} flex justify-center align-center coreExtra fs-24`}

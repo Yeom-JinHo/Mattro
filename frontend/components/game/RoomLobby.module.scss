@@ -29,7 +29,7 @@
       align-self: center;
     }
   }
-  button {
+  .startBtn {
     width: 200px;
     height: 70px;
     border: 4px solid $GRAY_3A;
@@ -63,6 +63,7 @@
     .username {
       margin: 28px 0;
       color: $WHITE;
+      cursor: pointer;
     }
     .visible {
       width: 86px;
@@ -71,7 +72,7 @@
       background-color: $SUB_YELLOW;
     }
     .invisible {
-      display: none;
+      visibility: hidden;
       width: 86px;
       height: 38px;
       border-radius: 22px;
@@ -81,14 +82,13 @@
 }
 
 .footer {
-  margin: 70px 0;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   width: 1004px;
   .chair1 {
     grid-column-start: span 2;
   }
-  button {
+  .startBtn {
     grid-column-start: span 4;
     justify-self: center;
     align-self: center;
@@ -97,6 +97,13 @@
   .chair2 {
     grid-column-start: -2;
   }
+}
+
+.modal__label {
+  margin-right: 10px;
+}
+.modal__input {
+  border-bottom: 1px solid $BLACK;
 }
 
 @media screen and (max-width: $DESKTOP-VW) {
@@ -119,7 +126,7 @@
         height: vw(44px);
       }
     }
-    button {
+    .startBtn {
       width: vw(200px);
       height: vw(70px);
       border: vw(4px) solid $GRAY_3A;
@@ -185,7 +192,7 @@
         height: 24px;
       }
     }
-    button {
+    .startBtn {
       width: 200px;
       height: 70px;
       border: 4px solid $GRAY_3A;
@@ -238,7 +245,7 @@
     width: 80%;
     .chair1 {
     }
-    button {
+    .startBtn {
       width: 150px;
       height: 52px;
       font-size: 24px;
@@ -273,7 +280,7 @@
         height: vw-p(24px);
       }
     }
-    button {
+    .startBtn {
       width: vw-p(200px);
       height: vw-p(70px);
       border: vw-p(4px) solid $GRAY_3A;
@@ -310,7 +317,7 @@
   }
 
   .footer {
-    button {
+    .startBtn {
       width: vw-p(150px);
       height: vw-p(52px);
       font-size: vw-p(24px);
