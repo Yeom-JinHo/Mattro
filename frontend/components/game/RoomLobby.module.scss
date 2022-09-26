@@ -83,17 +83,19 @@
 .footer {
   margin: 70px 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   width: 1004px;
-  button {
+  .chair1 {
     grid-column-start: span 2;
+  }
+  button {
+    grid-column-start: span 4;
     justify-self: center;
     align-self: center;
     cursor: pointer;
   }
   .chair2 {
-    justify-self: flex-end;
-    width: 40%;
+    grid-column-start: -2;
   }
 }
 
@@ -196,7 +198,7 @@
       }
     }
   }
-  
+
   .userList {
     width: 90%;
     margin-top: 30px;
@@ -231,29 +233,18 @@
       }
     }
   }
-  
+
   .footer {
     width: 80%;
-    margin-top: 38px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px;
     .chair1 {
-      align-self: center;
     }
     button {
       width: 150px;
       height: 52px;
-      grid-column-start: span 1;
-      justify-self: center;
-      align-self: flex-start;
       font-size: 24px;
       cursor: pointer;
     }
     .chair2 {
-      align-self: center;
-      justify-self: flex-start;
-      width: 50%;
     }
   }
 }
@@ -292,7 +283,7 @@
       }
     }
   }
-  
+
   .userList {
     margin-top: vw-p(30px);
     .user {
@@ -317,10 +308,8 @@
       }
     }
   }
-  
+
   .footer {
-    margin-top: vw-p(38px);
-    grid-template-rows: vw-p(200px);
     button {
       width: vw-p(150px);
       height: vw-p(52px);

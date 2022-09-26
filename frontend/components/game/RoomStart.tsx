@@ -165,6 +165,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         document.removeEventListener("keydown", keyDownHandler);
       };
     }, [answer]);
+
     useEffect(() => {
       if (!limit) return;
       if (socket.id !== turn.id) return;
@@ -172,7 +173,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         socket.emit("uncorrect", roomName, "시간초과");
       }, limit - now * 500);
       timeoutReturn.current = id;
-    }, [limit, now]);
+    }, [limit, now, turn]);
+
     useEffect(() => {
       if (socket.id === turn.id) {
         if (inputAnswerRef?.current) {
