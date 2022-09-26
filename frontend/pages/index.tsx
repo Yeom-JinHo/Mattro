@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   const startClick = () => {
     setClicked(true);
     setTimeout(function () {
-      router.push("/theme/main");
+      router.push("/subway");
     }, 3000);
   };
 
