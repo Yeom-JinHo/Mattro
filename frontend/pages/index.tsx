@@ -11,6 +11,7 @@ const Home: NextPage = () => {
   const [clicked, setClicked] = useState<boolean>(false);
   const startClick = () => {
     setClicked(true);
+
     setTimeout(function () {
       router.push("/subway");
     }, 3000);

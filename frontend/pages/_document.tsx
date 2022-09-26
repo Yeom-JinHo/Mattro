@@ -1,6 +1,5 @@
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, { Html, Head, Main, NextScript } from "next/document";
-
 // NextScript가 _app.tsx를 송출한다
 
 class MyDocument extends Document {
