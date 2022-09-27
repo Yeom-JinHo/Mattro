@@ -90,61 +90,64 @@ const Index = () => {
     }
   };
 
+  const removeFromSelectedStations = (station: SelectedStationType) => {
+    const markerGroup = document.querySelector(".selectedMarker");
+    const marker = document.getElementById(station.stationId);
+    markerGroup?.removeChild(marker as HTMLElement);
+
+    setSelectedStations((prev) =>
+      prev.filter((item) => JSON.stringify(item) !== JSON.stringify(station))
+    );
+  };
+
+  const addToSelectedStations = (station: SelectedStationType) => {
+    const markerGroup = document.querySelector(".selectedMarker");
+    setSelectedStations((prev) => [...prev, station]);
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttributeNS(null, "x", `${station.cx - 6}`);
+    svg.setAttributeNS(null, "y", `${station.cy - 18}`);
+    svg.setAttributeNS(null, "width", "300");
+    svg.setAttributeNS(null, "height", "200");
+    svg.setAttributeNS(null, "viewBox", "0 0 1500 1000");
+    svg.setAttributeNS(null, "id", station.stationId);
+
+    const ellipse = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "ellipse"
+    );
+    ellipse.setAttributeNS(null, "cx", "28.53");
+    ellipse.setAttributeNS(null, "cy", "29.68");
+    ellipse.setAttributeNS(null, "rx", "12.31");
+    ellipse.setAttributeNS(null, "ry", "12.45");
+    ellipse.setAttributeNS(null, "fill", "white");
+    svg.appendChild(ellipse);
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttributeNS(
+      null,
+      "d",
+      "M28 0C12.52 0 0 12.52 0 28C0 34.96 2 41.48 5.64 47.36C9.44 53.52 14.44 58.8 18.28 64.96C20.16 67.96 21.52 70.76 22.96 74C24 76.2 24.84 80 28 80C31.16 80 32 76.2 33 74C34.48 70.76 35.8 67.96 37.68 64.96C41.52 58.84 46.52 53.56 50.32 47.36C54 41.48 56 34.96 56 28C56 12.52 43.48 0 28 0ZM28 39C22.48 39 18 34.52 18 29C18 23.48 22.48 19 28 19C33.52 19 38 23.48 38 29C38 34.52 33.52 39 28 39Z"
+    );
+    path.setAttributeNS(null, "fill", "#e53060");
+    svg.appendChild(path);
+
+    markerGroup?.appendChild(svg);
+  };
+
   // 최종적으로 선택된역들
   const handleSelectedStations = () => {
     if (!stationInfo.name) return;
-    // const ind = selectedStations.indexOf(stationInfo.name);
     let isInclude = false;
     selectedStations.forEach((station) => {
       if (JSON.stringify(station) === JSON.stringify(stationInfo)) {
         isInclude = true;
       }
     });
-    const markerGroup = document.querySelector(".selectedMarker");
     if (!isInclude) {
-      setSelectedStations((prev) => [...prev, stationInfo]);
-
-      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      svg.setAttributeNS(null, "x", `${stationInfo.cx - 6}`);
-      svg.setAttributeNS(null, "y", `${stationInfo.cy - 18}`);
-      svg.setAttributeNS(null, "width", "300");
-      svg.setAttributeNS(null, "height", "200");
-      svg.setAttributeNS(null, "viewBox", "0 0 1500 1000");
-      svg.setAttributeNS(null, "id", stationInfo.stationId);
-
-      const ellipse = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "ellipse"
-      );
-      ellipse.setAttributeNS(null, "cx", "28.53");
-      ellipse.setAttributeNS(null, "cy", "29.68");
-      ellipse.setAttributeNS(null, "rx", "12.31");
-      ellipse.setAttributeNS(null, "ry", "12.45");
-      ellipse.setAttributeNS(null, "fill", "white");
-      svg.appendChild(ellipse);
-
-      const path = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      path.setAttributeNS(
-        null,
-        "d",
-        "M28 0C12.52 0 0 12.52 0 28C0 34.96 2 41.48 5.64 47.36C9.44 53.52 14.44 58.8 18.28 64.96C20.16 67.96 21.52 70.76 22.96 74C24 76.2 24.84 80 28 80C31.16 80 32 76.2 33 74C34.48 70.76 35.8 67.96 37.68 64.96C41.52 58.84 46.52 53.56 50.32 47.36C54 41.48 56 34.96 56 28C56 12.52 43.48 0 28 0ZM28 39C22.48 39 18 34.52 18 29C18 23.48 22.48 19 28 19C33.52 19 38 23.48 38 29C38 34.52 33.52 39 28 39Z"
-      );
-      path.setAttributeNS(null, "fill", "#e53060");
-      svg.appendChild(path);
-
-      markerGroup?.appendChild(svg);
+      addToSelectedStations(stationInfo);
     } else {
-      const marker = document.getElementById(stationInfo.stationId);
-      markerGroup?.removeChild(marker as HTMLElement);
-
-      setSelectedStations((prev) =>
-        prev.filter(
-          (station) => JSON.stringify(station) !== JSON.stringify(stationInfo)
-        )
-      );
+      removeFromSelectedStations(stationInfo);
     }
 
     setSelecting(false);
@@ -297,7 +300,10 @@ const Index = () => {
       </div>
       <div id="select-container" className="flex justify-center">
         {selectedStations.length !== 0 && (
-          <LineSelectedBar selectedStations={selectedStations} />
+          <LineSelectedBar
+            selectedStations={selectedStations}
+            removeFromSelectedStations={removeFromSelectedStations}
+          />
         )}
       </div>
     </div>

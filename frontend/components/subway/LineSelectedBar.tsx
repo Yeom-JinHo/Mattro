@@ -6,9 +6,13 @@ import styles from "./LineSelectedBar.module.scss";
 
 type LineSelectedBarProps = {
   selectedStations: SelectedStationType[];
+  removeFromSelectedStations: (statation: SelectedStationType) => void;
 };
 
-const LineSelectedBar = ({ selectedStations }: LineSelectedBarProps) => {
+const LineSelectedBar = ({
+  selectedStations,
+  removeFromSelectedStations
+}: LineSelectedBarProps) => {
   const router = useRouter();
 
   const recommendPlace = () => {
@@ -21,16 +25,19 @@ const LineSelectedBar = ({ selectedStations }: LineSelectedBarProps) => {
     <div id="lineSelectedBar" className="flex align-center">
       <ul className={`flex ${styles.stations} align-center`}>
         {selectedStations.map((station) => (
-          <li
-            key={station.name}
-            className={`notoBold flex column align-center justify-center ${styles.station}`}
-          >
-            <div className={`${styles.circleContainer} flex`}>
-              {station.lineId.map((id) => (
-                <div key={id} className={`${styles.circle} ${id}`} />
-              ))}
-            </div>
-            {station.name}
+          <li key={station.name}>
+            <button
+              type="button"
+              className={`notoBold flex column align-center justify-center ${styles.station}`}
+              onClick={() => removeFromSelectedStations(station)}
+            >
+              <div className={`${styles.circleContainer} flex`}>
+                {station.lineId.map((id) => (
+                  <div key={id} className={`${styles.circle} ${id}`} />
+                ))}
+              </div>
+              {station.name}
+            </button>
           </li>
         ))}
       </ul>
