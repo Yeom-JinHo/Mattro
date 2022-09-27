@@ -4,12 +4,13 @@ import type { NextPage } from "next";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { io } from "socket.io-client";
 
-import { IUserList } from "./api/socketio";
+import { IUserList } from "../../constants/socketio";
 import OpenRoomList from "../../components/game/OpenRoomList";
 import RoomLobby from "../../components/game/RoomLobby";
 import RoomStart from "../../components/game/RoomStart";
 
-const socket = io("ws://localhost:8000");
+// const socket = io("ws://localhost:8000");
+const socket = io("ws://j7c206.p.ssafy.io:8000");
 
 const Main: NextPage = () => {
   const childRef = useRef<{

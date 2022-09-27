@@ -12,7 +12,7 @@ import React, {
   useEffect
 } from "react";
 import styles from "./RoomStart.module.scss";
-import { IUserList, ISocket } from "../../pages/game/api/socketio";
+import { IUserList, ISocket } from "../../constants/socketio";
 import Modal from "../layouts/Modal";
 
 interface Props {
