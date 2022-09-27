@@ -55,7 +55,7 @@ const Index = () => {
   const handleLineOpacity = (lineId: UsedLineIdType, opacity: 0.1 | 1) => {
     const lines = document.querySelectorAll<HTMLElement>(`.${lineId}`);
     lines.forEach((line) => {
-      if (line.tagName !== "LI") {
+      if (line.tagName === "SPAN") {
         line.style.opacity = opacity.toString();
       }
     });
