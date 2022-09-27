@@ -3,7 +3,7 @@
 /* eslint-disable no-param-reassign */
 import Image from "next/image";
 import { useEffect, useState, MouseEvent } from "react";
-import LineInfoList from "../../components/subway/LineCircleList";
+import LineCircleList from "../../components/subway/LineCircleList";
 import LineSearch from "../../components/subway/LineSearch";
 import MetroMap from "../../components/subway/MetroMap";
 import styles from "./subway.module.scss";
@@ -271,7 +271,11 @@ const Index = () => {
     <div className={styles.subway}>
       <MetroMap scaleSize={scaleSize} searchId={searchId} />
       <div id="line-container" className="flex">
-        <LineInfoList togggleSelectedLines={handleSelectedLines} />
+        <LineCircleList
+          togggleSelectedLines={handleSelectedLines}
+          selectedLinesSize={selectedLines.length}
+          setSelectedLines={setSelectedLines}
+        />
         <LineSearch
           setSearchId={setSearchId}
           setScaleSize={setScaleSize}
