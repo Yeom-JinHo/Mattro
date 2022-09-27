@@ -190,7 +190,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     //   }
     // }, [closeSession]);
     const onEnterKeyUp = (e: { key: string }) => {
-      if (e.key === "Enter") {
+      if (answer && e.key === "Enter") {
         onSubmitAnswer(answer);
       }
     };
