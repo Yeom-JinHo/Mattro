@@ -111,6 +111,18 @@ const Index = () => {
       svg.setAttributeNS(null, "height", "200");
       svg.setAttributeNS(null, "viewBox", "0 0 1500 1000");
       svg.setAttributeNS(null, "id", stationInfo.stationId);
+
+      const ellipse = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "ellipse"
+      );
+      ellipse.setAttributeNS(null, "cx", "28.53");
+      ellipse.setAttributeNS(null, "cy", "29.68");
+      ellipse.setAttributeNS(null, "rx", "12.31");
+      ellipse.setAttributeNS(null, "ry", "12.45");
+      ellipse.setAttributeNS(null, "fill", "white");
+      svg.appendChild(ellipse);
+
       const path = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "path"
