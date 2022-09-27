@@ -267,14 +267,20 @@ const Index = () => {
         <button
           type="button"
           onClick={() => setScaleSize((prev) => (prev >= 4 ? 4 : prev + 1))}
+          className="flex align-center justify-center"
         >
-          <Image src={PlusBtn} layout="responsive" alt="확대" />
+          <div className={`${styles.btnImg} flex align-center justify-center`}>
+            <Image src={PlusBtn} alt="확대" />
+          </div>
         </button>
         <button
           type="button"
           onClick={() => setScaleSize((prev) => (prev <= 1 ? 1 : prev - 1))}
+          className="flex align-center justify-center"
         >
-          <Image src={MinusBtn} layout="responsive" alt="축소" />
+          <div className={`${styles.btnImg} flex align-center justify-center`}>
+            <Image src={MinusBtn} alt="축소" />
+          </div>
         </button>
       </div>
       <div id="select-container" className="flex justify-center">
