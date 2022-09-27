@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import styles from "./RoomLobby.module.scss";
@@ -28,36 +28,26 @@ const RoomLobby: React.FunctionComponent<Props> = ({
   const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-  const onChangeNickname: React.ChangeEventHandler<HTMLInputElement> =
-    useCallback((e) => {
-      setNickname(e.target.value);
-    }, []);
-  const onStartLobby: React.MouseEventHandler<HTMLButtonElement> =
-    useCallback(() => {
-      if (roomName) {
-        socket.emit("start_lobby", roomName);
-      }
-    }, [roomName]);
-
-  // Enter 누르면 submit
-  useEffect(() => {
-    const keyDownHandler = (e: { key: string; preventDefault: () => void }) => {
-      if (e.key === "Enter") {
-        socket.emit("nickname", roomName, nickname);
-        toggleModal();
-      }
-    };
-    document.addEventListener("keydown", keyDownHandler);
-    return () => {
-      document.removeEventListener("keydown", keyDownHandler);
-    };
-  }, [roomName, nickname]);
+  const onChangeNickname: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    setNickname(e.target.value);
+  };
+  const onStartLobby: React.MouseEventHandler<HTMLButtonElement> = () => {
+    if (roomName) {
+      socket.emit("start_lobby", roomName);
+    }
+  };
 
   useEffect(() => {
     if (isModalOpen && nicknameRef?.current) {
       nicknameRef.current.focus();
     }
   }, [isModalOpen]);
+  const onEnterKeyUp = (e: { key: string }) => {
+    if (e.key === "Enter") {
+      socket.emit("nickname", roomName, nickname);
+      toggleModal();
+    }
+  };
   return (
     <div className={`${styles.wrapper} flex column align-center`}>
       <h2 className="align-center coreExtra fs-30">
@@ -125,6 +115,7 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           <div>
             <span className={styles.modal__label}>닉네임 :</span>
             <input
+              onKeyUp={onEnterKeyUp}
               ref={nicknameRef}
               className={`${styles.modal__input} fs-32 coreExtra`}
               type="text"

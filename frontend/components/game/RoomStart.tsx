@@ -152,23 +152,6 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       );
       setAnswer("");
     };
-    // Enter 누르면 submit
-    useEffect(() => {
-      const keyDownHandler = (e: {
-        key: string;
-        preventDefault: () => void;
-      }) => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          onSubmitAnswer(answer);
-        }
-      };
-      document.addEventListener("keydown", keyDownHandler);
-      return () => {
-        document.removeEventListener("keydown", keyDownHandler);
-      };
-    }, [answer]);
-
     useEffect(() => {
       if (!limit) return;
       if (socket.id !== turn.id) return;
@@ -195,6 +178,11 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     //     });
     //   }
     // }, [closeSession]);
+    const onEnterKeyUp = (e: { key: string }) => {
+      if (e.key === "Enter") {
+        onSubmitAnswer(answer);
+      }
+    };
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -240,6 +228,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
                   {line}
                 </span>
                 <input
+                  onKeyUp={onEnterKeyUp}
                   ref={inputAnswerRef}
                   className={`${styles.answer__content} coreExtra fs-60`}
                   value={answer}

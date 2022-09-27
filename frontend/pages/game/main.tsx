@@ -135,14 +135,14 @@ const Main: NextPage = () => {
   }, []);
 
   const leave = (e: any) => {
-    // setIsEntered(false);
-    // resetGame();
-    // socket.disconnect();
-    // setTimeout(() => {
-    //   router.push("/game");
-    // }, 10000);
-    e.preventDefault();
-    e.returnValue = "";
+    setIsEntered(false);
+    resetGame();
+    socket.disconnect();
+    setTimeout(() => {
+      router.push("/");
+    }, 10000);
+    // e.preventDefault();
+    // e.returnValue = "";
   };
 
   useEffect(() => {

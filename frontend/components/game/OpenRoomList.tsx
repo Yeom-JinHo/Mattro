@@ -30,6 +30,7 @@ const Rooms: React.FunctionComponent<Props> = ({
     }, []);
   const onMakeRoom: React.MouseEventHandler<HTMLButtonElement> =
     useCallback(() => {
+      if (roomName.trim() === "") return;
       socket.emit("enter_room", roomName, () => {
         setIsEntered(true);
       });
