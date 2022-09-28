@@ -98,6 +98,9 @@ const Index = () => {
     setSelectedStations((prev) =>
       prev.filter((item) => JSON.stringify(item) !== JSON.stringify(station))
     );
+    toggleCircle(
+      document.querySelector(`.M${station.stationId}`) as SVGCircleElement
+    );
   };
 
   const addToSelectedStations = (station: SelectedStationType) => {
@@ -133,6 +136,9 @@ const Index = () => {
     svg.appendChild(path);
 
     markerGroup?.appendChild(svg);
+    toggleCircle(
+      document.querySelector(`.M${station.stationId}`) as SVGCircleElement
+    );
   };
 
   // 최종적으로 선택된역들
@@ -149,7 +155,6 @@ const Index = () => {
     } else {
       removeFromSelectedStations(stationInfo);
     }
-
     setSelecting(false);
   };
 
@@ -186,7 +191,7 @@ const Index = () => {
         }
         // 환승역이 아니면
       } else {
-        toggleCircle(circle as SVGCircleElement);
+        // toggleCircle(circle as SVGCircleElement);
         cx = (circle as SVGCircleElement).cx.baseVal.value;
         cy = (circle as SVGCircleElement).cy.baseVal.value;
         name = findNameById(
@@ -207,7 +212,7 @@ const Index = () => {
         const circle = document.querySelector(
           `.M${circleIds[0]}`
         ) as SVGCircleElement;
-        toggleCircle(circle);
+        // toggleCircle(circle);
         cx = circle.cx.baseVal.value;
         cy = circle.cy.baseVal.value;
       } else {
