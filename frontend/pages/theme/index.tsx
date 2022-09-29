@@ -9,12 +9,14 @@ import title from "../../public/images/theme_title.png";
 import char from "../../public/images/gaonasi.png";
 import chair1 from "../../public/images/chair_red.png";
 import chair2 from "../../public/images/chair_two.png";
+import textBox from "../../public/images/textbox.svg";
 
 export default function themeMain() {
   const btnRef = useRef(null);
-  const [throttle, setThrottle] = useState(false);
+  const [throttle, setThrottle] = useState<boolean>(false);
+  const [textAppear, setTextAppear] = useState<boolean>(false);
 
-  const clickMe = () => {
+  const coinAction = () => {
     if (throttle) return;
     if (!throttle) {
       setThrottle(true);
@@ -26,6 +28,20 @@ export default function themeMain() {
         setThrottle(false);
       }, 800);
     }
+  };
+
+  const textAction = () => {
+    console.log(textAppear + ": textappear");
+
+    if (textAppear) setTextAppear(false);
+    if (!textAppear) {
+      setTextAppear(true);
+    }
+  };
+
+  const clickMe = () => {
+    coinAction();
+    textAction();
   };
 
   const foodList: Array<string> = [
@@ -72,9 +88,17 @@ export default function themeMain() {
         </div>
 
         <div className={`${styles.box} flex column align-center`}>
+          <div className={styles.textBallon}>
+            <Image src={textBox} alt="click" className="" />{" "}
+          </div>
+
           <div className={`${styles.images} flex`}>
             <div>
-              <Image src={chair2} alt="char" className="" />
+              {textAppear && (
+                <Image src={chair2} alt="char" className="">
+                  dd
+                </Image>
+              )}
             </div>
             <button
               type="button"
