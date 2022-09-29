@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { SelectedStationType } from "../../pages/subway";
 import styles from "./LineSelectedBar.module.scss";
@@ -14,6 +14,7 @@ const LineSelectedBar = ({
   removeFromSelectedStations
 }: LineSelectedBarProps) => {
   const router = useRouter();
+  const emptyRef = useRef<HTMLDivElement>(null);
 
   const recommendPlace = () => {
     const randomInd = Math.floor(Math.random() * selectedStations.length);
@@ -21,6 +22,11 @@ const LineSelectedBar = ({
     router.push(`/subway/${lineId[0]}/${stationId}/1`);
   };
 
+  useEffect(() => {
+    if (emptyRef.current) {
+      emptyRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [selectedStations]);
   return (
     <div id="lineSelectedBar" className="flex align-center">
       <ul className={`flex ${styles.stations} align-center`}>
@@ -40,6 +46,7 @@ const LineSelectedBar = ({
             </button>
           </li>
         ))}
+        <div ref={emptyRef} />
       </ul>
       <button
         className={`fs-24 notoBold flex align-center justify-center  ${styles.btn}`}
