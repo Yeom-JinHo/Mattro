@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,15 +12,54 @@ import chair2 from "../../public/images/chair_two.png";
 
 export default function themeMain() {
   const btnRef = useRef(null);
+  const [throttle, setThrottle] = useState(false);
 
   const clickMe = () => {
-    const node = btnRef.current as any;
-    node.classList.toggle(styles.animate);
+    if (throttle) return;
+    if (!throttle) {
+      setThrottle(true);
+      const node = btnRef.current as any;
+      node.classList.toggle(styles.animate);
 
-    setTimeout(function () {
-      node.classList.remove(styles.animate);
-    }, 800);
+      setTimeout(function () {
+        node.classList.remove(styles.animate);
+        setThrottle(false);
+      }, 800);
+    }
   };
+
+  const foodList: Array<string> = [
+    "족발",
+    "국밥",
+    "매운탕",
+    "이자카야",
+    "브런치",
+    "닭볶음탕",
+    "순대",
+    "치킨",
+    "닭발",
+    "초밥",
+    "채식",
+    "갈비탕",
+    "곱창",
+    "냉면",
+    "돈가스",
+    "양갈비",
+    "양꼬치",
+    "햄버거",
+    "만두",
+    "막국수",
+    "한정식",
+    "떡볶이",
+    "마라탕",
+    "김치찜",
+    "삼겹살",
+    "소고기",
+    "물회",
+    "파스타",
+    "스테이크",
+    "와플"
+  ];
 
   return (
     <div className={`${styles.theme} flex justify-center`}>
