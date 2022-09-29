@@ -181,7 +181,7 @@ const Index = () => {
           cy /= circleChilds.length - 1;
         }
         const id = e.currentTarget.parentElement?.classList.value
-          .match(/M\d{4}/g)
+          .match(/M.{4}/g)
           ?.map((id_) => id_.replace("M", ""))[0];
         if (id) {
           name = findNameById(id as UsedLineIdType);
@@ -202,12 +202,12 @@ const Index = () => {
       }
     } else if (e.currentTarget.tagName === "text") {
       const circleIds = e.currentTarget.classList.value
-        .match(/S\d{4}/g)
+        .match(/S.{4}/g)
         ?.map((id) => id.replace("S", ""));
       if (!circleIds) {
         return;
       }
-
+      console.log(circleIds);
       if (circleIds.length === 1) {
         const circle = document.querySelector(
           `.M${circleIds[0]}`
