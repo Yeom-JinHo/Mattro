@@ -52,7 +52,7 @@ const Index = () => {
   };
 
   // 현재 선택된 라인 불투명조정
-  const handleLineOpacity = (lineId: UsedLineIdType, opacity: 0.1 | 1) => {
+  const handleLineOpacity = (lineId: UsedLineIdType, opacity: 0.25 | 1) => {
     const lines = document.querySelectorAll<HTMLElement>(`.${lineId}`);
     lines.forEach((line) => {
       if (line.tagName !== "LI" && line.tagName !== "DIV") {
@@ -258,7 +258,7 @@ const Index = () => {
         (lineId: UsedLineIdType) =>
           selectedLines.findIndex((item) => item === lineId) === -1
       );
-    unSelectedLines.map((line) => handleLineOpacity(line, 0.1));
+    unSelectedLines.map((line) => handleLineOpacity(line, 0.25));
     selectedLines.map((line) => handleLineOpacity(line, 1));
   }, [selectedLines]);
 
