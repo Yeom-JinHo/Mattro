@@ -108,8 +108,8 @@ const Index = () => {
     setSelectedStations((prev) => [...prev, station]);
 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttributeNS(null, "x", `${station.cx - 6}`);
-    svg.setAttributeNS(null, "y", `${station.cy - 18}`);
+    svg.setAttributeNS(null, "x", `${station.cx - 5.5}`);
+    svg.setAttributeNS(null, "y", `${station.cy - 17}`);
     svg.setAttributeNS(null, "width", "300");
     svg.setAttributeNS(null, "height", "200");
     svg.setAttributeNS(null, "viewBox", "0 0 1500 1000");
