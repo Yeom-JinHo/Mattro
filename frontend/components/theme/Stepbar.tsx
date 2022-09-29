@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import styles from "./Stepbar.module.scss";
 
 interface Props {
-  //
   duration: number;
+  choices: string;
 }
 
 const Stepbar: React.FunctionComponent<Props> = ({ duration }) => {
