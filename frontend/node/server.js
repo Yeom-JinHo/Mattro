@@ -151,34 +151,20 @@ io.on("connection", (socket) => {
     data.get(roomName).set("timeout", null);
     data.get(roomName).set("limit", 8000);
     data.get(roomName).set("clear", false);
-    socket.to(roomName).emit("start_game", line, order);
-    socket.emit("start_game", line, order);
+    const limit =
+      data.get(roomName).get("limit") - 200 * data.get(roomName).get("now");
+    socket.to(roomName).emit("start_game", line, order, limit);
+    socket.emit("start_game", line, order, limit);
     clearTimeout(data.get(roomName).get("timeout"));
     console.log("스타트게임 클리어");
     data.get(roomName).set("clear", true);
-    console.log(
-      "시간 체크 시작========",
-      data.get(roomName).get("limit") -
-        500 *
-          Math.floor(
-            data.get(roomName).get("now") /
-              data.get(roomName).get("order").length
-          )
-    );
+    console.log("시간 체크 시작========", limit);
     const timeoutId = setTimeout(() => {
-      console.log(
-        "시간초과 =============",
-        data.get(roomName).get("limit") -
-          500 *
-            Math.floor(
-              data.get(roomName).get("now") /
-                data.get(roomName).get("order").length
-            )
-      );
+      console.log("시간초과 =============", limit);
       socket.emit("start_time_over", socketId);
       socket.to(roomName).emit("start_time_over", socketId);
       data.get(roomName).set("clear", false);
-    }, data.get(roomName).get("limit") - 500 * Math.floor(data.get(roomName).get("now") / data.get(roomName).get("order").length));
+    }, limit + 3800);
     data.get(roomName).set("timeout", timeoutId);
   });
   socket.on("room_change", () => {
@@ -188,6 +174,7 @@ io.on("connection", (socket) => {
     "answer",
     (roomName, line, answer, arr, order, now, userListNum, socketId) => {
       clearTimeout(data.get(roomName).get("timeout"));
+      data.get(roomName).set("clear", true);
       console.log("앤서 클리어");
       if (!data.get(roomName).get("clear")) {
         return;
@@ -218,36 +205,32 @@ io.on("connection", (socket) => {
           userListNum,
           socketId
         );
-      console.log(
-        "시간 체크 시작========",
+      // const limit =
+      //   data.get(roomName).get("limit") -
+      //   500 *
+      //     Math.floor(
+      //       data.get(roomName).get("now") /
+      //         data.get(roomName).get("order").length
+      //     );
+      const limit =
         data.get(roomName).get("limit") -
-          500 *
-            Math.floor(
-              data.get(roomName).get("now") /
-                data.get(roomName).get("order").length
-            )
-      );
-      data.get(roomName).set("clear", true);
+        200 * (data.get(roomName).get("now") + 1);
+      socket.emit("limit", limit);
+      socket.to(roomName).emit("limit", limit);
+      console.log("시간 체크 시작========", limit);
       const timeoutId = setTimeout(() => {
-        console.log(
-          "시간초과 =============",
-          data.get(roomName).get("limit") -
-            500 *
-              Math.floor(
-                data.get(roomName).get("now") /
-                  data.get(roomName).get("order").length
-              )
-        );
+        console.log("시간초과 =============", limit);
         socket.emit("time_over", order, now);
         socket.to(roomName).emit("time_over", order, now);
         data.get(roomName).set("clear", false);
-      }, data.get(roomName).get("limit") - 500 * Math.floor(data.get(roomName).get("now") / data.get(roomName).get("order").length));
+      }, limit);
       data.get(roomName).set("timeout", timeoutId);
     }
   );
   socket.on(
     "correct",
     (roomName, answer, order, now, userListNum, socketId) => {
+      data.get(roomName).set("now", data.get(roomName).get("now") + 1);
       now += 1;
       socket.emit("correct", answer, socketId, now, order[now % userListNum]);
       socket

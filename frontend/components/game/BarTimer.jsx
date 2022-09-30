@@ -1,31 +1,35 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import styles from "./BarTimer.module.scss";
 
-const BarTimer = () => {
-  const speed = 15;
-  let indexPB = speed * 60;
-  const getPercentage = (current, max) => {
-    return (current * 100) / (max * 60);
+const BarTimer = ({ limit, line }) => {
+  const start = Date.now();
+  const end = start + limit;
+  const getPercentage = (now) => {
+    const diff = now - start;
+    return ((limit - diff) / limit) * 100;
   };
   const progressBar = (percentage) => {
     const progress = document.querySelector(".progress__inner");
-    progress.style = `width: ${`${percentage}%`}`;
+    if (progress) {
+      progress.style = `width: ${`${percentage}%`}`;
+    }
   };
   const myFunction = () => {
-    indexPB -= 1;
-    const percentage = getPercentage(indexPB, speed);
+    const now = Date.now();
+    const percentage = getPercentage(now);
     progressBar(percentage);
-    if (indexPB !== 0) {
+    if (end > now + 30) {
       window.requestAnimationFrame(myFunction);
     }
   };
   useEffect(() => {
     window.requestAnimationFrame(myFunction);
-  }, []);
+  }, [limit]);
   return (
     <div className={styles.wrapper}>
       <div className={styles.progress}>
-        <div className={`${styles.progress__inner} progress__inner`} />
+        <div className={`${styles.progress__inner} progress__inner L${line}`} />
       </div>
     </div>
   );

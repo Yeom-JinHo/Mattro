@@ -16,6 +16,7 @@ import styles from "./RoomStart.module.scss";
 import { IUserList, ISocket } from "../../constants/socketio";
 import Modal from "../layouts/Modal";
 import Ready from "./Ready";
+import BarTimer from "./BarTimer";
 
 interface Props {
   userList: IUserList[];
@@ -30,7 +31,8 @@ interface Props {
   now: number;
   line: string;
   onChangeLine: React.ChangeEventHandler<HTMLInputElement>;
-  setIsStartedGame: (a: boolean) => void;
+  limit: number;
+  isStartTimer: boolean;
   ref: React.ForwardedRef<unknown>;
 }
 
@@ -95,7 +97,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       now,
       line,
       onChangeLine,
-      setIsStartedGame
+      limit,
+      isStartTimer
     },
     ref
   ) => {
@@ -187,6 +190,14 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         inputLineRef.current.focus();
       }
     }, []);
+    useEffect(() => {
+      if (isStartedGame) {
+        setIsReadyOpen(true);
+        setTimeout(() => {
+          setIsReadyOpen(false);
+        }, 3800);
+      }
+    }, [isStartedGame]);
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -209,6 +220,11 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
             </div>
           )}
         </h2>
+        {isStartedGame && !isReadyOpen && (
+          <div>
+            <BarTimer limit={limit} line={lineToColor(line)} />
+          </div>
+        )}
         <div className={`${styles.userList}`}>
           {order.map((user) => (
             <div key={user.id} className="flex column">
@@ -278,13 +294,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
               !isStartedGame && canStart ? styles.visible : styles.invisible
             } coreExtra fs-80`}
             type="button"
-            onClick={() => {
-              setIsReadyOpen(true);
-              setTimeout(() => {
-                setIsReadyOpen(false);
-                onStartGame();
-              }, 3800);
-            }}
+            onClick={onStartGame}
           >
             Start!
           </button>

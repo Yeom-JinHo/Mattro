@@ -39,6 +39,8 @@ const Main: NextPage = () => {
   const [result, setResult] = useState({});
   const [now, setNow] = useState<number>(0);
   const [line, setLine] = useState<string>("2");
+  const [limit, setLimit] = useState<number>(8000);
+  const [isStartTimer, setIsStartTimer] = useState<boolean>(true);
   const onChangeLine: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     if (isStartedGame) return;
     setLine(e.target.value);
@@ -80,12 +82,14 @@ const Main: NextPage = () => {
       setCanStart(canStart);
       setIsStartedLobby(true);
     });
-    socket.on("start_game", (line, order) => {
+    socket.on("start_game", (line, order, limit) => {
+      setIsStartTimer(true);
       setIsStartedGame(true);
       setLine(line);
       setTurn(order[0]);
       setOrder(order);
       setNow(0);
+      setLimit(limit);
     });
     socket.on("nickname", (socketId, nickname) => {
       setUserList((prev) => {
@@ -126,6 +130,7 @@ const Main: NextPage = () => {
       }
     );
     socket.on("correct", (answer, socketId, now, turn) => {
+      setIsStartTimer(false);
       setResult({ answer, socketId });
       setTimeout(() => {
         setResult({});
@@ -172,6 +177,9 @@ const Main: NextPage = () => {
     socket.on("isStarted", () => {
       openRoomListRef.current?.toggleIsStartedModal(true);
     });
+    socket.on("limit", (limit) => {
+      setLimit(limit);
+    });
     return () => {
       socket.off("welcome");
       socket.off("iMHere");
@@ -188,6 +196,7 @@ const Main: NextPage = () => {
       socket.off("who_out");
       socket.off("on_change_line");
       socket.off("full");
+      socket.off("limit");
     };
   }, []);
   return (
@@ -208,7 +217,8 @@ const Main: NextPage = () => {
             now={now}
             line={line}
             onChangeLine={onChangeLine}
-            setIsStartedGame={setIsStartedGame}
+            limit={limit}
+            isStartTimer={isStartTimer}
           />
         ) : (
           userList &&

@@ -34,7 +34,7 @@
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   column-gap: 44px;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 120px;
   .result {
     width: 202px;
@@ -102,10 +102,6 @@
   .invisible {
     visibility: hidden;
   }
-  // .chair2 {
-  //   justify-self: flex-end;
-  //   width: 30%;
-  // }
 }
 
 @media screen and (max-width: $DESKTOP-VW) {
@@ -114,12 +110,15 @@
       margin-top: vw(40px);
       margin-bottom: vw(30px);
       padding: vw(30px) vw(158px);
+      span {
+        font-size: vw(32px);
+      }
     }
   }
 
   .userList {
     column-gap: vw(44px);
-    margin-top: vw(50px);
+    margin-top: vw(40px);
     margin-bottom: vw(120px);
     .result {
       width: vw(200px);
@@ -166,9 +165,11 @@
       margin: 30px;
       padding: 16px 84px;
       font-size: 20px;
+      span {
+        font-size: 16px;
+      }
     }
   }
-
   .userList {
     width: 80%;
     margin-top: 20px;
@@ -243,6 +244,9 @@
       margin: vw-p(30px);
       padding: vw-p(16px) vw-p(84px);
       font-size: vw-p(20px);
+      span {
+        font-size: vw-p(16px);
+      }
     }
   }
 
