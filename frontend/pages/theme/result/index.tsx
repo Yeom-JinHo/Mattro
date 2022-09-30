@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import ResultCard from "../../../components/theme/ResultCard";
-import styles from "./result.module.scss";
+import styles from "./index.module.scss";
 import Loading from "../../../components/layouts/Loading";
 
 export default function themeMain() {

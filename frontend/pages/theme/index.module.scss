@@ -8,7 +8,13 @@
       margin: (30px) 0 (34px) 0;
     }
     .box {
-      width: 100%;
+    }
+    .textBallon {
+      // width: 300px;
+      :nth-child(1) {
+        // position: absolute;
+        // z-index: -3;
+      }
     }
     .images {
       z-index: 2;

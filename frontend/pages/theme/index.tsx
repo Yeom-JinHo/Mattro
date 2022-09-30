@@ -88,17 +88,18 @@ export default function themeMain() {
         </div>
 
         <div className={`${styles.box} flex column align-center`}>
-          <div className={styles.textBallon}>
-            <Image src={textBox} alt="click" className="" />{" "}
-          </div>
+          {textAppear && (
+            <div
+              className={`${styles.textBallon} flex align-center justify-center`}
+            >
+              <Image src={textBox} alt="click" className="" />
+              <p className="notoBold fs-20">{foodList[1]}</p>
+            </div>
+          )}
 
           <div className={`${styles.images} flex`}>
             <div>
-              {textAppear && (
-                <Image src={chair2} alt="char" className="">
-                  dd
-                </Image>
-              )}
+              <Image src={chair2} alt="char" className="" />
             </div>
             <button
               type="button"
