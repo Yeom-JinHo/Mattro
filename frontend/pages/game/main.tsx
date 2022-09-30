@@ -208,6 +208,7 @@ const Main: NextPage = () => {
             now={now}
             line={line}
             onChangeLine={onChangeLine}
+            setIsStartedGame={setIsStartedGame}
           />
         ) : (
           userList &&

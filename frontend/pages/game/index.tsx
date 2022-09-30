@@ -6,6 +6,7 @@ import logo from "../../public/images/logo/game_logo.png";
 import Modal from "../../components/layouts/Modal";
 
 import styles from "./index.module.scss";
+import BarTimer from "../../components/game/BarTimer.jsx";
 
 const index: NextPage = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -16,6 +17,7 @@ const index: NextPage = () => {
     <div
       className={`${styles.wrapper} flex column justify-center align-center`}
     >
+      {/* <BarTimer /> */}
       <div>
         <Image src={logo} alt="logo" />
       </div>

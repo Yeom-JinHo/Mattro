@@ -30,6 +30,7 @@ interface Props {
   now: number;
   line: string;
   onChangeLine: React.ChangeEventHandler<HTMLInputElement>;
+  setIsStartedGame: (a: boolean) => void;
   ref: React.ForwardedRef<unknown>;
 }
 
@@ -93,7 +94,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       order,
       now,
       line,
-      onChangeLine
+      onChangeLine,
+      setIsStartedGame
     },
     ref
   ) => {
@@ -122,38 +124,37 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       useCallback((e) => {
         setAnswer(e.target.value);
       }, []);
-    const onStartGame: React.MouseEventHandler<HTMLButtonElement> | undefined =
-      useCallback(() => {
-        if (!roomName) return;
-        if (inputLineRef?.current) {
-          if (
-            [
-              "1",
-              "2",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7",
-              "8",
-              "9",
-              "경의중앙",
-              "수인분당",
-              "신분당",
-              "우아신설",
-              "신림"
-            ].includes(inputLineRef.current.value)
-          ) {
-            socket.emit(
-              "start_game",
-              socket.id,
-              roomName,
-              inputLineRef.current.value,
-              shuffle([...userList], socket.id)
-            );
-          }
+    const onStartGame = () => {
+      if (!roomName) return;
+      if (inputLineRef.current) {
+        if (
+          [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "경의중앙",
+            "수인분당",
+            "신분당",
+            "우아신설",
+            "신림"
+          ].includes(inputLineRef.current.value)
+        ) {
+          socket.emit(
+            "start_game",
+            socket.id,
+            roomName,
+            inputLineRef.current.value,
+            shuffle([...userList], socket.id)
+          );
         }
-      }, [roomName]);
+      }
+    };
     const onSubmitAnswer = (answer: string) => {
       if (isReadyOpen) return;
       socket.emit(
@@ -186,14 +187,14 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         inputLineRef.current.focus();
       }
     }, []);
-    useEffect(() => {
-      if (isStartedGame) {
-        setIsReadyOpen(true);
-        setTimeout(() => {
-          setIsReadyOpen(false);
-        }, 3800);
-      }
-    }, [isStartedGame]);
+    // useEffect(() => {
+    //   if (isStartedGame) {
+    //     setIsReadyOpen(true);
+    //     setTimeout(() => {
+    //       setIsReadyOpen(false);
+    //     }, 3800);
+    //   }
+    // }, [isStartedGame]);
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
@@ -285,7 +286,13 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
               !isStartedGame && canStart ? styles.visible : styles.invisible
             } coreExtra fs-80`}
             type="button"
-            onClick={onStartGame}
+            onClick={() => {
+              setIsReadyOpen(true);
+              setTimeout(() => {
+                setIsReadyOpen(false);
+                onStartGame();
+              }, 3800);
+            }}
           >
             Start!
           </button>

@@ -178,7 +178,7 @@ io.on("connection", (socket) => {
       socket.emit("start_time_over", socketId);
       socket.to(roomName).emit("start_time_over", socketId);
       data.get(roomName).set("clear", false);
-    }, data.get(roomName).get("limit") - 500 * Math.floor(data.get(roomName).get("now") / data.get(roomName).get("order").length) + 3800);
+    }, data.get(roomName).get("limit") - 500 * Math.floor(data.get(roomName).get("now") / data.get(roomName).get("order").length));
     data.get(roomName).set("timeout", timeoutId);
   });
   socket.on("room_change", () => {
