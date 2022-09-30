@@ -3,7 +3,7 @@ import styles from "./BarTimer.module.scss";
 
 const BarTimer = () => {
   const speed = 15;
-  let indexPB = speed * 60; // 900
+  let indexPB = speed * 60;
   const getPercentage = (current, max) => {
     return (current * 100) / (max * 60);
   };

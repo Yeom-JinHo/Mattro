@@ -187,14 +187,6 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         inputLineRef.current.focus();
       }
     }, []);
-    // useEffect(() => {
-    //   if (isStartedGame) {
-    //     setIsReadyOpen(true);
-    //     setTimeout(() => {
-    //       setIsReadyOpen(false);
-    //     }, 3800);
-    //   }
-    // }, [isStartedGame]);
     return (
       <div className={`${styles.wrapper} flex column align-center`}>
         <h2 className="flex justify-center align-center coreExtra fs-34">
