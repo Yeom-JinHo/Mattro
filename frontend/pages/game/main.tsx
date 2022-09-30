@@ -26,7 +26,6 @@ const Main: NextPage = () => {
     toggleIsStartedModal: (a: boolean) => void;
   }>(null);
   const [roomName, setRoomName] = useState<string>("");
-  // const [messages, setMessages] = useState([]);
   const [roomList, setRoomList] = useState([]);
   const [isEntered, setIsEntered] = useState<boolean>(false);
   const [isStartedLobby, setIsStartedLobby] = useState<boolean>(false);
@@ -34,7 +33,6 @@ const Main: NextPage = () => {
   const [userList, setUserList] = useState<IUserList[]>([]);
   const [canStart, setCanStart] = useState<boolean>(false);
   const [isStartedGame, setIsStartedGame] = useState<boolean>(false);
-  // const [nickname, setNickname] = useState<string>("익명");
   const [order, setOrder] = useState<IUserList[]>([]);
   const [turn, setTurn] = useState<IUserList | object>({});
   const [total, setTotal] = useState<string[]>([]);
@@ -212,14 +210,18 @@ const Main: NextPage = () => {
             onChangeLine={onChangeLine}
           />
         ) : (
-          <RoomLobby
-            socket={socket}
-            nowCnt={nowCnt}
-            userList={userList}
-            roomName={roomName}
-            // nickname={nickname}
-            // setNickname={setNickname}
-          />
+          userList &&
+          userList.filter((user) => user.id === socket.id)?.[0]?.nickname && (
+            <RoomLobby
+              socket={socket}
+              nowCnt={nowCnt}
+              userList={userList}
+              roomName={roomName}
+              defaultNick={
+                userList.filter((user) => user.id === socket.id)[0].nickname
+              }
+            />
+          )
         )
       ) : (
         <OpenRoomList

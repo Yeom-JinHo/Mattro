@@ -15,24 +15,20 @@ interface Props {
   nowCnt: number;
   userList: IUserList[];
   roomName: string;
-  // nickname: string;
-  // setNickname: (a: string) => void;
+  defaultNick: string;
 }
 
 const RoomLobby: React.FunctionComponent<Props> = ({
   socket,
   nowCnt,
   userList,
-  roomName
-  // nickname,
-  // setNickname
+  roomName,
+  defaultNick
 }) => {
   const nicknameRef = useRef<HTMLInputElement>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
-  const [nickname, setNickname] = useState<string>(
-    userList.filter((user) => user.id === socket.id)?.[0]?.nickname
-  );
+  const [nickname, setNickname] = useState<string>(defaultNick);
   const onChangeNickname: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setNickname(e.target.value);
   };
@@ -52,11 +48,6 @@ const RoomLobby: React.FunctionComponent<Props> = ({
       toggleModal();
     }
   };
-  // useEffect(() => {
-  //   if (nickname === "익명") {
-  //     setIsModalOpen(true);
-  //   }
-  // }, [nickname]);
   return (
     <div className={`${styles.wrapper} flex align-center`}>
       <h2 className="align-center coreExtra fs-30">
@@ -121,19 +112,17 @@ const RoomLobby: React.FunctionComponent<Props> = ({
       </footer>
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
         <div className={`${styles.children} fs-32 coreExtra`}>
-          <div>
-            <span className={styles.modal__label}>닉네임 :</span>
-            <input
-              onKeyUp={onEnterKeyUp}
-              ref={nicknameRef}
-              className={`${styles.modal__input} fs-32 coreExtra`}
-              type="text"
-              required
-              maxLength={6}
-              value={nickname}
-              onChange={onChangeNickname}
-            />
-          </div>
+          <span className={styles.modal__label}>닉네임 :</span>
+          <input
+            onKeyUp={onEnterKeyUp}
+            ref={nicknameRef}
+            className={`${styles.modal__input} fs-32 coreExtra`}
+            type="text"
+            required
+            maxLength={6}
+            value={nickname}
+            onChange={onChangeNickname}
+          />
         </div>
       </Modal>
     </div>
