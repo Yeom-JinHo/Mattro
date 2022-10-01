@@ -3,45 +3,43 @@ import { useRouter } from "next/router";
 import ResultCard from "../../components/theme/ResultCard";
 import styles from "./result.module.scss";
 import Loading from "../../components/layouts/Loading";
-import { indexRes } from "../apis/recommend";
+import { indexRes, themeRecommend } from "../apis/recommend";
 import loading from "../../components/layouts/Loading";
 import { storeDataType } from "../../constants/storeData";
 const Result = () => {
   const food = "떡볶이";
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData]: any = useState(router.query.params);
+  const [choices, storeIndex]: any = router.query.params || [];
   const [foodList, setFoodList] = useState([]);
+  const [storeList, setStoreList] = useState<string[]>([]);
 
+  async function indexFind() {
+    //  api 호출
+    const res = await indexRes(storeIndex);
+    setFoodList(res);
+    console.log(foodList);
+  }
   // api 호출
   useEffect(() => {
-    // setTimeout(function () {
-    //   // setIsLoading(true);
-    //   indexFind();
-    // }, 2000);
-
     // 인덱스로 접근
-    setData(data);
-    console.log(data);
-
-    // console.log(data[0]);
-    async function indexFind() {
-      //  api 호출
-      const res = await indexRes(data);
-      setFoodList(res);
-      console.log(foodList);
-    }
-    setTimeout(function () {
-      indexFind();
-    }, 2000);
     indexFind();
-
     setIsLoading(false);
   }, []);
 
-  useEffect(() => {
-    console.log("change");
-  }, foodList);
+  const again = () => {
+    // api 재호출
+    // setIsLoading(true);
+    async function getList() {
+      const res = await themeRecommend(choices);
+      console.log(res);
+      setStoreList(res);
+      const index = res.join();
+      router.push(`/theme/${choices}/${index}`);
+    }
+    getList();
+    console.log("aaaaa");
+  };
 
   return (
     <div className={`${styles.result} flex justify-center`}>
@@ -92,7 +90,7 @@ const Result = () => {
             <div className={`${styles.btns} flex`}>
               <button
                 onClick={() => {
-                  router.push("/theme");
+                  again();
                 }}
                 type="button"
                 className={`${styles.btn} notoBold `}

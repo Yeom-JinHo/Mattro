@@ -22,8 +22,8 @@ const question = () => {
       // storeIdx 5개 담기
       setStoreList(res); // indec 배열 담기
       // list의 배열 5개를 join해서 보내기
-      const params = res.join();
-      router.push(`/theme/${params}`);
+      const storeIndex = res.join();
+      router.push(`/theme/${choices}/${storeIndex}`);
     }
     getList();
   };
