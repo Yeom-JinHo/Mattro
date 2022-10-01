@@ -134,7 +134,13 @@ const Index = () => {
     );
     path.setAttributeNS(null, "fill", "#e53060");
     svg.appendChild(path);
-
+    svg.addEventListener("click", (e) => {
+      const marker = e.currentTarget as SVGAElement;
+      removeFromSelectedStations(station);
+      if (marker && marker.parentElement) {
+        marker.parentElement.removeChild(marker);
+      }
+    });
     markerGroup?.appendChild(svg);
     toggleCircle(
       document.querySelector(`.M${station.stationId}`) as SVGCircleElement
