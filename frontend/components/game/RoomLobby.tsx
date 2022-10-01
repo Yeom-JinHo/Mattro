@@ -57,7 +57,9 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           {nowCnt}/4
         </span>
         <span className={`${styles.room__title}`}>
-          {roomName.length > 9 ? `${roomName.slice(0, 9)}...` : roomName}
+          {roomName && roomName.length > 9
+            ? `${roomName.slice(0, 9)}...`
+            : roomName}
         </span>
         <span className={`${styles.subway1}`}>
           <Image src={subway1} alt="subway1" />

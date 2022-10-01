@@ -1,7 +1,7 @@
 .wrapper {
   .progress {
     height: 30px;
-    width: 400px;
+    width: 300px;
     position: relative;
     border: 1px solid black;
     background: white;
@@ -13,7 +13,6 @@
       transition: background 0.2s;
       top: 0;
       left: 0;
-      background: green;
     }
   }
 }

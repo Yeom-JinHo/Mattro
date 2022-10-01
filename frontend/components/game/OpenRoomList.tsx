@@ -30,7 +30,6 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
       toggleIsFullModal,
       toggleIsStartedModal
     }));
-    const title = useRef<HTMLSpanElement>(null);
     const modalRoomNameInput = useRef<HTMLInputElement>(null);
     const [roomName, setRoomName] = useState<string>("");
     const [isMakeRoomModalOpen, setIsMakeRoomModalOpen] =
@@ -43,18 +42,17 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
       useState<boolean>(false);
     const toggleIsStartedModal = () => setIsStartedModalOpen((prev) => !prev);
 
-    const onChangeRoomName: React.ChangeEventHandler<HTMLInputElement> =
-      useCallback((e) => {
-        setRoomName(e.target.value);
-      }, []);
-    const onMakeRoom: React.MouseEventHandler<HTMLButtonElement> =
-      useCallback(() => {
-        if (roomName.trim() === "") return;
-        socket.emit("enter_room", roomName, () => {
-          setIsEntered(true);
-        });
-      }, [roomName]);
-
+    const onChangeRoomName: React.ChangeEventHandler<HTMLInputElement> = (
+      e
+    ) => {
+      setRoomName(e.target.value);
+    };
+    const onMakeRoom: React.MouseEventHandler<HTMLButtonElement> = () => {
+      if (roomName.trim() === "") return;
+      socket.emit("enter_room", roomName, () => {
+        setIsEntered(true);
+      });
+    };
     const onKeyUpEnterMakeRoom: React.KeyboardEventHandler<
       HTMLInputElement
     > = (e: { key: string }) => {
@@ -65,16 +63,13 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
         });
       }
     };
-
-    const onEnterRoom: React.MouseEventHandler<HTMLSpanElement> =
-      useCallback(() => {
-        if (title.current?.textContent) {
-          socket.emit("enter_room", title.current.textContent, () => {
-            setIsEntered(true);
-          });
-        }
-      }, [title.current]);
-
+    const onEnterRoom = (e: any) => {
+      if (e.target.innerText) {
+        socket.emit("enter_room", e.target.innerText.split("\n")[1], () => {
+          setIsEntered(true);
+        });
+      }
+    };
     useEffect(() => {
       if (isMakeRoomModalOpen) {
         if (modalRoomNameInput.current) {
@@ -101,7 +96,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
                 >
                   {room.size}/4
                 </span>
-                <span ref={title}>
+                <span>
                   {room.roomName && room.roomName.length > 10
                     ? `${room.roomName.slice(0, 10)}...`
                     : room.roomName}

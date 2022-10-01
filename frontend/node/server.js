@@ -74,7 +74,6 @@ io.on("connection", (socket) => {
       socket.emit("isStarted");
       return;
     }
-    data.get(roomName).set("size", howManyInRoom(roomName));
     if (howManyInRoom(roomName) >= 4) {
       socket.emit("full");
       return;
@@ -115,8 +114,6 @@ io.on("connection", (socket) => {
         { id: socket.id, nickname: socket.data.nickname },
         howManyInRoom(roomName)
       );
-    // socket.emit("room_change", res);
-    // 방 입장할 때마다 방 개수를 emit
     io.sockets.emit("room_change", getAllRooms());
   });
   socket.on("iMHere", (roomName) => {
@@ -127,9 +124,14 @@ io.on("connection", (socket) => {
   });
   socket.on("disconnecting", () => {
     socket.rooms.forEach((room) => {
-      socket.to(room).emit("bye", socket.id, howManyInRoom(room) - 1);
-      socket.emit("bye", socket.id, howManyInRoom(room) - 1);
-      socket.to(room).emit("who_out");
+      if (data.get(room)) {
+        socket
+          .to(room)
+          .emit("who_out", socket.id, data.get(room).get("size") - 1);
+        data.get(room).get("nicknameList").push(socket.data.nickname);
+        data.get(room).set("isStarted", false);
+        data.get(room).set("size", data.get(room).get("size") - 1);
+      }
     });
   });
   socket.on("disconnect", () => {
@@ -141,11 +143,11 @@ io.on("connection", (socket) => {
     socket.to(roomName).emit("nickname", socket.id, nickname);
   });
   socket.on("start_lobby", (roomName) => {
+    data.get(roomName).set("isStarted", true);
     socket.to(roomName).emit("start_lobby", false);
     socket.emit("start_lobby", true);
   });
   socket.on("start_game", (socketId, roomName, line, order) => {
-    data.get(roomName).set("isStarted", true);
     data.get(roomName).set("order", order);
     data.get(roomName).set("now", 0);
     data.get(roomName).set("timeout", null);

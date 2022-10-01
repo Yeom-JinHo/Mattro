@@ -71,10 +71,6 @@ const Main: NextPage = () => {
         return [...filteredPrev, newUser];
       });
     });
-    socket.on("bye", (socketId, newCount) => {
-      setUserList((prev) => [...prev].filter((user) => user.id !== socketId));
-      setNowCnt(newCount);
-    });
     socket.on("room_change", (rooms) => {
       setRoomList(rooms);
     });
@@ -165,7 +161,9 @@ const Main: NextPage = () => {
         resetGame();
       }, 3000);
     });
-    socket.on("who_out", () => {
+    socket.on("who_out", (socketId, newCnt) => {
+      setUserList((prev) => [...prev].filter((user) => user.id !== socketId));
+      setNowCnt(newCnt);
       resetGame();
     });
     socket.on("on_change_line", (line) => {
@@ -183,7 +181,6 @@ const Main: NextPage = () => {
     return () => {
       socket.off("welcome");
       socket.off("iMHere");
-      socket.off("bye");
       socket.off("room_change");
       socket.off("start_lobby");
       socket.off("start_game");
