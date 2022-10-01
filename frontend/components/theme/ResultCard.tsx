@@ -19,12 +19,9 @@ const ResultCard = ({
   역명
 }: storeDataType) => {
   // 카카오톡 공유하기 기능
-  console.log(typeof mainImageURL);
   const shareKakao = () => {
     const shareUrl = `/theme/share/${id}`; // 공유페이지 위해서
     const { Kakao, location } = window;
-
-    console.log(location.href + id);
     if (!window.Kakao.isInitialized()) {
       // 공유하기 기능을 위해 initialize 마운트 될때 적용
       window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API_KEY);
@@ -54,29 +51,14 @@ const ResultCard = ({
       </div>
 
       <div className={`${styles.img} flex align-center justify-center`}>
-        {mainImageURL !== null && (
-          <Image
-            src={mainImageURL}
-            alt="food"
-            className={styles.sub}
-            unoptimized={true}
-            width="400px"
-            height="300px"
-          />
-        )}
-        {mainImageURL === null && menuImageUrl !== null && (
-          <Image
-            src={menuImageUrl}
-            alt="food"
-            className={styles.sub}
-            unoptimized={true}
-            width="400px"
-            height="300px"
-          />
-        )}
-        {mainImageURL === null && menuImageUrl === null && (
-          <Image src={temp} alt="food" className={styles.sub} />
-        )}
+        <Image
+          src={mainImageURL || menuImageUrl || temp}
+          alt="food"
+          className={styles.sub}
+          unoptimized={true}
+          width="400px"
+          height="300px"
+        />
       </div>
       <div className={`${styles.detail} flex column justify-center`}>
         <div className={`${styles.txt} flex  notoMid`}>

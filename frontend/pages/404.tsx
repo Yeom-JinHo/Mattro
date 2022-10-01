@@ -3,7 +3,7 @@ import React from "react";
 // import page from "../public/images/404page.png";
 import styles from "./404page.module.scss";
 
-const result = () => {
+const NotFound = () => {
   return (
     <div className={`${styles.back} flex`}>
       <button
@@ -16,4 +16,4 @@ const result = () => {
   );
 };
 
-export default result;
+export default NotFound;

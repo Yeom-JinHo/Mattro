@@ -6,6 +6,8 @@ import Loading from "../../components/layouts/Loading";
 import { indexRes, themeRecommend } from "../apis/recommend";
 import loading from "../../components/layouts/Loading";
 import { storeDataType } from "../../constants/storeData";
+import { GetServerSideProps } from "next";
+
 const Result = () => {
   const food = "떡볶이";
   const router = useRouter();
@@ -14,22 +16,30 @@ const Result = () => {
   const [foodList, setFoodList] = useState([]);
   const [storeList, setStoreList] = useState<string[]>([]);
 
-  async function indexFind() {
+  // 즉시 실행 함수
+  //
+  (async function () {
     //  api 호출
     const res = await indexRes(storeIndex);
     setFoodList(res);
-    console.log(foodList);
-  }
-  // api 호출
-  useEffect(() => {
-    // 인덱스로 접근
-    indexFind();
     setIsLoading(false);
+  })();
+
+  useEffect(() => {
+    //정규 표현식
+    const numTest = /^[0-1]{5}$/;
+
+    if (numTest.test(choices) === false) {
+      router.push("/404");
+    }
+    if (router.query.params?.length !== 2) {
+      router.push("/404");
+    }
   }, []);
 
   const again = () => {
     // api 재호출
-    // setIsLoading(true);
+    setIsLoading(true);
     async function getList() {
       const res = await themeRecommend(choices);
       console.log(res);
@@ -46,16 +56,9 @@ const Result = () => {
       <div
         className={`${styles.contents} flex column align-center justify-center`}
       >
-        {!isLoading && foodList.length !== 0 && (
+        {!isLoading && foodList && (
           <div className="flex column align-center justify-center">
-            <div className={`${styles.title} fs-24 coreBold`}>
-              {/* <div>이번역은</div>
-              <div className={`${styles.food} coreExtra`}>
-                <span>{food}</span> 역
-              </div>
-              <div>입니다.</div> */}
-              오늘 당신은
-            </div>
+            <div className={`${styles.title} fs-24 coreBold`}>오늘 당신은</div>
             <div className="flex">
               {foodList.map(
                 ({

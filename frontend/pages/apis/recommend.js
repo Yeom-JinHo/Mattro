@@ -6,11 +6,7 @@ export const themeRecommend = async (choices) => {
     const res = await API.get(`/individual/recommendation/${choices}`);
     return res.data;
   } catch (error) {
-    if (error.res.status !== 500) {
-      return res.data;
-    } else {
-      console.log("Error");
-    }
+    console.log("Error");
   }
 };
 
@@ -20,11 +16,7 @@ export const indexRes = async (data) => {
     const res = await API.get(`/individual/recommendation/list/${data}`);
     return res.data;
   } catch (error) {
-    if (error.res.status !== 500) {
-      return res.data;
-    } else {
-      console.log("Error");
-    }
+    console.log("Error");
   }
 };
 
