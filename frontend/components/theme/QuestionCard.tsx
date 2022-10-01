@@ -54,7 +54,7 @@ export default function QuestionCard({
   return (
     <div className={`${styles.card} flex`}>
       <div ref={aniRef} className={`${styles.container} flex column`}>
-        <div className={`${styles.title} coreExtra fs-60`}>
+        <div className={`${styles.title} coreExtra`}>
           Q{quesList[start].num + 1}.
         </div>
         <div className={`${styles.ques} coreExtra fs-40`}>

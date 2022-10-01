@@ -1,5 +1,5 @@
 .back {
-  width: 100%;
+  width: 1440px;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
   .btn {
     position: absolute;
-    right: 20%;
+    left: calc(50% + 300px);
     bottom: 20%;
     background-color: $WHITE;
     border: 4px solid #c5dcfd;
@@ -30,7 +30,8 @@
   .back {
     width: vw(1440px);
     .btn {
-      right: 5%;
+      // right: 5%;
+      left: calc(50% + vw(300px));
       bottom: 20%;
       font-size: vw(32px);
       padding: vw(10px) vw(24px);

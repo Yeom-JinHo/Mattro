@@ -15,7 +15,7 @@ export default function themeMain() {
   const btnRef = useRef(null);
   const [throttle, setThrottle] = useState<boolean>(false);
   const [textAppear, setTextAppear] = useState<boolean>(false);
-
+  const [foodNum, setFoodNum] = useState<number>(0);
   const coinAction = () => {
     if (throttle) return;
     if (!throttle) {
@@ -31,11 +31,13 @@ export default function themeMain() {
   };
 
   const textAction = () => {
-    console.log(textAppear + ": textappear");
+    console.log(foodList);
 
     if (textAppear) setTextAppear(false);
     if (!textAppear) {
       setTextAppear(true);
+      const random = Math.floor(Math.random() * 30);
+      setFoodNum(random);
     }
   };
 
@@ -90,13 +92,18 @@ export default function themeMain() {
         <div className={`${styles.box} flex column align-center`}>
           {textAppear && (
             <div
-              className={`${styles.textBallon} flex align-center justify-center`}
+              className={`${styles.textBalloon} flex align-center justify-center`}
             >
-              <Image src={textBox} alt="click" className="" />
-              <p className="notoBold fs-20">{foodList[1]}</p>
+              <Image src={textBox} alt="click" className={styles.balloonImg} />
+              <p className="notoBold fs-24">{foodList[foodNum]}</p>
             </div>
           )}
-
+          {!textAppear && (
+            <div className={`${styles.dummy} flex align-center justify-center`}>
+              <Image src={textBox} alt="click" className={styles.balloonDis} />
+              <p className="notoBold fs-24">disappear</p>
+            </div>
+          )}
           <div className={`${styles.images} flex`}>
             <div>
               <Image src={chair2} alt="char" className="" />

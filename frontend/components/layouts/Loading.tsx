@@ -3,9 +3,9 @@ import styles from "./loading.module.scss";
 
 export default function loading() {
   const router = useRouter();
-  setTimeout(function () {
-    router.push("/theme/result");
-  }, 3000);
+  // setTimeout(function () {
+  // router.push("/theme/result");
+  // }, 3000);
   return (
     <>
       <div className={`${styles.load} fs-32 notoBold`}>

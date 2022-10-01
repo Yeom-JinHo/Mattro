@@ -1,7 +1,7 @@
 .step {
   // margin-top: (200px);
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   align-items: flex-end;
   .num {
     color: $GRAY-5B;
@@ -20,46 +20,6 @@
     }
   }
 }
-// @keyframes bar_20 {
-//   from {
-//     width: 0%;
-//   }
-//   to {
-//     width: 20%;
-//   }
-// }
-// @keyframes bar_40 {
-//   from {
-//     width: 20%;
-//   }
-//   to {
-//     width: 40%;
-//   }
-// }
-// @keyframes bar_60 {
-//   from {
-//     width: 40%;
-//   }
-//   to {
-//     width: 60%;
-//   }
-// }
-// @keyframes bar_80 {
-//   from {
-//     width: 60%;
-//   }
-//   to {
-//     width: 80%;
-//   }
-// }
-// @keyframes bar_100 {
-//   from {
-//     width: 80%;
-//   }
-//   to {
-//     width: 100%;
-//   }
-// }
 
 @media screen and (max-width: $DESKTOP-VW) {
   .step {

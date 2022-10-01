@@ -21,12 +21,9 @@ const question = () => {
       const res = await themeRecommend(choices);
       // storeIdx 5개 담기
       setStoreList(res); // indec 배열 담기
-
       // list의 배열 5개를 join해서 보내기
-      const params = "";
-
-      router.push(`/theme/result/${params}`);
-      // router.push("/theme/result/222"); // index 뒤에 붙이기
+      const params = res.join();
+      router.push(`/theme/${params}`);
     }
     getList();
   };

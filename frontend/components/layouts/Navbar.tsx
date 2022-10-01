@@ -13,7 +13,7 @@ export default function Navbar() {
   // console.log(document.querySelector("body"));
   const { pathname } = useRouter();
   const router = useRouter();
-  const bodyRef = useRef(null);
+  const bodyRef = useRef<any>();
   const [clicked, setClicked] = useState(false);
 
   const navList = [
