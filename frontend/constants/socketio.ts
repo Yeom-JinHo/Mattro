@@ -28,7 +28,7 @@ export interface ClientToServerEvents {
   disconnect: () => void;
   new_message: (msg: string, room: object, done: () => void) => void;
   nickname: (roomName: string, nickname: string) => void;
-  start_lobby: (roomName: string) => void;
+  start_lobby: (roomName: string, socketId: string) => void;
   start_game: (
     socketId: string,
     roomName: string,

@@ -40,7 +40,7 @@ const Main: NextPage = () => {
   const [now, setNow] = useState<number>(0);
   const [line, setLine] = useState<string>("2");
   const [limit, setLimit] = useState<number>(8000);
-  const [isStartTimer, setIsStartTimer] = useState<boolean>(true);
+  const [startId, setStartId] = useState<string>("");
   const onChangeLine: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     if (isStartedGame) return;
     setLine(e.target.value);
@@ -74,12 +74,12 @@ const Main: NextPage = () => {
     socket.on("room_change", (rooms) => {
       setRoomList(rooms);
     });
-    socket.on("start_lobby", (canStart) => {
+    socket.on("start_lobby", (canStart, socketId) => {
+      setStartId(socketId);
       setCanStart(canStart);
       setIsStartedLobby(true);
     });
     socket.on("start_game", (line, order, limit) => {
-      setIsStartTimer(true);
       setIsStartedGame(true);
       setLine(line);
       setTurn(order[0]);
@@ -126,7 +126,6 @@ const Main: NextPage = () => {
       }
     );
     socket.on("correct", (answer, socketId, now, turn) => {
-      setIsStartTimer(false);
       setResult({ answer, socketId });
       setTimeout(() => {
         setResult({});
@@ -215,7 +214,7 @@ const Main: NextPage = () => {
             line={line}
             onChangeLine={onChangeLine}
             limit={limit}
-            isStartTimer={isStartTimer}
+            startId={startId}
           />
         ) : (
           userList &&

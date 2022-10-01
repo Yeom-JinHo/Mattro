@@ -64,10 +64,14 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
       }
     };
     const onEnterRoom = (e: any) => {
-      if (e.target.innerText) {
-        socket.emit("enter_room", e.target.innerText.split("\n")[1], () => {
-          setIsEntered(true);
-        });
+      if (e.currentTarget?.innerText?.split("\n")?.[1]) {
+        socket.emit(
+          "enter_room",
+          e.currentTarget.innerText.split("\n")[1],
+          () => {
+            setIsEntered(true);
+          }
+        );
       }
     };
     useEffect(() => {
@@ -120,7 +124,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
         </div>
         <Modal isOpen={isMakeRoomModalOpen} onClose={toggleMakeRoomModal}>
           <div className={`${styles.modal} flex column`}>
-            <div className="flex">
+            <div className={`${styles.modal__content} flex`}>
               <span
                 className={`${styles.modal__label} flex align-center justify-center fs-32 coreExtra`}
               >

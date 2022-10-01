@@ -32,7 +32,7 @@ interface Props {
   line: string;
   onChangeLine: React.ChangeEventHandler<HTMLInputElement>;
   limit: number;
-  isStartTimer: boolean;
+  startId: string;
   ref: React.ForwardedRef<unknown>;
 }
 
@@ -98,7 +98,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       line,
       onChangeLine,
       limit,
-      isStartTimer
+      startId
     },
     ref
   ) => {
@@ -279,6 +279,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
                 className={`${styles.line__content} coreExtra fs-60`}
                 value={line}
                 onChange={onChangeLine}
+                disabled={socket.id !== startId}
               />
             )}
             {isStartedGame ? (

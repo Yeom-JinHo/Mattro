@@ -142,10 +142,10 @@ io.on("connection", (socket) => {
     socket.emit("nickname", socket.id, nickname);
     socket.to(roomName).emit("nickname", socket.id, nickname);
   });
-  socket.on("start_lobby", (roomName) => {
+  socket.on("start_lobby", (roomName, socketId) => {
     data.get(roomName).set("isStarted", true);
-    socket.to(roomName).emit("start_lobby", false);
-    socket.emit("start_lobby", true);
+    socket.to(roomName).emit("start_lobby", false, socketId);
+    socket.emit("start_lobby", true, socketId);
   });
   socket.on("start_game", (socketId, roomName, line, order) => {
     data.get(roomName).set("order", order);

@@ -34,7 +34,7 @@ const RoomLobby: React.FunctionComponent<Props> = ({
   };
   const onStartLobby: React.MouseEventHandler<HTMLButtonElement> = () => {
     if (roomName) {
-      socket.emit("start_lobby", roomName);
+      socket.emit("start_lobby", roomName, socket.id);
     }
   };
   useEffect(() => {
