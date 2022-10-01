@@ -49,7 +49,9 @@ const RoomLobby: React.FunctionComponent<Props> = ({
     }
   };
   return (
-    <div className={`${styles.wrapper} flex align-center`}>
+    <div
+      className={`${styles.wrapper} flex column justify-space-between align-center`}
+    >
       <h2 className="align-center coreExtra fs-30">
         <span
           className={`${styles.room__num} flex justify-center align-center coreExtra fs-28`}
@@ -113,8 +115,12 @@ const RoomLobby: React.FunctionComponent<Props> = ({
         </span>
       </footer>
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
-        <div className={`${styles.children} fs-32 coreExtra`}>
-          <span className={styles.modal__label}>닉네임 :</span>
+        <div className={`${styles.modal} flex fs-32 coreExtra`}>
+          <span
+            className={`${styles.modal__label} flex align-center justify-center`}
+          >
+            닉네임 :
+          </span>
           <input
             onKeyUp={onEnterKeyUp}
             ref={nicknameRef}

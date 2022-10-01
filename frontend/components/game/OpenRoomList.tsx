@@ -82,7 +82,9 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
       }
     }, [isMakeRoomModalOpen]);
     return (
-      <div className={`${styles.wrapper} flex column align-center`}>
+      <div
+        className={`${styles.wrapper} flex column justify-space-between align-center`}
+      >
         <span className={styles.station}>
           <Image src={station} alt="station" />
         </span>

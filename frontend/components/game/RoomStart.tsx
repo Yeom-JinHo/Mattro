@@ -289,7 +289,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
             )}
           </div>
         </div>
-        <div className={`${styles.footer} flex align-center justify-center`}>
+        <div className={`${styles.footer} flex justify-center`}>
           <button
             className={`${
               !isStartedGame && canStart ? styles.visible : styles.invisible
