@@ -77,6 +77,73 @@ const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
           (window.innerWidth > 1024 ? 4 : 1) *
             (475 - (circle.getAttribute("cy") as unknown as number))
       );
+      const rectList: SVGRectElement[] = [];
+      const labelGroup = document.querySelector(`.label-group`);
+      const text = document.querySelector(`.S${searchId}`) as SVGTextElement;
+      if (text && text.firstElementChild && labelGroup) {
+        for (let i = 0; i < text.childNodes.length; i += 1) {
+          const tspan = text.childNodes[i] as SVGTSpanElement;
+          let xOffset = 0;
+          const labelWidth = (8 * tspan.innerHTML.length) as unknown as string;
+          if (text.style.textAnchor === "middle") {
+            xOffset = +labelWidth / 2;
+          }
+          if (text.style.textAnchor === "end") {
+            xOffset = +labelWidth;
+          }
+          // if (tspan && labelGroup) {
+          const rect = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "rect"
+          );
+          rect.setAttributeNS(
+            null,
+            "x",
+            `${
+              1 * (tspan.getAttributeNS(null, "x") as unknown as number) +
+              1 * (tspan.getAttributeNS(null, "dx") as unknown as number) -
+              xOffset
+            }`
+          );
+          rect.setAttributeNS(
+            null,
+            "y",
+            `${
+              1 * (text.getAttributeNS(null, "y") as unknown as number) +
+              1 * (tspan.getAttributeNS(null, "dy") as unknown as number) -
+              6
+            }`
+          );
+
+          if (tspan.classList.value.match(/fdx\d+/g)) {
+            const fdx = tspan.classList.value.match(/fdx\d+/g) as string[];
+            rect.setAttributeNS(null, "x", `${fdx[0].replace("fdx", "")}`);
+          }
+
+          if (tspan.classList.value.match(/fdy\d+/g)) {
+            const fdy = tspan.classList.value.match(/fdy\d+/g) as string[];
+            rect.setAttributeNS(null, "y", `${fdy[0].replace("fdy", "")}`);
+          }
+
+          rect.setAttributeNS(null, "fill", "#e53060");
+          rect.setAttributeNS(null, "width", labelWidth);
+
+          if (tspan.classList.value.match(/fdw\d+/g)) {
+            const fdw = tspan.classList.value.match(/fdw\d+/g) as string[];
+            rect.setAttributeNS(null, "width", `${fdw[0].replace("fdw", "")}`);
+          }
+          rect.setAttributeNS(null, "height", "6"); // `${6 * text.childNodes.length}`);
+          labelGroup.insertAdjacentElement("afterbegin", rect);
+          rectList.push(rect);
+          // }
+        }
+        // eslint-disable-next-line consistent-return
+        return () => {
+          rectList.forEach((r) => {
+            labelGroup.removeChild(r);
+          });
+        };
+      }
     }
   }, [searchId]);
   return (
@@ -12286,7 +12353,14 @@ const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
               <tspan x="415" dx="-7" dy="15" fontSize="9px" fontWeight="bold">
                 가산
               </tspan>
-              <tspan x="415" dx="-7" dy="12" fontSize="9px" fontWeight="bold">
+              <tspan
+                x="415"
+                dx="-7"
+                dy="12"
+                fontSize="9px"
+                className="fdy660"
+                fontWeight="bold"
+              >
                 디지털단지
               </tspan>
             </text>
@@ -12819,7 +12893,14 @@ const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
               <tspan x="850" dx="-7" dy="-12" fontSize="9px" fontWeight="bold">
                 동대문역사
               </tspan>
-              <tspan x="850" dx="-7" dy="9" fontSize="9px" fontWeight="bold">
+              <tspan
+                x="850"
+                dx="-7"
+                dy="9"
+                className="fdy330"
+                fontSize="9px"
+                fontWeight="bold"
+              >
                 문화공원
               </tspan>
             </text>
@@ -14922,7 +15003,7 @@ const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
               <tspan x="555" dx="0" dy="-12" fontSize="9px">
                 신대방
               </tspan>
-              <tspan x="555" dx="0" dy="9" fontSize="9px">
+              <tspan x="555" dx="0" dy="9" className="fdy630" fontSize="9px">
                 삼거리
               </tspan>
             </text>
@@ -16120,7 +16201,7 @@ const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
               <tspan x="285" dx="0" dy="-12" fontSize="9px">
                 남동
               </tspan>
-              <tspan x="285" dx="0" dy="9" fontSize="9px">
+              <tspan x="285" dx="0" dy="9" className="fdy891" fontSize="9px">
                 인더스파크
               </tspan>
             </text>
@@ -16661,7 +16742,13 @@ const MetroMap = ({ scaleSize, searchId }: MetroMapProps) => {
               id="S4703"
               style={{ textAnchor: "middle" }}
             >
-              <tspan x="610" dx="0" dy="13" fontSize="9px">
+              <tspan
+                x="610"
+                dx="0"
+                dy="13"
+                className="fdx588 fdw46"
+                fontSize="9px"
+              >
                 4·19민주묘지
               </tspan>
             </text>
