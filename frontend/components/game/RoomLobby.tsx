@@ -115,9 +115,9 @@ const RoomLobby: React.FunctionComponent<Props> = ({
         </span>
       </footer>
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
-        <div className={`${styles.modal} flex fs-32 coreExtra`}>
+        <div className={`${styles.modal} flex`}>
           <span
-            className={`${styles.modal__label} flex align-center justify-center`}
+            className={`${styles.modal__label} flex align-center justify-center fs-32 coreExtra`}
           >
             닉네임 :
           </span>
