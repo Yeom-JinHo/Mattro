@@ -20,7 +20,6 @@ const Main: NextPage = () => {
   const roomStartRef = useRef<{
     setLine: (line: string) => void;
     toggleModal: (a: boolean) => void;
-    clear: () => void;
   }>(null);
   const openRoomListRef = useRef<{
     toggleIsFullModal: (a: boolean) => void;
@@ -102,7 +101,6 @@ const Main: NextPage = () => {
     socket.on(
       "check_answer",
       (roomName, res, arr, answer, order, now, userListNum, socketId) => {
-        roomStartRef.current?.clear();
         if (res === "정답") {
           console.log("맞음!!");
           setTotal(arr);

@@ -92,6 +92,11 @@
   }
 }
 
+.modal__warning {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: $DESKTOP-VW) {
   .wrapper {
     padding-top: vw(20px);
@@ -146,6 +151,9 @@
       border: vw(4px) solid $GRAY_3A;
       border-radius: vw(20px);
     }
+  }
+  .modal__warning {
+    margin-bottom: vw(20px);
   }
 }
 
@@ -220,6 +228,9 @@
       border-radius: 20px;
     }
   }
+  .modal__warning {
+    margin-bottom: (20px);
+  }
 }
 
 @media screen and (max-width: $PHONE-VW) {
@@ -275,5 +286,8 @@
       border: vw-p(4px) solid $GRAY_3A;
       border-radius: vw-p(20px);
     }
+  }
+  .modal__warning {
+    margin-bottom: vw-p(20px);
   }
 }

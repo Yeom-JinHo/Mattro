@@ -158,8 +158,8 @@ io.on("connection", (socket) => {
     data.get(roomName).set("timeout", null);
     data.get(roomName).set("limit", 8000);
     data.get(roomName).set("clear", false);
-    const limit =
-      data.get(roomName).get("limit") - 200 * data.get(roomName).get("now");
+    const limit = data.get(roomName).get("limit");
+    data.get(roomName).set("limit", limit);
     socket.to(roomName).emit("start_game", line, order, limit);
     socket.emit("start_game", line, order, limit);
     clearTimeout(data.get(roomName).get("timeout"));
@@ -210,22 +210,29 @@ io.on("connection", (socket) => {
           userListNum,
           socketId
         );
-      const limit =
-        data.get(roomName).get("limit") -
-        200 *
-          ((data.get(roomName).get("now") + 1) /
-            data.get(roomName).get("size"));
-      socket.emit("limit", limit);
-      socket.to(roomName).emit("limit", limit);
+      console.log(
+        data.get(roomName).get("limit"),
+        data.get(roomName).get("now"),
+        data.get(roomName).get("size")
+      );
+      if (data.get(roomName).get("limit") > 4500) {
+        const limit =
+          data.get(roomName).get("limit") -
+          100 *
+            (data.get(roomName).get("now") / data.get(roomName).get("size"));
+        data.get(roomName).set("limit", limit);
+      }
+      socket.emit("limit", data.get(roomName).get("limit"));
+      socket.to(roomName).emit("limit", data.get(roomName).get("limit"));
       clearTimeout(data.get(roomName).get("timeout"));
       data.get(roomName).set("clear", true);
-      console.log("시간 체크 시작========", limit);
+      console.log("시간 체크 시작========", data.get(roomName).get("limit"));
       const timeoutId = setTimeout(() => {
-        console.log("시간초과 =============", limit);
+        console.log("시간초과 =============", data.get(roomName).get("limit"));
         socket.emit("time_over", order, now);
         socket.to(roomName).emit("time_over", order, now);
         data.get(roomName).set("clear", false);
-      }, limit);
+      }, data.get(roomName).get("limit"));
       data.get(roomName).set("timeout", timeoutId);
     }
   );

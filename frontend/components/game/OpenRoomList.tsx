@@ -150,10 +150,14 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
           </div>
         </Modal>
         <Modal isOpen={isFullModalOpen} onClose={toggleIsFullModal}>
-          <div className="fs-32 coreExtra">방이 꽉 찼습니다.</div>
+          <div className={`${styles.modal__warning} fs-32 coreExtra`}>
+            방이 꽉 찼습니다.
+          </div>
         </Modal>
         <Modal isOpen={isStartedModalOpen} onClose={toggleIsStartedModal}>
-          <div className="fs-32 coreExtra">게임이 이미 시작했습니다.</div>
+          <div className={`${styles.modal__warning} fs-32 coreExtra`}>
+            게임이 이미 시작했습니다.
+          </div>
         </Modal>
       </div>
     );

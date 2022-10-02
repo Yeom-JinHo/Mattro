@@ -102,14 +102,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     },
     ref
   ) => {
-    const timeoutReturn: { current: NodeJS.Timeout | null } = useRef(null);
-    const clear = () => {
-      console.log("시간초과 클리어========");
-      clearTimeout(timeoutReturn.current as NodeJS.Timeout);
-    };
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const toggleModal = () => {
-      console.log("콘솔 켜져라 얍");
       setIsModalOpen(true);
     };
     const inputLineRef = useRef<HTMLInputElement>(null);
@@ -120,8 +114,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     const [answer, setAnswer] = useState<string>("");
     const [isReadyOpen, setIsReadyOpen] = useState<boolean>(false);
     useImperativeHandle(ref, () => ({
-      toggleModal,
-      clear
+      toggleModal
     }));
     const onChangeAnswer: React.ChangeEventHandler<HTMLInputElement> =
       useCallback((e) => {
@@ -175,7 +168,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     };
     useEffect(() => {
       if (socket.id === turn.id) {
-        if (inputAnswerRef?.current) {
+        if (inputAnswerRef.current) {
           inputAnswerRef.current.focus();
         }
       }
@@ -186,7 +179,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       }
     };
     useEffect(() => {
-      if (inputLineRef?.current) {
+      if (inputLineRef.current) {
         inputLineRef.current.focus();
       }
     }, []);
