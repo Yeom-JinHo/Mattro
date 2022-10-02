@@ -16,7 +16,7 @@
     padding: 16px;
     overflow: auto;
     .room {
-      padding: 18px 30px;
+      padding: 18px;
       width: 414px;
       height: 100px;
       border-radius: 22px;
@@ -25,8 +25,7 @@
       &:hover {
         transform: scale(1.02) translateY(-2px);
       }
-      p {
-        color: $WHITE;
+      .room__num__name {
         .room__num {
           margin-right: 24px;
           padding: 12px;
@@ -35,6 +34,17 @@
           border-radius: 50%;
           background-color: $WHITE;
           color: $GRAY_3A;
+        }
+        .room__name {
+          color: $WHITE;
+        }
+      }
+      .room__status {
+        .room__isStarted {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          background-color: $WHITE;
         }
       }
     }

@@ -36,7 +36,8 @@ function getAllRooms() {
   publicRooms().forEach((roomName) => {
     res.push({
       roomName,
-      size: data.get(roomName).get("size")
+      size: data.get(roomName).get("size"),
+      isStarted: data.get(roomName).get("isStarted")
     });
   });
   return res;
@@ -68,6 +69,7 @@ io.on("connection", (socket) => {
       data
         .get(roomName)
         .set("nicknameList", ["4번 출구", "3번 출구", "2번 출구", "1번 출구"]);
+      data.get(roomName).set("isStarted", false);
     }
     if (data.get(roomName).get("isStarted")) {
       socket.emit("isStarted");
@@ -149,6 +151,7 @@ io.on("connection", (socket) => {
   });
   socket.on("start_lobby", (roomName, socketId) => {
     data.get(roomName).set("isStarted", true);
+    io.sockets.emit("room_change", getAllRooms());
     socket.to(roomName).emit("start_lobby", false, socketId);
     socket.emit("start_lobby", true, socketId);
   });
@@ -253,6 +256,7 @@ io.on("connection", (socket) => {
     socket.to(roomName).emit("uncorrect", answer, socketId);
     socket.emit("uncorrect", answer, socketId);
     data.get(roomName).set("isStarted", false);
+    io.sockets.emit("room_change", getAllRooms());
   });
   socket.on("time_over", (roomName, answer, socketId) => {
     clearTimeout(data.get(roomName).get("timeout"));
@@ -260,6 +264,7 @@ io.on("connection", (socket) => {
     socket.to(roomName).emit("uncorrect", answer, socketId);
     socket.emit("uncorrect", answer, socketId);
     data.get(roomName).set("isStarted", false);
+    io.sockets.emit("room_change", getAllRooms());
   });
   socket.on("on_change_line", (roomName, line) => {
     socket.to(roomName).emit("on_change_line", line);

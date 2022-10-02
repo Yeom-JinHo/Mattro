@@ -91,23 +91,34 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
         <div className={styles.roomList}>
           {roomList.map((room) => (
             <div
-              className={`${styles.room} flex align-center`}
+              className={`${styles.room} flex justify-space-between align-center`}
               key={room.roomName}
               onClick={onEnterRoom}
               aria-hidden="true"
             >
-              <p className="flex align-center fs-34 coreExtra">
+              <div className={`${styles.room__num__name} flex`}>
                 <span
-                  className={`${styles.room__num} flex justify-center align-center fs-24 coreExtra`}
+                  className={`${styles.room__num} flex justify-center align-center coreExtra fs-28`}
                 >
                   {room.size}/4
                 </span>
-                <span>
-                  {room.roomName && room.roomName.length > 10
-                    ? `${room.roomName.slice(0, 10)}...`
+                <span
+                  className={`${styles.room__name} flex justify-center align-center coreExtra fs-32`}
+                >
+                  {room.roomName && room.roomName.length > 9
+                    ? `${room.roomName.slice(0, 9)}...`
                     : room.roomName}
                 </span>
-              </p>
+              </div>
+              <div className={`${styles.room__status}`}>
+                {room.isStarted && (
+                  <span
+                    className={`${styles.room__isStarted} flex justify-center align-center coreExtra fs-20`}
+                  >
+                    게임중
+                  </span>
+                )}
+              </div>
             </div>
           ))}
         </div>
