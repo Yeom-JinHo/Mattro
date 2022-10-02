@@ -180,8 +180,6 @@ io.on("connection", (socket) => {
   socket.on(
     "answer",
     (roomName, line, answer, arr, order, now, userListNum, socketId) => {
-      clearTimeout(data.get(roomName).get("timeout"));
-      data.get(roomName).set("clear", true);
       console.log("앤서 클리어");
       if (!data.get(roomName).get("clear")) {
         return;
@@ -214,9 +212,13 @@ io.on("connection", (socket) => {
         );
       const limit =
         data.get(roomName).get("limit") -
-        200 * (data.get(roomName).get("now") + 1);
+        200 *
+          ((data.get(roomName).get("now") + 1) /
+            data.get(roomName).get("size"));
       socket.emit("limit", limit);
       socket.to(roomName).emit("limit", limit);
+      clearTimeout(data.get(roomName).get("timeout"));
+      data.get(roomName).set("clear", true);
       console.log("시간 체크 시작========", limit);
       const timeoutId = setTimeout(() => {
         console.log("시간초과 =============", limit);
