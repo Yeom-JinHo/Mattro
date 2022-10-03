@@ -99,7 +99,7 @@ const RoomLobby: React.FunctionComponent<Props> = ({
                       : styles.edit__invisible
                   }
                 >
-                  <Image src={pencil} />
+                  <Image src={pencil} alt="pencil" />
                 </div>
               </div>
               <span
