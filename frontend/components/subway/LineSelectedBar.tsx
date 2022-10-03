@@ -21,7 +21,7 @@ const LineSelectedBar = ({
     const randomInd = Math.floor(Math.random() * selectedStations.length);
     const { name, lineId, stationId } = selectedStations[randomInd];
     const storeIndex = await recommandIndexByStation(name);
-    router.push(`/subway/${lineId[0]}/${stationId}/${storeIndex}`);
+    router.push(`/subway/${lineId[0]}/${stationId}/${storeIndex || "null"}`);
   };
 
   useEffect(() => {

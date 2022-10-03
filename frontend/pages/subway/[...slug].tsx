@@ -19,7 +19,7 @@ const Result = ({ loadingBarData, lineId, placeInd }: ResultType) => {
   const [storeData, setStoreData] = useState<storeDataType | null>(null);
   const router = useRouter();
   useEffect(() => {
-    if (placeInd !== "undefined") {
+    if (placeInd !== "null") {
       (async () => {
         const res = await recommandByStoreIndex(placeInd);
         const {
