@@ -95,7 +95,7 @@ export default function themeMain() {
               className={`${styles.textBalloon} flex align-center justify-center`}
             >
               <Image src={textBox} alt="click" className={styles.balloonImg} />
-              <p className="notoBold fs-24">{foodList[foodNum]}</p>
+              <p className="notoBold">{foodList[foodNum]}</p>
             </div>
           )}
           {!textAppear && (

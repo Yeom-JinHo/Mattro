@@ -59,7 +59,7 @@
       bottom: calc(0% + 400px);
     }
     .train_out {
-      animation-duration: 2.5s;
+      animation-duration: 2s;
       animation-name: train_out;
       animation-fill-mode: forwards;
     }
@@ -194,8 +194,8 @@
         bottom: calc(0% + 180px);
       }
       to {
-        left: calc(0% - 100px);
-        bottom: calc(0% + 20px);
+        left: calc(0% + 50px);
+        bottom: calc(0% - 60px);
       }
     }
   }
@@ -250,8 +250,8 @@
       bottom: calc(0% + vw-p(180px));
     }
     to {
-      left: calc(0% - vw-p(100px));
-      bottom: calc(0% + vw-p(20px));
+      left: calc(0% + vw-p(50px));
+      bottom: calc(0% - vw-p(60px));
     }
   }
 }
