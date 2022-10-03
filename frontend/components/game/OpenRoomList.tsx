@@ -2,7 +2,6 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/prop-types */
 import React, {
-  useCallback,
   useEffect,
   useRef,
   useState,
@@ -126,7 +125,6 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
           <span className={styles.chair1}>
             <Image src={chair1} alt="chair1" />
           </span>
-
           <button
             className="fs-24 coreExtra"
             type="button"
