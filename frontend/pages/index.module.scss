@@ -52,14 +52,14 @@
     }
     .train {
       animation-name: train;
-      animation-delay: 2s;
-      // animation-duration: 1s;
+      // animation-delay: 2s;
+      animation-duration: 1.5s;
       animation-fill-mode: forwards;
       left: calc(0% - 800px);
       bottom: calc(0% + 400px);
     }
     .train_out {
-      animation-duration: 3s;
+      animation-duration: 1.5s;
       animation-name: train_out;
       animation-fill-mode: forwards;
     }

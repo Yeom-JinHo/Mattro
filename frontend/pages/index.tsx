@@ -12,9 +12,9 @@ const Home: NextPage = () => {
   const startClick = () => {
     setClicked(true);
 
-    setTimeout(function () {
+    setTimeout(() => {
       router.push("/subway");
-    }, 3000);
+    }, 1000);
   };
 
   return (
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           START
         </button>
         <div className={clicked ? styles.train_out : styles.train}>
-          <Image src={train} alt="train" className="styles.img" />
+          <Image src={train} alt="train" className="styles.img" priority />
         </div>
       </div>
     </div>
