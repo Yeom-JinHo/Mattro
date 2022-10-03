@@ -28,7 +28,10 @@ public class SubwayApiController {
 
     @GetMapping("/{store_index}")
     public ResponseEntity getPlaceByStoreIndex(@PathVariable(name = "store_index") String storeIndex){
+        long before_time = System.currentTimeMillis();
         Optional<Output> response = mds.findPlaceByStoreIndex(storeIndex);
+        long after_time = System.currentTimeMillis();
+        System.out.println("시간 차 : "+ (after_time - before_time));
         if(response != null) {
             return new ResponseEntity(response, HttpStatus.OK);
         }else {

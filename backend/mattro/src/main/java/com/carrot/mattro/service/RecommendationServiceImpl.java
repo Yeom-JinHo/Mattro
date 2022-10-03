@@ -6,6 +6,7 @@ import com.carrot.mattro.Repository.OutputRepository;
 import com.carrot.mattro.domain.entity.Subway;
 import com.carrot.mattro.domain.repository.SubwayRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -20,6 +21,7 @@ public class RecommendationServiceImpl implements RecommendationService {
     private final String EMPTY_RESULT = "empty_result";
     private final String EMPTY_SUBWAY = "empty_subway";
 
+    @Cacheable(value = "layoutCaching")
     @Override
     public String recommendationStore(String subwayName) {
 
