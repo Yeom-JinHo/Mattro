@@ -13,9 +13,6 @@ const Result = () => {
   const [choices, storeIndex]: any = router.query.params || [];
   const [foodList, setFoodList] = useState([]);
   const [storeList, setStoreList] = useState<string[]>([]);
-  const [isFinished, setIsFinished] = useState<boolean>(false);
-
-  useEffect(() => {}, [foodList]);
 
   // 제일 처음 실행
   useEffect(() => {
@@ -28,9 +25,6 @@ const Result = () => {
     })();
 
     setTimeout(() => {
-      if (foodList.length !== 0) {
-      }
-      console.log("end!!!!");
       setIsLoading(false);
     }, 2000);
   }, [storeIndex]);
@@ -46,7 +40,6 @@ const Result = () => {
       router.push("/404");
     }
   }, []);
-  console.log("re");
   const again = () => {
     // api 재호출
     setIsLoading(true);
@@ -59,13 +52,6 @@ const Result = () => {
       router.push(`/theme/${choices}/${index}`);
       // setIsFinished(true);
     })();
-
-    // setTimeout(() => {
-    //   if (isFinished) {
-    //     setIsFinished(false);
-    //   }
-    //   setIsLoading(false);
-    // }, 2000);
   };
 
   return (
