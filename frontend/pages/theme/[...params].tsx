@@ -8,21 +8,32 @@ import { storeDataType } from "../../constants/storeData";
 import { GetServerSideProps } from "next";
 
 const Result = () => {
-  const food = "떡볶이";
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [choices, storeIndex]: any = router.query.params || [];
   const [foodList, setFoodList] = useState([]);
   const [storeList, setStoreList] = useState<string[]>([]);
+  const [isFinished, setIsFinished] = useState<boolean>(false);
 
-  // 즉시 실행 함수
-  //
-  (async function () {
-    //  api 호출
-    const res = await indexRes(storeIndex);
-    setFoodList(res);
-    setIsLoading(false);
-  })();
+  useEffect(() => {}, [foodList]);
+
+  // 제일 처음 실행
+  useEffect(() => {
+    setIsLoading(true);
+    // 즉시 실행 함수
+    (async function () {
+      //  api 호출
+      const res = await indexRes(storeIndex);
+      setFoodList(res);
+    })();
+
+    setTimeout(() => {
+      if (foodList.length !== 0) {
+      }
+      console.log("end!!!!");
+      setIsLoading(false);
+    }, 2000);
+  }, [storeIndex]);
 
   useEffect(() => {
     //정규 표현식
@@ -35,19 +46,26 @@ const Result = () => {
       router.push("/404");
     }
   }, []);
-
+  console.log("re");
   const again = () => {
     // api 재호출
     setIsLoading(true);
-    async function getList() {
+
+    (async function () {
       const res = await themeRecommend(choices);
       console.log(res);
       setStoreList(res);
       const index = res.join();
       router.push(`/theme/${choices}/${index}`);
-    }
-    getList();
-    console.log("aaaaa");
+      // setIsFinished(true);
+    })();
+
+    // setTimeout(() => {
+    //   if (isFinished) {
+    //     setIsFinished(false);
+    //   }
+    //   setIsLoading(false);
+    // }, 2000);
   };
 
   return (
