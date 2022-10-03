@@ -61,14 +61,23 @@
       margin: 28px 0;
       color: $WHITE;
       cursor: pointer;
+      .username__nickname {
+        margin-right: 6px;
+      }
+      .edit__visible {
+        width: 12px;
+      }
+      .edit__invisible {
+        display: none;
+      }
     }
-    .visible {
+    .me__visible {
       width: 86px;
       height: 38px;
       border-radius: 22px;
       background-color: $SUB_YELLOW;
     }
-    .invisible {
+    .me__invisible {
       visibility: hidden;
       width: 86px;
       height: 38px;
@@ -143,22 +152,15 @@
   .userList {
     column-gap: vw(36px);
     margin: vw(20px);
-    .user {
-      width: vw(224px);
-      height: vw(340px);
-      border-radius: vw(44px);
-      .username {
-        margin: vw(28px) 0;
+    .username {
+      margin: vw(28px) 0;
+      .username__nickname {
+        margin-right: vw(6px);
       }
-      .visible {
-        width: vw(86px);
-        height: vw(38px);
-        border-radius: vw(22px);
+      .edit__visible {
+        width: vw(12px);
       }
-      .invisible {
-        width: vw(86px);
-        height: vw(38px);
-        border-radius: vw(22px);
+      .edit__invisible {
       }
     }
   }
@@ -231,16 +233,24 @@
         width: 30%;
       }
       .username {
-        margin: 28px 0;
-        font-size: 20px;
+        margin: (14px) 0;
+        .username__nickname {
+          margin-right: (5px);
+          font-size: 20px;
+        }
+        .edit__visible {
+          width: (10px);
+        }
+        .edit__invisible {
+        }
       }
-      .visible {
+      .me__visible {
         width: 86px;
         height: 38px;
         border-radius: 22px;
         font-size: 20px;
       }
-      .invisible {
+      .me__invisible {
         width: 86px;
         height: 38px;
         border-radius: 22px;
@@ -318,16 +328,24 @@
       height: vw-p(208px);
       border-radius: vw-p(24px);
       .username {
-        margin: vw-p(28px) 0;
-        font-size: vw-p(20px);
+        margin: vw-p(14px) 0;
+        .username__nickname {
+          margin-right: vw-p(5px);
+          font-size: vw-p(20px);
+        }
+        .edit__visible {
+          width: vw-p(10px);
+        }
+        .edit__invisible {
+        }
       }
-      .visible {
+      .me__visible {
         width: vw-p(86px);
         height: vw-p(38px);
         border-radius: vw-p(22px);
         font-size: vw-p(20px);
       }
-      .invisible {
+      .me__invisible {
         width: vw-p(86px);
         height: vw-p(38px);
         border-radius: vw-p(22px);
