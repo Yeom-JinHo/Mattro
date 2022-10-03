@@ -59,7 +59,7 @@
       bottom: calc(0% + 400px);
     }
     .train_out {
-      animation-duration: 1.5s;
+      animation-duration: 2.5s;
       animation-name: train_out;
       animation-fill-mode: forwards;
     }
@@ -82,8 +82,8 @@
       bottom: calc(0% + 150px);
     }
     to {
-      left: calc(0%);
-      bottom: calc(0% - 100px);
+      left: calc(0% + 400px);
+      bottom: calc(0% - 300px);
     }
   }
 }
@@ -118,12 +118,12 @@
     }
     @keyframes train {
       from {
-        left: calc(0% - 800px);
-        bottom: calc(0% + 400px);
+        left: calc(0% - vw(800px));
+        bottom: calc(0% + vw(400px));
       }
       to {
-        left: calc(0% - 400px);
-        bottom: calc(0% + 150px);
+        left: calc(0% - vw(400px));
+        bottom: calc(0% + vw(150px));
       }
     }
 
@@ -133,8 +133,8 @@
         bottom: calc(0% + vw(150px));
       }
       to {
-        left: calc(0%);
-        bottom: calc(0% - vw(100px));
+        left: calc(0% + vw(400px));
+        bottom: calc(0% - vw(300px));
       }
     }
   }
@@ -169,29 +169,33 @@
       }
 
       .train {
-        left: calc(0% - 600px);
-        bottom: calc(0% + 300px);
+        animation-duration: 1.5s;
+        left: calc(0% - 700px);
+        bottom: calc(0% + 330px);
+      }
+      .train_out {
+        animation-duration: 1.5s;
       }
     }
     @keyframes train {
       from {
-        left: calc(0% - 600px);
-        bottom: calc(0% + 300px);
+        left: calc(0% - 700px);
+        bottom: calc(0% + 330px);
       }
       to {
         left: calc(0% - 400px);
-        bottom: calc(0% + 200px);
+        bottom: calc(0% + 180px);
       }
     }
 
     @keyframes train_out {
       from {
         left: calc(0% - 400px);
-        bottom: calc(0% + 200px);
+        bottom: calc(0% + 180px);
       }
       to {
-        left: calc(0% - 0px);
-        bottom: calc(0% + 00px);
+        left: calc(0% - 100px);
+        bottom: calc(0% + 20px);
       }
     }
   }
@@ -219,35 +223,35 @@
       }
       .train,
       .train_out {
-        width: vw-p(60px);
+        width: vw-p(600px);
         height: vw-p(450px);
       }
 
       .train {
-        left: calc(0% - vw-p(600px));
-        bottom: calc(0% + vw-p(300px));
+        left: calc(0% - vw-p(700px));
+        bottom: calc(0% + vw-p(330px));
       }
     }
   }
   @keyframes train {
     from {
-      left: calc(0% - vw-p(600px));
-      bottom: calc(0% + vw-p(300px));
+      left: calc(0% - vw-p(700px));
+      bottom: calc(0% + vw-p(320px));
     }
     to {
       left: calc(0% - vw-p(400px));
-      bottom: calc(0% + vw-p(200px));
+      bottom: calc(0% + vw-p(180px));
     }
   }
 
   @keyframes train_out {
     from {
       left: calc(0% - vw-p(400px));
-      bottom: calc(0% + vw-p(200px));
+      bottom: calc(0% + vw-p(180px));
     }
     to {
-      left: calc(0% - 0px);
-      bottom: calc(0% + 00px);
+      left: calc(0% - vw-p(100px));
+      bottom: calc(0% + vw-p(20px));
     }
   }
 }
