@@ -11,6 +11,8 @@ const useAudio = (url) => {
       } else {
         setPlaying(false);
       }
+    } else {
+      setPlaying(false);
     }
   };
 
