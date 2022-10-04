@@ -27,18 +27,27 @@ const ResultCard = ({
 }: ResultCardType) => {
   const router = useRouter();
   const [starView, setStarView] = useState<number>(0);
-  const [choices, storeIndex]: any = router.query.params;
+
   const [address, setAddress] = useState<string>("");
   // 카카오톡 공유하기 기능
   const shareKakao = () => {
-    // url 재정비, 현재 선택된 값을 2번째 요소에 집어넣기
-    const list = storeIndex.split(",");
-    const newList = list.filter(function (data: string) {
-      return data !== storeIdx;
-    });
+    let url = null;
 
-    newList.splice(2, 0, storeIdx);
-    const res = newList.join(",");
+    if (router.pathname === "/theme/[...params]") {
+      const [choices, storeIndex]: any = router.query.params;
+      // url 재정비, 현재 선택된 값을 2번째 요소에 집어넣기
+      const list = storeIndex.split(",");
+      const newList = list.filter(function (data: string) {
+        return data !== storeIdx;
+      });
+
+      newList.splice(2, 0, storeIdx);
+      const res = newList.join(",");
+      url = `theme/${choices}/${res}`;
+    } else {
+      url = router.asPath;
+    }
+
     const { Kakao, location } = window;
 
     // 공유하기 기능을 위해 initialize 마운트 될때 적용
@@ -52,8 +61,8 @@ const ResultCard = ({
         description: address,
         imageUrl: mainImageURL !== null ? mainImageURL : menuImageUrl,
         link: {
-          mobileWebUrl: `https://j7c206.p.ssafy.io/theme/${choices}/${res}`,
-          webUrl: `https://j7c206.p.ssafy.io/theme/${choices}/${res}`
+          mobileWebUrl: `https://j7c206.p.ssafy.io/${url}`,
+          webUrl: `https://j7c206.p.ssafy.io/${url}`
         }
       }
     });
