@@ -31,6 +31,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
       toggleIsFullModal,
       toggleIsStartedModal
     }));
+    const [isEnterInput, setIsEnterInput] = useState<boolean>(false);
     const modalRoomNameInput = useRef<HTMLInputElement>(null);
     const [roomName, setRoomName] = useState<string>("");
     const [isMakeRoomModalOpen, setIsMakeRoomModalOpen] =
@@ -58,15 +59,19 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
     };
     const onKeyUpEnterMakeRoom: React.KeyboardEventHandler<
       HTMLInputElement
-    > = (e: { key: string; preventDefault: () => void }) => {
-      if (roomName && e.key === "Enter") {
-        e.preventDefault();
+    > = (e: { key: string }) => {
+      if (e.key === "Enter") {
+        setIsEnterInput(true);
+      }
+    };
+    useEffect(() => {
+      if (isEnterInput) {
         toggle(isMute);
         socket.emit("enter_room", roomName, () => {
           setIsEntered(true);
         });
       }
-    };
+    }, [isEnterInput]);
     const onEnterRoom = (e: any) => {
       if (e.currentTarget?.innerText?.split("\n")?.[1]) {
         toggle(isMute);
@@ -150,7 +155,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
               </span>
               <input
                 className={`${styles.modal__input} flex align-center justify-center fs-32 coreExtra`}
-                onKeyDown={onKeyUpEnterMakeRoom}
+                onKeyUp={onKeyUpEnterMakeRoom}
                 ref={modalRoomNameInput}
                 value={roomName}
                 onChange={onChangeRoomName}

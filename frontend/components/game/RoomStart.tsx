@@ -92,6 +92,9 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     },
     ref
   ) => {
+    const [isEnterInputStart, setIsEnterInputStart] = useState<boolean>(false);
+    const [isEnterInputAnswer, setIsEnterInputAnswer] =
+      useState<boolean>(false);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const toggleModal = () => {
       setIsModalOpen(true);
@@ -150,17 +153,18 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         inputLineRef.current.focus();
       }
     }, []);
-    const onEnterKeyUpline = (e: {
-      key: string;
-      preventDefault: () => void;
-    }) => {
+    const onEnterKeyUpline = (e: { key: string }) => {
       if (startId !== socket.id) return;
       if (e.key === "Enter") {
-        e.preventDefault();
+        setIsEnterInputStart(true);
+      }
+    };
+    useEffect(() => {
+      if (isEnterInputStart) {
         toggle(isMute);
         onStartGame();
       }
-    };
+    }, [isEnterInputStart]);
     useEffect(() => {
       if (isStartedGame && !isReadyOpen && socket.id === turn.id) {
         if (inputAnswerRef.current) {
@@ -168,12 +172,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         }
       }
     }, [isStartedGame, isReadyOpen, turn]);
-    const onEnterKeyUpAnswer = (e: {
-      key: string;
-      preventDefault: () => void;
-    }) => {
+    const onEnterKeyUpAnswer = (e: { key: string }) => {
       if (answer && e.key === "Enter") {
-        e.preventDefault();
         toggle(isMute);
         onSubmitAnswer(answer);
       }
@@ -254,7 +254,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
                   {line}
                 </span>
                 <input
-                  onKeyDown={onEnterKeyUpAnswer}
+                  onKeyUp={onEnterKeyUpAnswer}
                   ref={inputAnswerRef}
                   className={`${styles.answer__content} coreExtra fs-60`}
                   value={answer}
@@ -264,7 +264,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
               </div>
             ) : (
               <input
-                onKeyDown={onEnterKeyUpline}
+                onKeyUp={onEnterKeyUpline}
                 ref={inputLineRef}
                 className={`${styles.line__content} coreExtra fs-60`}
                 value={line}
