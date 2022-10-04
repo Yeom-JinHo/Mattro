@@ -34,6 +34,7 @@ interface Props {
   startId: string;
   toggle: (a: boolean) => void;
   toggleBGM: (a: boolean) => void;
+  isMute: boolean;
   ref: React.ForwardedRef<unknown>;
 }
 
@@ -86,7 +87,8 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
       limit,
       startId,
       toggle,
-      toggleBGM
+      toggleBGM,
+      isMute
     },
     ref
   ) => {
@@ -139,7 +141,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     };
     const onSubmitAnswer = (answer: string) => {
       if (isReadyOpen) return;
-      toggle(true);
+      toggle(isMute);
       socket.emit("answer", roomName, line, answer, socket.id);
       setAnswer("");
     };
@@ -151,7 +153,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     const onEnterKeyUpline = (e: { key: string }) => {
       if (startId !== socket.id) return;
       if (e.key === "Enter") {
-        toggle(true);
+        toggle(isMute);
         onStartGame();
       }
     };
@@ -164,13 +166,13 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     }, [isStartedGame, isReadyOpen, turn]);
     const onEnterKeyUpAnswer = (e: { key: string }) => {
       if (answer && e.key === "Enter") {
-        toggle(true);
+        toggle(isMute);
         onSubmitAnswer(answer);
       }
     };
     useEffect(() => {
       if (isStartedGame) {
-        // toggleBGM(true);
+        toggleBGM(isMute);
         setIsReadyOpen(true);
         setTimeout(() => {
           setIsReadyOpen(false);

@@ -21,11 +21,12 @@ interface Props {
   socket: ISocket;
   setIsEntered: (a: boolean) => void;
   toggle: (a: boolean) => void;
+  isMute: boolean;
   ref: React.ForwardedRef<unknown>;
 }
 
 const Rooms: React.FunctionComponent<Props> = forwardRef(
-  ({ roomList, socket, setIsEntered, toggle }, ref) => {
+  ({ roomList, socket, setIsEntered, toggle, isMute }, ref) => {
     useImperativeHandle(ref, () => ({
       toggleIsFullModal,
       toggleIsStartedModal
@@ -35,7 +36,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
     const [isMakeRoomModalOpen, setIsMakeRoomModalOpen] =
       useState<boolean>(false);
     const toggleMakeRoomModal = () => {
-      toggle(true);
+      toggle(isMute);
       setIsMakeRoomModalOpen((prev) => !prev);
     };
     const [isFullModalOpen, setIsFullModalOpen] = useState<boolean>(false);
@@ -50,7 +51,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
     };
     const onMakeRoom: React.MouseEventHandler<HTMLButtonElement> = () => {
       if (roomName.trim() === "") return;
-      toggle(true);
+      toggle(isMute);
       socket.emit("enter_room", roomName, () => {
         setIsEntered(true);
       });
@@ -60,7 +61,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
     > = (e: { key: string }) => {
       if (e.key === "Enter") {
         if (roomName.trim() === "") return;
-        toggle(true);
+        toggle(isMute);
         socket.emit("enter_room", roomName, () => {
           setIsEntered(true);
         });
@@ -68,7 +69,7 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
     };
     const onEnterRoom = (e: any) => {
       if (e.currentTarget?.innerText?.split("\n")?.[1]) {
-        toggle(true);
+        toggle(isMute);
         socket.emit(
           "enter_room",
           e.currentTarget.innerText.split("\n")[1],

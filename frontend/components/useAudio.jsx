@@ -4,7 +4,15 @@ const useAudio = (url) => {
   const [audio] = useState(typeof Audio !== "undefined" && new Audio(url));
   const [playing, setPlaying] = useState(false);
 
-  const toggle = (a) => setPlaying(a);
+  const toggle = (isMute, a = true) => {
+    if (!isMute) {
+      if (a) {
+        setPlaying(true);
+      } else {
+        setPlaying(false);
+      }
+    }
+  };
 
   useEffect(() => {
     if (playing) {

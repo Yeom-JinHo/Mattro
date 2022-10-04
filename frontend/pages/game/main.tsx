@@ -13,7 +13,7 @@ import styles from "./main.module.scss";
 import useAudio from "../../components/useAudio";
 import click from "../../public/sounds/click.mp3";
 import gameMainMusic from "../../public/sounds/gameMainMusic.mp3";
-import volumeUp from "../../public/icons/volume_up.svg";
+import volumeOn from "../../public/icons/volume_up.svg";
 import volumeOff from "../../public/icons/volume_off.svg";
 
 const socket =
@@ -24,6 +24,7 @@ const socket =
 const Main: NextPage = () => {
   const [toggle] = useAudio(click);
   const [toggleBGM] = useAudio(gameMainMusic);
+  const [isMute, setIsMute] = useState<boolean>(false);
   let timeout: any;
   const roomStartRef = useRef<{
     setLine: (line: string) => void;
@@ -117,7 +118,7 @@ const Main: NextPage = () => {
       }, 1500);
     });
     socket.on("uncorrect", (answer, socketId) => {
-      toggleBGM(false);
+      toggleBGM(isMute, false);
       setTurn({});
       setResult({ answer, socketId });
       roomStartRef.current?.toggleModal(true);
@@ -126,7 +127,7 @@ const Main: NextPage = () => {
       }, 3000);
     });
     socket.on("time_over", (order, now) => {
-      toggleBGM(false);
+      toggleBGM(isMute, false);
       setTurn({});
       setResult({
         answer: "시간초과",
@@ -150,7 +151,7 @@ const Main: NextPage = () => {
       }, 3000);
     });
     socket.on("who_out", (newUserList) => {
-      toggleBGM(false);
+      toggleBGM(isMute, false);
       setUserList([...newUserList]);
       resetGame();
     });
@@ -186,14 +187,27 @@ const Main: NextPage = () => {
   }, []);
   return (
     <div className={styles.wrapper}>
-      <div className={`${styles.icon}`}>
-        <button className={`${styles.volumeUp}`} type="button">
-          <Image src={volumeUp} alt="volumeUp" />
-        </button>
-        <button className={`${styles.volumeOff}`} type="button">
-          <Image src={volumeOff} alt="volumeOff" />
-        </button>
-      </div>
+      {!isStartedLobby && (
+        <div className={`${styles.icons}`}>
+          {isMute ? (
+            <button
+              className={`${styles.volumeOff}`}
+              type="button"
+              onClick={() => setIsMute(false)}
+            >
+              <Image src={volumeOff} alt="volumeOff" />
+            </button>
+          ) : (
+            <button
+              className={`${styles.volumeOn}`}
+              type="button"
+              onClick={() => setIsMute(true)}
+            >
+              <Image src={volumeOn} alt="volumeOn" />
+            </button>
+          )}
+        </div>
+      )}
       {socket && isEntered ? (
         isStartedLobby ? (
           <RoomStart
@@ -213,6 +227,7 @@ const Main: NextPage = () => {
             startId={startId}
             toggle={toggle}
             toggleBGM={toggleBGM}
+            isMute={isMute}
           />
         ) : (
           userList &&
@@ -225,6 +240,7 @@ const Main: NextPage = () => {
                 userList.filter((user) => user.id === socket.id)[0].nickname
               }
               toggle={toggle}
+              isMute={isMute}
             />
           )
         )
@@ -235,6 +251,7 @@ const Main: NextPage = () => {
           socket={socket}
           setIsEntered={setIsEntered}
           toggle={toggle}
+          isMute={isMute}
         />
       )}
     </div>
