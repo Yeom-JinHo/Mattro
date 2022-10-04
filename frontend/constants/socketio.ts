@@ -10,7 +10,6 @@ export interface IRoomList {
   roomName: string;
   size: number;
   isStarted: boolean;
-  isFull: boolean;
 }
 
 export interface ServerToClientEvents {
@@ -39,6 +38,8 @@ export interface ClientToServerEvents {
     socketId: string
   ) => void;
   time_over: (roomName: string, answer: string, socketId: string) => void;
+  room_change: () => void;
+  exit: (roomName: string) => void;
 }
 
 export type ISocket = Socket<ServerToClientEvents, ClientToServerEvents>;

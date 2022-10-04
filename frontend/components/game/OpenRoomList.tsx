@@ -94,38 +94,39 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
           <Image src={station} alt="station" />
         </span>
         <div className={styles.roomList}>
-          {roomList.map((room) => (
-            <div
-              className={`${styles.room} flex justify-space-between align-center`}
-              key={room.roomName}
-              onClick={onEnterRoom}
-              aria-hidden="true"
-            >
-              <div className={`${styles.room__num__name} flex`}>
-                <span
-                  className={`${styles.room__num} flex justify-center align-center coreExtra fs-28`}
-                >
-                  {room.size}/4
-                </span>
-                <span
-                  className={`${styles.room__name} flex justify-center align-center coreExtra fs-32`}
-                >
-                  {room.roomName && room.roomName.length > 9
-                    ? `${room.roomName.slice(0, 9)}...`
-                    : room.roomName}
-                </span>
-              </div>
-              <div className={`${styles.room__status}`}>
-                {room.isStarted && (
+          {roomList &&
+            roomList.map((room) => (
+              <div
+                className={`${styles.room} flex justify-space-between align-center`}
+                key={room.roomName}
+                onClick={onEnterRoom}
+                aria-hidden="true"
+              >
+                <div className={`${styles.room__num__name} flex`}>
                   <span
-                    className={`${styles.room__isStarted} flex justify-center align-center coreExtra fs-20`}
+                    className={`${styles.room__num} flex justify-center align-center coreExtra fs-28`}
                   >
-                    게임중
+                    {room.size}/4
                   </span>
-                )}
+                  <span
+                    className={`${styles.room__name} flex justify-center align-center coreExtra fs-32`}
+                  >
+                    {room.roomName && room.roomName.length > 9
+                      ? `${room.roomName.slice(0, 9)}...`
+                      : room.roomName}
+                  </span>
+                </div>
+                <div className={`${styles.room__status}`}>
+                  {room.isStarted && (
+                    <span
+                      className={`${styles.room__isStarted} flex justify-center align-center coreExtra fs-20`}
+                    >
+                      게임중
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
         <div className={styles.footer}>
           <span className={styles.chair1}>

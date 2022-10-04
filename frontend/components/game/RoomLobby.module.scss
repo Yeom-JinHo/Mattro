@@ -6,8 +6,15 @@
 }
 
 .wrapper {
+  position: relative;
   height: 100%;
   background-color: $GRAY_ED;
+  .exit {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
   h2 {
     margin-top: 20px;
     width: 500px;
@@ -17,8 +24,8 @@
     border-radius: 22px;
     .room__num__title {
       .room__num {
-        width: 58px;
-        height: 58px;
+        width: 50px;
+        height: 50px;
         margin: 0 16px;
         border-radius: 50%;
         background-color: $SUB_YELLOW;
@@ -124,7 +131,11 @@
     border-radius: vw(22px);
   }
   .wrapper {
-    width: 100%;
+    .exit {
+      width: vw(30px);
+      right: vw(20px);
+      top: vw(20px);
+    }
     h2 {
       margin-top: vw(20px);
       width: vw(500px);
@@ -132,8 +143,8 @@
       border-radius: vw(22px);
       .room__num__title {
         .room__num {
-          width: vw(58px);
-          height: vw(58px);
+          width: vw(50px);
+          height: vw(50px);
           margin: 0 vw(16px);
         }
         .room__title {
@@ -200,8 +211,11 @@
     font-size: 16px;
   }
   .wrapper {
-    width: 100%;
-    height: 100%;
+    .exit {
+      width: (24px);
+      right: (10px);
+      top: (10px);
+    }
     h2 {
       margin-top: (20px);
       width: (300px);
@@ -308,6 +322,11 @@
     font-size: vw-p(16px);
   }
   .wrapper {
+    .exit {
+      width: vw-p(24px);
+      right: vw-p(10px);
+      top: vw-p(10px);
+    }
     h2 {
       margin-top: vw-p(20px);
       width: vw-p(300px);

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { io } from "socket.io-client";
 
-import { IUserList } from "../../constants/socketio";
+import { IUserList, IRoomList } from "../../constants/socketio";
 import OpenRoomList from "../../components/game/OpenRoomList";
 import RoomLobby from "../../components/game/RoomLobby";
 import RoomStart from "../../components/game/RoomStart";
@@ -16,12 +16,12 @@ import gameMainMusic from "../../public/sounds/gameMainMusic.mp3";
 import volumeOn from "../../public/icons/volume_up.svg";
 import volumeOff from "../../public/icons/volume_off.svg";
 
-const socket =
-  process.env.NODE_ENV === "development"
-    ? io("ws://localhost:8000")
-    : io("wss://j7c206.p.ssafy.io", { path: "/node/socket.io" });
-
 const Main: NextPage = () => {
+  const [socket] = useState(
+    process.env.NODE_ENV === "development"
+      ? io("ws://localhost:8000")
+      : io("wss://j7c206.p.ssafy.io", { path: "/node/socket.io" })
+  );
   const [toggle] = useAudio(click);
   const [toggleBGM] = useAudio(gameMainMusic);
   const [isMute, setIsMute] = useState<boolean>(false);
@@ -35,7 +35,7 @@ const Main: NextPage = () => {
     toggleIsStartedModal: (a: boolean) => void;
   }>(null);
   const [roomName, setRoomName] = useState<string>("");
-  const [roomList, setRoomList] = useState([]);
+  const [roomList, setRoomList] = useState<IRoomList[]>([]);
   const [isEntered, setIsEntered] = useState<boolean>(false);
   const [isStartedLobby, setIsStartedLobby] = useState<boolean>(false);
   const [userList, setUserList] = useState<IUserList[]>([]);
@@ -64,19 +64,16 @@ const Main: NextPage = () => {
   }, []);
 
   useEffect(() => {
-    if (isEntered) {
-      socket.emit("room_change");
-    }
-  }, [isEntered]);
+    socket.emit("room_change");
+  }, []);
 
   useEffect(() => {
-    socket.emit("room_change");
     socket.on("welcome", (roomName, newUserList) => {
       setRoomName(roomName);
       setUserList([...newUserList]);
     });
     socket.on("room_change", (rooms) => {
-      setRoomList(rooms);
+      setRoomList([...rooms]);
     });
     socket.on("start_lobby", (canStart, socketId) => {
       setStartId(socketId);

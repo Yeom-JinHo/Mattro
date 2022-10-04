@@ -180,7 +180,7 @@ io.on("connection", (socket) => {
     data.get(roomName).set("timeout", timeoutId);
   });
   socket.on("room_change", () => {
-    socket.emit("room_change", getAllRooms());
+    io.sockets.emit("room_change", getAllRooms());
   });
   socket.on("answer", (roomName, line, answer, socketId) => {
     // console.log("앤서 클리어");
@@ -258,6 +258,26 @@ io.on("connection", (socket) => {
   });
   socket.on("on_change_line", (roomName, line) => {
     socket.to(roomName).emit("on_change_line", line);
+  });
+  socket.on("exit", (roomName) => {
+    if (data.get(roomName)) {
+      data.get(roomName).set("userList", [
+        ...data
+          .get(roomName)
+          .get("userList")
+          .filter((user) => user.id !== socket.id)
+      ]);
+      socket.to(roomName).emit("who_out", data.get(roomName).get("userList"));
+      if (
+        ["4번 출구", "3번 출구", "2번 출구", "1번 출구"].includes(
+          socket.data.nickname
+        )
+      ) {
+        data.get(roomName).get("nicknameList").push(socket.data.nickname);
+      }
+      data.get(roomName).set("isStarted", false);
+    }
+    io.sockets.emit("room_change", getAllRooms());
   });
 });
 
