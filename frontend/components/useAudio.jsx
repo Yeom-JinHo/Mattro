@@ -4,9 +4,9 @@ const useAudio = (url) => {
   const [audio] = useState(typeof Audio !== "undefined" && new Audio(url));
   const [playing, setPlaying] = useState(false);
 
-  const toggle = (isMute, a = true) => {
+  const toggle = (isMute, makePlayed = true) => {
     if (!isMute) {
-      if (a) {
+      if (makePlayed) {
         setPlaying(true);
       } else {
         setPlaying(false);
