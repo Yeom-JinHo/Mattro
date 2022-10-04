@@ -52,8 +52,8 @@ const ResultCard = ({
         description: address,
         imageUrl: mainImageURL !== null ? mainImageURL : menuImageUrl,
         link: {
-          mobileWebUrl: `http://localhost:3000/theme/${choices}/${res}`,
-          webUrl: `http://localhost:3000/theme/${choices}/${res}`
+          mobileWebUrl: `https://j7c206.p.ssafy.io/theme/${choices}/${res}`,
+          webUrl: `https://j7c206.p.ssafy.io/theme/${choices}/${res}`
         }
       }
     });

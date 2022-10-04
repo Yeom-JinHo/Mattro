@@ -42,7 +42,7 @@
         background-color: $GRAY-BA;
         color: $WHITE;
         border-radius: (18px);
-        margin: 0 (14px);
+        margin: 0 (14px) 50px 0;
         &:hover {
           background-color: $MAIN;
         }
@@ -71,7 +71,7 @@
           font-size: vw(16px);
           padding: vw(12px) vw(24px);
           border-radius: vw(18px);
-          margin: 0 vw(14px);
+          margin: 0 vw(14px) vw(50px) 0;
         }
       }
     }
@@ -99,8 +99,7 @@
         margin-top: (20px);
         .btn {
           padding: (10px) (18px);
-          margin: 0 (8px);
-          margin-top: (15px);
+          margin: (15px) (8px) (40px) 0;
           border-radius: (16px);
           font-size: (14px);
         }
@@ -128,7 +127,7 @@
         margin-top: vw-p(15px);
         .btn {
           padding: vw-p(10px) vw-p(18px);
-          margin: 0 vw-p(8px);
+          margin: vw-p(15px) vw-p(8px) vw-p(40px) 0;
           border-radius: vw-p(16px);
           font-size: vw-p(14px);
         }
