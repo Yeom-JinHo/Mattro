@@ -150,9 +150,13 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         inputLineRef.current.focus();
       }
     }, []);
-    const onEnterKeyUpline = (e: { key: string }) => {
+    const onEnterKeyUpline = (e: {
+      key: string;
+      preventDefault: () => void;
+    }) => {
       if (startId !== socket.id) return;
       if (e.key === "Enter") {
+        e.preventDefault();
         toggle(isMute);
         onStartGame();
       }
@@ -164,8 +168,12 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
         }
       }
     }, [isStartedGame, isReadyOpen, turn]);
-    const onEnterKeyUpAnswer = (e: { key: string }) => {
+    const onEnterKeyUpAnswer = (e: {
+      key: string;
+      preventDefault: () => void;
+    }) => {
       if (answer && e.key === "Enter") {
+        e.preventDefault();
         toggle(isMute);
         onSubmitAnswer(answer);
       }
@@ -246,7 +254,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
                   {line}
                 </span>
                 <input
-                  onKeyUp={onEnterKeyUpAnswer}
+                  onKeyDown={onEnterKeyUpAnswer}
                   ref={inputAnswerRef}
                   className={`${styles.answer__content} coreExtra fs-60`}
                   value={answer}
@@ -256,7 +264,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
               </div>
             ) : (
               <input
-                onKeyUp={onEnterKeyUpline}
+                onKeyDown={onEnterKeyUpline}
                 ref={inputLineRef}
                 className={`${styles.line__content} coreExtra fs-60`}
                 value={line}

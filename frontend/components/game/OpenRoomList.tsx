@@ -58,9 +58,9 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
     };
     const onKeyUpEnterMakeRoom: React.KeyboardEventHandler<
       HTMLInputElement
-    > = (e: { key: string }) => {
-      if (e.key === "Enter") {
-        if (roomName.trim() === "") return;
+    > = (e: { key: string; preventDefault: () => void }) => {
+      if (roomName && e.key === "Enter") {
+        e.preventDefault();
         toggle(isMute);
         socket.emit("enter_room", roomName, () => {
           setIsEntered(true);
@@ -150,10 +150,11 @@ const Rooms: React.FunctionComponent<Props> = forwardRef(
               </span>
               <input
                 className={`${styles.modal__input} flex align-center justify-center fs-32 coreExtra`}
-                onKeyUp={onKeyUpEnterMakeRoom}
+                onKeyDown={onKeyUpEnterMakeRoom}
                 ref={modalRoomNameInput}
                 value={roomName}
                 onChange={onChangeRoomName}
+                maxLength={10}
               />
             </div>
             <button
