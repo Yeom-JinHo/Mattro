@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/no-unknown-property */
 import React, {
@@ -19,7 +20,6 @@ const MetroMap = ({ scaleSize, searchId, prevScale }: MetroMapProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
   const [dragging, setDragging] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-
   const movePosition = (posX: number, posY: number) => {
     if (wrraperRef.current) {
       wrraperRef.current.style.left = `${
@@ -66,6 +66,18 @@ const MetroMap = ({ scaleSize, searchId, prevScale }: MetroMapProps) => {
   const endTouch = () => {
     setDragging(false);
   };
+
+  const onIntersect = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      if (!entry.isIntersecting && wrraperRef.current) {
+        movePosition(
+          wrraperRef.current.style.left.replace("px", "") as unknown as number,
+          wrraperRef.current.style.top.replace("px", "") as unknown as number
+        );
+      }
+    });
+  };
+
   useEffect(() => {
     if (wrraperRef.current && searchId) {
       const circle = document.querySelector(`.M${searchId}`);
@@ -148,7 +160,6 @@ const MetroMap = ({ scaleSize, searchId, prevScale }: MetroMapProps) => {
           labelGroup.insertAdjacentElement("afterbegin", rect);
           rectList.push(rect);
         }
-        // eslint-disable-next-line consistent-return
         return () => {
           rectList.forEach((r) => {
             labelGroup.removeChild(r);
@@ -178,35 +189,22 @@ const MetroMap = ({ scaleSize, searchId, prevScale }: MetroMapProps) => {
             scaleSize
       );
     }
-  }, [prevScale, scaleSize]);
-
-  const onIntersect = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry: IntersectionObserverEntry) => {
-      if (!entry.isIntersecting && wrraperRef.current) {
-        movePosition(
-          wrraperRef.current.style.left.replace("px", "") as unknown as number,
-          wrraperRef.current.style.top.replace("px", "") as unknown as number
-        );
+    if (scaleSize === 1) {
+      if (rootRef.current) {
+        const margin = `${window.innerWidth > 1024 ? "-60" : "-20"}px`;
+        const observer = new IntersectionObserver(onIntersect, {
+          root: rootRef.current,
+          rootMargin: margin
+        });
+        if (wrraperRef.current) {
+          observer.observe(wrraperRef.current);
+        }
+        return () => {
+          observer.disconnect();
+        };
       }
-    });
-  };
-
-  // eslint-disable-next-line consistent-return
-  useEffect(() => {
-    if (rootRef.current) {
-      const margin = `${window.innerWidth > 1024 ? "-60" : "-20"}px`;
-      const observer = new IntersectionObserver(onIntersect, {
-        root: rootRef.current,
-        rootMargin: margin
-      });
-      if (wrraperRef.current) {
-        observer.observe(wrraperRef.current);
-      }
-      return () => {
-        observer.disconnect();
-      };
     }
-  }, []);
+  }, [prevScale, scaleSize]);
 
   return (
     <div id="metroMap" ref={rootRef}>
