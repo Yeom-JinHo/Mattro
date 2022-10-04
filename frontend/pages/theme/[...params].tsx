@@ -93,7 +93,7 @@ const Result = () => {
   };
 
   return (
-    <div className={`${styles.result} flex justify-center`}>
+    <div className={`${styles.result} flex justify-center align-center`}>
       <div
         className={`${styles.contents} flex column align-center justify-center`}
       >

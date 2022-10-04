@@ -1,17 +1,19 @@
 .result {
+  height: 100%;
   .contents {
-    width: 800px;
-    overflow-y: hidden;
-    padding-top: (12px);
+    width: 450px;
+    overflow: hidden;
+    padding-top: (8px);
 
     .title {
       color: $GRAY-3A;
-      margin-bottom: (40px);
+      margin-bottom: (28px);
+      font-size: (28px);
     }
 
     .arrowPrevButton,
     .arrowNextButton {
-      background-color: red;
+      // background-color: red;
       border-radius: 70%;
       width: (50px);
       height: (50px);
@@ -19,7 +21,6 @@
       &:hover {
         opacity: 0.7;
       }
-      z-index: 99;
     }
 
     .arrowNextButton {
@@ -28,17 +29,15 @@
 
     .container {
       overflow: hidden;
-      // background-color: orange;
-      // width: 500px;
       width: 500%;
       .ref {
         width: 100%;
       }
     }
     .btns {
-      margin-top: (50px);
+      margin-top: (20px);
       .btn {
-        font-size: 20px;
+        font-size: 16px;
         padding: (12px) (24px);
         background-color: $GRAY-BA;
         color: $WHITE;
@@ -55,18 +54,25 @@
 @media screen and (max-width: $DESKTOP-VW) {
   .result {
     .contents {
-      margin-top: vw(12px);
+      width: vw(450px);
+      padding-top: vw(8px);
       .title {
-        margin-bottom: vw(40px);
+        margin-bottom: vw(28px);
+        font-size: vw(28px);
       }
-    }
-    .btns {
-      margin-top: vw(30px);
-      .btn {
-        font-size: vw(18px);
-        padding: vw(16px) vw(28px);
-        border-radius: vw(20px);
-        margin: 0 vw(20px);
+      .arrowPrevButton,
+      .arrowNextButton {
+        width: vw(50px);
+        height: vw(50px);
+      }
+      .btns {
+        margin-top: vw(20px);
+        .btn {
+          font-size: vw(16px);
+          padding: vw(12px) vw(24px);
+          border-radius: vw(18px);
+          margin: 0 vw(14px);
+        }
       }
     }
   }
@@ -75,11 +81,20 @@
   .result {
     .contents {
       padding-top: (10px);
-
+      width: 400px;
       .title {
         font-size: (20px);
         margin-bottom: (30px);
       }
+
+      .arrowPrevButton,
+      .arrowNextButton {
+        background-color: transparent;
+        border-radius: 70%;
+        width: (50px);
+        height: (50px);
+      }
+
       .btns {
         margin-top: (20px);
         .btn {
@@ -99,15 +114,21 @@
       padding-top: vw-p(10px);
 
       .title {
-        font-size: vw-p(14px);
+        font-size: vw-p(20px);
         margin-bottom: vw-p(30px);
       }
+
+      .arrowPrevButton,
+      .arrowNextButton {
+        width: vw-p(50px);
+        height: vw-p(50px);
+      }
+
       .btns {
-        margin-top: vw-p(20px);
+        margin-top: vw-p(15px);
         .btn {
           padding: vw-p(10px) vw-p(18px);
           margin: 0 vw-p(8px);
-          margin-top: vw-p(15px);
           border-radius: vw-p(16px);
           font-size: vw-p(14px);
         }

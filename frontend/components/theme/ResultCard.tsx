@@ -39,13 +39,10 @@ const ResultCard = ({
 
     newList.splice(2, 0, storeIdx);
     const res = newList.join(",");
-    console.log(res);
-    console.log(storeIdx);
-
     const { Kakao, location } = window;
 
+    // 공유하기 기능을 위해 initialize 마운트 될때 적용
     if (!window.Kakao.isInitialized()) {
-      // 공유하기 기능을 위해 initialize 마운트 될때 적용
       window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API_KEY);
     }
     Kakao.Link.sendDefault({
@@ -87,7 +84,7 @@ const ResultCard = ({
     star.push(
       <span
         style={{ color: "#5a5a5a", margin: " 0 12px" }}
-        className="notoMid fs-16"
+        className={`${styles.rating} notoMid`}
       >
         {starView}
       </span>
@@ -118,14 +115,17 @@ const ResultCard = ({
         <div className="coreBold fs-24 flex">{name}</div>
       </div>
 
-      <div className={`${styles.img} flex align-center justify-center`}>
+      <div
+        onClick={moveMap}
+        className={`${styles.img} flex align-center justify-center`}
+      >
         <Image
           src={mainImageURL || menuImageUrl || temp}
           alt="food"
           className={styles.sub}
           unoptimized
-          width="350"
-          height="250"
+          width="250"
+          height="200"
         />
       </div>
       <div className={`${styles.detail} flex column justify-center`}>
