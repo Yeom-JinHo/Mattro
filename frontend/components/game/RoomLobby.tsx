@@ -13,7 +13,6 @@ import pencil from "../../public/images/pencil.svg";
 
 interface Props {
   socket: ISocket;
-  nowCnt: number;
   userList: IUserList[];
   roomName: string;
   defaultNick: string;
@@ -22,7 +21,6 @@ interface Props {
 
 const RoomLobby: React.FunctionComponent<Props> = ({
   socket,
-  nowCnt,
   userList,
   roomName,
   defaultNick,
@@ -62,7 +60,7 @@ const RoomLobby: React.FunctionComponent<Props> = ({
           <span
             className={`${styles.room__num} flex justify-center align-center coreExtra fs-24`}
           >
-            {nowCnt}/4
+            {userList.length}/4
           </span>
           <span className={`${styles.room__title} coreExtra fs-28`}>
             {roomName && roomName.length > 9

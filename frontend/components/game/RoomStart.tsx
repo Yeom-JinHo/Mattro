@@ -19,7 +19,7 @@ import Ready from "./Ready";
 import BarTimer from "./BarTimer";
 
 interface Props {
-  userList: IUserList[];
+  // userList: IUserList[];
   socket: ISocket;
   roomName: string;
   canStart: boolean;
@@ -69,24 +69,10 @@ const lineToColor = (line: string): string => {
   return "";
 };
 
-const shuffle = (arr: IUserList[], socketId: string) => {
-  const res = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i].id === socketId) {
-      res.push(arr.splice(i, 1)[0]);
-    }
-  }
-  while (arr.length) {
-    const randomIdx = Math.floor(Math.random() * arr.length);
-    res.push(arr.splice(randomIdx, 1)[0]);
-  }
-  return res;
-};
-
 const RoomStart: React.FunctionComponent<Props> = forwardRef(
   (
     {
-      userList,
+      // userList,
       socket,
       roomName,
       canStart,
@@ -146,8 +132,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
             "start_game",
             socket.id,
             roomName,
-            inputLineRef.current.value,
-            shuffle([...userList], socket.id)
+            inputLineRef.current.value
           );
         }
       }
@@ -155,7 +140,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     const onSubmitAnswer = (answer: string) => {
       if (isReadyOpen) return;
       toggle(true);
-      socket.emit("answer", roomName, line, answer, order, now, socket.id);
+      socket.emit("answer", roomName, line, answer, socket.id);
       setAnswer("");
     };
     useEffect(() => {
@@ -185,7 +170,7 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
     };
     useEffect(() => {
       if (isStartedGame) {
-        toggleBGM(true);
+        // toggleBGM(true);
         setIsReadyOpen(true);
         setTimeout(() => {
           setIsReadyOpen(false);
@@ -303,7 +288,9 @@ const RoomStart: React.FunctionComponent<Props> = forwardRef(
           <div className={`${styles.children} fs-32 coreExtra`}>
             <div>
               {isModalOpen && (
-                <div>{result.socketId === socket.id ? "패배" : "승리"}</div>
+                <div>
+                  {result && result.socketId === socket.id ? "패배" : "승리"}
+                </div>
               )}
             </div>
           </div>

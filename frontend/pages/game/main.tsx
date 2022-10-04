@@ -37,7 +37,6 @@ const Main: NextPage = () => {
   const [roomList, setRoomList] = useState([]);
   const [isEntered, setIsEntered] = useState<boolean>(false);
   const [isStartedLobby, setIsStartedLobby] = useState<boolean>(false);
-  const [nowCnt, setNowCnt] = useState<number>(1);
   const [userList, setUserList] = useState<IUserList[]>([]);
   const [canStart, setCanStart] = useState<boolean>(false);
   const [isStartedGame, setIsStartedGame] = useState<boolean>(false);
@@ -64,18 +63,16 @@ const Main: NextPage = () => {
   }, []);
 
   useEffect(() => {
+    if (isEntered) {
+      socket.emit("room_change");
+    }
+  }, [isEntered]);
+
+  useEffect(() => {
     socket.emit("room_change");
-    socket.on("welcome", (roomName, newUser, newCount) => {
+    socket.on("welcome", (roomName, newUserList) => {
       setRoomName(roomName);
-      setUserList((prev) => [...prev, newUser]);
-      setNowCnt(newCount);
-      socket.emit("iMHere", roomName);
-    });
-    socket.on("iMHere", (newUser) => {
-      setUserList((prev) => {
-        const filteredPrev = prev.filter((user) => user.id !== newUser.id);
-        return [...filteredPrev, newUser];
-      });
+      setUserList([...newUserList]);
     });
     socket.on("room_change", (rooms) => {
       setRoomList(rooms);
@@ -93,42 +90,23 @@ const Main: NextPage = () => {
       setNow(0);
       setLimit(limit);
     });
-    socket.on("nickname", (socketId, nickname) => {
-      setUserList((prev) => {
-        const copy = [...prev];
-        copy.forEach((user) => {
-          if (user.id === socketId) {
-            user.nickname = nickname;
-          }
-        });
-        return copy;
-      });
+    socket.on("nickname", (newUserList) => {
+      setUserList([...newUserList]);
     });
-    socket.on(
-      "check_answer",
-      (roomName, res, answer, order, now, userListNum, socketId) => {
-        if (res === "정답") {
-          console.log("맞음!!");
-          socket.emit(
-            "correct",
-            roomName,
-            answer,
-            order,
-            now,
-            userListNum,
-            socketId
-          );
-        }
-        if (res === "오답") {
-          console.log("틀림!!");
-          socket.emit("uncorrect", roomName, res, socketId);
-        }
-        if (res === "중복") {
-          console.log("중복!!");
-          socket.emit("uncorrect", roomName, res, socketId);
-        }
+    socket.on("check_answer", (roomName, res, answer, socketId) => {
+      if (res === "정답") {
+        console.log("맞음!!");
+        socket.emit("correct", roomName, answer, socketId);
       }
-    );
+      if (res === "오답") {
+        console.log("틀림!!");
+        socket.emit("uncorrect", roomName, res, socketId);
+      }
+      if (res === "중복") {
+        console.log("중복!!");
+        socket.emit("uncorrect", roomName, res, socketId);
+      }
+    });
     socket.on("correct", (answer, socketId, now, turn) => {
       setResult({ answer, socketId });
       setNow(now);
@@ -171,10 +149,9 @@ const Main: NextPage = () => {
         resetGame();
       }, 3000);
     });
-    socket.on("who_out", (socketId, newCnt) => {
+    socket.on("who_out", (newUserList) => {
       toggleBGM(false);
-      setUserList((prev) => [...prev].filter((user) => user.id !== socketId));
-      setNowCnt(newCnt);
+      setUserList([...newUserList]);
       resetGame();
     });
     socket.on("on_change_line", (line) => {
@@ -191,7 +168,6 @@ const Main: NextPage = () => {
     });
     return () => {
       socket.off("welcome");
-      socket.off("iMHere");
       socket.off("room_change");
       socket.off("start_lobby");
       socket.off("start_game");
@@ -221,7 +197,7 @@ const Main: NextPage = () => {
       {socket && isEntered ? (
         isStartedLobby ? (
           <RoomStart
-            userList={userList}
+            // userList={userList}
             socket={socket}
             roomName={roomName}
             canStart={canStart}
@@ -243,7 +219,6 @@ const Main: NextPage = () => {
           userList.filter((user) => user.id === socket.id)?.[0]?.nickname && (
             <RoomLobby
               socket={socket}
-              nowCnt={nowCnt}
               userList={userList}
               roomName={roomName}
               defaultNick={
