@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import styles from "./ResultCard.module.scss";
 import temp from "../../public/images/foodTemp.jpeg";
 import star_all from "../../public/images/star.png";
@@ -19,15 +20,30 @@ const ResultCard = ({
   name,
   rating,
   searchKeyword,
-  storUrl,
+  storURL,
   storeIdx,
   역명,
   lineId
 }: ResultCardType) => {
+  const router = useRouter();
   const [starView, setStarView] = useState<number>(0);
+  const [choices, storeIndex]: any = router.query.params;
+  const [address, setAddress] = useState<string>("");
   // 카카오톡 공유하기 기능
   const shareKakao = () => {
+    // url 재정비, 현재 선택된 값을 2번째 요소에 집어넣기
+    const list = storeIndex.split(",");
+    const newList = list.filter(function (data: string) {
+      return data !== storeIdx;
+    });
+
+    newList.splice(2, 0, storeIdx);
+    const res = newList.join(",");
+    console.log(res);
+    console.log(storeIdx);
+
     const { Kakao, location } = window;
+
     if (!window.Kakao.isInitialized()) {
       // 공유하기 기능을 위해 initialize 마운트 될때 적용
       window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API_KEY);
@@ -36,19 +52,24 @@ const ResultCard = ({
       objectType: "feed",
       content: {
         title: name,
-        description: searchKeyword,
+        description: address,
         imageUrl: mainImageURL !== null ? mainImageURL : menuImageUrl,
         link: {
-          mobileWebUrl: location.href,
-          webUrl: location.href
+          mobileWebUrl: `http://localhost:3000/theme/${choices}/${res}`,
+          webUrl: `http://localhost:3000/theme/${choices}/${res}`
         }
       }
     });
   };
+
   useEffect(() => {
     // rating 계산
     const temp = rating.split("/").map(Number);
     setStarView(temp[0]);
+
+    const str = searchKeyword.split(" ");
+    str.shift();
+    setAddress(str.join(" "));
   }, []);
 
   const repeatStar = () => {
@@ -60,12 +81,7 @@ const ResultCard = ({
     }
     if (starView % 1 >= 0.5) {
       star.push(
-        <Image
-          key={"half"}
-          className={styles.stars}
-          alt="star"
-          src={star_half}
-        />
+        <Image key={name} className={styles.stars} alt="star" src={star_half} />
       );
     }
     star.push(
@@ -79,13 +95,27 @@ const ResultCard = ({
     return star;
   };
 
+  const moveMap = () => {
+    if (storURL !== undefined) {
+      window.open(storURL);
+      console.log("click");
+    } else {
+      alert("이동할 수 있는 url이 없습니다");
+    }
+  };
+
   return (
     <div
       className={`${styles.card} ${lineId} flex column align-center justify-center`}
     >
-      <div className={`${styles.num} coreExtra fs-18 flex align-center`}>
-        <p className={lineId}>{lineNameById(lineId)}</p>
-        <div className="coreBold fs-24 flex ">{name}</div>
+      <div
+        onClick={moveMap}
+        className={`${styles.num} coreExtra fs-18 flex align-center`}
+      >
+        <p className={`${lineId} flex align-center justify-center`}>
+          {lineNameById(lineId)}
+        </p>
+        <div className="coreBold fs-24 flex">{name}</div>
       </div>
 
       <div className={`${styles.img} flex align-center justify-center`}>
@@ -94,14 +124,14 @@ const ResultCard = ({
           alt="food"
           className={styles.sub}
           unoptimized
-          width="400px"
-          height="300px"
+          width="350"
+          height="250"
         />
       </div>
       <div className={`${styles.detail} flex column justify-center`}>
         <div className={`${styles.txt} flex  notoMid`}>
           <span>주소</span>
-          <span>{searchKeyword}</span>
+          <span>{address}</span>
         </div>
         <div className={`${styles.txt} flex fs-15 notoMid`}>
           <span>대표 메뉴</span>

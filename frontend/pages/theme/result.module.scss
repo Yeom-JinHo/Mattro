@@ -1,18 +1,12 @@
 .result {
   .contents {
-    margin-top: (12px);
+    width: 800px;
+    overflow-y: hidden;
+    padding-top: (12px);
+
     .title {
       color: $GRAY-3A;
       margin-bottom: (40px);
-      .food {
-        padding: (19px) (70px);
-        border: (7px) solid $MAIN;
-        border-radius: (46px);
-        margin: 0 (52px);
-        span {
-          color: $MAIN;
-        }
-      }
     }
 
     .arrowPrevButton,
@@ -33,9 +27,13 @@
     }
 
     .container {
-      // overflow: hidden;
-      background-color: orange;
-      width: 500px;
+      overflow: hidden;
+      // background-color: orange;
+      // width: 500px;
+      width: 500%;
+      .ref {
+        width: 100%;
+      }
     }
     .btns {
       margin-top: (50px);
@@ -60,12 +58,6 @@
       margin-top: vw(12px);
       .title {
         margin-bottom: vw(40px);
-        .food {
-          padding: vw(19px) vw(70px);
-          border: vw(8px) solid $MAIN;
-          border-radius: vw(46px);
-          margin: 0 vw(52px);
-        }
       }
     }
     .btns {
@@ -82,18 +74,11 @@
 @media screen and (max-width: $TABLET-VW) {
   .result {
     .contents {
-      margin-top: (10px);
+      padding-top: (10px);
 
       .title {
-        font-size: (14px);
+        font-size: (20px);
         margin-bottom: (30px);
-        .food {
-          font-size: (18px);
-          padding: (13px) (40px);
-          border: (6px) solid $MAIN;
-          border-radius: (46px);
-          margin: 0 (16px);
-        }
       }
       .btns {
         margin-top: (20px);
@@ -111,18 +96,11 @@
 @media screen and (max-width: $PHONE-VW) {
   .result {
     .contents {
-      margin-top: vw-p(10px);
+      padding-top: vw-p(10px);
 
       .title {
         font-size: vw-p(14px);
         margin-bottom: vw-p(30px);
-        .food {
-          font-size: vw-p(18px);
-          padding: vw-p(13px) vw-p(40px);
-          border: vw-p(6px) solid $MAIN;
-          border-radius: vw-p(46px);
-          margin: 0 vw-p(16px);
-        }
       }
       .btns {
         margin-top: vw-p(20px);

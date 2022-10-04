@@ -40,12 +40,11 @@ const Result = () => {
 
   useEffect(() => {
     if (slideRef.current) {
-      console.log(currentSlide + "aaaa");
       slideRef.current.style.transition = "all 0.5s ease-in-out";
       if (currentSlide < 0) {
-        slideRef.current.style.transform = `translateX(${-currentSlide}00%)`;
+        slideRef.current.style.transform = `translateX(${-currentSlide * 20}%)`;
       } else {
-        slideRef.current.style.transform = `translateX(-${currentSlide}00%)`;
+        slideRef.current.style.transform = `translateX(-${currentSlide * 20}%)`;
       }
     }
   }, [currentSlide]);
@@ -64,6 +63,8 @@ const Result = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
+
+    console.log(foodList);
   }, [storeIndex]);
 
   // useEffect(() => {
@@ -98,37 +99,42 @@ const Result = () => {
       >
         {!isLoading && foodList && (
           <div className="flex column align-center justify-center">
-            <div className={`${styles.title} fs-24 coreBold`}>오늘 당신은</div>
+            <div className={`${styles.title} coreBold`}>오늘의 추천 메뉴는</div>
             <div className="flex justify-center align-center">
-              <button
-                type="button"
-                className={`${styles.arrowPrevButton} flex align-center justify-center`}
-                onClick={() => prevSlide()}
-                // style={
-                //   currentSlide === 0 ? { opacity: 0 } : { opacity: "100%" }
-                // }
-              >
-                <Image src={prevBtn} alt="prev" className={styles.icon} />
-              </button>
               <div
                 className={`${styles.container} flex align-center justify-center`}
+                ref={slideRef}
               >
-                <div ref={slideRef} className="flex">
-                  {foodList.map(
-                    ({
-                      id,
-                      mainImageURL,
-                      menuImageUrl,
-                      menuList,
-                      name,
-                      rating,
-                      searchKeyword,
-                      storUrl,
-                      storeIdx,
-                      역명
-                    }: storeDataType) => (
+                {foodList.map(
+                  ({
+                    id,
+                    mainImageURL,
+                    menuImageUrl,
+                    menuList,
+                    name,
+                    rating,
+                    searchKeyword,
+                    storURL,
+                    storeIdx,
+                    역명
+                  }: storeDataType) => (
+                    <div className={`${styles.ref} flex align-center`} key={id}>
+                      <button
+                        type="button"
+                        className={`${styles.arrowPrevButton} flex align-center justify-center`}
+                        onClick={() => prevSlide()}
+                        // style={
+                        //   currentSlide === 0 ? { opacity: 0 } : { opacity: "100%" }
+                        // }
+                      >
+                        <Image
+                          src={prevBtn}
+                          alt="prev"
+                          className={styles.icon}
+                        />
+                      </button>
                       <ResultCard
-                        key={id}
+                        // key={storURL}
                         id={id}
                         mainImageURL={mainImageURL}
                         menuImageUrl={menuImageUrl}
@@ -136,25 +142,29 @@ const Result = () => {
                         name={name}
                         rating={rating}
                         searchKeyword={searchKeyword}
-                        storUrl={storUrl}
+                        storURL={storURL}
                         storeIdx={storeIdx}
                         역명={역명}
                         lineId={searchByName(역명)[0].lines[0].id}
                       />
-                    )
-                  )}
-                </div>
+                      <button
+                        type="button"
+                        className={`${styles.arrowNextButton} flex align-center justify-center`}
+                        onClick={() => nextSlide()}
+                        // style={
+                        //   currentSlide === 4 ? { opacity: 0 } : { opacity: "100%" }
+                        // }
+                      >
+                        <Image
+                          alt="next"
+                          src={prevBtn}
+                          className={styles.icon}
+                        />
+                      </button>
+                    </div>
+                  )
+                )}
               </div>
-              <button
-                type="button"
-                className={`${styles.arrowNextButton} flex align-center justify-center`}
-                onClick={() => nextSlide()}
-                // style={
-                //   currentSlide === 4 ? { opacity: 0 } : { opacity: "100%" }
-                // }
-              >
-                <Image alt="next" src={prevBtn} className={styles.icon} />
-              </button>
             </div>
 
             <div className={`${styles.btns} flex`}>
