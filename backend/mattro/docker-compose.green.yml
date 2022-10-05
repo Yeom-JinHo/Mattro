@@ -1,8 +1,6 @@
 version: "3"
 services:
-  // 서비스 명
   mattro:
-    // 루트 디렉토리의 dockerfile을 실행
     build: .
     ports:
       - 9001:8080
