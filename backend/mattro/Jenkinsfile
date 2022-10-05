@@ -98,7 +98,7 @@ pipeline {
                 dir ('./backend/mattro'){
                     sh 'chmod +x gradlew'
                     sh 'chmod +x dev.sh'
-                    sh './gradlew'
+                    sh './dev.sh'
                 }
             }
         }
