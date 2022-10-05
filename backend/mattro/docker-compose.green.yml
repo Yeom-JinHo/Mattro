@@ -5,4 +5,4 @@ services:
     // 루트 디렉토리의 dockerfile을 실행
     build: .
     ports:
-      - 9001:8080
+    - 9001:8080
