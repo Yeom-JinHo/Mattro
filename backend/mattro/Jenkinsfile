@@ -98,6 +98,8 @@ pipeline {
                 dir ('./backend/mattro'){
                     sh 'chmod +x gradlew'
                     sh 'chmod +x dev.sh'
+                    sh 'chmod +x docker-compose.blue.yml'
+                    sh 'chmod +x docker-compose.green.yml'
                     sh './dev.sh'
                 }
             }
