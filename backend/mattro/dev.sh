@@ -1,6 +1,6 @@
 # 실행 중인 도커 컴포즈 확인
-EXIST_A=$(docker-compose -p blink-blue -f docker-compose.blue.yml ps | grep blink-blue)
-if [ -z "${EXIST_A}" ] # -z는 문자열 길이가 0이면 true. A가 실행 중이지 않다는 의미.
+EXIST_BLUE=$(docker-compose -p blink-blue -f docker-compose.blue.yml ps | grep blink-blue)
+if [ -z "${EXIST_BLUE}" ] # -z는 문자열 길이가 0이면 true. A가 실행 중이지 않다는 의미.
 then
         # B가 실행 중인 경우
         START_CONTAINER=blue
