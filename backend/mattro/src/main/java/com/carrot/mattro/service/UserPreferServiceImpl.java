@@ -22,9 +22,9 @@ public class UserPreferServiceImpl implements UserPreferService {
     private final Logger logger = LoggerFactory.getLogger(UserPreferServiceImpl.class);
     @Override
     public List<Integer> userPrefer(String choices) {
-        Boolean index0 = false;
-        Boolean index1 = false;
-        Boolean index2 = false;
+        int index0 = 0;
+        int index1 = 0;
+        int index2 = 0;
 
         HashSet<String> basicFoodList = new HashSet<>(Arrays.asList("일식튀김,꼬치","전복요리","급식","스페인음식","방앗간",
                 "고고즉석떡볶이","카레","반찬가게",
@@ -81,13 +81,13 @@ public class UserPreferServiceImpl implements UserPreferService {
                 "오뎅,꼬치","게요리","수산물가공,제조"));
 
         if(choices.charAt(0) == '1'){
-            index0 = true;
+            index0 = 1;
         }
         if(choices.charAt(1) == '1'){
-            index1 = true;
+            index1 = 1;
         }
         if(choices.charAt(2) == '1'){
-            index2 = true;
+            index2 = 1;
         }
         if(choices.charAt(3) == '1'){
             basicFoodList.removeAll(notKoreanFoodList);
