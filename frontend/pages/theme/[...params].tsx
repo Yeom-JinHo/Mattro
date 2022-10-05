@@ -53,6 +53,7 @@ const Result = () => {
   // 제일 처음 실행
   useEffect(() => {
     setIsLoading(true);
+
     // 즉시 실행 함수
     (async function () {
       //  api 호출

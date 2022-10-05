@@ -32,7 +32,6 @@ const ResultCard = ({
   // 카카오톡 공유하기 기능
   const shareKakao = () => {
     let url = null;
-
     if (router.pathname === "/theme/[...params]") {
       const [choices, storeIndex]: any = router.query.params;
       // url 재정비, 현재 선택된 값을 2번째 요소에 집어넣기
@@ -92,6 +91,7 @@ const ResultCard = ({
     }
     star.push(
       <span
+        key={rating}
         style={{ color: "#5a5a5a", margin: " 0 12px" }}
         className={`${styles.rating} notoMid`}
       >
