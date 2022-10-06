@@ -29,7 +29,7 @@ pipeline {
             sshagent (credentials: ['ssh-deploy']) {
               sh """
                 ssh -o StrictHostKeyChecking=no ubuntu@3.34.140.235 '
-                cd /var/jenkins/workspace/backend/mattro
+                cd /var/jenkins/workspace/spring/backend/mattro
                 ls -al
                 '
               """
