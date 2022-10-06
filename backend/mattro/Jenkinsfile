@@ -2,8 +2,6 @@ pipeline {
     agent any           // 아무 에이전트에서 해당 파이프라인 또는 stage를 실행함.
 
     stages {
-
-        gradle build
         stage('Build Gradle') {
           steps {
             echo 'Build Gradle'
