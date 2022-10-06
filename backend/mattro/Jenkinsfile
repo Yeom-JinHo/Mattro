@@ -4,27 +4,28 @@ pipeline {
     stages {
 
         // gradle build
-        stage('Build Gradle') {
-          steps {
-            echo 'Build Gradle'
-            dir ('./backend/mattro'){
-              sh 'chmod +x gradlew'
-              sh 'chmod +x dev.sh'
-              sh './gradlew clean build'
-            }
-          }
-          post {
-            success {
-                echo 'Successfully Build Gradle'
-            }
-            failure {
-              error 'This pipeline stops here...'
-            }
-          }
-        }
+//         stage('Build Gradle') {
+//           steps {
+//             echo 'Build Gradle'
+//             dir ('./backend/mattro'){
+//               sh 'chmod +x gradlew'
+//               sh 'chmod +x dev.sh'
+//               sh './gradlew clean build'
+//             }
+//           }
+//           post {
+//             success {
+//                 echo 'Successfully Build Gradle'
+//             }
+//             failure {
+//               error 'This pipeline stops here...'
+//             }
+//           }
+//         }
 
         stage('Hello') {
           steps {
+            echo 'hello start'
             sshagent (credentials: ['ssh-deploy']) {
               sh """
                 ssh -o StrictHostKeyChecking=no {ubuntu}@{3.34.140.235} '
@@ -35,20 +36,20 @@ pipeline {
           }
         }
 
-        stage('Deploy'){
-            steps{
-            dir ('./backend/mattro'){
-              sh "./dev.sh"
-              }
-            }
-            post {
-            success {
-              echo 'Successfully Deploy Server'
-            }
-            failure {
-              error 'This pipeline stops here...'
-            }
-          }
-        }
+//         stage('Deploy'){
+//             steps{
+//             dir ('./backend/mattro'){
+//               sh "./dev.sh"
+//               }
+//             }
+//             post {
+//             success {
+//               echo 'Successfully Deploy Server'
+//             }
+//             failure {
+//               error 'This pipeline stops here...'
+//             }
+//           }
+//         }
     }
 }
