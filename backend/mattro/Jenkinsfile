@@ -23,18 +23,16 @@ pipeline {
           }
         }
 
-        stages {
-                stage('Hello') {
-                    steps {
-                        sshagent (credentials: ['ssh-deploy']) {
-                        sh """
-                            ssh -o StrictHostKeyChecking=no {ubuntu}@{3.34.140.235} '
-                            ls -al
-                            '
-                        """
-                        }
-                    }
-                }
+        stage('Hello') {
+          steps {
+            sshagent (credentials: ['ssh-deploy']) {
+              sh """
+                ssh -o StrictHostKeyChecking=no {ubuntu}@{3.34.140.235} '
+                ls -al
+                '
+              """
+            }
+          }
         }
 
         stage('Deploy'){
