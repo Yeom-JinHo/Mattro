@@ -21,7 +21,7 @@ pipeline {
           }
         }
 
-        stage('Hello') {
+        stage('Deploy') {
           steps {
             echo 'hello start'
             sshagent (credentials: ['ssh-deploy']) {
@@ -34,21 +34,5 @@ pipeline {
             }
           }
         }
-
-//         stage('Deploy'){
-//             steps{
-//             dir ('./backend/mattro'){
-//               sh "./dev.sh"
-//               }
-//             }
-//             post {
-//             success {
-//               echo 'Successfully Deploy Server'
-//             }
-//             failure {
-//               error 'This pipeline stops here...'
-//             }
-//           }
-//         }
     }
 }
