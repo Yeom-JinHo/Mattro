@@ -3,25 +3,25 @@ pipeline {
 
     stages {
 
-        // gradle build
-//         stage('Build Gradle') {
-//           steps {
-//             echo 'Build Gradle'
-//             dir ('./backend/mattro'){
-//               sh 'chmod +x gradlew'
-//               sh 'chmod +x dev.sh'
-//               sh './gradlew clean build'
-//             }
-//           }
-//           post {
-//             success {
-//                 echo 'Successfully Build Gradle'
-//             }
-//             failure {
-//               error 'This pipeline stops here...'
-//             }
-//           }
-//         }
+        gradle build
+        stage('Build Gradle') {
+          steps {
+            echo 'Build Gradle'
+            dir ('./backend/mattro'){
+              sh 'chmod +x gradlew'
+              sh 'chmod +x dev.sh'
+              sh './gradlew clean build'
+            }
+          }
+          post {
+            success {
+                echo 'Successfully Build Gradle'
+            }
+            failure {
+              error 'This pipeline stops here...'
+            }
+          }
+        }
 
         stage('Hello') {
           steps {
@@ -30,7 +30,7 @@ pipeline {
               sh """
                 ssh -o StrictHostKeyChecking=no ubuntu@3.34.140.235 '
                 cd /var/jenkins/workspace/spring/backend/mattro
-                ls -al
+                ./dev.sh
                 '
               """
             }
